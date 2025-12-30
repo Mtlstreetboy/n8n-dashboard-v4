@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment V4 Dashboard - Split View</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState } = React;
+
+        // Embedded Data
+        const EMBEDDED_DATA = { "NVDA": { "ticker": "NVDA", "timestamp": "2025-12-27T11:59:18.591365", "final_sentiment_score": 0.3603, "classification": "HOLD", "confidence_level": "LOW", "conviction_score": 0.2551, "smart_money_factor": 0.0732, "components": { "news_sentiment": 0.0185, "news_confidence": 0.5349, "news_weight": 0.2313, "options_sentiment": 0.2399, "options_confidence": 1.0, "options_weight": 0.6486, "analyst_sentiment": 0.8359, "analyst_confidence": 0.3333, "analyst_weight": 0.1201, "narrative_momentum": 0.0, "fear_greed_asymmetry": 0.1 }, "divergence_analysis": { "type": "aligned", "magnitude": 0.2213, "opportunity_score": 0, "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent" }, "metadata": { "news_articles_count": 634, "options_volume": 1506064, "analysis_depth": "DEEP", "config_rationale": "NVDA est une action tech à forte volatilité, nécessitant un déclin temporel plus rapide et une sensibilité plus élevée aux indicateurs de momentum.", "version": "V4 - Dual Brain" }, "analyst_insights": { "recommendation_mean": 1.32812, "recommendation_count": 57, "recommendation_summary": "Strong Buy consensus (Mean: 1.3)", "recommendation_score": 0.836, "target_mean": 253.01825, "target_median": 250.0, "current_price": 190.53, "upside_potential": 0.32797066078832726, "price_target_score": 0.576, "upgrades_30d": 0, "downgrades_30d": 0, "net_changes_30d": 0, "momentum_score": 0, "weights": { "rec": 1.0, "pt": 0.0, "momentum": 0.0 }, "component_confidences": { "recommendation": 1.0, "price_target": 0.0, "momentum": 0 } }, "volatility_regime": { "regime": "HIGH_VOLATILITY", "sub_regime": "EUPHORIA", "confidence": 1.0, "metrics": { "avg_iv": 1.3711499999999999, "iv_skew": -0.5734276647765698, "pcr_volume": 0.609 }, "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections. | 📞 Call skew élevé - Spéculation haussière agressive", "signal_adjustment": -0.15, "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel." }, "catalysts": { "catalysts_detected": [{ "type": "merger_acquisition", "category": "CORPORATE_ACTION", "timestamp": "2025-12-27T06:39:41+00:00", "confidence": 0.333, "sentiment": 0.867, "impact_score": 0.289, "title": "NVIDIA Stock (+1.0%): Groq Licensing Deal Solidifies AI Moat - Trefis", "matches": 1 }], "count": 4, "most_recent": { "type": "merger_acquisition", "category": "CORPORATE_ACTION", "timestamp": "2025-12-27T06:39:41+00:00", "confidence": 0.333, "sentiment": 0.867, "impact_score": 0.289, "title": "NVIDIA Stock (+1.0%): Groq Licensing Deal Solidifies AI Moat - Trefis", "matches": 1 }, "impact_assessment": "LOW_IMPACT", "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.", "categories_present": ["ANALYST", "MANAGEMENT", "CORPORATE_ACTION", "FINANCIAL"] }, "advanced_metrics": { "sharpe_ratio": 0.573, "sentiment_volatility": 0.398, "momentum_acceleration": 0.0, "contrarian_score": 0, "sentiment_consistency": 0.0, "llm_interpretation": "Je ne peux pas fournir de conseils d’investissement. Pourrais-je vous aider avec autre chose ?" }, "alerts": [{ "priority": "HIGH", "type": "VOLATILITY", "icon": "🌪️", "title": "RÉGIME DE HAUTE VOLATILITÉ", "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections. | 📞 Call skew élevé - Spéculation haussière agressive", "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.", "urgency": "IMMEDIATE" }], "options_detail": { "ticker": "NVDA", "timestamp": "2025-12-27T11:34:07.841165", "call_volume": 936286, "put_volume": 569778, "call_open_interest": 4833977, "put_open_interest": 4023756, "put_call_ratio_volume": 0.609, "put_call_ratio_oi": 0.832, "call_implied_volatility": 1.9223, "put_implied_volatility": 0.82, "sentiment_label": "bullish", "sentiment_score": 0.391, "total_contracts": 1506064, "total_open_interest": 8857733, "near_term_call_volume": 759196, "far_term_call_volume": 177090, "near_term_put_volume": 407316, "far_term_put_volume": 162462 } } };
+
+        // Utility functions
+        const getSentimentColor = (score) => {
+            if (score > 0.5) return 'text-green-500';
+            if (score > 0.2) return 'text-green-400';
+            if (score < -0.5) return 'text-red-500';
+            if (score < -0.2) return 'text-red-400';
+            return 'text-yellow-500';
+        };
+
+        const getSentimentBg = (score) => {
+            if (score > 0.5) return 'bg-green-500';
+            if (score > 0.2) return 'bg-green-400';
+            if (score < -0.5) return 'bg-red-500';
+            if (score < -0.2) return 'bg-red-400';
+            return 'bg-yellow-500';
+        };
+
+        // --- VUE GRILLE ---
+        const GridView = ({ tickersData, onNavigate }) => {
+            return (
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-6">
+                    <div className="max-w-7xl mx-auto">
+                        <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-6 mb-6">
+                            <h1 className="text-4xl font-bold text-white mb-2">
+                                🧠 Sentiment Dashboard V4 - Split Navigation
+                            </h1>
+                            <p className="text-slate-400">
+                                {tickersData.length} tickers analysés • V4 Dual Brain
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {tickersData.map(({ ticker, data }) => {
+                                const gaugePosition = ((data.final_sentiment_score + 1) / 2) * 100;
+                                return (
+                                    <div key={ticker} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:shadow-lg transition-all">
+                                        <div className="flex items-center justify-between mb-4">
+                                            <div className="text-3xl font-bold text-white">{ticker}</div>
+                                            <div className={`text-4xl font-bold ${getSentimentColor(data.final_sentiment_score)}`}>
+                                                {data.final_sentiment_score > 0 ? '+' : ''}{(data.final_sentiment_score * 100).toFixed(1)}
+                                            </div>
+                                        </div>
+
+                                        <div className="relative mb-4">
+                                            <div className="h-3 rounded-full overflow-hidden bg-gradient-to-r from-red-600 via-yellow-500 to-green-600">
+                                                <div
+                                                    className="absolute top-0 bottom-0 w-1 bg-white shadow-lg"
+                                                    style={{ left: `${gaugePosition}%` }}
+                                                />
+                                            </div>
+                                        </div>
+
+                                        <div className="grid grid-cols-2 gap-3 mb-4">
+                                            <div>
+                                                <div className="text-xs text-slate-400 mb-1">Classification</div>
+                                                <div className={`text-lg font-bold ${getSentimentColor(data.final_sentiment_score)}`}>{data.classification}</div>
+                                            </div>
+                                            <div>
+                                                <div className="text-xs text-slate-400 mb-1">Conviction</div>
+                                                <div className="text-lg font-bold text-white">{(data.conviction_score * 100).toFixed(0)}%</div>
+                                            </div>
+                                        </div>
+
+                                        {/* Action Buttons */}
+                                        <div className="flex gap-3 mt-4">
+                                            <button
+                                                onClick={() => onNavigate('sentiment', ticker)}
+                                                className="flex-1 bg-cyan-600 hover:bg-cyan-500 text-white py-2 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2"
+                                            >
+                                                📊 Sentiment
+                                            </button>
+                                            <button
+                                                onClick={() => onNavigate('options', ticker)}
+                                                className="flex-1 bg-purple-600 hover:bg-purple-500 text-white py-2 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2"
+                                            >
+                                                📈 Options
+                                            </button>
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        // --- VUE DETAIL SENTIMENT ---
+        const SentimentDetailView = ({ ticker, data, onBack }) => {
+            const gaugePosition = ((data.final_sentiment_score + 1) / 2) * 100;
+            return (
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-6">
+                    <div className="max-w-7xl mx-auto space-y-6">
+                        <button onClick={onBack} className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors">
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+                            Retour à la grille
+                        </button>
+
+                        <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8">
+                            <div className="flex items-center justify-between">
+                                <div>
+                                    <div className="flex items-center gap-3">
+                                        <h1 className="text-5xl font-bold text-white mb-2">{ticker}</h1>
+                                        <span className="px-3 py-1 bg-cyan-900/50 text-cyan-400 rounded-full text-sm font-semibold border border-cyan-800">
+                                            📊 VUE SENTIMENT
+                                        </span>
+                                    </div>
+                                    <p className="text-slate-400">{new Date(data.timestamp).toLocaleString('fr-FR')}</p>
+                                </div>
+                                <div className="text-right">
+                                    <div className={`text-6xl font-bold ${getSentimentColor(data.final_sentiment_score)}`}>
+                                        {data.final_sentiment_score > 0 ? '+' : ''}{(data.final_sentiment_score * 100).toFixed(2)}
+                                    </div>
+                                    <div className="text-slate-400 text-sm mt-1">Score Final</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Gauge */}
+                        <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8">
+                            <h2 className="text-xl font-semibold text-white mb-6">Sentiment Global</h2>
+                            <div className="relative h-12 rounded-xl overflow-hidden bg-gradient-to-r from-red-600 via-yellow-500 to-green-600">
+                                <div className="absolute top-0 bottom-0 w-1 bg-white shadow-lg" style={{ left: `${gaugePosition}%` }}>
+                                    <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-white text-slate-900 px-3 py-1 rounded-lg text-sm font-bold whitespace-nowrap shadow-lg">
+                                        {data.final_sentiment_score > 0 ? '+' : ''}{data.final_sentiment_score.toFixed(4)}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Components Breakdown */}
+                        <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8">
+                            <h2 className="text-xl font-semibold text-white mb-6">6 Dimensions de Sentiment</h2>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div className="space-y-4">
+                                    <ComponentBar label="📰 News" value={data.components.news_sentiment} weight={data.components.news_weight} />
+                                    <ComponentBar label="📊 Options" value={data.components.options_sentiment} weight={data.components.options_weight} />
+                                </div>
+                                <div className="space-y-4">
+                                    <ComponentBar label="👥 Analysts" value={data.components.analyst_sentiment} weight={data.components.analyst_weight} />
+                                    <ComponentBar label="🚀 Momentum" value={data.components.narrative_momentum} weight={0} />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        const ComponentBar = ({ label, value, weight }) => (
+            <div>
+                <div className="flex justify-between items-center mb-1">
+                    <span className="text-white font-medium">{label}</span>
+                    <span className={`font-bold ${getSentimentColor(value)}`}>{value > 0 ? '+' : ''}{value.toFixed(4)}</span>
+                </div>
+                <div className="w-full bg-slate-700 rounded-full h-3 overflow-hidden">
+                    <div className={`${getSentimentBg(value)} h-3`} style={{ width: `${Math.abs(value) * 100}%`, marginLeft: value < 0 ? `${100 - Math.abs(value) * 100}%` : '0' }} />
+                </div>
+                {weight > 0 && <div className="text-right text-xs text-slate-400 mt-1">Poids: {(weight * 100).toFixed(1)}%</div>}
+            </div>
+        );
+
+        // --- VUE DETAIL OPTIONS ---
+        const OptionsDetailView = ({ ticker, data, onBack }) => {
+            const opts = data.options_detail;
+            if (!opts) return <div className="p-8 text-white">Pas de données d'options. <button onClick={onBack}>Retour</button></div>;
+
+            const pcrVolume = opts.put_call_ratio_volume;
+            const callIV = opts.call_implied_volatility;
+            const putIV = opts.put_implied_volatility;
+            const ivSkew = callIV - putIV;
+
+            return (
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-6">
+                    <div className="max-w-7xl mx-auto space-y-6">
+                        <button onClick={onBack} className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors">
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+                            Retour à la grille
+                        </button>
+
+                        <div className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 backdrop-blur-sm border border-purple-700/50 rounded-2xl p-8">
+                            <div className="flex items-center justify-between">
+                                <div>
+                                    <div className="flex items-center gap-3">
+                                        <h1 className="text-5xl font-bold text-white mb-2">{ticker}</h1>
+                                        <span className="px-3 py-1 bg-purple-900/50 text-purple-400 rounded-full text-sm font-semibold border border-purple-800">
+                                            📈 VUE OPTIONS
+                                        </span>
+                                    </div>
+                                    <p className="text-slate-400">Analyse Deep Dive du marché des options</p>
+                                </div>
+                                <div className="text-right">
+                                    <div className={`text-4xl font-bold ${opts.sentiment_label === 'bullish' ? 'text-green-400' : 'text-red-400'}`}>
+                                        {opts.sentiment_label.toUpperCase()}
+                                    </div>
+                                    <div className="text-slate-400 text-sm mt-1">Sentiment Options</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Top Metrics */}
+                        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                            <MetricCard label="Volume Total" value={opts.total_contracts.toLocaleString()} sub="Contrats" />
+                            <MetricCard label="Open Interest" value={opts.total_open_interest.toLocaleString()} sub="Positions" />
+                            <MetricCard label="Put/Call Vol" value={pcrVolume.toFixed(3)} subColor={pcrVolume < 0.7 ? 'text-green-400' : pcrVolume > 1.0 ? 'text-red-400' : 'text-yellow-400'} sub={pcrVolume < 0.7 ? 'Bullish' : 'Bearish'} />
+                            <MetricCard label="Skew" value={`${(ivSkew * 100).toFixed(1)}%`} subColor={ivSkew > 0 ? 'text-orange-400' : 'text-purple-400'} sub={ivSkew > 0 ? 'Call Skew' : 'Put Skew'} />
+                        </div>
+
+                        {/* Distributions */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="bg-slate-800/50 border border-slate-700 rounded-2xl p-8">
+                                <h2 className="text-xl font-semibold text-white mb-6">Volume Distribution</h2>
+                                <div className="space-y-4">
+                                    <BarMetric label="Calls" value={opts.call_volume} total={opts.total_contracts} color="bg-green-500" />
+                                    <BarMetric label="Puts" value={opts.put_volume} total={opts.total_contracts} color="bg-red-500" />
+                                </div>
+                            </div>
+                            <div className="bg-slate-800/50 border border-slate-700 rounded-2xl p-8">
+                                <h2 className="text-xl font-semibold text-white mb-6">Implied Volatility</h2>
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div className="bg-slate-700/50 p-4 rounded-xl">
+                                        <div className="text-slate-400 text-sm">Call IV</div>
+                                        <div className="text-3xl font-bold text-green-400">{(callIV * 100).toFixed(1)}%</div>
+                                    </div>
+                                    <div className="bg-slate-700/50 p-4 rounded-xl">
+                                        <div className="text-slate-400 text-sm">Put IV</div>
+                                        <div className="text-3xl font-bold text-red-400">{(putIV * 100).toFixed(1)}%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        const MetricCard = ({ label, value, sub, subColor = "text-slate-500" }) => (
+            <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
+                <div className="text-slate-400 text-sm mb-2">{label}</div>
+                <div className="text-3xl font-bold text-white">{value}</div>
+                <div className={`text-sm mt-2 ${subColor}`}>{sub}</div>
+            </div>
+        );
+
+        const BarMetric = ({ label, value, total, color }) => (
+            <div>
+                <div className="flex justify-between text-sm mb-2">
+                    <span className="text-white">{label}</span>
+                    <span className="text-white font-bold">{value.toLocaleString()}</span>
+                </div>
+                <div className="w-full bg-slate-700 rounded-full h-3">
+                    <div className={`${color} h-3 rounded-full`} style={{ width: `${(value / total) * 100}%` }}></div>
+                </div>
+            </div>
+        );
+
+        // --- MAIN APP (ROUTER) ---
+        const App = () => {
+            const [view, setView] = useState('grid'); // 'grid' | 'sentiment' | 'options'
+            const [selectedTicker, setSelectedTicker] = useState(null);
+            const [tickersData, setTickersData] = useState([]);
+
+            React.useEffect(() => {
+                const data = Object.entries(EMBEDDED_DATA).map(([ticker, data]) => ({ ticker, data }));
+                setTickersData(data);
+            }, []);
+
+            const handleNavigate = (targetView, ticker) => {
+                setSelectedTicker(ticker);
+                setView(targetView);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+
+            const handleBack = () => {
+                setView('grid');
+                setSelectedTicker(null);
+            };
+
+            const getData = () => tickersData.find(t => t.ticker === selectedTicker)?.data;
+
+            if (tickersData.length === 0) return <div className="text-white p-10">Chargement...</div>;
+
+            if (view === 'sentiment' && selectedTicker) {
+                return <SentimentDetailView ticker={selectedTicker} data={getData()} onBack={handleBack} />;
+            }
+
+            if (view === 'options' && selectedTicker) {
+                return <OptionsDetailView ticker={selectedTicker} data={getData()} onBack={handleBack} />;
+            }
+
+            return <GridView tickersData={tickersData} onNavigate={handleNavigate} />;
+        };
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+
+</html>

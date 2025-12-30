@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  n8n:
+    build: . # Utilise ton Dockerfile custom
+    container_name: n8n_data_architect
+    restart: always
+    ports:
+      - "5678:5678"
+      - "8501:8501"
+    environment:
+      - N8N_HOST=localhost
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=http
+      - NODE_ENV=production
+      - WEBHOOK_URL=http://localhost:5678/
+      # Sécurité basique pour le local
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_USER=${N8N_USER}
+      - N8N_BASIC_AUTH_PASSWORD=${N8N_PASSWORD}
+      # Activation des manipulations de fichiers locaux
+      - N8N_SECURE_COOKIE=false
+    volumes:
+      # Persistance de la DB interne (SQLite par défaut) et config
+      - n8n_data:/home/node/.n8n
+      # LE POINT CLÉ : Mapping de tes scripts locaux vers le conteneur
+      - ./prod:/data/scripts
+      # Mapping pour l'échange de fichiers (CSV, JSON)
+      - ./local_files:/data/files
+    depends_on:
+      - ollama
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama_local_ai
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: always
+    # Pour le support GPU Nvidia (si disponible et configuré sur l'hôte)
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+volumes:
+  n8n_data:
+  ollama_data:

@@ -1,0 +1,25 @@
+# System & Environment
+.env
+.venv/
+.venv_dashboard/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Data & Logs
+local_files/
+_archive/
+logs/
+*.log
+*.csv
+*.json
+!prod/dashboard/config/*.json
+
+# Large/Generated files
+*.mmd
+*.svg
