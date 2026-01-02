@@ -31,13 +31,19 @@
 
 ## 🔧 Plans Techniques
 
-### [`POLITICAL_TRADES_PLAN.md`](POLITICAL_TRADES_PLAN.md)
-**Durée:** 15 min (lecture) + 2h (implémentation)  
+### 📁 QuiverQuant Documentation [`docs/QQ/`](QQ/)
+**Durée:** Variable selon besoin  
 **Contenu:**
-- Stratégie déblocage données politiques
-- BeautifulSoup guide complet
-- Alternatives (Selenium, paid APIs)
-- Implementation step-by-step
+- Documentation complète QuiverQuant API
+- Pipeline automatisé political trading
+- Diagrammes Mermaid du flux complet
+- Guides d'intégration et références
+
+**Fichiers principaux:**
+- [`QQ/README.md`](QQ/README.md) - Index complet ⭐
+- [`QQ/POLITICAL_TRADING_PIPELINE.md`](QQ/POLITICAL_TRADING_PIPELINE.md) - Guide du pipeline
+- [`QQ/QUIVERQUANT_API_REFERENCE.md`](QQ/QUIVERQUANT_API_REFERENCE.md) - Référence API
+- [`QQ/political_trades_flow.md`](QQ/political_trades_flow.md) - Diagrammes Mermaid
 
 ---
 
