@@ -1,0 +1,29 @@
+{
+  "ticker": "AMZN",
+  "timestamp": "2025-12-10T01:29:11.777764",
+  "final_sentiment_score": 0.3244,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.4574,
+  "components": {
+    "news_sentiment": 0.0445,
+    "news_confidence": 0.7734,
+    "news_weight": 0.3402,
+    "options_sentiment": 0.3171,
+    "options_confidence": 1.0,
+    "options_weight": 0.6598,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.2726,
+    "opportunity_score": 0,
+    "interpretation": "???? Consensus - Nouvelles et march?? s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 239,
+    "options_volume": 292611,
+    "analysis_depth": "DEEP"
+  }
+}

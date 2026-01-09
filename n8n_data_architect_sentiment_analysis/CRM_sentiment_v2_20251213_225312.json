@@ -1,0 +1,115 @@
+{
+  "ticker": "CRM",
+  "timestamp": "2025-12-13T22:53:12.128799",
+  "final_sentiment_score": 0.2214,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2153,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0205,
+    "news_confidence": 0.5074,
+    "news_weight": 0.3346,
+    "options_sentiment": 0.1721,
+    "options_confidence": 0.6727,
+    "options_weight": 0.6654,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.1516,
+    "opportunity_score": 0,
+    "interpretation": "\ud83e\udd1d Consensus - Nouvelles et march\u00e9s s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 188,
+    "options_volume": 24094,
+    "analysis_depth": "DEEP",
+    "config_rationale": "Configuration par d\u00e9faut (mod\u00e9r\u00e9e)"
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.191,
+    "metrics": {
+      "avg_iv": 0.5956,
+      "iv_skew": 0.06590357266736045,
+      "pcr_volume": 0.531
+    },
+    "implications": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-11T13:57:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.38,
+        "impact_score": 0.114,
+        "title": "Can Agentforce Momentum Help Salesforce Reignite Revenue Growth? - TradingView",
+        "matches": 1
+      },
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2025-12-11T12:46:00+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.38,
+        "impact_score": 0.076,
+        "title": "Slack CEO leaves Salesforce to become OpenAI's first revenue chief, tackle multibillion-dollar losses - Fortune",
+        "matches": 1
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-11T13:00:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "ZS to introduce ZAIDYN\u00ae intelligence into Agentforce Life Sciences - Yahoo Finance",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2025-12-11T13:57:00+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.38,
+      "impact_score": 0.114,
+      "title": "Can Agentforce Momentum Help Salesforce Reignite Revenue Growth? - TradingView",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "\u2713 Catalyseurs mineurs. Impact limit\u00e9 sur tendance globale.",
+    "categories_present": [
+      "MANAGEMENT",
+      "PRODUCT",
+      "FINANCIAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.731,
+    "sentiment_volatility": 0.353,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "M\u00e9triques standards, pas de signal particulier."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "\ud83c\udf2a\ufe0f",
+      "title": "R\u00c9GIME DE HAUTE VOLATILIT\u00c9",
+      "message": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "ticker": "GOOGL",
+  "timestamp": "2025-12-10T01:21:31.806292",
+  "final_sentiment_score": 0.2976,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.3318,
+  "components": {
+    "news_sentiment": 0.027,
+    "news_confidence": 0.7378,
+    "news_weight": 0.3333,
+    "options_sentiment": 0.2828,
+    "options_confidence": 0.9839,
+    "options_weight": 0.6667,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.2558,
+    "opportunity_score": 0,
+    "interpretation": "???? Consensus - Nouvelles et march?? s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 377,
+    "options_volume": 219538,
+    "analysis_depth": "DEEP"
+  }
+}

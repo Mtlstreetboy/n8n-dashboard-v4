@@ -1,0 +1,199 @@
+{
+  "ticker": "TMO",
+  "timestamp": "2026-01-03T02:59:48.932864",
+  "final_sentiment_score": -0.2093,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2689,
+  "smart_money_factor": 0.1367,
+  "components": {
+    "news_sentiment": 0.009,
+    "news_confidence": 0.5,
+    "news_weight": 0.2758,
+    "options_sentiment": -0.017,
+    "options_confidence": 1.0,
+    "options_weight": 0.5197,
+    "analyst_sentiment": 0.5548,
+    "analyst_confidence": 0.4449,
+    "analyst_weight": 0.2045,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "bearish_divergence",
+    "magnitude": 0.5502,
+    "opportunity_score": 0.4401,
+    "interpretation": "\ud83d\udc3b BEARISH DIVERGENCE (force: 0.55) - Le march\u00e9 ignore les bonnes nouvelles. Possible correction \u00e0 venir ou les nouvelles sont 'priced in'."
+  },
+  "metadata": {
+    "news_articles_count": 19,
+    "options_volume": 2570,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "TMO est une compagnie utilities avec des nouvelles fr\u00e9quentes mais moins volatil que TSLA. Un decay mod\u00e9r\u00e9 et un threshold moyen sont appropri\u00e9s.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.53846,
+    "recommendation_count": 23,
+    "recommendation_summary": "Buy consensus (Mean: 1.5)",
+    "recommendation_score": 0.731,
+    "target_mean": 639.3913,
+    "target_median": 630.0,
+    "current_price": 592.51,
+    "upside_potential": 0.0791232215490034,
+    "price_target_score": 0.157,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 0.693,
+      "pt": 0.307,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0.925,
+      "price_target": 0.409,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.082,
+    "metrics": {
+      "avg_iv": 0.54115,
+      "iv_skew": 0.375548726953468,
+      "pcr_volume": 1.017
+    },
+    "implications": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections. | \u26a0\ufe0f Put skew \u00e9lev\u00e9 - Protection tail risk demand\u00e9e",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-23T08:00:00+00:00",
+        "confidence": 0.667,
+        "sentiment": 0.933,
+        "impact_score": 0.56,
+        "title": "Favorable Results and Improved Guidance Lifted Thermo Fisher Scientific (TMO) in Q3 - Yahoo Finance",
+        "matches": 2
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-20T08:00:00+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.227,
+        "impact_score": 0.038,
+        "title": "Analysts See 12% Upside To Thermo Fisher Scientific Inc. (TMO) - Yahoo Finance",
+        "matches": 1
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-22T08:00:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.072,
+        "impact_score": 0.017,
+        "title": "TMO Stock May Benefit From PPD CorEvitas Alzheimer's Registry Launch - Yahoo Finance",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2025-12-23T08:00:00+00:00",
+      "confidence": 0.667,
+      "sentiment": 0.933,
+      "impact_score": 0.56,
+      "title": "Favorable Results and Improved Guidance Lifted Thermo Fisher Scientific (TMO) in Q3 - Yahoo Finance",
+      "matches": 2
+    },
+    "impact_assessment": "MODERATE_IMPACT",
+    "recommendation": "\ud83d\udcca Catalyseurs mod\u00e9r\u00e9s en jeu. Ajuster positions selon d\u00e9veloppements.",
+    "categories_present": [
+      "PRODUCT",
+      "FINANCIAL",
+      "ANALYST"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.569,
+    "sentiment_volatility": 0.318,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Je suis d\u00e9sol\u00e9 mais je ne peux pas fournir d\u2019informations ou de conseils sur les transactions financi\u00e8res. Puis-je vous aider avec autre chose ?"
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "SMART_MONEY",
+      "icon": "\ud83d\udcb0",
+      "title": "SMART MONEY ACTIF",
+      "message": "D\u00e9tection d'activit\u00e9 institutionnelle (score: 0.137). Open Interest sugg\u00e8re positionnement de gros joueurs.",
+      "action": "Analyser leurs positions. Ils ont souvent raison \u00e0 moyen terme.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "\ud83c\udf2a\ufe0f",
+      "title": "R\u00c9GIME DE HAUTE VOLATILIT\u00c9",
+      "message": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections. | \u26a0\ufe0f Put skew \u00e9lev\u00e9 - Protection tail risk demand\u00e9e",
+      "action": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "MEDIUM",
+      "type": "DIVERGENCE",
+      "icon": "\u26a0\ufe0f",
+      "title": "Divergence Notable",
+      "message": "\ud83d\udc3b BEARISH DIVERGENCE (force: 0.55) - Le march\u00e9 ignore les bonnes nouvelles. Possible correction \u00e0 venir ou les nouvelles sont 'priced in'.",
+      "action": "Surveiller \u00e9volution dans les 24-48h",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "MEDIUM",
+      "type": "CATALYST",
+      "icon": "\ud83c\udfaf",
+      "title": "Catalyseur: Earnings",
+      "message": "Favorable Results and Improved Guidance Lifted Thermo Fisher Scientific (TMO) in... (Impact: 0.56)",
+      "action": "\ud83d\udcca Catalyseurs mod\u00e9r\u00e9s en jeu. Ajuster positions selon d\u00e9veloppements.",
+      "urgency": "SOON"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "\u26a0\ufe0f",
+      "title": "Donn\u00e9es Limit\u00e9es",
+      "message": "Seulement 19 articles analys\u00e9s. Confiance r\u00e9duite.",
+      "action": "Attendre plus de donn\u00e9es ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ],
+  "options_detail": {
+    "timestamp": "2026-01-03T01:50:34.485151",
+    "call_volume": 1274,
+    "put_volume": 1296,
+    "call_open_interest": 16400,
+    "put_open_interest": 28070,
+    "put_call_ratio_volume": 1.017,
+    "put_call_ratio_oi": 1.712,
+    "call_implied_volatility": 0.4556,
+    "put_implied_volatility": 0.6267,
+    "sentiment_label": "bearish",
+    "sentiment_score": -0.017,
+    "total_contracts": 2570,
+    "total_open_interest": 44470,
+    "near_term_call_volume": 915,
+    "far_term_call_volume": 359,
+    "near_term_put_volume": 937,
+    "far_term_put_volume": 359
+  }
+}

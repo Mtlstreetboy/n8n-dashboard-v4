@@ -1,0 +1,29 @@
+{
+  "ticker": "NVDA",
+  "timestamp": "2025-12-10T01:38:19.199857",
+  "final_sentiment_score": 0.2995,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.3504,
+  "components": {
+    "news_sentiment": 0.0303,
+    "news_confidence": 0.7244,
+    "news_weight": 0.3257,
+    "options_sentiment": 0.2812,
+    "options_confidence": 1.0,
+    "options_weight": 0.6743,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.2509,
+    "opportunity_score": 0,
+    "interpretation": "???? Consensus - Nouvelles et march?? s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 381,
+    "options_volume": 1239312,
+    "analysis_depth": "DEEP"
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "ticker": "ORCL",
+  "timestamp": "2025-12-23T23:52:02.287974",
+  "final_sentiment_score": 0.0993,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.118,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0171,
+    "news_confidence": 0.5537,
+    "news_weight": 0.2672,
+    "options_sentiment": 0.0255,
+    "options_confidence": 0.8272,
+    "options_weight": 0.5988,
+    "analyst_sentiment": 0.593,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.134,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0084,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 305,
+    "options_volume": 244650,
+    "analysis_depth": "DEEP",
+    "config_rationale": "As a software company, ORCL has a relatively stable sentiment profile with a moderate decay rate and a high threshold for divergence from its mean. The momentum window is set to capture the mid-term market trends.",
+    "version": "V3"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.81395,
+    "recommendation_count": 39,
+    "recommendation_summary": "Buy consensus (Mean: 1.8)",
+    "recommendation_score": 0.593,
+    "target_mean": 290.87622,
+    "target_median": 290.0,
+    "current_price": 195.34,
+    "upside_potential": 0.48907658441691404,
+    "price_target_score": 0.752,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.404,
+    "metrics": {
+      "avg_iv": 0.7020500000000001,
+      "iv_skew": -0.14664730728616696,
+      "pcr_volume": 0.722
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-23T04:19:54+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.783,
+        "impact_score": 0.131,
+        "title": "Palantir (PLTR) vs. Oracle (ORCL): AI Analyst Picks the Best AI Stock for 2026 - TipRanks",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-22T10:04:58+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.159,
+        "impact_score": 0.053,
+        "title": "Oracle: TikTok Deal Secures Major Cash Flow but Does Little to Derisk the Data Center Buildout - Morningstar Canada",
+        "matches": 1
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-23T09:33:14+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.084,
+        "impact_score": 0.02,
+        "title": "Oracle NetSuite Introduces NetSuite Next to Reimagine ERP with Embedded AI, Natural-Language Workflows - ERP Today",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "analyst_action",
+      "category": "ANALYST",
+      "timestamp": "2025-12-23T04:19:54+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.783,
+      "impact_score": 0.131,
+      "title": "Palantir (PLTR) vs. Oracle (ORCL): AI Analyst Picks the Best AI Stock for 2026 - TipRanks",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale. | Biais POSITIF des catalyseurs.",
+    "categories_present": [
+      "CORPORATE_ACTION",
+      "PRODUCT",
+      "ANALYST"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.404,
+    "sentiment_volatility": 0.501,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "📊 Based on these metrics, here's what I see:\n\n**Stable and Consistent**: The Sharpe Ratio suggests a moderate risk-adjusted sentiment, while the Volatility Sentiment indicates a stable sentiment. This combination implies that ORCL's sentiment is relatively steady.\n\n**No Clear Trend**: The Accélération Momentum shows no significant change in speed, indicating no clear trend or momentum.\n\n**Contrarian Opportunity**: Despite the HOLD classification and moderate conviction, the Score Contrarian suggests there might be an opportunity for contrarian investors to act (e.g., buy/sell).\n\nFor a trader, this analysis implies:\n\n📊 **Monitor and Wait**: Consider monitoring ORCL's sentiment and waiting for potential contrarian opportunities or changes in momentum before taking action.\n\n(Note: These insights are based on the provided metrics only and should not be considered as personalized investment advice.)"
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

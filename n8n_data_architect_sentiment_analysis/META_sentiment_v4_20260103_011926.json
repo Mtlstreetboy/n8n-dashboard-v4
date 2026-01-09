@@ -1,0 +1,142 @@
+{
+  "ticker": "META",
+  "timestamp": "2026-01-03T01:19:13.686570",
+  "final_sentiment_score": 0.0159,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.0752,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0007,
+    "news_confidence": 0.7431,
+    "news_weight": 0.3279,
+    "options_sentiment": 0.1184,
+    "options_confidence": 0.8304,
+    "options_weight": 0.5496,
+    "analyst_sentiment": 0.8209,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.1226,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.1177,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 572,
+    "options_volume": 256970,
+    "analysis_depth": "DEEP",
+    "config_rationale": "META est une entreprise technologique avec des nouvelles fréquentes et volatilites typiques de ce secteur, nécessitant donc un ajustement du modèle pour réagir rapidement aux changements.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.35821,
+    "recommendation_count": 59,
+    "recommendation_summary": "Strong Buy consensus (Mean: 1.4)",
+    "recommendation_score": 0.821,
+    "target_mean": 837.1525,
+    "target_median": 850.0,
+    "current_price": 650.41,
+    "upside_potential": 0.28711505050660363,
+    "price_target_score": 0.518,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.353,
+    "metrics": {
+      "avg_iv": 0.67655,
+      "iv_skew": 0.08618563058896093,
+      "pcr_volume": 0.566
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2026-01-02T15:18:05+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.665,
+        "impact_score": 0.222,
+        "title": "Meta Just Acquired an Incredibly Impressive AI Startup. - 24/7 Wall St.",
+        "matches": 1
+      },
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2026-01-02T18:26:14+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.877,
+        "impact_score": 0.175,
+        "title": "Yann LeCun calls Alexandr Wang 'inexperienced' and predicts more Meta AI employee departures - Business Insider Africa",
+        "matches": 1
+      }
+    ],
+    "count": 2,
+    "most_recent": {
+      "type": "merger_acquisition",
+      "category": "CORPORATE_ACTION",
+      "timestamp": "2026-01-02T15:18:05+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.665,
+      "impact_score": 0.222,
+      "title": "Meta Just Acquired an Incredibly Impressive AI Startup. - 24/7 Wall St.",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "CORPORATE_ACTION",
+      "MANAGEMENT"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.026,
+    "sentiment_volatility": 0.324,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Bien sûr ! Voici les analyses:\n\n📊 **Métrique critique** : Sharpe Ratio bas (0.026) indique un sentiment risqué ajusté, ce qui pourrait rendre le portefeuille plus sensibles aux fluctuations du marché.\n\nAction recommandée : Réduire la taille des positions ou considérer une position plus large pour atténuer le risque.\n\n📈 **Volatilité Sentiment** élevée (0.324) suggère un sentiment chaotique, ce qui peut être un signal de surpris du marché.\n\nAction recommandée : Suivre les actualités et se tenir prêt à ajuster la position en fonction des changements du sentiment.\n\n🚀 **Accélération Momentum** neutre (0.0) indique que le changement de vitesse est stable, sans tendance claire.\n\nAction recommandée : Maintenir la position actuelle ou attendre davantage d'informations avant prendre une décision.\n\n🤔 **Score Contrarian** bas (0) suggère un consensus faible, ce qui pourrait indiquer des opportunités cachées.\n\nAction recommandée : Explorer d'autres sources de sentiment ou actualités pour obtenir plus d'informations."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "😨",
+      "title": "Asymétrie de Peur Détectée",
+      "message": "Marché surréagit aux mauvaises nouvelles. Possible capitulation ou opportunité contrarian.",
+      "action": "Opportunité d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    }
+  ]
+}

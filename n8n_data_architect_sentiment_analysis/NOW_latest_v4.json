@@ -1,0 +1,127 @@
+{
+  "ticker": "NOW",
+  "timestamp": "2026-01-06T17:36:36.961322",
+  "final_sentiment_score": -0.6231,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2941,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0156,
+    "news_confidence": 0.9218,
+    "news_weight": 0.4511,
+    "options_sentiment": -5.204,
+    "options_confidence": 1.0,
+    "options_weight": 0.5489,
+    "analyst_sentiment": 0,
+    "analyst_confidence": 0,
+    "analyst_weight": 0.0,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "bearish_divergence",
+    "magnitude": 1.0156,
+    "opportunity_score": 0.8125,
+    "interpretation": "\ud83d\udc3b BEARISH DIVERGENCE (force: 1.02) - Le march\u00e9 ignore les bonnes nouvelles. Possible correction \u00e0 venir ou les nouvelles sont 'priced in'."
+  },
+  "metadata": {
+    "news_articles_count": 180,
+    "options_volume": 74196,
+    "analysis_depth": "DEEP",
+    "config_rationale": "NOW est une action du secteur des technologies avec un volume de trading d'options important et une forte r\u00e9activit\u00e9 aux nouvelles. La fr\u00e9quence \u00e9lev\u00e9e des informations tech justifie un d\u00e9clin temporel plus rapide, tandis que la volatilit\u00e9 requiert une p\u00e9nalit\u00e9 pour la volatilit\u00e9 plus \u00e9lev\u00e9e.",
+    "version": "V4 - Dual Brain"
+  },
+  "volatility_regime": {
+    "regime": "MODERATE_VOLATILITY",
+    "sub_regime": "RISING",
+    "confidence": 0.7,
+    "metrics": {
+      "avg_iv": 0.49875,
+      "iv_skew": -0.3880090497737557,
+      "pcr_volume": 6.204
+    },
+    "implications": "\ud83d\udcc8 TENSION MONTANTE - Nervosit\u00e9 croissante. Surveiller pour escalade. | \ud83d\udcde Call skew \u00e9lev\u00e9 - Sp\u00e9culation haussi\u00e8re agressive",
+    "signal_adjustment": -0.05,
+    "recommendation": "Augmenter prudence. R\u00e9duire taille positions. Surveiller \u00e9volution."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2026-01-01T15:23:36+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.81,
+        "impact_score": 0.27,
+        "title": "ServiceNow Strengthens AI Platform Following Completion of Moveworks Acquisition - The Software Report",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2026-01-01T20:12:00+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.882,
+        "impact_score": 0.147,
+        "title": "The Great Agent War: Salesforce and ServiceNow Clash Over the Future of the Enterprise AI Operating System - FinancialContent",
+        "matches": 1
+      }
+    ],
+    "count": 2,
+    "most_recent": {
+      "type": "merger_acquisition",
+      "category": "CORPORATE_ACTION",
+      "timestamp": "2026-01-01T15:23:36+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.81,
+      "impact_score": 0.27,
+      "title": "ServiceNow Strengthens AI Platform Following Completion of Moveworks Acquisition - The Software Report",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "\u2713 Catalyseurs mineurs. Impact limit\u00e9 sur tendance globale.",
+    "categories_present": [
+      "ANALYST",
+      "CORPORATE_ACTION"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.532,
+    "sentiment_volatility": 0.298,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0.44,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "\ud83d\udcca Voici les analyses :\n\n1. **Perte de confiance** | **Reviens sur tes positions**, la Sharpe Ratio est faible, indiquant que le sentiment est fortement ajust\u00e9 au risque, ce qui peut traduire une perte de confiance des investisseurs dans NOW.\n2. **Volatilit\u00e9 \u00e9lev\u00e9e** | **Sois prudent et r\u00e9fl\u00e9chissant**, l'Acc\u00e9l\u00e9ration Momentum est \u00e0 0 et la Volatilit\u00e9 Sentiment est de 0.298, ce qui signifie que les sentiments sont instables et peuvent faire flipper le march\u00e9.\n3. **Opportunit\u00e9 contrariane** | **Consid\u00e8re des positions longues**, le Score Contrarian est \u00e9lev\u00e9 \u00e0 0.44, indiquant une forte opportunit\u00e9 d'achat, ce qui peut traduire un sentiment n\u00e9gatif sur les march\u00e9s mais potentiellement rentable.\n4. **Incoh\u00e9rence du sentiment** | **Attends les signaux plus clairs**, la Consistance est \u00e0 0,0, ce qui sugg\u00e8re que le sentiment est incoherent et peu fiable.\n\nNote : Les informations fournies ne sont pas des conseils d'investissement, mais plut\u00f4t une analyse quantitative."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "DIVERGENCE",
+      "icon": "\ud83d\udea8",
+      "title": "DIVERGENCE MAJEURE D\u00c9TECT\u00c9E",
+      "message": "\ud83d\udc3b BEARISH DIVERGENCE (force: 1.02) - Le march\u00e9 ignore les bonnes nouvelles. Possible correction \u00e0 venir ou les nouvelles sont 'priced in'.",
+      "action": "\u274c NE PAS ACHETER malgr\u00e9 bonnes nouvelles. Attendre correction ou confirmation par price action.",
+      "urgency": "IMMEDIATE"
+    }
+  ],
+  "options_detail": {
+    "timestamp": "2026-01-06T17:27:06.549666",
+    "call_volume": 10299,
+    "put_volume": 63897,
+    "call_open_interest": 215693,
+    "put_open_interest": 168221,
+    "put_call_ratio_volume": 6.204,
+    "put_call_ratio_oi": 0.78,
+    "call_implied_volatility": 0.6188,
+    "put_implied_volatility": 0.3787,
+    "sentiment_label": "bearish",
+    "sentiment_score": -5.204,
+    "total_contracts": 74196,
+    "total_open_interest": 383914,
+    "near_term_call_volume": 7447,
+    "far_term_call_volume": 2852,
+    "near_term_put_volume": 58751,
+    "far_term_put_volume": 5146
+  }
+}

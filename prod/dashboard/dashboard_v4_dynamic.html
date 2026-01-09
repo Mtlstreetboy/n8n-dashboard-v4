@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment V4 Dashboard - Dynamic Data</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        // Utility functions
+        const getSentimentColor = (score) => {
+            if (score > 0.5) return 'text-green-500';
+            if (score > 0.2) return 'text-green-400';
+            if (score < -0.5) return 'text-red-500';
+            if (score < -0.2) return 'text-red-400';
+            return 'text-yellow-500';
+        };
+
+        const getSentimentBg = (score) => {
+            if (score > 0.5) return 'bg-green-500';
+            if (score > 0.2) return 'bg-green-400';
+            if (score < -0.5) return 'bg-red-500';
+            if (score < -0.2) return 'bg-red-400';
+            return 'bg-yellow-500';
+        };
+
+        // Breadcrumb Component
+        const Breadcrumb = ({ path, onNavigate }) => (
+            <div className="flex items-center gap-2 text-sm text-slate-400 mb-6">
+                {path.map((item, idx) => (
+                    <React.Fragment key={idx}>
+                        {idx > 0 && <span>›</span>}
+                        <button
+                            onClick={() => onNavigate(item.view, item.ticker, item.section)}
+                            className={`hover:text-cyan-400 transition-colors ${idx === path.length - 1 ? 'text-white font-semibold' : ''}`}
+                        >
+                            {item.label}
+                        </button>
+                    </React.Fragment>
+                ))}
+            </div>
+        );
+
+        // NIVEAU 1: GridView - Vue principale avec grille de tickers (SPLIT NAVIGATION)
+        const GridView = ({ tickersData, onNavigate, lastUpdated }) => {
+            // Sort tickers alphabetically
+            const sortedTickers = [...tickersData].sort((a, b) => a.ticker.localeCompare(b.ticker));
+
+            return (
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-6">
+                    <div className="max-w-7xl mx-auto">
+                        <div className="flex justify-between items-center mb-8">
+                            <h1 className="text-4xl font-bold text-white">🧠 Sentiment Dashboard V4 - Dynamic</h1>
+                            <div className="text-right">
+                                <div className="text-slate-400 text-sm">Dernière mise à jour</div>
+                                <div className="text-cyan-400 font-mono">{lastUpdated}</div>
+                                <div className="text-slate-500 text-xs mt-1">{tickersData.length} tickers chargés</div>
+                            </div>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {sortedTickers.map(({ ticker, data }) => (
+                                <div
+                                    key={ticker}
+                                    className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-cyan-500 hover:shadow-lg hover:shadow-cyan-500/20 transition-all"
+                                >
+                                    {/* Ticker name with alert icons */}
+                                    <div className="flex items-center gap-2 mb-4">
+                                        <h2 className="text-2xl font-bold text-white">{ticker}</h2>
+                                        {data.alerts && data.alerts.length > 0 && (
+                                            <div className="flex gap-1">
+                                                {data.alerts.slice(0, 3).map((alert, idx) => (
+                                                    <span key={idx} className="text-lg">{alert.icon}</span>
+                                                ))}
+                                            </div>
+                                        )}
+                                    </div>
+
+                                    <div className={`text-4xl font-bold ${getSentimentColor(data.final_sentiment_score)}`}>
+                                        {(data.final_sentiment_score > 0 ? '+' : '')}{(data.final_sentiment_score * 100).toFixed(2)}
+                                    </div>
+                                    <div className="text-slate-400 mt-2">{data.classification}</div>
+                                    <div className="text-slate-500 text-sm mt-1">
+                                        Conviction: {(data.conviction_score * 100).toFixed(1)}%
+                                    </div>
+
+                                    {/* Split Navigation Buttons */}
+                                    <div className="mt-4 pt-4 border-t border-slate-700 grid grid-cols-2 gap-3">
+                                        <button
+                                            onClick={() => onNavigate('sentiment', ticker)}
+                                            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors text-sm"
+                                        >
+                                            📊 Sentiment
+                                        </button>
+                                        <button
+                                            onClick={() => onNavigate('options', ticker)}
+                                            className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg transition-colors text-sm"
+                                        >
+                                            📈 Options
+                                        </button>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        <div className="text-center text-slate-600 text-xs mt-8 pb-4">
+                            Dashboard v4.1 (Dynamic) • Finance Integrated • Fixed Weights display
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        // NIVEAU 3: Options Deep Dive
+        const OptionsDeepDive = ({ ticker, data, onBack }) => {
+            const opts = data.options_detail;
+            if (!opts) {
+                return (
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-6">
+                        <div className="max-w-7xl mx-auto">
+                            <button onClick={onBack} className="text-cyan-400 hover:text-cyan-300 mb-6">← Retour</button>
+                            <div className="text-white text-2xl">Données d'options non disponibles</div>
+                        </div>
+                    </div>
+                );
+            }
+
+            const pcrVolume = opts.put_call_ratio_volume;
+            const pcrOI = opts.put_call_ratio_oi;
+            const callIV = opts.call_implied_volatility;
+            const putIV = opts.put_implied_volatility;
+            const ivSkew = callIV - putIV;
+
+            return (
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-6">
+                    <div className="max-w-7xl mx-auto space-y-6">
+                        <Breadcrumb
+                            path={[
+                                { label: 'Grille', view: 'grid' },
+                                { label: ticker, view: 'detail', ticker },
+                                { label: 'Options Deep Dive', view: 'deepdive', ticker, section: 'options' }
+                            ]}
+                            onNavigate={(view, t, s) => {
+                                if (view === 'grid') onBack('grid');
+                                else if (view === 'detail') onBack('detail');
+                            }}
+                        />
+
+                        {/* Header */}
+                        <div className="bg-gradient-to-r from-cyan-900/30 to-blue-900/30 backdrop-blur-sm border border-cyan-700/50 rounded-2xl p-8">
+                            <h1 className="text-4xl font-bold text-white mb-2">📊 Options Deep Dive - {ticker}</h1>
+                            <p className="text-slate-400">Analyse détaillée du marché des options</p>
+                        </div>
+
+                        {/* Key Metrics Grid */}
+                        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                            <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
+                                <div className="text-slate-400 text-sm mb-2">Sentiment Global</div>
+                                <div className={`text-3xl font-bold ${opts.sentiment_label === 'bullish' ? 'text-green-400' : opts.sentiment_label === 'bearish' ? 'text-red-400' : 'text-yellow-400'}`}>
+                                    {opts.sentiment_label.toUpperCase()}
+                                </div>
+                                <div className="text-slate-500 text-sm mt-2">Score: {opts.sentiment_score.toFixed(3)}</div>
+                            </div>
+
+                            <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
+                                <div className="text-slate-400 text-sm mb-2">Volume Total</div>
+                                <div className="text-3xl font-bold text-white">{opts.total_contracts.toLocaleString()}</div>
+                                <div className="text-slate-500 text-sm mt-2">Contrats</div>
+                            </div>
+
+                            <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
+                                <div className="text-slate-400 text-sm mb-2">Open Interest</div>
+                                <div className="text-3xl font-bold text-white">{opts.total_open_interest.toLocaleString()}</div>
+                                <div className="text-slate-500 text-sm mt-2">Contrats ouverts</div>
+                            </div>
+
+                            <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-6">
+                                <div className="text-slate-400 text-sm mb-2">Timestamp</div>
+                                <div className="text-lg font-bold text-white">{new Date(opts.timestamp).toLocaleTimeString('fr-FR')}</div>
+                                <div className="text-slate-500 text-sm mt-2">{new Date(opts.timestamp).toLocaleDateString('fr-FR')}</div>
+                            </div>
+                        </div>
+
+                        {/* Put/Call Ratios */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="bg-slate-800/50 border border-slate-700 rounded-2xl p-8">
+                                <h2 className="text-xl font-semibold text-white mb-6">📊 Put/Call Ratio - Volume</h2>
+                                <div className="text-center mb-6">
+                                    <div className={`text-6xl font-bold ${(pcrVolume < 0.7) ? 'text-green-400' : (pcrVolume > 1.0) ? 'text-red-400' : 'text-yellow-400'}`}>
+                                        {pcrVolume.toFixed(3)}
+                                    </div>
+                                    <div className="text-slate-400 text-sm mt-2">
+                                        {(pcrVolume < 0.7) ? '🚀 Très Bullish' : (pcrVolume > 1.0) ? '🐻 Bearish' : '⚖️ Neutre'}
+                                    </div>
+                                </div>
+                                <div className="space-y-3">
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-slate-400">Call Volume</span>
+                                        <span className="text-green-400 font-bold">{opts.call_volume.toLocaleString()}</span>
+                                    </div>
+                                    <div className="w-full bg-slate-700 rounded-full h-3">
+                                        <div className="bg-green-500 h-3 rounded-full" style={{ width: `${(opts.call_volume / opts.total_contracts) * 100}%` }}></div>
+                                    </div>
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-slate-400">Put Volume</span>
+                                        <span className="text-red-400 font-bold">{opts.put_volume.toLocaleString()}</span>
+                                    </div>
+                                    <div className="w-full bg-slate-700 rounded-full h-3">
+                                        <div className="bg-red-500 h-3 rounded-full" style={{ width: `${(opts.put_volume / opts.total_contracts) * 100}%` }}></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="bg-slate-800/50 border border-slate-700 rounded-2xl p-8">
+                                <h2 className="text-xl font-semibold text-white mb-6">📈 Put/Call Ratio - Open Interest</h2>
+                                <div className="text-center mb-6">
+                                    <div className={`text-6xl font-bold ${(pcrOI < 0.7) ? 'text-green-400' : (pcrOI > 1.0) ? 'text-red-400' : 'text-yellow-400'}`}>
+                                        {pcrOI.toFixed(3)}
+                                    </div>
+                                    <div className="text-slate-400 text-sm mt-2">
+                                        {(pcrOI < 0.7) ? '📈 Positionnement Haussier' : (pcrOI > 1.0) ? '📉 Positionnement Baissier' : '➡️ Équilibré'}
+                                    </div>
+                                </div>
+                                <div className="space-y-3">
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-slate-400">Call OI</span>
+                                        <span className="text-green-400 font-bold">{opts.call_open_interest.toLocaleString()}</span>
+                                    </div>
+                                    <div className="w-full bg-slate-700 rounded-full h-3">
+                                        <div className="bg-green-500 h-3 rounded-full" style={{ width: `${(opts.call_open_interest / opts.total_open_interest) * 100}%` }}></div>
+                                    </div>
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-slate-400">Put OI</span>
+                                        <span className="text-red-400 font-bold">{opts.put_open_interest.toLocaleString()}</span>
+                                    </div>
+                                    <div className="w-full bg-slate-700 rounded-full h-3">
+                                        <div className="bg-red-500 h-3 rounded-full" style={{ width: `${(opts.put_open_interest / opts.total_open_interest) * 100}%` }}></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Implied Volatility */}
+                        <div className="bg-slate-800/50 border border-slate-700 rounded-2xl p-8">
+                            <h2 className="text-xl font-semibold text-white mb-6">🌪️ Implied Volatility Analysis</h2>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <div className="bg-slate-700/50 rounded-xl p-6">
+                                    <div className="text-slate-400 text-sm mb-2">Call IV</div>
+                                    <div className="text-4xl font-bold text-green-400 mb-2">{(callIV * 100).toFixed(1)}%</div>
+                                    <div className="text-slate-500 text-xs">Volatilité implicite des calls</div>
+                                </div>
+                                <div className="bg-slate-700/50 rounded-xl p-6">
+                                    <div className="text-slate-400 text-sm mb-2">Put IV</div>
+                                    <div className="text-4xl font-bold text-red-400 mb-2">{(putIV * 100).toFixed(1)}%</div>
+                                    <div className="text-slate-500 text-xs">Volatilité implicite des puts</div>
+                                </div>
+                                <div className="bg-slate-700/50 rounded-xl p-6">
+                                    <div className="text-slate-400 text-sm mb-2">IV Skew</div>
+                                    <div className={`text-4xl font-bold ${(ivSkew > 0) ? 'text-orange-400' : 'text-purple-400'}`}>
+                                        {(ivSkew > 0) ? '+' : ''}{(ivSkew * 100).toFixed(1)}%
+                                    </div>
+                                    <div className="text-slate-500 text-xs">
+                                        {(ivSkew > 0) ? '📞 Call skew (spéculation haussière)' : '📉 Put skew (protection baissière)'}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Near-term vs Far-term */}
+                        <div className="bg-slate-800/50 border border-slate-700 rounded-2xl p-8">
+                            <h2 className="text-xl font-semibold text-white mb-6">⏰ Distribution Temporelle</h2>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <h3 className="text-lg font-semibold text-white mb-4">Calls</h3>
+                                    <div className="space-y-4">
+                                        <div>
+                                            <div className="flex justify-between text-sm mb-2">
+                                                <span className="text-slate-400">Near-term</span>
+                                                <span className="text-green-400 font-bold">{opts.near_term_call_volume.toLocaleString()}</span>
+                                            </div>
+                                            <div className="w-full bg-slate-700 rounded-full h-3">
+                                                <div className="bg-green-500 h-3 rounded-full" style={{ width: `${(opts.near_term_call_volume / opts.call_volume) * 100}%` }}></div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div className="flex justify-between text-sm mb-2">
+                                                <span className="text-slate-400">Far-term</span>
+                                                <span className="text-green-300 font-bold">{opts.far_term_call_volume.toLocaleString()}</span>
+                                            </div>
+                                            <div className="w-full bg-slate-700 rounded-full h-3">
+                                                <div className="bg-green-300 h-3 rounded-full" style={{ width: `${(opts.far_term_call_volume / opts.call_volume) * 100}%` }}></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 className="text-lg font-semibold text-white mb-4">Puts</h3>
+                                    <div className="space-y-4">
+                                        <div>
+                                            <div className="flex justify-between text-sm mb-2">
+                                                <span className="text-slate-400">Near-term</span>
+                                                <span className="text-red-400 font-bold">{opts.near_term_put_volume.toLocaleString()}</span>
+                                            </div>
+                                            <div className="w-full bg-slate-700 rounded-full h-3">
+                                                <div className="bg-red-500 h-3 rounded-full" style={{ width: `${(opts.near_term_put_volume / opts.put_volume) * 100}%` }}></div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div className="flex justify-between text-sm mb-2">
+                                                <span className="text-slate-400">Far-term</span>
+                                                <span className="text-red-300 font-bold">{opts.far_term_put_volume.toLocaleString()}</span>
+                                            </div>
+                                            <div className="w-full bg-slate-700 rounded-full h-3">
+                                                <div className="bg-red-300 h-3 rounded-full" style={{ width: `${(opts.far_term_put_volume / opts.put_volume) * 100}%` }}></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Interpretation */}
+                        <div className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 border border-purple-700/50 rounded-2xl p-8">
+                            <h2 className="text-xl font-semibold text-white mb-4">💡 Interprétation</h2>
+                            <div className="space-y-3 text-slate-300">
+                                <p>
+                                    <strong className="text-white">Sentiment:</strong> Le marché des options affiche un sentiment <strong className={opts.sentiment_label === 'bullish' ? 'text-green-400' : 'text-red-400'}>{opts.sentiment_label}</strong> avec un score de {opts.sentiment_score.toFixed(3)}.
+                                </p>
+                                <p>
+                                    <strong className="text-white">Put/Call Ratio:</strong> {(pcrVolume < 0.7) ? 'Le faible PCR volume indique une forte demande pour les calls, suggérant un positionnement haussier agressif.' : (pcrVolume > 1.0) ? 'Le PCR élevé montre une préférence pour les puts, indiquant une couverture baissière ou des paris directionnels négatifs.' : 'Le PCR équilibré suggère un marché indécis ou une activité de hedging symétrique.'}
+                                </p>
+                                <p>
+                                    <strong className="text-white">IV Skew:</strong> {(ivSkew > 0) ? 'Le skew positif (call IV > put IV) indique une spéculation haussière agressive avec prime sur les calls.' : 'Le skew négatif (put IV > call IV) suggère une demande élevée pour la protection baissière.'}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        // NIVEAU 2: DetailView - Analyse Sentiment Complète
+        const DetailView = ({ ticker, data, onBack }) => {
+            const gaugePosition = ((data.final_sentiment_score + 1) / 2) * 100;
+
+            return (
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-6">
+                    <div className="max-w-7xl mx-auto space-y-6">
+                        {/* Back Button */}
+                        <button
+                            onClick={onBack}
+                            className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+                        >
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                            </svg>
+                            Retour à la grille
+                        </button>
+
+                        {/* Header */}
+                        <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8">
+                            <div className="flex items-center justify-between">
+                                <div>
+                                    <h1 className="text-5xl font-bold text-white mb-2">{ticker}</h1>
+                                    <p className="text-slate-400">
+                                        {new Date(data.timestamp).toLocaleString('fr-FR')} • V4 Dual Brain
+                                    </p>
+                                </div>
+                                <div className="text-right">
+                                    <div className={`text-6xl font-bold ${getSentimentColor(data.final_sentiment_score)}`}>
+                                        {(data.final_sentiment_score > 0) ? '+' : ''}{(data.final_sentiment_score * 100).toFixed(2)}
+                                    </div>
+                                    <div className="text-slate-400 text-sm mt-1">Score Final</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Classification & Metrics */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6">
+                                <div className="text-slate-400 text-sm mb-2">Classification</div>
+                                <div className={`text-3xl font-bold ${getSentimentColor(data.final_sentiment_score)}`}>
+                                    {data.classification}
+                                </div>
+                            </div>
+                            <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6">
+                                <div className="text-slate-400 text-sm mb-2">Conviction</div>
+                                <div className="text-3xl font-bold text-white">
+                                    {(data.conviction_score * 100).toFixed(1)}%
+                                </div>
+                                <div className="w-full bg-slate-700 rounded-full h-2 mt-3">
+                                    <div
+                                        className="bg-gradient-to-r from-yellow-500 to-orange-500 h-2 rounded-full"
+                                        style={{ width: `${data.conviction_score * 100}%` }}
+                                    />
+                                </div>
+                            </div>
+                            <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6">
+                                <div className="text-slate-400 text-sm mb-2">Confiance</div>
+                                <div className="text-3xl font-bold text-white">
+                                    {data.confidence_level}
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Gauge */}
+                        <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8">
+                            <h2 className="text-xl font-semibold text-white mb-6">Sentiment Global</h2>
+                            <div className="relative">
+                                <div className="flex justify-between text-xs text-slate-400 mb-2">
+                                    <span>Bearish Fort</span>
+                                    <span>Neutre</span>
+                                    <span>Bullish Fort</span>
+                                </div>
+                                <div className="relative h-12 rounded-xl overflow-hidden bg-gradient-to-r from-red-600 via-yellow-500 to-green-600">
+                                    <div
+                                        className="absolute top-0 bottom-0 w-1 bg-white shadow-lg"
+                                        style={{ left: `${gaugePosition}%` }}
+                                    >
+                                        <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-white text-slate-900 px-3 py-1 rounded-lg text-sm font-bold whitespace-nowrap shadow-lg">
+                                            {data.final_sentiment_score > 0 ? '+' : ''}{data.final_sentiment_score.toFixed(4)}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="flex justify-between text-xs text-slate-500 mt-2">
+                                    <span>-1.00</span>
+                                    <span>-0.50</span>
+                                    <span>0.00</span>
+                                    <span>+0.50</span>
+                                    <span>+1.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Components - 6 Dimensions */}
+                        <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8">
+                            <h2 className="text-xl font-semibold text-white mb-6">6 Dimensions de Sentiment</h2>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                {/* News */}
+                                <div className="space-y-3">
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-white font-medium">📰 Sentiment Nouvelles</span>
+                                        <span className={`font-bold ${getSentimentColor(data.components.news_sentiment)}`}>
+                                            {data.components.news_sentiment > 0 ? '+' : ''}{data.components.news_sentiment.toFixed(4)}
+                                        </span>
+                                    </div>
+                                    <div className="w-full bg-slate-700 rounded-full h-3 overflow-hidden">
+                                        <div
+                                            className={`${getSentimentBg(data.components.news_sentiment)} h-3`}
+                                            style={{
+                                                width: `${Math.abs(data.components.news_sentiment) * 100}%`,
+                                                marginLeft: data.components.news_sentiment < 0 ? `${100 - Math.abs(data.components.news_sentiment) * 100}%` : '0'
+                                            }}
+                                        />
+                                    </div>
+                                    <div className="flex justify-between text-xs text-slate-400">
+                                        <span>Confiance: {(data.components.news_confidence * 100).toFixed(1)}%</span>
+                                        <span>Poids: {(data.components.news_weight * 100).toFixed(1)}%</span>
+                                    </div>
+                                </div>
+
+                                {/* Options */}
+                                <div className="space-y-3">
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-white font-medium">📊 Sentiment Options</span>
+                                        <span className={`font-bold ${getSentimentColor(data.components.options_sentiment)}`}>
+                                            {data.components.options_sentiment > 0 ? '+' : ''}{data.components.options_sentiment.toFixed(4)}
+                                        </span>
+                                    </div>
+                                    <div className="w-full bg-slate-700 rounded-full h-3 overflow-hidden">
+                                        <div
+                                            className={`${getSentimentBg(data.components.options_sentiment)} h-3`}
+                                            style={{
+                                                width: `${Math.abs(data.components.options_sentiment) * 100}%`,
+                                                marginLeft: data.components.options_sentiment < 0 ? `${100 - Math.abs(data.components.options_sentiment) * 100}%` : '0'
+                                            }}
+                                        />
+                                    </div>
+                                    <div className="flex justify-between text-xs text-slate-400">
+                                        <span>Confiance: {(data.components.options_confidence * 100).toFixed(1)}%</span>
+                                        <span>Poids: {(data.components.options_weight * 100).toFixed(1)}%</span>
+                                    </div>
+                                </div>
+
+                                {/* Analysts */}
+                                <div className="space-y-3 bg-purple-900/20 p-4 rounded-lg border border-purple-600/30">
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-white font-medium">👥 Sentiment Analystes</span>
+                                        <span className={`font-bold ${getSentimentColor(data.components.analyst_sentiment)}`}>
+                                            {data.components.analyst_sentiment > 0 ? '+' : ''}{data.components.analyst_sentiment.toFixed(4)}
+                                        </span>
+                                    </div>
+                                    <div className="w-full bg-slate-700 rounded-full h-3 overflow-hidden">
+                                        <div
+                                            className="bg-gradient-to-r from-purple-500 to-blue-500 h-3"
+                                            style={{
+                                                width: `${Math.abs(data.components.analyst_sentiment) * 100}%`,
+                                                marginLeft: data.components.analyst_sentiment < 0 ? `${100 - Math.abs(data.components.analyst_sentiment) * 100}%` : '0'
+                                            }}
+                                        />
+                                    </div>
+                                    <div className="flex justify-between text-xs text-slate-400">
+                                        <span>Confiance: {(data.components.analyst_confidence * 100).toFixed(1)}%</span>
+                                        <span>Poids: {(data.components.analyst_weight * 100).toFixed(1)}%</span>
+                                    </div>
+                                </div>
+
+                                {/* Financials - NEW V5 */}
+                                <div className="space-y-3 bg-emerald-900/20 p-4 rounded-lg border border-emerald-600/30">
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-white font-medium">💰 Sentiment Financier</span>
+                                        <span className={`font-bold ${getSentimentColor(data.components.financial_sentiment)}`}>
+                                            {data.components.financial_sentiment > 0 ? '+' : ''}{(data.components.financial_sentiment || 0).toFixed(4)}
+                                        </span>
+                                    </div>
+                                    <div className="w-full bg-slate-700 rounded-full h-3 overflow-hidden">
+                                        <div
+                                            className="bg-gradient-to-r from-emerald-500 to-teal-500 h-3"
+                                            style={{
+                                                width: `${Math.abs(data.components.financial_sentiment || 0) * 100}%`,
+                                                marginLeft: (data.components.financial_sentiment || 0) < 0 ? `${100 - Math.abs(data.components.financial_sentiment || 0) * 100}%` : '0'
+                                            }}
+                                        />
+                                    </div>
+                                    <div className="flex justify-between text-xs text-slate-400">
+                                        <span>Confiance: {((data.components.financial_confidence || 0) * 100).toFixed(1)}%</span>
+                                        <span>Poids: {((data.components.financial_weight || 0) * 100).toFixed(1)}%</span>
+                                    </div>
+                                </div>
+
+                                {/* Momentum */}
+                                <div className="space-y-3">
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-white font-medium">🚀 Momentum Narratif</span>
+                                        <span className={`font-bold ${getSentimentColor(data.components.narrative_momentum)}`}>
+                                            {data.components.narrative_momentum > 0 ? '+' : ''}{data.components.narrative_momentum.toFixed(4)}
+                                        </span>
+                                    </div>
+                                    <div className="w-full bg-slate-700 rounded-full h-3 overflow-hidden">
+                                        <div
+                                            className={`${getSentimentBg(data.components.narrative_momentum)} h-3`}
+                                            style={{
+                                                width: `${Math.abs(data.components.narrative_momentum) * 100}%`,
+                                                marginLeft: data.components.narrative_momentum < 0 ? `${100 - Math.abs(data.components.narrative_momentum) * 100}%` : '0'
+                                            }}
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Weight Distribution */}
+                            <div className="mt-8 pt-6 border-t border-slate-700">
+                                <h3 className="text-sm font-semibold text-slate-300 mb-4">Pondération des Sources</h3>
+                                <div className="flex gap-2 h-8">
+                                    <div
+                                        className="bg-blue-500 rounded flex items-center justify-center text-white text-xs font-semibold"
+                                        style={{ width: `${(data.components.news_weight || 0) * 100}%` }}
+                                    >
+                                        News {((data.components.news_weight || 0) * 100).toFixed(0)}%
+                                    </div>
+                                    <div
+                                        className="bg-cyan-500 rounded flex items-center justify-center text-white text-xs font-semibold"
+                                        style={{ width: `${(data.components.options_weight || 0) * 100}%` }}
+                                    >
+                                        Options {((data.components.options_weight || 0) * 100).toFixed(0)}%
+                                    </div>
+                                    <div
+                                        className="bg-purple-500 rounded flex items-center justify-center text-white text-xs font-semibold"
+                                        style={{ width: `${(data.components.analyst_weight || 0) * 100}%` }}
+                                    >
+                                        Analysts {((data.components.analyst_weight || 0) * 100).toFixed(0)}%
+                                    </div>
+                                    <div
+                                        className="bg-emerald-500 rounded flex items-center justify-center text-white text-xs font-semibold"
+                                        style={{ width: `${(data.components.financial_weight || 0) * 100}%` }}
+                                    >
+                                        Finance {((data.components.financial_weight || 0) * 100).toFixed(0)}%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Analyst Insights */}
+                        {data.analyst_insights && (
+                            <div className="bg-gradient-to-br from-purple-900/30 to-blue-900/30 backdrop-blur-sm border border-purple-700/50 rounded-2xl p-8">
+                                <h2 className="text-xl font-semibold text-white mb-6 flex items-center gap-2">
+                                    👥 Analyst Insights - Consensus Professionnel
+                                    <span className="ml-auto text-sm bg-purple-600 px-3 py-1 rounded-full">
+                                        {data.analyst_insights.recommendation_count} analystes
+                                    </span>
+                                </h2>
+
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                    {/* Recommendation */}
+                                    <div className="bg-slate-800/50 rounded-xl p-5 border border-purple-600/30">
+                                        <div className="text-slate-300 text-sm mb-2">Recommandation</div>
+                                        <div className="text-2xl font-bold text-white mb-2">
+                                            {data.analyst_insights.recommendation_summary}
+                                        </div>
+                                        <div className="text-sm text-slate-400">
+                                            Moyenne: {data.analyst_insights.recommendation_mean?.toFixed(2) || 'N/A'}/5.0
+                                        </div>
+                                    </div>
+
+                                    {/* Price Target */}
+                                    <div className="bg-slate-800/50 rounded-xl p-5 border border-blue-600/30">
+                                        <div className="text-slate-300 text-sm mb-2">Price Target</div>
+                                        <div className="text-2xl font-bold text-white mb-2">
+                                            {data.analyst_insights.target_mean ? `$${data.analyst_insights.target_mean.toFixed(2)}` : 'N/A'}
+                                        </div>
+                                        <div className="text-sm text-slate-400">
+                                            Prix actuel: {data.analyst_insights.current_price ? `$${data.analyst_insights.current_price.toFixed(2)}` : 'N/A'}
+                                        </div>
+                                        {data.analyst_insights.upside_potential != null && (
+                                            <div className={`text-lg font-bold mt-2 ${data.analyst_insights.upside_potential > 0 ? 'text-green-400' : 'text-red-400'}`}>
+                                                {data.analyst_insights.upside_potential > 0 ? '+' : ''}{(data.analyst_insights.upside_potential * 100).toFixed(1)}%
+                                            </div>
+                                        )}
+                                    </div>
+
+                                    {/* Revisions */}
+                                    <div className="bg-slate-800/50 rounded-xl p-5 border border-cyan-600/30">
+                                        <div className="text-slate-300 text-sm mb-2">Révisions 30j</div>
+                                        <div className="flex gap-4 mb-2">
+                                            <div>
+                                                <div className="text-xl font-bold text-green-400">
+                                                    ↑ {data.analyst_insights.upgrades_30d || 0}
+                                                </div>
+                                                <div className="text-xs text-slate-400">Upgrades</div>
+                                            </div>
+                                            <div>
+                                                <div className="text-xl font-bold text-red-400">
+                                                    ↓ {data.analyst_insights.downgrades_30d || 0}
+                                                </div>
+                                                <div className="text-xs text-slate-400">Downgrades</div>
+                                            </div>
+                                        </div>
+                                        <div className={`text-lg font-bold ${(data.analyst_insights.net_changes_30d || 0) > 0 ? 'text-green-400' : 'text-red-400'}`}>
+                                            Net: {(data.analyst_insights.net_changes_30d || 0) > 0 ? '+' : ''}{data.analyst_insights.net_changes_30d || 0}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Volatility Regime */}
+                        {data.volatility_regime && (
+                            <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8">
+                                <h2 className="text-xl font-semibold text-white mb-6">🌪️ Régime de Volatilité</h2>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <div className="text-slate-400 text-sm mb-2">Régime Actuel</div>
+                                        <div className="text-3xl font-bold text-orange-400 mb-4">
+                                            {data.volatility_regime.regime} - {data.volatility_regime.sub_regime}
+                                        </div>
+                                        <div className="text-slate-300">
+                                            {data.volatility_regime.implications}
+                                        </div>
+                                    </div>
+                                    <div className="bg-slate-700/50 rounded-xl p-6">
+                                        <div className="text-slate-400 text-sm mb-3">Recommandation</div>
+                                        <div className="text-white">
+                                            {data.volatility_regime.recommendation}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Catalysts */}
+                        {data.catalysts && data.catalysts.catalysts_detected && data.catalysts.catalysts_detected.length > 0 && (
+                            <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8">
+                                <h2 className="text-xl font-semibold text-white mb-6">
+                                    🎯 Catalyseurs Détectés ({data.catalysts.count})
+                                </h2>
+                                <div className="space-y-4">
+                                    {data.catalysts.catalysts_detected.slice(0, 5).map((catalyst, idx) => (
+                                        <div key={idx} className="bg-slate-700/50 rounded-lg p-4 border border-slate-600">
+                                            <div className="flex items-start justify-between mb-2">
+                                                <div className="flex-1">
+                                                    <div className="text-white font-medium mb-1">{catalyst.title}</div>
+                                                    <div className="flex gap-3 text-xs text-slate-400">
+                                                        <span>Type: {catalyst.type}</span>
+                                                        <span>Impact: {(catalyst.impact_score * 100).toFixed(0)}%</span>
+                                                        <span>Sentiment: {(catalyst.sentiment > 0) ? '+' : ''}{catalyst.sentiment.toFixed(2)}</span>
+                                                    </div>
+                                                </div>
+                                                <div className="text-xs text-slate-500">
+                                                    {new Date(catalyst.timestamp).toLocaleDateString('fr-FR')}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Alerts */}
+                        {data.alerts && data.alerts.length > 0 && (
+                            <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8">
+                                <h2 className="text-xl font-semibold text-white mb-6">🚨 Alertes ({data.alerts.length})</h2>
+                                <div className="space-y-4">
+                                    {data.alerts.map((alert, idx) => (
+                                        <div
+                                            key={idx}
+                                            className={`rounded-lg p-6 border ${alert.priority === 'HIGH' ? 'bg-red-900/20 border-red-600/50' :
+                                                alert.priority === 'MEDIUM' ? 'bg-yellow-900/20 border-yellow-600/50' :
+                                                    'bg-blue-900/20 border-blue-600/50'
+                                                }`}
+                                        >
+                                            <div className="flex items-start gap-3">
+                                                <div className="text-2xl">{alert.icon}</div>
+                                                <div className="flex-1">
+                                                    <div className="text-white font-semibold mb-2">{alert.title}</div>
+                                                    <div className="text-slate-300 text-sm mb-3">{alert.message}</div>
+                                                    <div className="text-cyan-400 text-sm">→ {alert.action}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Metadata */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6">
+                                <div className="text-slate-400 text-sm mb-1">Articles Analysés</div>
+                                <div className="text-3xl font-bold text-white">{data.metadata.news_articles_count}</div>
+                            </div>
+                            <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6">
+                                <div className="text-slate-400 text-sm mb-1">Volume Options</div>
+                                <div className="text-3xl font-bold text-white">{data.metadata.options_volume.toLocaleString()}</div>
+                            </div>
+                            <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6">
+                                <div className="text-slate-400 text-sm mb-1">Version / Profondeur</div>
+                                <div className="text-3xl font-bold text-white">
+                                    {data.metadata.version || 'V4'} / {data.metadata.analysis_depth}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        // App Principal - CHARGEMENT DYNAMIQUE
+        const App = () => {
+            const [view, setView] = useState('grid'); // 'grid', 'sentiment', 'options'
+            const [selectedTicker, setSelectedTicker] = useState(null);
+            const [tickersData, setTickersData] = useState([]);
+            const [loading, setLoading] = useState(true);
+            const [error, setError] = useState(null);
+            const [lastUpdated, setLastUpdated] = useState('');
+
+            useEffect(() => {
+                // Charger les données consolidées depuis le fichier JSON
+                const loadData = async () => {
+                    try {
+                        // Cache-busting: ajouter timestamp pour forcer le rechargement
+                        const response = await fetch('./consolidated_sentiment_data.json?t=' + new Date().getTime());
+
+                        if (!response.ok) {
+                            throw new Error(`Erreur HTTP: ${response.status}`);
+                        }
+
+                        const consolidatedData = await response.json();
+
+                        // Transformer en array pour le composant GridView
+                        const data = Object.entries(consolidatedData).map(([ticker, tickerData]) => ({
+                            ticker,
+                            data: tickerData,
+                            loaded: true
+                        }));
+
+                        setTickersData(data);
+                        setLastUpdated(new Date().toLocaleString('fr-FR'));
+                        console.log(`✅ ${data.length} tickers chargés avec succès`);
+                    } catch (err) {
+                        console.error('Erreur chargement données:', err);
+                        setError(err.message);
+                    } finally {
+                        setLoading(false);
+                    }
+                };
+
+                loadData();
+            }, []);
+
+            const handleNavigate = (viewType, ticker) => {
+                setSelectedTicker(ticker);
+                setView(viewType); // 'sentiment' or 'options'
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+
+            const handleBack = () => {
+                setView('grid');
+                setSelectedTicker(null);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+
+            // Loading State
+            if (loading) {
+                return (
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+                        <div className="text-center">
+                            <div className="text-6xl mb-6 animate-pulse">🧠</div>
+                            <h2 className="text-3xl font-bold text-white mb-4">Chargement des données...</h2>
+                            <p className="text-slate-400">Lecture du fichier consolidated_sentiment_data.json</p>
+                            <div className="mt-6">
+                                <div className="w-48 h-2 bg-slate-700 rounded-full mx-auto overflow-hidden">
+                                    <div className="h-full bg-cyan-500 animate-pulse rounded-full" style={{ width: '60%' }}></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                );
+            }
+
+            // Error State
+            if (error) {
+                return (
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+                        <div className="text-center max-w-md">
+                            <div className="text-6xl mb-6">❌</div>
+                            <h2 className="text-3xl font-bold text-red-500 mb-4">Erreur de chargement</h2>
+                            <p className="text-slate-400 mb-4">{error}</p>
+                            <div className="bg-slate-800 p-4 rounded-lg text-left">
+                                <p className="text-slate-300 text-sm mb-2">Vérifiez que:</p>
+                                <ul className="text-slate-400 text-sm list-disc list-inside">
+                                    <li>Le fichier <code className="text-cyan-400">consolidated_sentiment_data.json</code> existe</li>
+                                    <li>Il est dans le même dossier que ce HTML</li>
+                                    <li>Le serveur HTTP est démarré</li>
+                                </ul>
+                            </div>
+                            <button
+                                onClick={() => window.location.reload()}
+                                className="mt-6 px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg font-semibold transition-colors"
+                            >
+                                🔄 Réessayer
+                            </button>
+                        </div>
+                    </div>
+                );
+            }
+
+            // Empty State
+            if (tickersData.length === 0) {
+                return (
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+                        <div className="text-center">
+                            <div className="text-6xl mb-6">📭</div>
+                            <h2 className="text-3xl font-bold text-white mb-4">Aucune donnée</h2>
+                            <p className="text-slate-400">Le fichier JSON est vide ou mal formaté</p>
+                        </div>
+                    </div>
+                );
+            }
+
+            // Get selected ticker data
+            const tickerData = selectedTicker ? tickersData.find(t => t.ticker === selectedTicker) : null;
+
+            // Options View
+            if (view === 'options' && tickerData) {
+                return <OptionsDeepDive ticker={selectedTicker} data={tickerData.data} onBack={handleBack} />;
+            }
+
+            // Sentiment Detail View
+            if (view === 'sentiment' && tickerData) {
+                return <DetailView ticker={selectedTicker} data={tickerData.data} onBack={handleBack} />;
+            }
+
+            // Default: Grid View
+            return <GridView tickersData={tickersData} onNavigate={handleNavigate} lastUpdated={lastUpdated} />;
+        };
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+
+</html>

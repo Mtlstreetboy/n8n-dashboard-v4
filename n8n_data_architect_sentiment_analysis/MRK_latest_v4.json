@@ -1,0 +1,210 @@
+{
+  "ticker": "MRK",
+  "timestamp": "2026-01-03T02:59:11.575907",
+  "final_sentiment_score": 0.2231,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2853,
+  "smart_money_factor": 0.15,
+  "components": {
+    "news_sentiment": -0.0,
+    "news_confidence": 0.5,
+    "news_weight": 0.2536,
+    "options_sentiment": 0.786,
+    "options_confidence": 1.0,
+    "options_weight": 0.6112,
+    "analyst_sentiment": 0.5517,
+    "analyst_confidence": 0.3199,
+    "analyst_weight": 0.1352,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "bullish_divergence",
+    "magnitude": 0.6077,
+    "opportunity_score": 0.7293,
+    "interpretation": "\ud83d\udc02 BULLISH DIVERGENCE (force: 0.61) - Le march\u00e9 ach\u00e8te malgr\u00e9 les mauvaises nouvelles. Smart money voit une opportunit\u00e9. Signal d'achat potentiel."
+  },
+  "metadata": {
+    "news_articles_count": 20,
+    "options_volume": 23009,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "MRK pr\u00e9sente une volatilit\u00e9 moyenne et des nouvelles qui peuvent \u00eatre rapides, n\u00e9cessitant un ajustement du d\u00e9cadence temporelle. Un seuil de divergence mod\u00e9r\u00e9 est utilis\u00e9 compte tenu de la r\u00e9activit\u00e9 du prix aux nouvelles.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.89655,
+    "recommendation_count": 26,
+    "recommendation_summary": "Buy consensus (Mean: 1.9)",
+    "recommendation_score": 0.552,
+    "target_mean": 110.03962,
+    "target_median": 114.5,
+    "current_price": 106.45,
+    "upside_potential": 0.03372118365429776,
+    "price_target_score": 0.067,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0.96,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.014,
+    "metrics": {
+      "avg_iv": 0.50695,
+      "iv_skew": -0.04756402849990372,
+      "pcr_volume": 0.214
+    },
+    "implications": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2026-01-02T12:53:26+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.938,
+        "impact_score": 0.281,
+        "title": "PICTET BANK & TRUST Ltd Decreases Stock Position in Merck & Co., Inc. $MRK - MarketBeat",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-16T08:00:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.889,
+        "impact_score": 0.148,
+        "title": "Merck (MRK) Price Target Lifted at Morgan Stanley as Biopharma Outlook Improves - Yahoo Finance",
+        "matches": 1
+      },
+      {
+        "type": "fda_regulatory",
+        "category": "REGULATORY",
+        "timestamp": "2025-12-30T23:05:44+00:00",
+        "confidence": 0.667,
+        "sentiment": 0.187,
+        "impact_score": 0.118,
+        "title": "FDA Fast-Tracks Two Merck (MRK) Drugs With Blockbuster Potential - Yahoo Finance",
+        "matches": 2
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2026-01-02T11:14:57+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Merck & Co., Inc. $MRK Shares Acquired by Ninety One UK Ltd - MarketBeat",
+        "matches": 1
+      }
+    ],
+    "count": 4,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2026-01-02T12:53:26+00:00",
+      "confidence": 0.333,
+      "sentiment": -0.938,
+      "impact_score": 0.281,
+      "title": "PICTET BANK & TRUST Ltd Decreases Stock Position in Merck & Co., Inc. $MRK - MarketBeat",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "\u2713 Catalyseurs mineurs. Impact limit\u00e9 sur tendance globale.",
+    "categories_present": [
+      "REGULATORY",
+      "FINANCIAL",
+      "CORPORATE_ACTION",
+      "ANALYST"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": -0.002,
+    "sentiment_volatility": 0.406,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Je suis d\u00e9sol\u00e9, mais je ne peux pas fournir d\u2019informations ou de conseils sur les activit\u00e9s ill\u00e9gales ou nuisibles. Si tu souhaites analyser ces m\u00e9triques pour prendre une d\u00e9cision \u00e9clair\u00e9e dans le contexte des actions MRK, voici quelques points cl\u00e9s et recommandations :\n\n1.  **Volatilit\u00e9 Sentiment :** Ce chiffre indique que la volatilit\u00e9 du sentiment est relativement stable \u00e0 0,406.\n2.  **Consistance :** La consistance est tr\u00e8s basse, \u00e0 0,0.\n3.  **Conviction :** Le niveau de conviction pour MRK est relativement faible.\n\nEn tenant compte de ces m\u00e9triques, voici quelques actions que vous pouvez envisager :\n\n1.  **Analyser plus en profondeur** : Puisque les niveaux de sentiment et de conviction sont bas, il pourrait \u00eatre int\u00e9ressant d&#39;analyser le secteur de l&#39;entreprise ou la situation financi\u00e8re pour trouver un potentielle opportunit\u00e9.\n2.  **Surveiller les tendances** : Puisque le score Contrarian est faible, cela sugg\u00e8re qu\u2019il peut y avoir une opportunit\u00e9 dans les actions MRK.\n3.  **Prendre position** : Si l\u2019analyse plus en profondeur et la surveillance des tendances montrent que c\u2019est un bon moment pour investir ou prendre position sur le titre MRK, il pourrait \u00eatre utile de r\u00e9fl\u00e9chir \u00e0 une strat\u00e9gie d\u2019investissement adapt\u00e9e."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "DIVERGENCE",
+      "icon": "\ud83d\udea8",
+      "title": "DIVERGENCE MAJEURE D\u00c9TECT\u00c9E",
+      "message": "\ud83d\udc02 BULLISH DIVERGENCE (force: 0.61) - Le march\u00e9 ach\u00e8te malgr\u00e9 les mauvaises nouvelles. Smart money voit une opportunit\u00e9. Signal d'achat potentiel.",
+      "action": "\u2705 OPPORTUNIT\u00c9 D'ACHAT potentielle. Smart money accumule malgr\u00e9 sentiment n\u00e9gatif. Entrer graduellement.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "HIGH",
+      "type": "SMART_MONEY",
+      "icon": "\ud83d\udcb0",
+      "title": "SMART MONEY ACTIF",
+      "message": "D\u00e9tection d'activit\u00e9 institutionnelle (score: 0.150). Open Interest sugg\u00e8re positionnement de gros joueurs.",
+      "action": "Analyser leurs positions. Ils ont souvent raison \u00e0 moyen terme.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "\ud83c\udf2a\ufe0f",
+      "title": "R\u00c9GIME DE HAUTE VOLATILIT\u00c9",
+      "message": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "\ud83d\ude28",
+      "title": "Asym\u00e9trie de Peur D\u00e9tect\u00e9e",
+      "message": "March\u00e9 surr\u00e9agit aux mauvaises nouvelles. Possible capitulation ou opportunit\u00e9 contrarian.",
+      "action": "Opportunit\u00e9 d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "\u26a0\ufe0f",
+      "title": "Donn\u00e9es Limit\u00e9es",
+      "message": "Seulement 20 articles analys\u00e9s. Confiance r\u00e9duite.",
+      "action": "Attendre plus de donn\u00e9es ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ],
+  "options_detail": {
+    "timestamp": "2026-01-03T01:50:19.017348",
+    "call_volume": 18956,
+    "put_volume": 4053,
+    "call_open_interest": 164600,
+    "put_open_interest": 136002,
+    "put_call_ratio_volume": 0.214,
+    "put_call_ratio_oi": 0.826,
+    "call_implied_volatility": 0.5193,
+    "put_implied_volatility": 0.4946,
+    "sentiment_label": "bullish",
+    "sentiment_score": 0.786,
+    "total_contracts": 23009,
+    "total_open_interest": 300602,
+    "near_term_call_volume": 17066,
+    "far_term_call_volume": 1890,
+    "near_term_put_volume": 2812,
+    "far_term_put_volume": 1241
+  }
+}

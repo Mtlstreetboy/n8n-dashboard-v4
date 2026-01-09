@@ -1,0 +1,156 @@
+{
+  "ticker": "WFC",
+  "timestamp": "2026-01-03T01:20:03.864215",
+  "final_sentiment_score": -0.0209,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": -0.0118,
+    "news_confidence": 0.5,
+    "news_weight": 0.5567,
+    "options_sentiment": 0,
+    "options_confidence": 0,
+    "options_weight": 0.0,
+    "analyst_sentiment": 0.3062,
+    "analyst_confidence": 0.4777,
+    "analyst_weight": 0.4433,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0118,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 23,
+    "options_volume": 0,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "WFC est une compagnie bancaire stable, avec des nouvelles moins fréquentes mais importantes. La volatilité est typiquement plus faible que pour les entreprises technologiques, donc un decalage temporel de 3 jours et un penalty de volatilité de 0.3 sont appropriés.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 2.07692,
+    "recommendation_count": 24,
+    "recommendation_summary": "Buy consensus (Mean: 2.1)",
+    "recommendation_score": 0.462,
+    "target_mean": 95.79167,
+    "target_median": 97.0,
+    "current_price": 95.2,
+    "upside_potential": 0.006215021008403293,
+    "price_target_score": 0.012,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 0.654,
+      "pt": 0.346,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0.937,
+      "price_target": 0.496,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "UNKNOWN",
+    "confidence": 0.0,
+    "implications": "Données insuffisantes pour déterminer le régime"
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2026-01-01T20:50:58+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.961,
+        "impact_score": 0.288,
+        "title": "Wells Fargo stock today: WFC ends 2025 lower as traders eye rates, funding markets and Jan. 14 earnings - ts2.tech",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2026-01-02T05:10:15+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.934,
+        "impact_score": 0.156,
+        "title": "Morgan Stanley cuts Wells Fargo and U.S. Bancorp rating - Yahoo Finance UK",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2026-01-02T12:09:12+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.052,
+        "impact_score": 0.017,
+        "title": "Lazard Freres Gestion S.A.S. Acquires Shares of 587,300 Wells Fargo & Company $WFC - MarketBeat",
+        "matches": 1
+      },
+      {
+        "type": "fda_regulatory",
+        "category": "REGULATORY",
+        "timestamp": "2025-12-27T14:07:00+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.004,
+        "impact_score": 0.001,
+        "title": "Wells Fargo & Company Stock (WFC) Opinions on Regulatory Changes and Financial Moves - Quiver Quantitative",
+        "matches": 1
+      }
+    ],
+    "count": 4,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2026-01-01T20:50:58+00:00",
+      "confidence": 0.333,
+      "sentiment": -0.961,
+      "impact_score": 0.288,
+      "title": "Wells Fargo stock today: WFC ends 2025 lower as traders eye rates, funding markets and Jan. 14 earnings - ts2.tech",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale. | Biais NÉGATIF des catalyseurs.",
+    "categories_present": [
+      "REGULATORY",
+      "CORPORATE_ACTION",
+      "FINANCIAL",
+      "ANALYST"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": -0.415,
+    "sentiment_volatility": 0.57,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "**🚨 Risque de perte potentielle | Réduire les positions WFC**\n\n- La ratio Sharpe négative (-0.415) suggère que le sentiment est soumis à des risques non ajustés.\n- Les scores de volatilité élevée (0,57) indiquent un comportement instable du marché.\n\n**💡 Opportunité limitée | Attendre une analyse plus approfondie**\n\n- L'accélération du mouvement est nulle (0.0), ce qui signifie que le sentiment est statique.\n- Le score Contrarian de 0 indique qu'il n'y a pas d'opportunité forte.\n\n**💡 Sentiment nuancé | Attendre plus de stabilisation**\n\n- La conviction est faible (0,5), ce qui suggère un scepticisme des analystes quantitatifs.\n- Le sentiment final (-0.0209) et la classification HOLD indiquent que l'opinion est neutre.\n\nEn résumé, ces métriques donnent une image nuancée du marché WFC, avec des signaux contradictoires qui nécessitent plus d'analyse. Il peut être prudent de limiter les positions ou attendre davantage de stabilisation."
+  },
+  "alerts": [
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "😨",
+      "title": "Asymétrie de Peur Détectée",
+      "message": "Marché surréagit aux mauvaises nouvelles. Possible capitulation ou opportunité contrarian.",
+      "action": "Opportunité d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 23 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

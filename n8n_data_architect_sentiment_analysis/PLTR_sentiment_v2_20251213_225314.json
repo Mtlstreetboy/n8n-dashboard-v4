@@ -1,0 +1,115 @@
+{
+  "ticker": "PLTR",
+  "timestamp": "2025-12-13T22:53:14.799605",
+  "final_sentiment_score": -0.2219,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.3,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0149,
+    "news_confidence": 0.5092,
+    "news_weight": 0.2937,
+    "options_sentiment": -0.3204,
+    "options_confidence": 0.8163,
+    "options_weight": 0.7063,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.3354,
+    "opportunity_score": 0,
+    "interpretation": "\ud83e\udd1d Consensus - Nouvelles et march\u00e9s s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 238,
+    "options_volume": 207840,
+    "analysis_depth": "DEEP",
+    "config_rationale": "Configuration par d\u00e9faut (mod\u00e9r\u00e9e)"
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.959,
+    "metrics": {
+      "avg_iv": 0.9797,
+      "iv_skew": -0.09748519273715898,
+      "pcr_volume": 1.005
+    },
+    "implications": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-11T13:42:38+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.462,
+        "impact_score": 0.154,
+        "title": "Palantir (PLTR) Stock in Late 2025: Navy Megadeal, AI Boom and a Post\u2011Rally Reality Check - ts2.tech",
+        "matches": 1
+      },
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2025-12-11T16:06:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Palantir Sues CEO of Rival AI Firm, Alleges Widespread Effort to Poach Employees - The Wall Street Journal",
+        "matches": 1
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-11T15:01:13+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Palantir Launches Chain Reaction to Build American AI Infrastructure - Manufacturing.net",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "merger_acquisition",
+      "category": "CORPORATE_ACTION",
+      "timestamp": "2025-12-11T13:42:38+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.462,
+      "impact_score": 0.154,
+      "title": "Palantir (PLTR) Stock in Late 2025: Navy Megadeal, AI Boom and a Post\u2011Rally Reality Check - ts2.tech",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "\u2713 Catalyseurs mineurs. Impact limit\u00e9 sur tendance globale.",
+    "categories_present": [
+      "PRODUCT",
+      "MANAGEMENT",
+      "CORPORATE_ACTION"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.505,
+    "sentiment_volatility": 0.38,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "M\u00e9triques standards, pas de signal particulier."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "\ud83c\udf2a\ufe0f",
+      "title": "R\u00c9GIME DE HAUTE VOLATILIT\u00c9",
+      "message": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

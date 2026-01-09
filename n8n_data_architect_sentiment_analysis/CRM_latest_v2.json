@@ -1,0 +1,137 @@
+{
+  "ticker": "CRM",
+  "timestamp": "2025-12-14T18:37:44.153945",
+  "final_sentiment_score": 0.2277,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.213,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0193,
+    "news_confidence": 0.4806,
+    "news_weight": 0.3226,
+    "options_sentiment": 0.1793,
+    "options_confidence": 0.6727,
+    "options_weight": 0.6774,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.1599,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 201,
+    "options_volume": 24094,
+    "analysis_depth": "DEEP",
+    "config_rationale": "CRM is a tech-enabled company with a relatively stable stock performance, but still exposed to market fluctuations. The fast decay halflife and moderate divergence threshold reflect its relatively high volatility compared to traditional utilities companies."
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.191,
+    "metrics": {
+      "avg_iv": 0.5956,
+      "iv_skew": 0.06590357266736045,
+      "pcr_volume": 0.531
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-13T15:11:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.38,
+        "impact_score": 0.114,
+        "title": "Salesforce Launches AI Solutions to Empower Overburdened Nonprofits - Small Business Trends",
+        "matches": 1
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-13T15:11:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.38,
+        "impact_score": 0.089,
+        "title": "Salesforce Launches AI Solutions to Empower Overburdened Nonprofits - Small Business Trends",
+        "matches": 1
+      },
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2025-12-11T12:46:00+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.38,
+        "impact_score": 0.076,
+        "title": "Slack CEO leaves Salesforce to become OpenAI's first revenue chief, tackle multibillion-dollar losses - Fortune",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-12T01:41:36+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.197,
+        "impact_score": 0.033,
+        "title": "Agentforce Tour Keynote: Salesforce Positions Agentforce 360 as Operating System for Agentic Enterprise - ERP Today",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-12T03:30:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Movate Acquires Solomo to Strengthen Salesforce and AI Capabilities in Healthcare - PR Newswire",
+        "matches": 1
+      }
+    ],
+    "count": 5,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2025-12-13T15:11:00+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.38,
+      "impact_score": 0.114,
+      "title": "Salesforce Launches AI Solutions to Empower Overburdened Nonprofits - Small Business Trends",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "ANALYST",
+      "FINANCIAL",
+      "PRODUCT",
+      "CORPORATE_ACTION",
+      "MANAGEMENT"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.704,
+    "sentiment_volatility": 0.346,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "📊 Here are the key insights and recommendations:\n\n🔥 **Bullish undertone**: Sharpe Ratio (0.704) suggests a strong, risk-adjusted sentiment, indicating an underlying bullish trend.\n| **Hold or buy in dips**.\n\n💥 **Volatility alert**: Volatilité Sentiment (0.346) indicates moderate volatility, but not chaotic. This might lead to some market movements.\n| **Monitor and adjust position accordingly**.\n\n🔴 **Neutral momentum**: Accélération Momentum (0) suggests no significant change in the trend's pace. No major concerns here!\n| **Maintain current strategy or wait for further developments**.\n\n🤔 **Contrarian opportunity**: Score Contrarian (0) indicates no strong contrarian signals, so no strong buy or sell recommendations.\n| **Wait and observe market behavior before making a move**.\n\n💯 **Consistency check**: Consistance (0.0) suggests some inconsistency in the sentiment, which could be due to various factors like news or market fluctuations.\n| **Keep an eye on these inconsistencies and adjust position if necessary**.\n\nFor a trader:\n\n* Hold onto your current position or consider buying in dips based on the strong Sharpe Ratio.\n* Monitor volatility and adjust your strategy accordingly.\n* Be cautious of inconsistencies in the sentiment and wait for further developments before making a move."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

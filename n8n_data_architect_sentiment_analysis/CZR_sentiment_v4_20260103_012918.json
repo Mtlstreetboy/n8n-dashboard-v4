@@ -1,0 +1,154 @@
+{
+  "ticker": "CZR",
+  "timestamp": "2026-01-03T01:29:10.882670",
+  "final_sentiment_score": 0.0178,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": -0.006,
+    "news_confidence": 0.5,
+    "news_weight": 0.6736,
+    "options_sentiment": 0,
+    "options_confidence": 0,
+    "options_weight": 0.0,
+    "analyst_sentiment": 0.5263,
+    "analyst_confidence": 0.2908,
+    "analyst_weight": 0.3264,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.006,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 19,
+    "options_volume": 0,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "CZR présente une volatilité typique modérée, avec des nouvelles tech qui se propagent rapidement. Une dépréciation temporelle moyenne et un seuil de divergence élevé permettent d'ajuster au rythme des changements rapides tout en tenant compte de la volatilité.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.94737,
+    "recommendation_count": 19,
+    "recommendation_summary": "Buy consensus (Mean: 1.9)",
+    "recommendation_score": 0.526,
+    "target_mean": 32.0,
+    "target_median": 33.0,
+    "current_price": 23.56,
+    "upside_potential": 0.3582342954159593,
+    "price_target_score": 0.615,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0.872,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "UNKNOWN",
+    "confidence": 0.0,
+    "implications": "Données insuffisantes pour déterminer le régime"
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-10-28T07:00:00+00:00",
+        "confidence": 0.667,
+        "sentiment": -0.92,
+        "impact_score": 0.552,
+        "title": "Caesars Entertainment (NASDAQ:CZR) Misses Q3 Sales Expectations, Stock Drops - Yahoo Finance",
+        "matches": 2
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2026-01-01T10:52:49+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.778,
+        "impact_score": 0.13,
+        "title": "Caesars Entertainment (NASDAQ:CZR) Rating Lowered to Strong Sell at Zacks Research - MarketBeat",
+        "matches": 1
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-08T08:00:00+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.107,
+        "impact_score": 0.025,
+        "title": "How Investors Are Reacting To Caesars Entertainment (CZR) Digital Earnings Pressure Amid New Missouri Sportsbook Launch - Yahoo Finance",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2025-10-28T07:00:00+00:00",
+      "confidence": 0.667,
+      "sentiment": -0.92,
+      "impact_score": 0.552,
+      "title": "Caesars Entertainment (NASDAQ:CZR) Misses Q3 Sales Expectations, Stock Drops - Yahoo Finance",
+      "matches": 2
+    },
+    "impact_assessment": "MODERATE_IMPACT",
+    "recommendation": "📊 Catalyseurs modérés en jeu. Ajuster positions selon développements. | Biais NÉGATIF des catalyseurs.",
+    "categories_present": [
+      "PRODUCT",
+      "FINANCIAL",
+      "ANALYST"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": -0.266,
+    "sentiment_volatility": 0.45,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "📊 **Sentiment neutre avec risque** | **Attendre la stabilisation du marché**\n\nLa combinaison d'un Sharpe Ratio négatif (-0,266) et d'une volatilité sentimentale élevée (0,45) suggère un marché instable avec des rendements potentiels de moins."
+  },
+  "alerts": [
+    {
+      "priority": "MEDIUM",
+      "type": "CATALYST",
+      "icon": "🎯",
+      "title": "Catalyseur: Earnings",
+      "message": "Caesars Entertainment (NASDAQ:CZR) Misses Q3 Sales Expectations, Stock Drops - Y... (Impact: 0.55)",
+      "action": "📊 Catalyseurs modérés en jeu. Ajuster positions selon développements. | Biais NÉGATIF des catalyseurs.",
+      "urgency": "SOON"
+    },
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "😨",
+      "title": "Asymétrie de Peur Détectée",
+      "message": "Marché surréagit aux mauvaises nouvelles. Possible capitulation ou opportunité contrarian.",
+      "action": "Opportunité d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 19 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

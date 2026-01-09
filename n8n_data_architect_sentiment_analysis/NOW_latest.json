@@ -1,0 +1,29 @@
+{
+  "ticker": "NOW",
+  "timestamp": "2025-12-10T01:38:24.635259",
+  "final_sentiment_score": -0.3886,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2805,
+  "components": {
+    "news_sentiment": 0.0401,
+    "news_confidence": 0.7335,
+    "news_weight": 0.4384,
+    "options_sentiment": -0.7839,
+    "options_confidence": 0.6263,
+    "options_weight": 0.5616,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "bearish_divergence",
+    "magnitude": 0.824,
+    "opportunity_score": 0.6592,
+    "interpretation": "?????? BEARISH DIVERGENCE (force: 0.82) - Le march?? ignore les bonnes nouvelles. Possible correction ?? venir ou les nouvelles sont 'priced in'."
+  },
+  "metadata": {
+    "news_articles_count": 82,
+    "options_volume": 12030,
+    "analysis_depth": "DEEP"
+  }
+}

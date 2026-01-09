@@ -1,0 +1,161 @@
+{
+  "ticker": "V",
+  "timestamp": "2026-01-03T02:55:38.633615",
+  "final_sentiment_score": -0.1895,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2845,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0035,
+    "news_confidence": 0.5,
+    "news_weight": 0.2752,
+    "options_sentiment": -0.159,
+    "options_confidence": 1.0,
+    "options_weight": 0.5469,
+    "analyst_sentiment": 0.6838,
+    "analyst_confidence": 0.3877,
+    "analyst_weight": 0.1778,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "bearish_divergence",
+    "magnitude": 0.6603,
+    "opportunity_score": 0.5282,
+    "interpretation": "\ud83d\udc3b BEARISH DIVERGENCE (force: 0.66) - Le march\u00e9 ignore les bonnes nouvelles. Possible correction \u00e0 venir ou les nouvelles sont 'priced in'."
+  },
+  "metadata": {
+    "news_articles_count": 23,
+    "options_volume": 20661,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "Le secteur technologique est volatile et soumis \u00e0 des nouvelles rapides, n\u00e9cessitant un decay plus lent pour capturer les tendances persistantes.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.5,
+    "recommendation_count": 37,
+    "recommendation_summary": "Strong Buy consensus (Mean: 1.5)",
+    "recommendation_score": 0.75,
+    "target_mean": 395.85,
+    "target_median": 405.0,
+    "current_price": 346.48,
+    "upside_potential": 0.14249018702378205,
+    "price_target_score": 0.278,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 0.86,
+      "pt": 0.14,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.163,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "MODERATE_VOLATILITY",
+    "sub_regime": "RISING",
+    "confidence": 0.7,
+    "metrics": {
+      "avg_iv": 0.4928,
+      "iv_skew": 0.012249897917517365,
+      "pcr_volume": 1.159
+    },
+    "implications": "\ud83d\udcc8 TENSION MONTANTE - Nervosit\u00e9 croissante. Surveiller pour escalade.",
+    "signal_adjustment": -0.05,
+    "recommendation": "Augmenter prudence. R\u00e9duire taille positions. Surveiller \u00e9volution."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "fda_regulatory",
+        "category": "REGULATORY",
+        "timestamp": "2026-01-02T09:31:35+00:00",
+        "confidence": 0.667,
+        "sentiment": 0.502,
+        "impact_score": 0.318,
+        "title": "BioAtla and GATC Health to advance Oz-V in Phase III trial - Clinical Trials Arena",
+        "matches": 2
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2026-01-02T14:02:32+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.271,
+        "impact_score": 0.09,
+        "title": "Stellantis confirms return of Ram TRX with supercharged V-8 - Car Dealership Guy News",
+        "matches": 1
+      }
+    ],
+    "count": 2,
+    "most_recent": {
+      "type": "fda_regulatory",
+      "category": "REGULATORY",
+      "timestamp": "2026-01-02T09:31:35+00:00",
+      "confidence": 0.667,
+      "sentiment": 0.502,
+      "impact_score": 0.318,
+      "title": "BioAtla and GATC Health to advance Oz-V in Phase III trial - Clinical Trials Arena",
+      "matches": 2
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "\u2713 Catalyseurs mineurs. Impact limit\u00e9 sur tendance globale. | Biais POSITIF des catalyseurs.",
+    "categories_present": [
+      "REGULATORY",
+      "CORPORATE_ACTION"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.497,
+    "sentiment_volatility": 0.141,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "**\ud83d\udca1 L\u2019analyse de sentiment de V indique une tendance n\u00e9gative avec une conviction relativement faible, ce qui sugg\u00e8re que le prix pourrait continuer \u00e0 baisser.**\n\n- **Action recommand\u00e9e :** Vendre les actions ou augmenter la position de vente.\n\nVoici quelques \u00e9l\u00e9ments cl\u00e9s du contexte :\n\n*   Le Sharpe Ratio est \u00e9lev\u00e9 (0,497), ce qui signifie que le sentiment est positif mais ajust\u00e9 pour tenir compte des risques.\n*   La volatilit\u00e9 du sentiment est relativement faible (0,141), ce qui indique que les fluctuations sont limit\u00e9es.\n\nEn revanche, certains indicateurs sont plus mitig\u00e9s :\n\n*   L'acc\u00e9l\u00e9ration du mouvement est nulle (0,0), ce qui sugg\u00e8re qu'il n'y a pas de tendance claire.\n*   Le score contrariant est \u00e9galement nul (0), ce qui signifie qu'il n'y a pas d'opportunit\u00e9 pour contrevenir \u00e0 la tendance actuelle."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "DIVERGENCE",
+      "icon": "\ud83d\udea8",
+      "title": "DIVERGENCE MAJEURE D\u00c9TECT\u00c9E",
+      "message": "\ud83d\udc3b BEARISH DIVERGENCE (force: 0.66) - Le march\u00e9 ignore les bonnes nouvelles. Possible correction \u00e0 venir ou les nouvelles sont 'priced in'.",
+      "action": "\u274c NE PAS ACHETER malgr\u00e9 bonnes nouvelles. Attendre correction ou confirmation par price action.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "\u26a0\ufe0f",
+      "title": "Donn\u00e9es Limit\u00e9es",
+      "message": "Seulement 23 articles analys\u00e9s. Confiance r\u00e9duite.",
+      "action": "Attendre plus de donn\u00e9es ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ],
+  "options_detail": {
+    "timestamp": "2026-01-03T01:49:01.288313",
+    "call_volume": 9569,
+    "put_volume": 11092,
+    "call_open_interest": 93831,
+    "put_open_interest": 80767,
+    "put_call_ratio_volume": 1.159,
+    "put_call_ratio_oi": 0.861,
+    "call_implied_volatility": 0.4898,
+    "put_implied_volatility": 0.4958,
+    "sentiment_label": "bearish",
+    "sentiment_score": -0.159,
+    "total_contracts": 20661,
+    "total_open_interest": 174598,
+    "near_term_call_volume": 7765,
+    "far_term_call_volume": 1804,
+    "near_term_put_volume": 8988,
+    "far_term_put_volume": 2104
+  }
+}

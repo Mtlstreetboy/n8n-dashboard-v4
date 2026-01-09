@@ -1,0 +1,456 @@
+# -*- coding: utf-8 -*-
+"""
+Configuration: Liste des compagnies AI a analyser
+Inclut ticker, nom complet, et mots-cles pour Google News
+"""
+
+AI_COMPANIES = [
+    # --- US BIG TECH & AI ---
+    {
+        "ticker": "NVDA",
+        "name": "NVIDIA Corporation",
+        "search_terms": ["NVIDIA", "NVDA stock", "Jensen Huang"],
+        "sector": "AI Hardware"
+    },
+    {
+        "ticker": "MSFT",
+        "name": "Microsoft Corporation",
+        "search_terms": ["Microsoft AI", "Azure AI", "Copilot", "OpenAI Microsoft"],
+        "sector": "AI Software"
+    },
+    {
+        "ticker": "GOOGL",
+        "name": "Alphabet Inc",
+        "search_terms": ["Google AI", "Gemini AI", "DeepMind", "Alphabet stock"],
+        "sector": "AI Software"
+    },
+    {
+        "ticker": "META",
+        "name": "Meta Platforms",
+        "search_terms": ["Meta AI", "LLaMA", "Facebook AI", "Mark Zuckerberg AI"],
+        "sector": "AI Software"
+    },
+    {
+        "ticker": "AMZN",
+        "name": "Amazon.com Inc",
+        "search_terms": ["Amazon AI", "AWS AI", "Amazon Bedrock", "Alexa AI"],
+        "sector": "AI Cloud"
+    },
+    {
+        "ticker": "AMD",
+        "name": "Advanced Micro Devices",
+        "search_terms": ["AMD AI", "AMD chips", "Lisa Su", "AMD data center"],
+        "sector": "AI Hardware"
+    },
+    {
+        "ticker": "TSLA",
+        "name": "Tesla Inc",
+        "search_terms": ["Tesla AI", "Tesla FSD", "Tesla Optimus", "Tesla autonomous"],
+        "sector": "AI Automotive"
+    },
+    {
+        "ticker": "ORCL",
+        "name": "Oracle Corporation",
+        "search_terms": ["Oracle AI", "Oracle Cloud", "Oracle database AI"],
+        "sector": "AI Cloud"
+    },
+    {
+        "ticker": "CRM",
+        "name": "Salesforce Inc",
+        "search_terms": ["Salesforce AI", "Einstein AI", "Salesforce Agentforce"],
+        "sector": "AI Software"
+    },
+    {
+        "ticker": "PLTR",
+        "name": "Palantir Technologies",
+        "search_terms": ["Palantir AI", "Palantir AIP", "Palantir stock"],
+        "sector": "AI Analytics"
+    },
+    {
+        "ticker": "SNOW",
+        "name": "Snowflake Inc",
+        "search_terms": ["Snowflake AI", "Snowflake data cloud", "Snowflake ML"],
+        "sector": "AI Data"
+    },
+    {
+        "ticker": "AVGO",
+        "name": "Broadcom Inc",
+        "search_terms": ["Broadcom AI", "Broadcom chips", "Broadcom semiconductor"],
+        "sector": "AI Hardware"
+    },
+    {
+        "ticker": "ADBE",
+        "name": "Adobe Inc",
+        "search_terms": ["Adobe AI", "Adobe Firefly", "Adobe Sensei"],
+        "sector": "AI Creative"
+    },
+    {
+        "ticker": "NOW",
+        "name": "ServiceNow Inc",
+        "search_terms": ["ServiceNow AI", "ServiceNow Now Assist"],
+        "sector": "AI Software"
+    },
+    {
+        "ticker": "INTC",
+        "name": "Intel Corporation",
+        "search_terms": ["Intel AI", "Intel chips", "Intel Gaudi", "Intel Xeon"],
+        "sector": "AI Hardware"
+    },
+    {
+        "ticker": "MU",
+        "name": "Micron Technology",
+        "search_terms": ["Micron AI", "HBM memory", "Micron chips"],
+        "sector": "AI Hardware"
+    },
+    {
+        "ticker": "TSM",
+        "name": "Taiwan Semiconductor",
+        "search_terms": ["TSMC", "Taiwan Semi", "TSMC AI chips"],
+        "sector": "AI Hardware"
+    },
+    
+    # --- PORTFOLIO CANADIEN & DIVERS ---
+    # Tech & Software
+    {
+        "ticker": "SHOP.TO",
+        "name": "Shopify Inc",
+        "search_terms": ["Shopify", "SHOP stock", "Shopify ecommerce"],
+        "sector": "Technology"
+    },
+    {
+        "ticker": "CSU.TO",
+        "name": "Constellation Software",
+        "search_terms": ["Constellation Software", "CSU.TO", "Mark Leonard"],
+        "sector": "Technology"
+    },
+    {
+        "ticker": "KXS.TO",
+        "name": "Kinaxis Inc",
+        "search_terms": ["Kinaxis", "Kinaxis supply chain", "KXS.TO"],
+        "sector": "Technology"
+    },
+    {
+        "ticker": "DSG.TO",
+        "name": "Descartes Systems",
+        "search_terms": ["Descartes Systems", "DSG.TO", "logistics software"],
+        "sector": "Technology"
+    },
+    {
+        "ticker": "CLS.TO",
+        "name": "Celestica Inc",
+        "search_terms": ["Celestica", "CLS.TO", "electronics manufacturing"],
+        "sector": "Technology"
+    },
+    {
+        "ticker": "BB.TO",
+        "name": "BlackBerry Ltd",
+        "search_terms": ["BlackBerry", "BB stock", "BlackBerry QNX", "BlackBerry Cyber"],
+        "sector": "Technology"
+    },
+    {
+        "ticker": "VHI.TO",
+        "name": "Vitalhub Corp",
+        "search_terms": ["Vitalhub", "VHI.TO", "health tech"],
+        "sector": "Healthcare Tech"
+    },
+     {
+        "ticker": "CLTE.V",
+        "name": "Clara Technologies",
+        "search_terms": ["Clara Technologies", "CLTE stock"],
+        "sector": "Technology"
+    },
+    
+    # Financials
+    {
+        "ticker": "RY.TO",
+        "name": "Royal Bank of Canada",
+        "search_terms": ["RBC", "Royal Bank", "RY.TO", "RBC earnings"],
+        "sector": "Financials"
+    },
+    {
+        "ticker": "TD.TO",
+        "name": "Toronto-Dominion Bank",
+        "search_terms": ["TD Bank", "Toronto-Dominion", "TD.TO"],
+        "sector": "Financials"
+    },
+    {
+        "ticker": "NA.TO",
+        "name": "National Bank of Canada",
+        "search_terms": ["National Bank of Canada", "NA.TO", "NBC"],
+        "sector": "Financials"
+    },
+    {
+        "ticker": "FFH.TO",
+        "name": "Fairfax Financial",
+        "search_terms": ["Fairfax Financial", "Prem Watsa", "FFH.TO"],
+        "sector": "Financials"
+    },
+    {
+        "ticker": "X.TO",
+        "name": "TMX Group",
+        "search_terms": ["TMX Group", "TSX operator", "X.TO"],
+        "sector": "Financials"
+    },
+
+    # Retail & Consumer
+    {
+        "ticker": "L.TO",
+        "name": "Loblaw Companies",
+        "search_terms": ["Loblaw", "L.TO", "Galen Weston"],
+        "sector": "Consumer Defensive"
+    },
+    {
+        "ticker": "ATD.TO",
+        "name": "Alimentation Couche-Tard",
+        "search_terms": ["Couche-Tard", "Circle K", "ATD.TO"],
+        "sector": "Consumer Defensive"
+    },
+    {
+        "ticker": "MRU.TO",
+        "name": "Metro Inc",
+        "search_terms": ["Metro Inc", "MRU.TO", "Metro grocery"],
+        "sector": "Consumer Defensive"
+    },
+    {
+        "ticker": "ATZ.TO",
+        "name": "Aritzia Inc",
+        "search_terms": ["Aritzia", "ATZ.TO", "Aritzia earnings"],
+        "sector": "Consumer Cyclical"
+    },
+    {
+        "ticker": "PBH.TO",
+        "name": "Premium Brands Holdings",
+        "search_terms": ["Premium Brands Holdings", "PBH.TO"],
+        "sector": "Consumer Defensive"
+    },
+    {
+        "ticker": "GRGD.TO",
+        "name": "Groupe Dynamite",
+        "search_terms": ["Groupe Dynamite", "Garage clothing", "Dynamite clothing"],
+        "sector": "Consumer Cyclical"
+    },
+    {
+        "ticker": "MNS.TO",
+        "name": "Royal Canadian Mint",
+        "search_terms": ["Royal Canadian Mint", "MNS stock", "Mint coins"],
+        "sector": "Consumer"
+    },
+
+    # Industrial & Materials
+    {
+        "ticker": "CNR.TO",
+        "name": "Canadian National Railway",
+        "search_terms": ["CN Rail", "CNR.TO", "Canadian National"],
+        "sector": "Industrials"
+    },
+    {
+        "ticker": "WSP.TO",
+        "name": "WSP Global",
+        "search_terms": ["WSP Global", "WSP engineering", "WSP.TO"],
+        "sector": "Industrials"
+    },
+    {
+        "ticker": "BBD-B.TO",
+        "name": "Bombardier Inc",
+        "search_terms": ["Bombardier", "Bombardier jets", "BBD.B"],
+        "sector": "Industrials"
+    },
+    {
+        "ticker": "BDT.TO",
+        "name": "Bird Construction",
+        "search_terms": ["Bird Construction", "BDT.TO"],
+        "sector": "Industrials"
+    },
+    {
+        "ticker": "MAL.TO",
+        "name": "Magellan Aerospace",
+        "search_terms": ["Magellan Aerospace", "MAL.TO"],
+        "sector": "Industrials"
+    },
+    {
+        "ticker": "BLDP.TO",
+        "name": "Ballard Power Systems",
+        "search_terms": ["Ballard Power", "fuel cells", "BLDP.TO"],
+        "sector": "Energy"
+    },
+    {
+        "ticker": "WPM.TO",
+        "name": "Wheaton Precious Metals",
+        "search_terms": ["Wheaton Precious Metals", "WPM", "streaming metals"],
+        "sector": "Basic Materials"
+    },
+    {
+        "ticker": "K.TO",
+        "name": "Kinross Gold",
+        "search_terms": ["Kinross Gold", "K.TO", "gold mining"],
+        "sector": "Basic Materials"
+    },
+    {
+        "ticker": "CCO.TO",
+        "name": "Cameco Corporation",
+        "search_terms": ["Cameco", "uranium", "CCO.TO"],
+        "sector": "Energy"
+    },
+    {
+        "ticker": "VNP.TO",
+        "name": "5N Plus Inc",
+        "search_terms": ["5N Plus", "VNP.TO", "semiconductor materials"],
+        "sector": "Basic Materials"
+    },
+    {
+        "ticker": "VWDRY",
+        "name": "Vestas Wind Systems",
+        "search_terms": ["Vestas", "wind turbines", "VWDRY"],
+        "sector": "Energy"
+    },
+    {
+        "ticker": "TNZ.TO",
+        "name": "Tenaz Energy",
+        "search_terms": ["Tenaz Energy", "TNZ.TO"],
+        "sector": "Energy"
+    },
+
+    # Telecom & Utilities
+    {
+        "ticker": "BCE.TO",
+        "name": "BCE Inc",
+        "search_terms": ["BCE", "Bell Canada", "BCE.TO"],
+        "sector": "Communication Services"
+    },
+    {
+        "ticker": "RCI-B.TO",
+        "name": "Rogers Communications",
+        "search_terms": ["Rogers Communications", "RCI.B", "Rogers stock"],
+        "sector": "Communication Services"
+    },
+    {
+        "ticker": "FTS.TO",
+        "name": "Fortis Inc",
+        "search_terms": ["Fortis", "FTS.TO", "Fortis utilities"],
+        "sector": "Utilities"
+    },
+    {
+        "ticker": "RAY-A.TO",
+        "name": "Stingray Group",
+        "search_terms": ["Stingray Group", "RAY.A", "Stingray music"],
+        "sector": "Communication Services"
+    },
+
+    # ETFs
+    {
+        "ticker": "VEQT.TO",
+        "name": "Vanguard All-Equity",
+        "search_terms": ["VEQT", "Vanguard All-Equity"],
+        "sector": "ETF"
+    },
+    {
+        "ticker": "XEQT.TO",
+        "name": "iShares Core Equity",
+        "search_terms": ["XEQT", "iShares Core All-Equity"],
+        "sector": "ETF"
+    },
+    {
+        "ticker": "SOXL",
+        "name": "Direxion Daily Semi Bull",
+        "search_terms": ["SOXL", "Semiconductor Bull 3x"],
+        "sector": "ETF"
+    },
+     {
+        "ticker": "WSRD.NE",
+        "name": "Wealthsimple Dev Mkts",
+        "search_terms": ["WSRD", "Wealthsimple ETF"],
+        "sector": "ETF"
+    },
+    {
+        "ticker": "WSRI.NE",
+        "name": "Wealthsimple Shariah",
+        "search_terms": ["WSRI", "Wealthsimple Shariah ETF"],
+        "sector": "ETF"
+    },
+
+    # Specifics from config history
+    {
+        "ticker": "ONDS",
+        "name": "Ondas Holdings Inc",
+        "search_terms": ["Ondas Holdings", "Ondas AI", "ONDS stock", "Ondas wireless", "Ondas Networks"],
+        "sector": "AI Infrastructure"
+    },
+    {
+        "ticker": "SNDK",
+        "name": "SanDisk Corporation",
+        "search_terms": ["SanDisk", "SNDK stock", "SanDisk storage", "SanDisk AI", "SanDisk flash"],
+        "sector": "AI Storage"
+    }
+]
+
+# Compagnies privees (pas de ticker boursier mais importantes)
+PRIVATE_AI_COMPANIES = [
+    {
+        "ticker": "OPENAI",
+        "name": "OpenAI",
+        "search_terms": ["OpenAI", "ChatGPT", "GPT-4", "Sam Altman"],
+        "sector": "AI Research"
+    },
+    {
+        "ticker": "ANTHROPIC",
+        "name": "Anthropic",
+        "search_terms": ["Anthropic", "Claude AI", "Dario Amodei"],
+        "sector": "AI Research"
+    },
+    {
+        "ticker": "COHERE",
+        "name": "Cohere",
+        "search_terms": ["Cohere AI", "Cohere LLM"],
+        "sector": "AI Research"
+    },
+    {
+        "ticker": "MISTRAL",
+        "name": "Mistral AI",
+        "search_terms": ["Mistral AI", "Mistral LLM"],
+        "sector": "AI Research"
+    }
+]
+
+def get_all_companies():
+    """Retourne toutes les compagnies (publiques + privees)"""
+    return AI_COMPANIES + PRIVATE_AI_COMPANIES
+
+def get_public_companies():
+    """Retourne seulement les compagnies cotees en bourse"""
+    return AI_COMPANIES
+
+def get_company_by_ticker(ticker):
+    """Trouve une compagnie par son ticker"""
+    all_companies = get_all_companies()
+    for company in all_companies:
+        if company['ticker'] == ticker:
+            return company
+    return None
+
+def get_search_query(company):
+    """Genere la requete Google News pour une compagnie"""
+    # Combine nom + termes de recherche
+    terms = [company['name']] + company['search_terms']
+    return " OR ".join(f'"{term}"' for term in terms)
+
+if __name__ == "__main__":
+    print("=== Compagnies AI Configurees ===\n")
+    
+    print("PUBLIQUES (cotees en bourse):")
+    for company in AI_COMPANIES:
+        print(f"  {company['ticker']:6} - {company['name']:30} ({company['sector']})")
+    
+    print(f"\nTotal publiques: {len(AI_COMPANIES)}")
+    
+    print("\n\nPRIVEES:")
+    for company in PRIVATE_AI_COMPANIES:
+        print(f"  {company['ticker']:10} - {company['name']:30} ({company['sector']})")
+    
+    print(f"\nTotal privees: {len(PRIVATE_AI_COMPANIES)}")
+    print(f"\nGRAND TOTAL: {len(get_all_companies())} compagnies")
+    
+    # Test requete
+    print("\n\n=== Exemple de requete Google News ===")
+    nvda = get_company_by_ticker("NVDA")
+    print(f"\nCompagnie: {nvda['name']}")
+    print(f"Requete: {get_search_query(nvda)}")

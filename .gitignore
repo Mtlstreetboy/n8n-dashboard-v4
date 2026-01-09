@@ -20,9 +20,9 @@ _archive_split_cleanup/
 logs/
 *.log
 *.csv
-*.json
++!docs/**/*.json
 !prod/dashboard/config/*.json
 
 # Large/Generated files
-*.mmd
++!docs/**/*.mmd
 *.svg

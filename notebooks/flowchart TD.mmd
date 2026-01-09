@@ -1,0 +1,60 @@
+flowchart TD
+    %% Entry Point
+    DAILY["⏰ daily_automation.py<br/>(orchestrateur principal)"]:::main
+    
+    %% Step 1: Collecte Options
+    DAILY -->|1. Lance| OPTS["📊 collect_options.py<br/>(Yahoo Finance API)"]:::collector
+    OPTS -->|génère| OPTS_CSV["📁 options/*.csv<br/>(put/call volumes)"]:::data
+    OPTS_CSV -->|consommé par| ANALYSIS
+    
+    %% Step 2: Collecte News
+    DAILY -->|2. Lance| NEWS["📰 batch_loader_v2.py<br/>(Google News API)"]:::collector
+    NEWS -->|génère| NEWS_JSON["📁 companies/*_news.json<br/>(articles 30j)"]:::data
+    NEWS_JSON -->|consommé par| ANALYSIS
+    
+    %% Step 3: Configuration
+    CONFIG["⚙️ companies_config.py<br/>(liste 15 tickers)"]:::config
+    CONFIG -->|définit| ANALYSIS
+    
+    %% Step 3: Analyse Sentiment
+    DAILY -->|3. Lance| ANALYZE["🔄 analyze_all_sentiment.py<br/>(orchestrateur batch)"]:::processor
+    
+    ANALYZE -->|pour chaque ticker| ANALYSIS["🧠 advanced_sentiment_engine_v4.py<br/>(moteur sentiment)"]:::processor
+    
+    %% Sub-modules de V4
+    ANALYSIS -->|utilise| FINBERT["📊 finbert_analyzer.py<br/>(FinBERT model)"]:::analyzer
+    ANALYSIS -->|utilise| ANALYST["👔 analyst_insights_integration.py<br/>(6ème dimension)"]:::analyzer
+    ANALYSIS -->|utilise| CONTEXT["🎯 contextual_sentiment_analyzer.py<br/>(évite cross-contamination)"]:::analyzer
+    
+    FINBERT -->|données| ANALYSIS
+    ANALYST -->|données| ANALYSIS
+    CONTEXT -->|données| ANALYSIS
+    
+    %% Inputs vers l'analyse
+    NEWS_JSON -->|articles| ANALYSIS
+    OPTS_CSV -->|options data| ANALYSIS
+    CONFIG -->|ticker config| ANALYZE
+    CONFIG -->|ticker config| ANALYSIS
+    
+    %% Output de l'analyse
+    ANALYSIS -->|génère| SENTIMENT_JSON["📁 sentiment_analysis/*_latest_v4.json<br/>(6D scores + alerts)"]:::data
+    
+    %% Step 4: Visualisation
+    SENTIMENT_JSON -->|embedded dans| DASHBOARD["🎨 dashboard_v4_split.html<br/>(React SPA)"]:::final
+    DASHBOARD -->|affiche| USER["👁️ Utilisateur<br/>(15 tickers + 6D)"]:::user
+    
+    %% Logs et monitoring
+    DAILY -.->|logs| LOGS["📋 logs/daily_automation.log"]:::support
+    ANALYZE -.->|logs| LOGS
+    ANALYSIS -.->|logs| LOGS
+    
+    %% Styling
+    classDef main fill:#4a90e2,stroke:#2c5aa0,color:#fff,stroke-width:3px
+    classDef collector fill:#7ed321,stroke:#5fa319,color:#fff,stroke-width:2px
+    classDef data fill:#f5a623,stroke:#c17d11,color:#fff,stroke-width:2px
+    classDef processor fill:#9013fe,stroke:#5e0ba0,color:#fff,stroke-width:2px
+    classDef analyzer fill:#bd10e0,stroke:#7a0ba0,color:#fff,stroke-width:2px
+    classDef final fill:#50e3c2,stroke:#2a8a6f,color:#333,stroke-width:3px
+    classDef config fill:#ffb600,stroke:#b88600,color:#333,stroke-width:2px
+    classDef user fill:#417505,stroke:#2a4f03,color:#fff,stroke-width:2px
+    classDef support fill:#d0021b,stroke:#800010,color:#fff,stroke-width:1px

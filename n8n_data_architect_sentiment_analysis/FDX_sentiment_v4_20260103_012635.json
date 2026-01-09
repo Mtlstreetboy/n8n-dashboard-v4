@@ -1,0 +1,167 @@
+{
+  "ticker": "FDX",
+  "timestamp": "2026-01-03T01:26:29.523975",
+  "final_sentiment_score": 0.2825,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0096,
+    "news_confidence": 0.5,
+    "news_weight": 0.6473,
+    "options_sentiment": 0,
+    "options_confidence": 0,
+    "options_weight": 0.0,
+    "analyst_sentiment": 0.5,
+    "analyst_confidence": 0.3269,
+    "analyst_weight": 0.3527,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0096,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 20,
+    "options_volume": 0,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "FDX est une compagnie de logistique avec des nouvelles fréquentes mais pas aussi volatil que TSLA. La réactivité du prix aux nouvelles est donc plus modérée, tandis qu'un volume d'options important nécessite une attention à la volatilité.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 2.0,
+    "recommendation_count": 28,
+    "recommendation_summary": "Buy consensus (Mean: 2.0)",
+    "recommendation_score": 0.5,
+    "target_mean": 300.10715,
+    "target_median": 309.0,
+    "current_price": 293.13,
+    "upside_potential": 0.023802237914918277,
+    "price_target_score": 0.048,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0.981,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "UNKNOWN",
+    "confidence": 0.0,
+    "implications": "Données insuffisantes pour déterminer le régime"
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-18T08:00:00+00:00",
+        "confidence": 0.667,
+        "sentiment": 0.738,
+        "impact_score": 0.443,
+        "title": "FDX Earnings: FedEx’s Financial Results Beat Wall Street Estimates - TipRanks",
+        "matches": 2
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2026-01-02T16:30:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.715,
+        "impact_score": 0.167,
+        "title": "FedEx Singapore and Zero Waste SG Launch 'Sort It Out' Campaign To Boost Community Recycling - Yahoo! Finance Canada",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-31T07:25:25+00:00",
+        "confidence": 0.667,
+        "sentiment": 0.35,
+        "impact_score": 0.117,
+        "title": "FedEx Corporation (NYSE:FDX) Given Consensus Rating of \"Moderate Buy\" by Analysts - MarketBeat",
+        "matches": 2
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-28T09:02:58+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.005,
+        "impact_score": 0.002,
+        "title": "FedEx Corporation $FDX Shares Acquired by Cwm LLC - MarketBeat",
+        "matches": 1
+      },
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2025-12-26T17:25:07+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.006,
+        "impact_score": 0.001,
+        "title": "FedEx (FDX) CEO is Playing Offense, Says Jim Cramer - Yahoo Finance",
+        "matches": 1
+      }
+    ],
+    "count": 5,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2025-12-18T08:00:00+00:00",
+      "confidence": 0.667,
+      "sentiment": 0.738,
+      "impact_score": 0.443,
+      "title": "FDX Earnings: FedEx’s Financial Results Beat Wall Street Estimates - TipRanks",
+      "matches": 2
+    },
+    "impact_assessment": "MODERATE_IMPACT",
+    "recommendation": "📊 Catalyseurs modérés en jeu. Ajuster positions selon développements. | Biais POSITIF des catalyseurs.",
+    "categories_present": [
+      "PRODUCT",
+      "FINANCIAL",
+      "ANALYST",
+      "MANAGEMENT",
+      "CORPORATE_ACTION"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.619,
+    "sentiment_volatility": 0.31,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Je n'ai pas accès à Internet. Je ne peux pas vous analyser le sentiment de la société FDX (Federal Express) d'après les métriques fournies, car cela nécessite un contexte financier actuel et des données en temps réel qui dépassent mes capacités."
+  },
+  "alerts": [
+    {
+      "priority": "MEDIUM",
+      "type": "CATALYST",
+      "icon": "🎯",
+      "title": "Catalyseur: Earnings",
+      "message": "FDX Earnings: FedEx’s Financial Results Beat Wall Street Estimates - TipRanks... (Impact: 0.44)",
+      "action": "📊 Catalyseurs modérés en jeu. Ajuster positions selon développements. | Biais POSITIF des catalyseurs.",
+      "urgency": "SOON"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 20 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

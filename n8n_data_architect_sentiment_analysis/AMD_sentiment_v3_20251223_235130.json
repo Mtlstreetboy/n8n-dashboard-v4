@@ -1,0 +1,144 @@
+{
+  "ticker": "AMD",
+  "timestamp": "2025-12-23T23:51:24.141636",
+  "final_sentiment_score": 0.1847,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2101,
+  "smart_money_factor": 0.0838,
+  "components": {
+    "news_sentiment": 0.021,
+    "news_confidence": 0.506,
+    "news_weight": 0.2216,
+    "options_sentiment": 0.1398,
+    "options_confidence": 1.0,
+    "options_weight": 0.6568,
+    "analyst_sentiment": 0.7255,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.1216,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.1188,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 347,
+    "options_volume": 307974,
+    "analysis_depth": "DEEP",
+    "config_rationale": "AMD is a tech company with moderate volatility, requiring a balance between short-term momentum and long-term trends. The high divergence threshold reflects the stock's sensitivity to sudden changes in sentiment.",
+    "version": "V3"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.54902,
+    "recommendation_count": 43,
+    "recommendation_summary": "Buy consensus (Mean: 1.5)",
+    "recommendation_score": 0.725,
+    "target_mean": 282.82092,
+    "target_median": 285.0,
+    "current_price": 214.9,
+    "upside_potential": 0.31605825965565376,
+    "price_target_score": 0.56,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.676,
+    "metrics": {
+      "avg_iv": 0.83805,
+      "iv_skew": -0.16176793156393954,
+      "pcr_volume": 0.635
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2025-12-23T12:32:11+00:00",
+        "confidence": 0.667,
+        "sentiment": 0.589,
+        "impact_score": 0.235,
+        "title": "Samsung Hires Former Amd & Intel Executive to Boost Exynos Chip Performance - Android Headlines",
+        "matches": 2
+      },
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-23T09:13:33+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.562,
+        "impact_score": 0.169,
+        "title": "How AMD quietly beat Nvidia this year — even as China curbs hit them both - MSN",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-23T07:11:51+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.027,
+        "impact_score": 0.005,
+        "title": "Intel vs. AMD: Which Chip Stock Has More Upside Heading into 2026, According to Analysts? - TipRanks",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "executive_changes",
+      "category": "MANAGEMENT",
+      "timestamp": "2025-12-23T12:32:11+00:00",
+      "confidence": 0.667,
+      "sentiment": 0.589,
+      "impact_score": 0.235,
+      "title": "Samsung Hires Former Amd & Intel Executive to Boost Exynos Chip Performance - Android Headlines",
+      "matches": 2
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale. | Biais POSITIF des catalyseurs.",
+    "categories_present": [
+      "MANAGEMENT",
+      "ANALYST",
+      "FINANCIAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.613,
+    "sentiment_volatility": 0.399,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "📊 Based on AMD's sentiment metrics:\n\n* The Sharpe Ratio indicates a relatively strong and risk-adjusted positive sentiment, suggesting an attractive investment opportunity.\n| **Buy**\n\n* The Volatility Sentiment suggests that the market is slightly unstable, which may lead to increased volatility in the coming days.\n| **Monitor and adjust positions**\n\n* The Acceleration Momentum being 0 implies no significant change in momentum, indicating a stable trend.\n| **Confirming the HOLD recommendation**\n\n* The Contrarian Score of 0 indicates no strong contrarian opportunity, suggesting the market is not overly optimistic or pessimistic.\n| **No urgent action needed**\n\n* Consistency is low, implying some uncertainty in sentiment, but not alarmingly so.\n| **Cautious approach with a long-term perspective**\n\nOverall, these metrics suggest that AMD's sentiment is relatively positive and stable, making it a HOLD recommendation. However, the market volatility and inconsistency may require monitoring and adjusting positions accordingly."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

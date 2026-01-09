@@ -1,0 +1,147 @@
+{
+  "ticker": "LLY",
+  "timestamp": "2026-01-03T01:22:07.122723",
+  "final_sentiment_score": 0.3366,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0138,
+    "news_confidence": 0.5,
+    "news_weight": 0.6497,
+    "options_sentiment": 0,
+    "options_confidence": 0,
+    "options_weight": 0.0,
+    "analyst_sentiment": 0.65,
+    "analyst_confidence": 0.3235,
+    "analyst_weight": 0.3503,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0138,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 20,
+    "options_volume": 0,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "Le ticker LLY est dans un secteur stable avec une fréquence modérée de nouvelles, nécessitant une configuration qui combine sensibilité aux tendances et résilience face à la volatilité.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.7,
+    "recommendation_count": 27,
+    "recommendation_summary": "Buy consensus (Mean: 1.7)",
+    "recommendation_score": 0.65,
+    "target_mean": 1093.2229,
+    "target_median": 1145.0,
+    "current_price": 1080.36,
+    "upside_potential": 0.011906123884631125,
+    "price_target_score": 0.024,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0.97,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "UNKNOWN",
+    "confidence": 0.0,
+    "implications": "Données insuffisantes pour déterminer le régime"
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "fda_regulatory",
+        "category": "REGULATORY",
+        "timestamp": "2026-01-02T23:32:21+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.925,
+        "impact_score": 0.293,
+        "title": "Eli Lilly stock (LLY) edges higher after hours today as drug-pricing reset and January catalysts loom - ts2.tech",
+        "matches": 1
+      },
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2026-01-01T14:27:05+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.893,
+        "impact_score": 0.268,
+        "title": "Eli Lilly and Company $LLY Position Boosted by Weaver Capital Management LLC - MarketBeat",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2026-01-02T10:44:49+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.034,
+        "impact_score": 0.011,
+        "title": "Merit Financial Group LLC Acquires 2,023 Shares of Eli Lilly and Company $LLY - MarketBeat",
+        "matches": 1
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-21T08:00:00+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.008,
+        "impact_score": 0.002,
+        "title": "Eli Lilly and Company (LLY) Releases Updated Results from Phase 3 EMBER-3 Study of Inluriyo (imlunestrant) - Yahoo Finance",
+        "matches": 1
+      }
+    ],
+    "count": 4,
+    "most_recent": {
+      "type": "fda_regulatory",
+      "category": "REGULATORY",
+      "timestamp": "2026-01-02T23:32:21+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.925,
+      "impact_score": 0.293,
+      "title": "Eli Lilly stock (LLY) edges higher after hours today as drug-pricing reset and January catalysts loom - ts2.tech",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale. | Biais POSITIF des catalyseurs.",
+    "categories_present": [
+      "REGULATORY",
+      "PRODUCT",
+      "CORPORATE_ACTION",
+      "FINANCIAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.777,
+    "sentiment_volatility": 0.354,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "**🚀 Analyse des métriques de sentiment LLY :**\n\n*   La **Sharpe Ratio** élevée (0.777) suggère que le titre est performant et offre une bonne rentabilité pour le niveau de risque.\n*   Une **Volatilité Sentiment** relativement basse (0,354) indique que l'opinion des investisseurs n'est pas très volatile, ce qui pourrait signifier qu'il y a peu d'effervescence autour du titre.\n*   La **Consistance** est faible (0.0), ce qui peut suggérer une incohérence dans les données de sentiment.\n\nImplication pour un trader : Dans cette situation, considérer une stratégie plus prudente pour maximiser le potentiel de rendement tout en minimisant le risque."
+  },
+  "alerts": [
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 20 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

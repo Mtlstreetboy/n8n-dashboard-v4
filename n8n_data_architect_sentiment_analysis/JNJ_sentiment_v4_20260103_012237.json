@@ -1,0 +1,167 @@
+{
+  "ticker": "JNJ",
+  "timestamp": "2026-01-03T01:22:23.882525",
+  "final_sentiment_score": -0.0206,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": -0.0117,
+    "news_confidence": 0.5,
+    "news_weight": 0.617,
+    "options_sentiment": 0,
+    "options_confidence": 0,
+    "options_weight": 0.0,
+    "analyst_sentiment": 0.3566,
+    "analyst_confidence": 0.3725,
+    "analyst_weight": 0.383,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0117,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 21,
+    "options_volume": 0,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "JNJ est une valeur stable avec un volume de trading d'options modéré, nécessitant une réactivité moyenne aux nouvelles et une configuration qui pondère la volatilité.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 2.16,
+    "recommendation_count": 24,
+    "recommendation_summary": "Buy consensus (Mean: 2.2)",
+    "recommendation_score": 0.42,
+    "target_mean": 210.12666,
+    "target_median": 212.52,
+    "current_price": 207.35,
+    "upside_potential": 0.013391174342898446,
+    "price_target_score": 0.027,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 0.839,
+      "pt": 0.161,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0.937,
+      "price_target": 0.18,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "UNKNOWN",
+    "confidence": 0.0,
+    "implications": "Données insuffisantes pour déterminer le régime"
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-30T18:04:41+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.939,
+        "impact_score": 0.313,
+        "title": "Johnson & Johnson stock today: JNJ slips after $3.05B Halda cancer deal closes, Barclays lifts target - ts2.tech",
+        "matches": 1
+      },
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2026-01-02T17:50:10+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.956,
+        "impact_score": 0.287,
+        "title": "Johnson & Johnson stock today: JNJ nudges lower after $1.30 dividend as earnings loom - ts2.tech",
+        "matches": 1
+      },
+      {
+        "type": "fda_regulatory",
+        "category": "REGULATORY",
+        "timestamp": "2025-12-29T15:40:53+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.641,
+        "impact_score": 0.203,
+        "title": "J&J abandons trial of atopic dermatitis drug - pharmaphorum",
+        "matches": 1
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2026-01-02T13:00:00+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.372,
+        "impact_score": 0.087,
+        "title": "Johnson & Johnson Announces Quarterly Dividend for First Quarter 2026 - Business Wire",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-31T08:51:55+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.046,
+        "impact_score": 0.008,
+        "title": "Barclays Keeps Their Hold Rating on Johnson & Johnson (JNJ) - The Globe and Mail",
+        "matches": 1
+      }
+    ],
+    "count": 5,
+    "most_recent": {
+      "type": "merger_acquisition",
+      "category": "CORPORATE_ACTION",
+      "timestamp": "2025-12-30T18:04:41+00:00",
+      "confidence": 0.333,
+      "sentiment": -0.939,
+      "impact_score": 0.313,
+      "title": "Johnson & Johnson stock today: JNJ slips after $3.05B Halda cancer deal closes, Barclays lifts target - ts2.tech",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale. | Biais NÉGATIF des catalyseurs.",
+    "categories_present": [
+      "ANALYST",
+      "REGULATORY",
+      "FINANCIAL",
+      "CORPORATE_ACTION",
+      "PRODUCT"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": -0.455,
+    "sentiment_volatility": 0.514,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Je vais analyser les métriques de sentiment pour JNJ. Voici quelques insights clés et actions recommandées :\n\n💸 **Sentiment négatif mais faible** | HOLD : Le sentiment final est légèrement négatif (-0,0206), indiquant une tendance à la baisse, mais avec un risque relativement faible.\n\n🚀 **Volatilité élevée** | REDUCER l'exposition : La volatilité sentimentale est élevée (0,514), ce qui suggère que le marché est sensible et susceptible de fluctuations importantes.\n\n📊 **Accélération Momentum nul** | PATIENSE : L'accélération du mouvement est à 0, ce qui signifie qu'il n'y a pas d'accélération significative de la tendance actuelle. Attendre des signaux plus clairs avant prendre une décision.\n\n🤔 **Contrarian Score 0 et Consistance 0** | ÉVALUER les perspectives à long terme : Le score contrariant est égal à zéro, ce qui suggère que le marché n'a pas de tendance inverse aux prédictions du marché. La consistance est également très faible (0), indiquant un marché incohérent et instable à long terme.\n\nJe vous recommande d'attendre des signaux plus clairs avant prendre une décision, voire de réduire l'exposition pour minimiser les risques dans ce marché instable."
+  },
+  "alerts": [
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "😨",
+      "title": "Asymétrie de Peur Détectée",
+      "message": "Marché surréagit aux mauvaises nouvelles. Possible capitulation ou opportunité contrarian.",
+      "action": "Opportunité d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 21 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

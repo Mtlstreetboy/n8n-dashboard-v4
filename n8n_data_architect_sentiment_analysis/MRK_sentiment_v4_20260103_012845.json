@@ -1,0 +1,156 @@
+{
+  "ticker": "MRK",
+  "timestamp": "2026-01-03T01:28:29.112322",
+  "final_sentiment_score": 0.0418,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": -0.0,
+    "news_confidence": 0.5,
+    "news_weight": 0.6522,
+    "options_sentiment": 0,
+    "options_confidence": 0,
+    "options_weight": 0.0,
+    "analyst_sentiment": 0.5517,
+    "analyst_confidence": 0.3199,
+    "analyst_weight": 0.3478,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 20,
+    "options_volume": 0,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "MRK est une entreprise de biens de consommation non alimentaires avec un secteur stable, donc un décroissance rapide et un seuil de divergence modéré sont appropriés. La volatilité moyenne du secteur nécessite une pénalité pour la volatilité.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.89655,
+    "recommendation_count": 26,
+    "recommendation_summary": "Buy consensus (Mean: 1.9)",
+    "recommendation_score": 0.552,
+    "target_mean": 110.03962,
+    "target_median": 114.5,
+    "current_price": 106.45,
+    "upside_potential": 0.03372118365429776,
+    "price_target_score": 0.067,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0.96,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "UNKNOWN",
+    "confidence": 0.0,
+    "implications": "Données insuffisantes pour déterminer le régime"
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2026-01-02T12:53:26+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.938,
+        "impact_score": 0.281,
+        "title": "PICTET BANK & TRUST Ltd Decreases Stock Position in Merck & Co., Inc. $MRK - MarketBeat",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-16T08:00:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.889,
+        "impact_score": 0.148,
+        "title": "Merck (MRK) Price Target Lifted at Morgan Stanley as Biopharma Outlook Improves - Yahoo Finance",
+        "matches": 1
+      },
+      {
+        "type": "fda_regulatory",
+        "category": "REGULATORY",
+        "timestamp": "2025-12-30T23:05:44+00:00",
+        "confidence": 0.667,
+        "sentiment": 0.187,
+        "impact_score": 0.118,
+        "title": "FDA Fast-Tracks Two Merck (MRK) Drugs With Blockbuster Potential - Yahoo Finance",
+        "matches": 2
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2026-01-02T11:14:57+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Merck & Co., Inc. $MRK Shares Acquired by Ninety One UK Ltd - MarketBeat",
+        "matches": 1
+      }
+    ],
+    "count": 4,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2026-01-02T12:53:26+00:00",
+      "confidence": 0.333,
+      "sentiment": -0.938,
+      "impact_score": 0.281,
+      "title": "PICTET BANK & TRUST Ltd Decreases Stock Position in Merck & Co., Inc. $MRK - MarketBeat",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "CORPORATE_ACTION",
+      "REGULATORY",
+      "FINANCIAL",
+      "ANALYST"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": -0.002,
+    "sentiment_volatility": 0.406,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Je peux analyser les métriques de sentiment fournies pour vous aider à prendre une décision éclairée. Voici quelques observations clés :\n\n📊 **Sentiment neutre, mais volatilité élevée** | **Diversifiez votre portefeuille**\n\nLe Sentiment Final est à 0,0418, ce qui indique un sentiment neutre, sans tendance nette vers l'achat ou la vente. Cependant, la Volatilité Sentiment de 0,406 suggère que le marché pourrait être instable et susceptible de fluctuations rapides.\n\n🚀 **Accélération de la vitesse : attention à une remontée rapide** | **Ne vous engagez pas trop tôt**\n\nL'Accélération Momentum est de 0, ce qui signifie qu'il n'y a pas de changement de vitesse significatif. Cependant, il est important de garder un œil sur les tendances à venir, car des remontées rapides peuvent se produire.\n\n🚫 **Contrarian Score zéro : il n'y a pas d'opportunité majeure** | **Attendez une signalisation plus claire**\n\nLe Contrarian Score est de 0, ce qui indique qu'il n'y a pas d'opportunité majeure d'acheter ou de vendre. Il convient donc de garder un profil de trading neutre et de surveiller les tendances à venir.\n\nEn résumé, il semble que la position actuelle soit relativement neutre, mais qu'il faudrait être prêt à une volatilité élevée. Il n'y a pas d'opportunité majeure d'acheter ou de vendre pour l'instant."
+  },
+  "alerts": [
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "😨",
+      "title": "Asymétrie de Peur Détectée",
+      "message": "Marché surréagit aux mauvaises nouvelles. Possible capitulation ou opportunité contrarian.",
+      "action": "Opportunité d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 20 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

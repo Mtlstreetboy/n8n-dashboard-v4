@@ -1,0 +1,190 @@
+{
+  "ticker": "PG",
+  "timestamp": "2026-01-03T02:53:48.160601",
+  "final_sentiment_score": -0.6662,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2885,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0017,
+    "news_confidence": 0.5,
+    "news_weight": 0.2592,
+    "options_sentiment": -1.966,
+    "options_confidence": 1.0,
+    "options_weight": 0.5426,
+    "analyst_sentiment": 0.4823,
+    "analyst_confidence": 0.459,
+    "analyst_weight": 0.1983,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "bearish_divergence",
+    "magnitude": 0.9849,
+    "opportunity_score": 0.7879,
+    "interpretation": "\ud83d\udc3b BEARISH DIVERGENCE (force: 0.98) - Le march\u00e9 ignore les bonnes nouvelles. Possible correction \u00e0 venir ou les nouvelles sont 'priced in'."
+  },
+  "metadata": {
+    "news_articles_count": 22,
+    "options_volume": 35155,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "PG est dans un secteur (utilities) qui est moins volatile et lessiv\u00e9 en termes de nouvelles, mais avec une r\u00e9activit\u00e9 aux nouvelles. Le profil prend en compte ces facteurs tout en ajustant la sensibilit\u00e9 du mod\u00e8le.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.91667,
+    "recommendation_count": 22,
+    "recommendation_summary": "Buy consensus (Mean: 1.9)",
+    "recommendation_score": 0.542,
+    "target_mean": 168.95454,
+    "target_median": 170.5,
+    "current_price": 141.79,
+    "upside_potential": 0.1915829042950844,
+    "price_target_score": 0.365,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 0.663,
+      "pt": 0.337,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0.913,
+      "price_target": 0.464,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "PANIC",
+    "confidence": 0.0,
+    "metrics": {
+      "avg_iv": 0.50015,
+      "iv_skew": -0.2953306066803,
+      "pcr_volume": 2.966
+    },
+    "implications": "\ud83d\udea8 PANIQUE - Les traders se couvrent agressivement. Opportunit\u00e9 contrarian possible mais risqu\u00e9e.",
+    "signal_adjustment": -0.2,
+    "recommendation": "Attendre stabilisation. Si conviction forte, petites positions avec stops serr\u00e9s."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "fda_regulatory",
+        "category": "REGULATORY",
+        "timestamp": "2026-01-02T15:25:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.518,
+        "impact_score": 0.164,
+        "title": "After scrapped trial, InflaRx could tap partner to revive development of COVID drug in rare skin disorder - Fierce Pharma",
+        "matches": 1
+      },
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2026-01-02T08:37:32+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.021,
+        "impact_score": 0.006,
+        "title": "Procter & Gamble Company (The) $PG Shares Sold by Banque Pictet & Cie SA - MarketBeat",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-15T08:00:00+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.023,
+        "impact_score": 0.004,
+        "title": "Amazon accidentally shows film with 15 rating to child who rented PG movie - bbc.com",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "fda_regulatory",
+      "category": "REGULATORY",
+      "timestamp": "2026-01-02T15:25:00+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.518,
+      "impact_score": 0.164,
+      "title": "After scrapped trial, InflaRx could tap partner to revive development of COVID drug in rare skin disorder - Fierce Pharma",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "\u2713 Catalyseurs mineurs. Impact limit\u00e9 sur tendance globale.",
+    "categories_present": [
+      "REGULATORY",
+      "ANALYST",
+      "FINANCIAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.118,
+    "sentiment_volatility": 0.296,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0.474,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "\ud83d\udcca L'analyse des m\u00e9triques de sentiment de PG sugg\u00e8re une tendance baissi\u00e8re avec un risque ajust\u00e9 \u00e9lev\u00e9. \n\nAction recommand\u00e9e : Consid\u00e9rer une position courte ou une allocation boursi\u00e8re r\u00e9duite dans la portefeuille."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "DIVERGENCE",
+      "icon": "\ud83d\udea8",
+      "title": "DIVERGENCE MAJEURE D\u00c9TECT\u00c9E",
+      "message": "\ud83d\udc3b BEARISH DIVERGENCE (force: 0.98) - Le march\u00e9 ignore les bonnes nouvelles. Possible correction \u00e0 venir ou les nouvelles sont 'priced in'.",
+      "action": "\u274c NE PAS ACHETER malgr\u00e9 bonnes nouvelles. Attendre correction ou confirmation par price action.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "\ud83c\udf2a\ufe0f",
+      "title": "R\u00c9GIME DE HAUTE VOLATILIT\u00c9",
+      "message": "\ud83d\udea8 PANIQUE - Les traders se couvrent agressivement. Opportunit\u00e9 contrarian possible mais risqu\u00e9e.",
+      "action": "Attendre stabilisation. Si conviction forte, petites positions avec stops serr\u00e9s.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "\ud83d\ude28",
+      "title": "Asym\u00e9trie de Peur D\u00e9tect\u00e9e",
+      "message": "March\u00e9 surr\u00e9agit aux mauvaises nouvelles. Possible capitulation ou opportunit\u00e9 contrarian.",
+      "action": "Opportunit\u00e9 d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "\u26a0\ufe0f",
+      "title": "Donn\u00e9es Limit\u00e9es",
+      "message": "Seulement 22 articles analys\u00e9s. Confiance r\u00e9duite.",
+      "action": "Attendre plus de donn\u00e9es ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ],
+  "options_detail": {
+    "timestamp": "2026-01-03T01:48:19.248643",
+    "call_volume": 8865,
+    "put_volume": 26290,
+    "call_open_interest": 119496,
+    "put_open_interest": 79724,
+    "put_call_ratio_volume": 2.966,
+    "put_call_ratio_oi": 0.667,
+    "call_implied_volatility": 0.5868,
+    "put_implied_volatility": 0.4135,
+    "sentiment_label": "bearish",
+    "sentiment_score": -1.966,
+    "total_contracts": 35155,
+    "total_open_interest": 199220,
+    "near_term_call_volume": 6344,
+    "far_term_call_volume": 2521,
+    "near_term_put_volume": 24891,
+    "far_term_put_volume": 1399
+  }
+}

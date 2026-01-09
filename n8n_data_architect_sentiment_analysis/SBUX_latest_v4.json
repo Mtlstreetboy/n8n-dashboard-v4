@@ -1,0 +1,170 @@
+{
+  "ticker": "SBUX",
+  "timestamp": "2026-01-03T02:56:33.522272",
+  "final_sentiment_score": -0.4796,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.3921,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": -0.0056,
+    "news_confidence": 0.5,
+    "news_weight": 0.2734,
+    "options_sentiment": -1.288,
+    "options_confidence": 1.0,
+    "options_weight": 0.5747,
+    "analyst_sentiment": 0.3194,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.1519,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "weak_divergence",
+    "magnitude": 0.6175,
+    "opportunity_score": 0.1853,
+    "interpretation": "\u26a0\ufe0f Divergence faible (force: 0.62) - Incertitude, attendre confirmation."
+  },
+  "metadata": {
+    "news_articles_count": 23,
+    "options_volume": 36661,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "SBUX est une compagnie de technologie avec des nouvelles fr\u00e9quentes et une volatilit\u00e9 typique, n\u00e9cessitant un d\u00e9croissance rapide et une r\u00e9activit\u00e9 \u00e9lev\u00e9e aux nouvelles.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 2.36111,
+    "recommendation_count": 31,
+    "recommendation_summary": "Buy consensus (Mean: 2.4)",
+    "recommendation_score": 0.319,
+    "target_mean": 94.12903,
+    "target_median": 95.0,
+    "current_price": 83.97,
+    "upside_potential": 0.12098404191973326,
+    "price_target_score": 0.237,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "PANIC",
+    "confidence": 0.122,
+    "metrics": {
+      "avg_iv": 0.5609,
+      "iv_skew": -0.022563017803631295,
+      "pcr_volume": 2.288
+    },
+    "implications": "\ud83d\udea8 PANIQUE - Les traders se couvrent agressivement. Opportunit\u00e9 contrarian possible mais risqu\u00e9e.",
+    "signal_adjustment": -0.2,
+    "recommendation": "Attendre stabilisation. Si conviction forte, petites positions avec stops serr\u00e9s."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2026-01-02T03:59:08+00:00",
+        "confidence": 0.667,
+        "sentiment": 0.884,
+        "impact_score": 0.295,
+        "title": "Starbucks: China Sale And U.S. Comps Improvement Are Encouraging (Rating Upgrade) - Seeking Alpha",
+        "matches": 2
+      },
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-31T12:05:22+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.86,
+        "impact_score": 0.258,
+        "title": "Zacks Research Downgrades Starbucks (NASDAQ:SBUX) to Strong Sell - MarketBeat",
+        "matches": 1
+      }
+    ],
+    "count": 2,
+    "most_recent": {
+      "type": "analyst_action",
+      "category": "ANALYST",
+      "timestamp": "2026-01-02T03:59:08+00:00",
+      "confidence": 0.667,
+      "sentiment": 0.884,
+      "impact_score": 0.295,
+      "title": "Starbucks: China Sale And U.S. Comps Improvement Are Encouraging (Rating Upgrade) - Seeking Alpha",
+      "matches": 2
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "\u2713 Catalyseurs mineurs. Impact limit\u00e9 sur tendance globale.",
+    "categories_present": [
+      "FINANCIAL",
+      "ANALYST"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": -0.225,
+    "sentiment_volatility": 0.495,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Bien s\u00fbr ! Voici mes analyses :\n\n\ud83d\udcc9 **Baisse du sentiment** | **Ne pas acheter maintenant**\n\nLa Sharpe Ratio n\u00e9gative (-0,225) indique que le sentiment est ajust\u00e9 au risque et sugg\u00e8re une action \u00e0 \u00e9viter. La volatilit\u00e9 de l'opinion (0,495) est \u00e9lev\u00e9e, ce qui signifie que les fluctuations sont importantes.\n\n\ud83d\ude80 **Mouvement momentan\u00e9** | **Attendez la confirmation**\n\nL'acc\u00e9l\u00e9ration du mouvement est nulle (0), ce qui sugg\u00e8re un mouvement momentan\u00e9. Attendre une confirmation avant de prendre position.\n\n\ud83d\udcb8 **Opportunit\u00e9 limit\u00e9e** | **Ne pas jouer sur les faiblesses**\n\nLe Score Contrarian est \u00e0 0, ce qui indique qu'il n'y a pas d'opportunit\u00e9 forte \u00e0 saisir. Ne pas jouer sur les faiblesses et attendre des signaux plus clairs.\n\nNotez que ces analyses sont bas\u00e9es uniquement sur les m\u00e9triques fournies et ne doivent pas \u00eatre consid\u00e9r\u00e9es comme de conseils d'investissement personnalis\u00e9s. Il est toujours recommand\u00e9 de faire sa propre analyse et de prendre ses propres d\u00e9cisions en fonction de vos objectifs financiers, de votre tol\u00e9rance au risque et des autres facteurs pertinents."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "\ud83c\udf2a\ufe0f",
+      "title": "R\u00c9GIME DE HAUTE VOLATILIT\u00c9",
+      "message": "\ud83d\udea8 PANIQUE - Les traders se couvrent agressivement. Opportunit\u00e9 contrarian possible mais risqu\u00e9e.",
+      "action": "Attendre stabilisation. Si conviction forte, petites positions avec stops serr\u00e9s.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "\ud83d\ude28",
+      "title": "Asym\u00e9trie de Peur D\u00e9tect\u00e9e",
+      "message": "March\u00e9 surr\u00e9agit aux mauvaises nouvelles. Possible capitulation ou opportunit\u00e9 contrarian.",
+      "action": "Opportunit\u00e9 d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "\u26a0\ufe0f",
+      "title": "Donn\u00e9es Limit\u00e9es",
+      "message": "Seulement 23 articles analys\u00e9s. Confiance r\u00e9duite.",
+      "action": "Attendre plus de donn\u00e9es ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ],
+  "options_detail": {
+    "timestamp": "2026-01-03T01:49:21.761819",
+    "call_volume": 11149,
+    "put_volume": 25512,
+    "call_open_interest": 206625,
+    "put_open_interest": 157431,
+    "put_call_ratio_volume": 2.288,
+    "put_call_ratio_oi": 0.762,
+    "call_implied_volatility": 0.5673,
+    "put_implied_volatility": 0.5545,
+    "sentiment_label": "bearish",
+    "sentiment_score": -1.288,
+    "total_contracts": 36661,
+    "total_open_interest": 364056,
+    "near_term_call_volume": 9389,
+    "far_term_call_volume": 1760,
+    "near_term_put_volume": 23554,
+    "far_term_put_volume": 1958
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "ticker": "PFE",
+  "timestamp": "2026-01-03T01:21:53.880559",
+  "final_sentiment_score": 0.2026,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0058,
+    "news_confidence": 0.5,
+    "news_weight": 0.6576,
+    "options_sentiment": 0,
+    "options_confidence": 0,
+    "options_weight": 0.0,
+    "analyst_sentiment": 0.2885,
+    "analyst_confidence": 0.3125,
+    "analyst_weight": 0.3424,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0058,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 20,
+    "options_volume": 0,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "PFE est une compagnie de santé avec un volume de trading d'options significatif, nécessitant un régime de déclin temporel plus court pour réagir rapidement aux nouvelles. La volatilité et la fréquence des nouvelles dans le secteur de la santé sont élevées, justifiant une pénalité à la volatilité moyenne et un seuil de divergence modéré.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 2.42308,
+    "recommendation_count": 24,
+    "recommendation_summary": "Buy consensus (Mean: 2.4)",
+    "recommendation_score": 0.288,
+    "target_mean": 28.62292,
+    "target_median": 27.5,
+    "current_price": 25.18,
+    "upside_potential": 0.13673232724384435,
+    "price_target_score": 0.267,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0.937,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "UNKNOWN",
+    "confidence": 0.0,
+    "implications": "Données insuffisantes pour déterminer le régime"
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "fda_regulatory",
+        "category": "REGULATORY",
+        "timestamp": "2025-12-31T15:05:11+00:00",
+        "confidence": 0.667,
+        "sentiment": 0.481,
+        "impact_score": 0.305,
+        "title": "Pfizer (PFE) Tops List as Drugmakers Plan Price Hike on 350 Medications - TipRanks",
+        "matches": 2
+      },
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2026-01-02T22:31:07+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.671,
+        "impact_score": 0.201,
+        "title": "Pfizer (NYSE:PFE) Trading 1.1% Higher - Should You Buy? - MarketBeat",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-30T16:10:38+00:00",
+        "confidence": 1.0,
+        "sentiment": -0.214,
+        "impact_score": 0.107,
+        "title": "SA analyst upgrades/downgrades: PLTR, TGT, NET, PFE (SP500:) (PFE:NYSE) - Seeking Alpha",
+        "matches": 3
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "fda_regulatory",
+      "category": "REGULATORY",
+      "timestamp": "2025-12-31T15:05:11+00:00",
+      "confidence": 0.667,
+      "sentiment": 0.481,
+      "impact_score": 0.305,
+      "title": "Pfizer (PFE) Tops List as Drugmakers Plan Price Hike on 350 Medications - TipRanks",
+      "matches": 2
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale. | Biais POSITIF des catalyseurs.",
+    "categories_present": [
+      "FINANCIAL",
+      "ANALYST",
+      "REGULATORY"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.301,
+    "sentiment_volatility": 0.386,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Je ne peux pas fournir d’informations sur les actions à entreprendre concernant des transactions financières. Doit-je vous aider avec autre chose?"
+  },
+  "alerts": [
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 20 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

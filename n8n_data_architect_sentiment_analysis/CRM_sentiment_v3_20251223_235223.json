@@ -1,0 +1,155 @@
+{
+  "ticker": "CRM",
+  "timestamp": "2025-12-23T23:52:19.239645",
+  "final_sentiment_score": 0.0845,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2875,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.019,
+    "news_confidence": 0.5134,
+    "news_weight": 0.2813,
+    "options_sentiment": -0.0433,
+    "options_confidence": 0.6891,
+    "options_weight": 0.5664,
+    "analyst_sentiment": 0.681,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.1522,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0624,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 246,
+    "options_volume": 30840,
+    "analysis_depth": "DEEP",
+    "config_rationale": "Le secteur de la technologie et les compagnies de services sont très volatils, il est donc nécessaire d'avoir un décroissance rapide pour prendre en compte les nouvelles rapidement. Le seuil de divergence est élevé car le prix du CRM réagit fortement aux nouvelles. L'institutional premium est modéré car il s'agit d'une compagnie de services qui n'est pas également instable.",
+    "version": "V3"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.63793,
+    "recommendation_count": 53,
+    "recommendation_summary": "Buy consensus (Mean: 1.6)",
+    "recommendation_score": 0.681,
+    "target_mean": 330.06265,
+    "target_median": 335.0,
+    "current_price": 263.43,
+    "upside_potential": 0.2529425274266409,
+    "price_target_score": 0.467,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "PANIC",
+    "confidence": 0.071,
+    "metrics": {
+      "avg_iv": 0.5354,
+      "iv_skew": -0.04348620500639511,
+      "pcr_volume": 1.394
+    },
+    "implications": "🚨 PANIQUE - Les traders se couvrent agressivement. Opportunité contrarian possible mais risquée.",
+    "signal_adjustment": -0.2,
+    "recommendation": "Attendre stabilisation. Si conviction forte, petites positions avec stops serrés."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2025-12-22T12:01:00+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.878,
+        "impact_score": 0.176,
+        "title": "After laying off 4,000 employees and automating with AI agents, Salesforce executives admit: We were more - Times of India",
+        "matches": 1
+      },
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-22T14:00:37+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.133,
+        "impact_score": 0.04,
+        "title": "While everyone talks about an AI bubble, Salesforce quietly added 6,000 enterprise customers in 3 months - VentureBeat",
+        "matches": 1
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-23T14:11:22+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.165,
+        "impact_score": 0.038,
+        "title": "Minuscule Technologies Launches Next-Gen AI Voice Support, Transforming Contact Centers via Service Cloud - AiThority",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-22T15:50:22+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.113,
+        "impact_score": 0.019,
+        "title": "Integrating Data Cloud with Agentforce for Predictive and Proactive Customer Engagement Using Real-Time CRM Intelligence - International Business Times",
+        "matches": 1
+      }
+    ],
+    "count": 4,
+    "most_recent": {
+      "type": "executive_changes",
+      "category": "MANAGEMENT",
+      "timestamp": "2025-12-22T12:01:00+00:00",
+      "confidence": 0.333,
+      "sentiment": -0.878,
+      "impact_score": 0.176,
+      "title": "After laying off 4,000 employees and automating with AI agents, Salesforce executives admit: We were more - Times of India",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "PRODUCT",
+      "MANAGEMENT",
+      "ANALYST",
+      "FINANCIAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.568,
+    "sentiment_volatility": 0.4,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "💡 Here are the key insights and recommendations based on these CRM sentiment metrics:\n\n* The Sharpe Ratio of 0.568 indicates a moderate risk-adjusted sentiment, suggesting that the market is slightly favorable for the CRM stock.\n| Hold or potentially take a small long position.\n\n* The Volatility Sentiment of 0.4 suggests a relatively stable environment, which may make it suitable to adjust positions accordingly.\n| Monitor and adjust positions based on market conditions.\n\n* The Accélération Momentum being 0 means no significant change in momentum, indicating that the trend is steady but not accelerating or decelerating rapidly.\n| Maintain current position and wait for further signs of acceleration or deceleration.\n\nOverall, these metrics suggest a stable and slightly favorable environment for CRM."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🚨 PANIQUE - Les traders se couvrent agressivement. Opportunité contrarian possible mais risquée.",
+      "action": "Attendre stabilisation. Si conviction forte, petites positions avec stops serrés.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

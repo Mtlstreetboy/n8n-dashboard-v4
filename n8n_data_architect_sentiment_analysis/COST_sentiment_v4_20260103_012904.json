@@ -1,0 +1,125 @@
+{
+  "ticker": "COST",
+  "timestamp": "2026-01-03T01:28:52.907058",
+  "final_sentiment_score": 0.1853,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": -0.005,
+    "news_confidence": 0.5,
+    "news_weight": 0.6429,
+    "options_sentiment": 0,
+    "options_confidence": 0,
+    "options_weight": 0.0,
+    "analyst_sentiment": 0.5278,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.3571,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.005,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 20,
+    "options_volume": 0,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "COST est une valeur stable avec un flux de nouvelles régulier mais moins intense que les secteurs technologiques. La configuration optimale combine un decalay moyen, un seuil de divergence modéré pour réagir aux changements importants, et une pénalité de volatilité équilibrée.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.94444,
+    "recommendation_count": 31,
+    "recommendation_summary": "Buy consensus (Mean: 1.9)",
+    "recommendation_score": 0.528,
+    "target_mean": 1031.4517,
+    "target_median": 1045.0,
+    "current_price": 854.5,
+    "upside_potential": 0.207082153306027,
+    "price_target_score": 0.392,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "UNKNOWN",
+    "confidence": 0.0,
+    "implications": "Données insuffisantes pour déterminer le régime"
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "fda_regulatory",
+        "category": "REGULATORY",
+        "timestamp": "2026-01-02T10:37:28+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.589,
+        "impact_score": 0.186,
+        "title": "Ultragenyx plans major cost-cutting push after flunking phase 3 brittle bone trials - Fierce Biotech",
+        "matches": 1
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-31T03:49:07+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.027,
+        "impact_score": 0.006,
+        "title": "Pentagon Releases Cost of Living, BAH Rates for 2026 - Air & Space Forces Magazine",
+        "matches": 1
+      }
+    ],
+    "count": 2,
+    "most_recent": {
+      "type": "fda_regulatory",
+      "category": "REGULATORY",
+      "timestamp": "2026-01-02T10:37:28+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.589,
+      "impact_score": 0.186,
+      "title": "Ultragenyx plans major cost-cutting push after flunking phase 3 brittle bone trials - Fierce Biotech",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "REGULATORY",
+      "PRODUCT"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": -0.248,
+    "sentiment_volatility": 0.406,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "📊 **Alerte de volatilité élevée** | Évitez les entrées à court terme\n\nLes métriques indiquent une volatilité sentimentale élevée (0,406) et un Sharpe Ratio négatif (-0,248), signalant des risques importants pour la position. Il convient donc d'éviter de prendre des positions à court terme.\n\n🚨 **Sentiment neutre** | Ne prenez aucune action\n\nLe sentiment final est de 0,1853 et le score contrariant est de 0, ce qui signifie qu'il n'y a pas d'opportunité claire pour prendre position. Il vaut mieux attendre des signaux plus forts avant d'intervenir.\n\n📈 **Momentum faible** | Attendez des signes d'amélioration\n\nL'accélération du momentum est de 0, ce qui indique une faiblesse dans la dynamique boursière. Il convient donc d'attendre des signaux plus positifs avant de prendre position."
+  },
+  "alerts": [
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 20 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

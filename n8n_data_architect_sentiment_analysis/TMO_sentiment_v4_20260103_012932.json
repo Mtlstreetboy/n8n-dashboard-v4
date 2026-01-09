@@ -1,0 +1,145 @@
+{
+  "ticker": "TMO",
+  "timestamp": "2026-01-03T01:29:24.895164",
+  "final_sentiment_score": 0.2414,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.009,
+    "news_confidence": 0.5,
+    "news_weight": 0.5742,
+    "options_sentiment": 0,
+    "options_confidence": 0,
+    "options_weight": 0.0,
+    "analyst_sentiment": 0.5548,
+    "analyst_confidence": 0.4449,
+    "analyst_weight": 0.4258,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.009,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 19,
+    "options_volume": 0,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "TMO est une compagnie utilities avec des nouvelles régulières et un volume de trading d'options modéré. La volatilité du secteur est généralement plus faible comparée aux technologies, mais il faut garder un œil sur les changements réglementaires potentiels.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.53846,
+    "recommendation_count": 23,
+    "recommendation_summary": "Buy consensus (Mean: 1.5)",
+    "recommendation_score": 0.731,
+    "target_mean": 639.3913,
+    "target_median": 630.0,
+    "current_price": 592.51,
+    "upside_potential": 0.0791232215490034,
+    "price_target_score": 0.157,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 0.693,
+      "pt": 0.307,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0.925,
+      "price_target": 0.409,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "UNKNOWN",
+    "confidence": 0.0,
+    "implications": "Données insuffisantes pour déterminer le régime"
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-23T08:00:00+00:00",
+        "confidence": 0.667,
+        "sentiment": 0.933,
+        "impact_score": 0.56,
+        "title": "Favorable Results and Improved Guidance Lifted Thermo Fisher Scientific (TMO) in Q3 - Yahoo Finance",
+        "matches": 2
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-20T08:00:00+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.227,
+        "impact_score": 0.038,
+        "title": "Analysts See 12% Upside To Thermo Fisher Scientific Inc. (TMO) - Yahoo Finance",
+        "matches": 1
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-22T08:00:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.072,
+        "impact_score": 0.017,
+        "title": "TMO Stock May Benefit From PPD CorEvitas Alzheimer's Registry Launch - Yahoo Finance",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2025-12-23T08:00:00+00:00",
+      "confidence": 0.667,
+      "sentiment": 0.933,
+      "impact_score": 0.56,
+      "title": "Favorable Results and Improved Guidance Lifted Thermo Fisher Scientific (TMO) in Q3 - Yahoo Finance",
+      "matches": 2
+    },
+    "impact_assessment": "MODERATE_IMPACT",
+    "recommendation": "📊 Catalyseurs modérés en jeu. Ajuster positions selon développements.",
+    "categories_present": [
+      "FINANCIAL",
+      "ANALYST",
+      "PRODUCT"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.569,
+    "sentiment_volatility": 0.318,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "📊 Les métriques de sentiment indiquent une tendance à la stabilité (Sentiment Final : 0,2414) avec une classification de HOLD.\n\n- **Opportunité limitée** | Évitez les transactions pour le moment.\n- **Volatilité moyenne** | Prévoyez une position médiane sans prendre trop de risque.\n- **Pas d'opportunité contrariane** | Attendez-vous à un mouvement vers la neutralité."
+  },
+  "alerts": [
+    {
+      "priority": "MEDIUM",
+      "type": "CATALYST",
+      "icon": "🎯",
+      "title": "Catalyseur: Earnings",
+      "message": "Favorable Results and Improved Guidance Lifted Thermo Fisher Scientific (TMO) in... (Impact: 0.56)",
+      "action": "📊 Catalyseurs modérés en jeu. Ajuster positions selon développements.",
+      "urgency": "SOON"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 19 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

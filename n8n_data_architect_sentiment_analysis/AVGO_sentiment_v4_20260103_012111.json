@@ -1,0 +1,162 @@
+{
+  "ticker": "AVGO",
+  "timestamp": "2026-01-03T01:21:02.886127",
+  "final_sentiment_score": 0.2166,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.3361,
+  "smart_money_factor": 0.15,
+  "components": {
+    "news_sentiment": 0.0042,
+    "news_confidence": 0.895,
+    "news_weight": 0.3349,
+    "options_sentiment": 0.5181,
+    "options_confidence": 1.0,
+    "options_weight": 0.5612,
+    "analyst_sentiment": 0.8646,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.1039,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "weak_divergence",
+    "magnitude": 0.5139,
+    "opportunity_score": 0.1542,
+    "interpretation": "⚠️ Divergence faible (force: 0.51) - Incertitude, attendre confirmation."
+  },
+  "metadata": {
+    "news_articles_count": 391,
+    "options_volume": 495550,
+    "analysis_depth": "DEEP",
+    "config_rationale": "AVGO est une compagnie technologique avec un volume de trading d'options important et des nouvelles fréquentes, nécessitant une configuration qui réagit rapidement aux tendances et maintient un équilibre entre le sentiment et la volatilité.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.27083,
+    "recommendation_count": 43,
+    "recommendation_summary": "Strong Buy consensus (Mean: 1.3)",
+    "recommendation_score": 0.865,
+    "target_mean": 456.802,
+    "target_median": 462.0,
+    "current_price": 347.62,
+    "upside_potential": 0.31408434497439736,
+    "price_target_score": 0.557,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.932,
+    "metrics": {
+      "avg_iv": 0.9661500000000001,
+      "iv_skew": -0.41757431823765456,
+      "pcr_volume": 0.324
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections. | 📞 Call skew élevé - Spéculation haussière agressive",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2026-01-02T22:39:57+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.882,
+        "impact_score": 0.176,
+        "title": "Broadcom stock today: AVGO holds gains after hours as CFO sale notice and chip rally grab attention - ts2.tech",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2026-01-02T14:10:34+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.909,
+        "impact_score": 0.152,
+        "title": "Benchmark Boosts Broadcom’s (AVGO) Price Target Amid AI Chip Growth - Yahoo Finance",
+        "matches": 1
+      },
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2026-01-02T20:03:03+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.147,
+        "impact_score": 0.044,
+        "title": "Key facts: Broadcom Custom Chips for Meta; Earnings Growth of 24% Expected - TradingView — Track All Markets",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "executive_changes",
+      "category": "MANAGEMENT",
+      "timestamp": "2026-01-02T22:39:57+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.882,
+      "impact_score": 0.176,
+      "title": "Broadcom stock today: AVGO holds gains after hours as CFO sale notice and chip rally grab attention - ts2.tech",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale. | Biais POSITIF des catalyseurs.",
+    "categories_present": [
+      "FINANCIAL",
+      "ANALYST",
+      "MANAGEMENT"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.097,
+    "sentiment_volatility": 0.462,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Je m’excuse, mais je n’ai pas accès à une base de données contenant les informations nécessaires pour répondre à votre question. Cependant, je peux vous fournir un exemple de comment interpréter et agir sur les métriques que vous avez mentionnées :\n\nLes métriques de sentiment indiquent que AVGO présente un sentiment mitigé avec une tendance stable à long terme (Sharpe Ratio : 0,097). Cela suggère que la performance du titre n'est pas exceptionnelle mais qu'il présente un certain niveau de rentabilité."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "SMART_MONEY",
+      "icon": "💰",
+      "title": "SMART MONEY ACTIF",
+      "message": "Détection d'activité institutionnelle (score: 0.150). Open Interest suggère positionnement de gros joueurs.",
+      "action": "Analyser leurs positions. Ils ont souvent raison à moyen terme.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections. | 📞 Call skew élevé - Spéculation haussière agressive",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "😨",
+      "title": "Asymétrie de Peur Détectée",
+      "message": "Marché surréagit aux mauvaises nouvelles. Possible capitulation ou opportunité contrarian.",
+      "action": "Opportunité d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    }
+  ]
+}

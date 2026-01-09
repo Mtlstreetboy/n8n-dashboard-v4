@@ -1,0 +1,89 @@
+{
+  "ticker": "AAPL",
+  "timestamp": "2025-12-14T04:11:05.049597",
+  "final_sentiment_score": 0.4031,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0.15,
+  "components": {
+    "news_sentiment": 0,
+    "news_confidence": 0,
+    "news_weight": 0.0,
+    "options_sentiment": 0.4031,
+    "options_confidence": 1.0,
+    "options_weight": 1.0,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.4031,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 0,
+    "options_volume": 486737,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "AAPL is a tech company with high volatility, requiring a faster decay of sentiment and a higher threshold to capture the divergence between momentum and value. The institutional premium reflects the company's large market capitalization."
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.702,
+    "metrics": {
+      "avg_iv": 0.85105,
+      "iv_skew": -0.0994863778472532,
+      "pcr_volume": 0.358
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [],
+    "count": 0,
+    "most_recent": null,
+    "impact_assessment": "NO_DATA",
+    "recommendation": "Pas de données articles disponibles pour détecter des catalyseurs.",
+    "categories_present": []
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0,
+    "sentiment_volatility": 0,
+    "momentum_acceleration": 0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.5,
+    "llm_interpretation": "📊 Here are the key insights and recommendations:\n\n* Neutral Sentiment: With a Sharpe Ratio of 0, the sentiment is neutral, indicating no significant risk-adjusted advantage or disadvantage.\n* Stable Market: Volatility Sentiment = 0 suggests a stable market with no strong trends or chaos.\n* No Momentum Shift: Acceleration Momentum = 0 indicates no significant change in momentum, suggesting no sudden acceleration or deceleration.\n* Contrarian Opportunity: Score Contrarian = 1 indicates a potential contrarian opportunity, as the sentiment is not strongly aligned with the classification (HOLD).\n* Slightly Inconsistent: Consistency = 0.5 suggests a slightly inconsistent market behavior.\n\n👉 Action Recommendation:\nConsider taking a neutral stance or adjusting your position to balance risk and reward. The contrarian opportunity may be worth exploring, but it's essential to carefully evaluate the market before making any significant moves."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "SMART_MONEY",
+      "icon": "💰",
+      "title": "SMART MONEY ACTIF",
+      "message": "Détection d'activité institutionnelle (score: 0.150). Open Interest suggère positionnement de gros joueurs.",
+      "action": "Analyser leurs positions. Ils ont souvent raison à moyen terme.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 0 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

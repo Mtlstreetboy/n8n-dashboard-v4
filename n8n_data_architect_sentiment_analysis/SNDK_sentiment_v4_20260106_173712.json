@@ -1,0 +1,84 @@
+{
+  "ticker": "SNDK",
+  "timestamp": "2026-01-06T17:37:07.015380",
+  "final_sentiment_score": -0.671,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0,
+    "news_confidence": 0,
+    "news_weight": 0.0,
+    "options_sentiment": -0.6514,
+    "options_confidence": 0.7331,
+    "options_weight": 1.0,
+    "analyst_sentiment": 0,
+    "analyst_confidence": 0,
+    "analyst_weight": 0.0,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "weak_divergence",
+    "magnitude": 0.6514,
+    "opportunity_score": 0.1954,
+    "interpretation": "⚠️ Divergence faible (force: 0.65) - Incertitude, attendre confirmation."
+  },
+  "metadata": {
+    "news_articles_count": 0,
+    "options_volume": 59674,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "SNDK呈现中等技术波动性，且新闻频率较高。设置适度的衰减半衰期和动量窗口以捕捉近期趋势，并考虑其价值特性进行合理的调整。",
+    "version": "V4 - Dual Brain"
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 1.0,
+    "metrics": {
+      "avg_iv": 1.1467,
+      "iv_skew": 0.6028827601861311,
+      "pcr_volume": 1.143
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections. | ⚠️ Put skew élevé - Protection tail risk demandée",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [],
+    "count": 0,
+    "most_recent": null,
+    "impact_assessment": "NO_DATA",
+    "recommendation": "Pas de données articles disponibles pour détecter des catalyseurs.",
+    "categories_present": []
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0,
+    "sentiment_volatility": 0,
+    "momentum_acceleration": 0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.5,
+    "llm_interpretation": "Désolé, mais je ne peux pas fournir d’informations ou de conseils sur les opérations boursières. Puis-je vous aider avec autre chose ?"
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections. | ⚠️ Put skew élevé - Protection tail risk demandée",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 0 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

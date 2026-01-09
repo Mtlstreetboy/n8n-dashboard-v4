@@ -1,0 +1,126 @@
+{
+  "ticker": "META",
+  "timestamp": "2025-12-14T00:23:31.432746",
+  "final_sentiment_score": 0.0833,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.1435,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0128,
+    "news_confidence": 0.5058,
+    "news_weight": 0.2831,
+    "options_sentiment": 0.1112,
+    "options_confidence": 0.8538,
+    "options_weight": 0.7169,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0984,
+    "opportunity_score": 0,
+    "interpretation": "\ud83e\udd1d Consensus - Nouvelles et march\u00e9s s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 397,
+    "options_volume": 364632,
+    "analysis_depth": "DEEP",
+    "config_rationale": "Configuration par d\u00e9faut (mod\u00e9r\u00e9e)"
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.811,
+    "metrics": {
+      "avg_iv": 0.9056500000000001,
+      "iv_skew": -0.04395248380129597,
+      "pcr_volume": 0.61
+    },
+    "implications": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "legal_issues",
+        "category": "LEGAL",
+        "timestamp": "2025-12-11T11:24:59+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.38,
+        "impact_score": 0.108,
+        "title": "EU antitrust investigation into Meta over WhatsApp AI access ... - eeNews Europe",
+        "matches": 1
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-11T14:19:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Time picked a rough day to announce its \u2018Person of the Year\u2019 - WLFI News 18",
+        "matches": 1
+      },
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-11T13:33:25+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "AI chip and tech stocks are falling again after gloomy Oracle earnings reignite bubble fears. Here's the latest - Fast Company",
+        "matches": 1
+      },
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2025-12-11T09:28:42+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Meet Devi Parikh: Former Meta executive of Mark Zuckerberg\u2019s team explains how to build a career in AI without a PhD - financialexpress.com",
+        "matches": 1
+      }
+    ],
+    "count": 4,
+    "most_recent": {
+      "type": "legal_issues",
+      "category": "LEGAL",
+      "timestamp": "2025-12-11T11:24:59+00:00",
+      "confidence": 0.333,
+      "sentiment": -0.38,
+      "impact_score": 0.108,
+      "title": "EU antitrust investigation into Meta over WhatsApp AI access ... - eeNews Europe",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "\u2713 Catalyseurs mineurs. Impact limit\u00e9 sur tendance globale.",
+    "categories_present": [
+      "FINANCIAL",
+      "MANAGEMENT",
+      "PRODUCT",
+      "LEGAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.545,
+    "sentiment_volatility": 0.302,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "M\u00e9triques standards, pas de signal particulier."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "\ud83c\udf2a\ufe0f",
+      "title": "R\u00c9GIME DE HAUTE VOLATILIT\u00c9",
+      "message": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

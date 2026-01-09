@@ -1,0 +1,106 @@
+{
+  "ticker": "PLTR",
+  "timestamp": "2026-01-06T17:35:29.272046",
+  "final_sentiment_score": -0.0344,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.1163,
+  "smart_money_factor": 0.0809,
+  "components": {
+    "news_sentiment": 0.0011,
+    "news_confidence": 0.8566,
+    "news_weight": 0.3689,
+    "options_sentiment": 0.1824,
+    "options_confidence": 0.9769,
+    "options_weight": 0.6311,
+    "analyst_sentiment": 0,
+    "analyst_confidence": 0,
+    "analyst_weight": 0.0,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.1813,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 396,
+    "options_volume": 201073,
+    "analysis_depth": "DEEP",
+    "config_rationale": "PLTR est une action de technologie avec des nouvelles fréquentes et volatilité typique, nécessitant un ajustement du décroissance temporelle et de la pénalité de volatilité pour gérer efficacement le sentiment.",
+    "version": "V4 - Dual Brain"
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 1.0,
+    "metrics": {
+      "avg_iv": 1.0025499999999998,
+      "iv_skew": -0.228553759166004,
+      "pcr_volume": 0.603
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2026-01-02T10:19:19+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.953,
+        "impact_score": 0.286,
+        "title": "Palantir stock slips in premarket as 2026 opens, even after Wedbush keeps $230 target - ts2.tech",
+        "matches": 1
+      }
+    ],
+    "count": 1,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2026-01-02T10:19:19+00:00",
+      "confidence": 0.333,
+      "sentiment": -0.953,
+      "impact_score": 0.286,
+      "title": "Palantir stock slips in premarket as 2026 opens, even after Wedbush keeps $230 target - ts2.tech",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale. | Biais NÉGATIF des catalyseurs.",
+    "categories_present": [
+      "FINANCIAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.027,
+    "sentiment_volatility": 0.483,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Je suis désolé mais je ne peux pas fournir d’informations ou de conseils sur les investissements. Si vous souhaitez plus d’aide pour analyser ces métriques, je serais ravi de vous aider à comprendre leur signification en général."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "😨",
+      "title": "Asymétrie de Peur Détectée",
+      "message": "Marché surréagit aux mauvaises nouvelles. Possible capitulation ou opportunité contrarian.",
+      "action": "Opportunité d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    }
+  ]
+}

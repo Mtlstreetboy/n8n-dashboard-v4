@@ -1,0 +1,181 @@
+{
+  "ticker": "NFLX",
+  "timestamp": "2026-01-03T02:50:21.631440",
+  "final_sentiment_score": 0.0988,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.3,
+  "smart_money_factor": 0.0826,
+  "components": {
+    "news_sentiment": -0.0034,
+    "news_confidence": 0.5,
+    "news_weight": 0.2195,
+    "options_sentiment": 0.409,
+    "options_confidence": 1.0,
+    "options_weight": 0.6585,
+    "analyst_sentiment": 0.5233,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.122,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.2855,
+    "opportunity_score": 0,
+    "interpretation": "\ud83e\udd1d Consensus - Nouvelles et march\u00e9s s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 20,
+    "options_volume": 462268,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "NFLX est une action tech avec des nouvelles fr\u00e9quentes, ce qui n\u00e9cessite un d\u00e9clin temporel rapide et une barre de divergence \u00e9lev\u00e9e en raison de sa volatilit\u00e9. La r\u00e9activit\u00e9 du prix aux nouvelles justifie une p\u00e9nalit\u00e9 pour la volatilit\u00e9 plus \u00e9lev\u00e9e.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.95349,
+    "recommendation_count": 38,
+    "recommendation_summary": "Buy consensus (Mean: 2.0)",
+    "recommendation_score": 0.523,
+    "target_mean": 126.19184,
+    "target_median": 129.0,
+    "current_price": 90.99,
+    "upside_potential": 0.38687592043081664,
+    "price_target_score": 0.649,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 1.0,
+    "metrics": {
+      "avg_iv": 1.16065,
+      "iv_skew": -0.7441571088508981,
+      "pcr_volume": 0.591
+    },
+    "implications": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections. | \ud83d\udcde Call skew \u00e9lev\u00e9 - Sp\u00e9culation haussi\u00e8re agressive",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-30T22:04:50+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.931,
+        "impact_score": 0.31,
+        "title": "Netflix stock dips after hours as Warner Bros seen rejecting Paramount bid in latest twist - ts2.tech",
+        "matches": 1
+      },
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2026-01-02T22:31:11+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.955,
+        "impact_score": 0.287,
+        "title": "Netflix (NASDAQ:NFLX) Trading Down 3% - Time to Sell? - MarketBeat",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-30T16:14:18+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.038,
+        "impact_score": 0.006,
+        "title": "Netflix Stock Forecast: Why Analysts Predict 40% Upside in 2026 - TipRanks",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "merger_acquisition",
+      "category": "CORPORATE_ACTION",
+      "timestamp": "2025-12-30T22:04:50+00:00",
+      "confidence": 0.333,
+      "sentiment": -0.931,
+      "impact_score": 0.31,
+      "title": "Netflix stock dips after hours as Warner Bros seen rejecting Paramount bid in latest twist - ts2.tech",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "\u2713 Catalyseurs mineurs. Impact limit\u00e9 sur tendance globale. | Biais N\u00c9GATIF des catalyseurs.",
+    "categories_present": [
+      "CORPORATE_ACTION",
+      "ANALYST",
+      "FINANCIAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": -0.136,
+    "sentiment_volatility": 0.496,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "**Nostalgie :** \u00c9cart de sentiment | **Ne pas acheter**\nUne analyse du sentiment sugg\u00e8re que le titre NFLX pr\u00e9sente des signes d'\u00e9puisement, alors il peut \u00eatre pr\u00e9f\u00e9rable de ne pas acheter."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "\ud83c\udf2a\ufe0f",
+      "title": "R\u00c9GIME DE HAUTE VOLATILIT\u00c9",
+      "message": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections. | \ud83d\udcde Call skew \u00e9lev\u00e9 - Sp\u00e9culation haussi\u00e8re agressive",
+      "action": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "\ud83d\ude28",
+      "title": "Asym\u00e9trie de Peur D\u00e9tect\u00e9e",
+      "message": "March\u00e9 surr\u00e9agit aux mauvaises nouvelles. Possible capitulation ou opportunit\u00e9 contrarian.",
+      "action": "Opportunit\u00e9 d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "\u26a0\ufe0f",
+      "title": "Donn\u00e9es Limit\u00e9es",
+      "message": "Seulement 20 articles analys\u00e9s. Confiance r\u00e9duite.",
+      "action": "Attendre plus de donn\u00e9es ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ],
+  "options_detail": {
+    "timestamp": "2026-01-03T01:46:57.409584",
+    "call_volume": 290536,
+    "put_volume": 171732,
+    "call_open_interest": 1549790,
+    "put_open_interest": 1293460,
+    "put_call_ratio_volume": 0.591,
+    "put_call_ratio_oi": 0.835,
+    "call_implied_volatility": 1.8484,
+    "put_implied_volatility": 0.4729,
+    "sentiment_label": "bullish",
+    "sentiment_score": 0.409,
+    "total_contracts": 462268,
+    "total_open_interest": 2843250,
+    "near_term_call_volume": 213048,
+    "far_term_call_volume": 77488,
+    "near_term_put_volume": 136680,
+    "far_term_put_volume": 35052
+  }
+}

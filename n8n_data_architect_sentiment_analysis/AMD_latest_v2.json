@@ -1,0 +1,126 @@
+{
+  "ticker": "AMD",
+  "timestamp": "2025-12-14T18:37:26.468191",
+  "final_sentiment_score": 0.134,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.1655,
+  "smart_money_factor": 0.0696,
+  "components": {
+    "news_sentiment": 0.0238,
+    "news_confidence": 0.4901,
+    "news_weight": 0.2469,
+    "options_sentiment": 0.0373,
+    "options_confidence": 0.9965,
+    "options_weight": 0.7531,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0134,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 278,
+    "options_volume": 256936,
+    "analysis_depth": "DEEP",
+    "config_rationale": "AMD's volatile tech sector requires a faster decay rate to adapt to changing market conditions. The higher divergence threshold reflects the company's tendency to experience sharp price swings in response to news and rumors."
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 1.0,
+    "metrics": {
+      "avg_iv": 1.01515,
+      "iv_skew": -0.15728807406062797,
+      "pcr_volume": 0.722
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-12T13:52:01+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.38,
+        "impact_score": 0.063,
+        "title": "AMD Rides on Accelerating Data Center Growth: A Sign of More Upside? - MSN",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-14T11:15:33+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Samsung offering AMD better 2nm tech than Exynos 2600 - Sammy Fans",
+        "matches": 1
+      },
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2025-12-12T20:01:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "AMD CEO Lisa Su Isn’t Afraid of the Competition - WIRED",
+        "matches": 1
+      },
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-12T14:20:23+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "How Nvidia Grew Data Center Market Share In Q3 (NASDAQ:NVDA) - Seeking Alpha",
+        "matches": 1
+      }
+    ],
+    "count": 4,
+    "most_recent": {
+      "type": "analyst_action",
+      "category": "ANALYST",
+      "timestamp": "2025-12-12T13:52:01+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.38,
+      "impact_score": 0.063,
+      "title": "AMD Rides on Accelerating Data Center Growth: A Sign of More Upside? - MSN",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "CORPORATE_ACTION",
+      "FINANCIAL",
+      "MANAGEMENT",
+      "ANALYST"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.891,
+    "sentiment_volatility": 0.331,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "📊 Based on these sentiment metrics, here's what stands out:\n\n💡 The Sharpe Ratio indicates a strong risk-adjusted return, suggesting AMD is likely to perform well in the long run.\n| Hold or accumulate position.\n\nThe low Volatility Sentiment suggests stability, making it an attractive entry point. The Acceleration Momentum being 0 implies no sudden changes are expected, further supporting a holding strategy."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

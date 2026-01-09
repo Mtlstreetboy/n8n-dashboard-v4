@@ -1,0 +1,29 @@
+{
+  "ticker": "AVGO",
+  "timestamp": "2025-12-10T01:38:23.793370",
+  "final_sentiment_score": 0.1553,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2903,
+  "components": {
+    "news_sentiment": 0.0422,
+    "news_confidence": 0.7373,
+    "news_weight": 0.3395,
+    "options_sentiment": 0.062,
+    "options_confidence": 0.9565,
+    "options_weight": 0.6605,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0197,
+    "opportunity_score": 0,
+    "interpretation": "???? Consensus - Nouvelles et march?? s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 118,
+    "options_volume": 155735,
+    "analysis_depth": "DEEP"
+  }
+}

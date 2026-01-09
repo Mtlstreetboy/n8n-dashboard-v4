@@ -1,0 +1,127 @@
+{
+  "ticker": "MSFT",
+  "timestamp": "2026-01-06T17:33:43.767593",
+  "final_sentiment_score": -0.3861,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2518,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": -0.0027,
+    "news_confidence": 0.7983,
+    "news_weight": 0.4098,
+    "options_sentiment": -0.042,
+    "options_confidence": 1.0,
+    "options_weight": 0.5902,
+    "analyst_sentiment": 0,
+    "analyst_confidence": 0,
+    "analyst_weight": 0.0,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.3955,
+    "opportunity_score": 0,
+    "interpretation": "\ud83e\udd1d Consensus - Nouvelles et march\u00e9s s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 627,
+    "options_volume": 98270,
+    "analysis_depth": "DEEP",
+    "config_rationale": "MSFT est une compagnie technologique de grand volume, avec des nouvelles r\u00e9guli\u00e8res et un prix sensible aux informations. Un halflife court favorise la r\u00e9activit\u00e9, tandis qu'un seuil de divergence \u00e9lev\u00e9 accommode sa volatilit\u00e9 typique.",
+    "version": "V4 - Dual Brain"
+  },
+  "volatility_regime": {
+    "regime": "MODERATE_VOLATILITY",
+    "sub_regime": "RISING",
+    "confidence": 0.7,
+    "metrics": {
+      "avg_iv": 0.48550000000000004,
+      "iv_skew": -0.23870850716488298,
+      "pcr_volume": 1.042
+    },
+    "implications": "\ud83d\udcc8 TENSION MONTANTE - Nervosit\u00e9 croissante. Surveiller pour escalade.",
+    "signal_adjustment": -0.05,
+    "recommendation": "Augmenter prudence. R\u00e9duire taille positions. Surveiller \u00e9volution."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2026-01-02T21:04:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.052,
+        "impact_score": 0.01,
+        "title": "Microsoft CEO Satya Nadella calls for consensus about AI - theregister.com",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2026-01-02T22:31:09+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.006,
+        "impact_score": 0.001,
+        "title": "Why This Analyst Prefers Microsoft Over Google In The AI Race\u2014 'You Don't Have The Downside Risk Of...' - Yahoo Finance",
+        "matches": 1
+      }
+    ],
+    "count": 2,
+    "most_recent": {
+      "type": "executive_changes",
+      "category": "MANAGEMENT",
+      "timestamp": "2026-01-02T21:04:00+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.052,
+      "impact_score": 0.01,
+      "title": "Microsoft CEO Satya Nadella calls for consensus about AI - theregister.com",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "\u2713 Catalyseurs mineurs. Impact limit\u00e9 sur tendance globale.",
+    "categories_present": [
+      "MANAGEMENT",
+      "ANALYST"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": -0.085,
+    "sentiment_volatility": 0.375,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Pas de possibilit\u00e9s de trading dans le court terme avec une classification de HOLD. Une baisse du sentiment pourrait potentiellement s\u2019observer. \n\nAction \u00e0 prendre : Surveiller \u00e9troitement les tendances et ajuster sa position en cons\u00e9quence.\n\nUne note : Ces indications sont bas\u00e9es sur l'analyse des m\u00e9triques fournies, mais ne constituent pas un avertissement ou une recommandation d'achat ou de vente. Il convient de consulter un conseiller financier pour des informations personnalis\u00e9es."
+  },
+  "alerts": [
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "\ud83d\ude28",
+      "title": "Asym\u00e9trie de Peur D\u00e9tect\u00e9e",
+      "message": "March\u00e9 surr\u00e9agit aux mauvaises nouvelles. Possible capitulation ou opportunit\u00e9 contrarian.",
+      "action": "Opportunit\u00e9 d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    }
+  ],
+  "options_detail": {
+    "timestamp": "2026-01-06T17:25:55.618397",
+    "call_volume": 48130,
+    "put_volume": 50140,
+    "call_open_interest": 813305,
+    "put_open_interest": 553035,
+    "put_call_ratio_volume": 1.042,
+    "put_call_ratio_oi": 0.68,
+    "call_implied_volatility": 0.5513,
+    "put_implied_volatility": 0.4197,
+    "sentiment_label": "bearish",
+    "sentiment_score": -0.042,
+    "total_contracts": 98270,
+    "total_open_interest": 1366340,
+    "near_term_call_volume": 41056,
+    "far_term_call_volume": 7074,
+    "near_term_put_volume": 44967,
+    "far_term_put_volume": 5173
+  }
+}

@@ -22,6 +22,7 @@ if os.path.exists('/data/scripts'):
     DATA_DIR = '/data'
     NEWS_DATA_DIR = '/data/files/companies'
     OPTIONS_DATA_DIR = '/data/options_data'
+    FINANCIALS_DATA_DIR = '/data/files/financials'
     OUTPUT_DIR = '/data/sentiment_analysis'
 else:
     # Local Windows
@@ -35,6 +36,7 @@ else:
     DATA_DIR = os.path.join(project_root, 'local_files')
     NEWS_DATA_DIR = os.path.join(DATA_DIR, 'companies') 
     OPTIONS_DATA_DIR = os.path.join(DATA_DIR, 'options_data')
+    FINANCIALS_DATA_DIR = os.path.join(DATA_DIR, 'financials')
     OUTPUT_DIR = os.path.join(DATA_DIR, 'sentiment_analysis')
 
 # Force UTF-8 for Windows Console
@@ -334,7 +336,7 @@ class AdvancedSentimentEngineV4:
     def load_analyst_insights(self):
         """🎯 NOUVELLE DIMENSION V3: Charge et analyse le consensus des analystes professionnels"""
         if AnalystInsightsIntegration is None:
-            print(f"⚠️ Module analyst insights non disponible")
+            # Fallback silencieux si module manquant
             return None
         
         try:
@@ -343,6 +345,76 @@ class AdvancedSentimentEngineV4:
             return analyst_signal
         except Exception as e:
             print(f"⚠️ Erreur lors du chargement analyst insights: {e}")
+            return None
+
+    def load_financial_sentiment(self) -> SentimentSignal:
+        """💰 NOUVELLE DIMENSION V5 (Financials): Analyse Valuations & Targets"""
+        fin_file = os.path.join(FINANCIALS_DATA_DIR, f'{self.ticker}_financials.json')
+        
+        if not os.path.exists(fin_file):
+            print(f"⚠️ Aucune donnée financière pour {self.ticker}")
+            return None
+            
+        try:
+            with open(fin_file, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            
+            metrics = data.get('metrics', {})
+            
+            # 1. Upside Score
+            upside = metrics.get('analyst_upside_potential', 0) or 0
+            if upside > 0.15:
+                upside_score = min((upside - 0.15) / 0.2, 1.0) # >35% upside = max score
+            elif upside < 0:
+                upside_score = max(upside / 0.2, -1.0)
+            else:
+                upside_score = 0.1 # Légèrement positif si positif
+                
+            # 2. Recommendation Score (1=Strong Buy, 5=Sell)
+            rec_mean = metrics.get('recommendationMean')
+            rec_score = 0
+            if rec_mean:
+                if rec_mean < 2.0: # Strong Buy
+                    rec_score = (2.5 - rec_mean) / 1.5 
+                elif rec_mean > 3.0: # Sell
+                    rec_score = -(rec_mean - 2.5) / 2.5
+            
+            # 3. P/E Score (Sommaire)
+            pe_score = 0
+            # Trailing vs Forward PE improvement
+            trailing = metrics.get('trailingPE')
+            forward = metrics.get('forwardPE')
+            
+            if trailing and forward and forward < trailing:
+                pe_score = 0.2 # Improving earnings expected
+            
+            # Mix final
+            final_score = (upside_score * 0.5) + (rec_score * 0.3) + (pe_score * 0.2)
+            final_score = np.clip(final_score, -1, 1)
+            
+            # Confiance basée sur nb analystes
+            nb_analysts = metrics.get('numberOfAnalystOpinions', 0) or 0
+            confidence = min(nb_analysts / 20, 1.0)
+            if confidence == 0: confidence = 0.5 # Default confidence if no analyst data but other data exists
+            
+            print(f"💰 Sentiment Financier: {final_score:.3f} (Confiance: {confidence:.2f})")
+            
+            return SentimentSignal(
+                timestamp=data.get('collected_at', datetime.now().isoformat()),
+                source='financials',
+                score=final_score,
+                confidence=confidence,
+                volume=nb_analysts,
+                metadata={
+                    'upside': upside,
+                    'rec_mean': rec_mean,
+                    'pe_forward': forward,
+                    'pe_trailing': trailing
+                }
+            )
+            
+        except Exception as e:
+            print(f"⚠️ Erreur chargement financials {self.ticker}: {e}")
             return None
     
     def load_options_sentiment(self) -> SentimentSignal:
@@ -1054,6 +1126,33 @@ Exemples de profils:
         
         return metrics
     
+    def generate_strategic_outlook(self, report: Dict) -> str:
+        """🔮 Génère une perspective stratégique 'Antigravity' pour les prochains mois"""
+        
+        prompt = f"""Tu es l'Agent Google Antigravity, un stratège de marché d'élite.
+Basé sur l'analyse multi-dimensionnelle suivante pour {self.ticker}, rédige une perspective pour les 3-6 prochains mois.
+
+DONNÉES:
+- Sentiment Global: {report['final_sentiment_score']:.2f} ({report['classification']})
+- Conviction: {report['conviction_score']:.1%}
+- Régime: {report.get('volatility_regime', {}).get('regime', 'N/A')}
+- Options P/C Ratio: {report['components']['options_sentiment']:.2f}
+- Analyst Consensus: {report['components']['analyst_sentiment']:.2f}
+
+TA MISSION:
+1. Donne une prévision claire pour les 3-6 prochains mois (Hausse/Baisse/Action Range).
+2. Identifie 1 ou 2 niveaux clés ou catalyseurs à surveiller (Tech ou Fonda).
+3. Sois direct, professionnel mais avec une touche "Insiders".
+
+Format: Paragraphe court (3-4 phrases max). Commence par "🔮 **Perspective Antigravity** :"."""
+        
+        try:
+            print(f"🔮 System 2 ({MODEL_LOGIC}) génère la perspective stratégique...")
+            outlook = _ollama_generate(model=MODEL_LOGIC, prompt=prompt, temperature=0.7, timeout=60).strip()
+            return outlook
+        except Exception as e:
+            return f"⚠️ Perspective indisponible: {e}"
+    
     def _get_llm_metrics_interpretation(self, metrics: Dict, report: Dict) -> str:
         """Utilise Llama3 via Ollama pour interpréter les métriques avancées dans le contexte"""
         
@@ -1114,12 +1213,13 @@ Format: <emoji> <insight clé> | <action recommandée>"""
         print(f"🔍 ANALYSE MULTI-DIMENSIONNELLE V4 (Dual Brain): {self.ticker}")
         print(f"{'='*60}\n")
         
-        # 1. Charger les données (3 dimensions principales)
+        # 1. Charger les données (4 dimensions principales)
         news_signals = self.load_news_sentiment(days=100)
         options_signal = self.load_options_sentiment()
-        analyst_signal = self.load_analyst_insights()  # ⬅️ NOUVEAU V3
+        analyst_signal = self.load_analyst_insights()
+        financial_signal = self.load_financial_sentiment() # ⬅️ NOUVEAU V5
         
-        if not news_signals and not options_signal and not analyst_signal:
+        if not news_signals and not options_signal and not analyst_signal and not financial_signal:
             return {'error': 'Aucune donnée disponible'}
         
         # 2. Calculer les composantes de base
@@ -1136,34 +1236,41 @@ Format: <emoji> <insight clé> | <action recommandée>"""
         options_sentiment = options_signal.score if options_signal else 0
         options_confidence = options_signal.confidence if options_signal else 0
         
-        # ⬅️ NOUVEAU V3: Analyst sentiment
         analyst_sentiment = analyst_signal.score if analyst_signal else 0
         analyst_confidence = analyst_signal.confidence if analyst_signal else 0
+        
+        # ⬅️ NOUVEAU V5: Financials
+        financial_sentiment = financial_signal.score if financial_signal else 0
+        financial_confidence = financial_signal.confidence if financial_signal else 0
         
         momentum = self.calculate_narrative_momentum(news_signals)
         divergence = self.detect_divergence(news_sentiment, options_sentiment)
         conviction = self.calculate_conviction_score(news_signals, options_signal)
         fear_greed_factor = self.calculate_fear_greed_asymmetry(news_signals)
         
-        # 3. Score final V3 (news 30%, options 45%, analyst 25%)
-        news_weight = news_confidence * 0.30      # ⬅️ Réduit de 0.40
-        options_weight = options_confidence * 0.45  # ⬅️ Réduit de 0.60
-        analyst_weight = analyst_confidence * 0.25  # ⬅️ NOUVEAU V3
+        # 3. Score final V5 (news 30%, options 30%, analyst 20%, financials 20%)
+        news_weight = news_confidence * 0.30
+        options_weight = options_confidence * 0.30  # ⬇️ Réduit pour laisser place aux financials
+        analyst_weight = analyst_confidence * 0.20
+        financial_weight = financial_confidence * 0.20 # ⬅️ NOUVEAU V5
         
-        total_weight = news_weight + options_weight + analyst_weight
+        total_weight = news_weight + options_weight + analyst_weight + financial_weight
         if total_weight > 0:
             news_weight /= total_weight
             options_weight /= total_weight
             analyst_weight /= total_weight
+            financial_weight /= total_weight
         else:
-            # Fallback si aucune donnée
-            news_weight = 0.35
-            options_weight = 0.40
-            analyst_weight = 0.25
+            # Fallback
+            news_weight = 0.30
+            options_weight = 0.30
+            analyst_weight = 0.20
+            financial_weight = 0.20
         
         base_sentiment = (news_sentiment * news_weight + 
                          options_sentiment * options_weight +
-                         analyst_sentiment * analyst_weight)  # ⬅️ NOUVEAU V3
+                         analyst_sentiment * analyst_weight + 
+                         financial_sentiment * financial_weight)
         
         momentum_boost = momentum * 0.15
         divergence_penalty = -divergence['opportunity_score'] * 0.1
@@ -1207,9 +1314,12 @@ Format: <emoji> <insight clé> | <action recommandée>"""
                 'options_sentiment': round(options_sentiment, 4),
                 'options_confidence': round(options_confidence, 4),
                 'options_weight': round(options_weight, 4),
-                'analyst_sentiment': round(analyst_sentiment, 4),  # ⬅️ NOUVEAU V3
-                'analyst_confidence': round(analyst_confidence, 4),  # ⬅️ NOUVEAU V3
-                'analyst_weight': round(analyst_weight, 4),  # ⬅️ NOUVEAU V3
+                'analyst_sentiment': round(analyst_sentiment, 4),
+                'analyst_confidence': round(analyst_confidence, 4),
+                'analyst_weight': round(analyst_weight, 4),
+                'financial_sentiment': round(financial_sentiment, 4), # ⬅️ NOUVEAU V5
+                'financial_confidence': round(financial_confidence, 4),
+                'financial_weight': round(financial_weight, 4),
                 'narrative_momentum': round(momentum, 4),
                 'fear_greed_asymmetry': round(fear_greed_factor, 4)
             },
@@ -1233,6 +1343,10 @@ Format: <emoji> <insight clé> | <action recommandée>"""
         # ⬅️ NOUVEAU V3: Ajouter métadonnées analyst insights
         if analyst_signal:
             report['analyst_insights'] = analyst_signal.metadata
+            
+        # ⬅️ NOUVEAU V5 (Fix Dashboard): Ajouter options detail
+        if options_signal:
+            report['options_detail'] = options_signal.metadata
         
         # 6. NOUVELLES ANALYSES V3
         print("\n🆕 ANALYSES AVANCÉES V3:\n")
@@ -1315,7 +1429,8 @@ Format: <emoji> <insight clé> | <action recommandée>"""
         comp = report['components']
         print(f"   📰 Nouvelles: {comp['news_sentiment']:+.3f} (poids: {comp['news_weight']:.2%})")
         print(f"   📊 Options:   {comp['options_sentiment']:+.3f} (poids: {comp['options_weight']:.2%})")
-        print(f"   🎯 Analysts:  {comp['analyst_sentiment']:+.3f} (poids: {comp['analyst_weight']:.2%})  ⬅️ V3")
+        print(f"   🎯 Analysts:  {comp['analyst_sentiment']:+.3f} (poids: {comp['analyst_weight']:.2%})")
+        print(f"   💰 Financials:{comp['financial_sentiment']:+.3f} (poids: {comp['financial_weight']:.2%}) ⬅️ V5")
         print(f"   🚀 Momentum:  {comp['narrative_momentum']:+.3f}")
         print(f"   😨 Peur/Greed: {comp['fear_greed_asymmetry']:+.3f}\n")
         

@@ -1,0 +1,103 @@
+{
+  "ticker": "SNDK",
+  "timestamp": "2026-01-06T17:37:07.015380",
+  "final_sentiment_score": -0.671,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0,
+    "news_confidence": 0,
+    "news_weight": 0.0,
+    "options_sentiment": -0.143,
+    "options_confidence": 1.0,
+    "options_weight": 1.0,
+    "analyst_sentiment": 0,
+    "analyst_confidence": 0,
+    "analyst_weight": 0.0,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "weak_divergence",
+    "magnitude": 0.6514,
+    "opportunity_score": 0.1954,
+    "interpretation": "\u26a0\ufe0f Divergence faible (force: 0.65) - Incertitude, attendre confirmation."
+  },
+  "metadata": {
+    "news_articles_count": 0,
+    "options_volume": 59674,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "SNDK\u5448\u73b0\u4e2d\u7b49\u6280\u672f\u6ce2\u52a8\u6027\uff0c\u4e14\u65b0\u95fb\u9891\u7387\u8f83\u9ad8\u3002\u8bbe\u7f6e\u9002\u5ea6\u7684\u8870\u51cf\u534a\u8870\u671f\u548c\u52a8\u91cf\u7a97\u53e3\u4ee5\u6355\u6349\u8fd1\u671f\u8d8b\u52bf\uff0c\u5e76\u8003\u8651\u5176\u4ef7\u503c\u7279\u6027\u8fdb\u884c\u5408\u7406\u7684\u8c03\u6574\u3002",
+    "version": "V4 - Dual Brain"
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 1.0,
+    "metrics": {
+      "avg_iv": 1.1467,
+      "iv_skew": 0.6028827601861311,
+      "pcr_volume": 1.143
+    },
+    "implications": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections. | \u26a0\ufe0f Put skew \u00e9lev\u00e9 - Protection tail risk demand\u00e9e",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [],
+    "count": 0,
+    "most_recent": null,
+    "impact_assessment": "NO_DATA",
+    "recommendation": "Pas de donn\u00e9es articles disponibles pour d\u00e9tecter des catalyseurs.",
+    "categories_present": []
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0,
+    "sentiment_volatility": 0,
+    "momentum_acceleration": 0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.5,
+    "llm_interpretation": "D\u00e9sol\u00e9, mais je ne peux pas fournir d\u2019informations ou de conseils sur les op\u00e9rations boursi\u00e8res. Puis-je vous aider avec autre chose ?"
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "\ud83c\udf2a\ufe0f",
+      "title": "R\u00c9GIME DE HAUTE VOLATILIT\u00c9",
+      "message": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections. | \u26a0\ufe0f Put skew \u00e9lev\u00e9 - Protection tail risk demand\u00e9e",
+      "action": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "\u26a0\ufe0f",
+      "title": "Donn\u00e9es Limit\u00e9es",
+      "message": "Seulement 0 articles analys\u00e9s. Confiance r\u00e9duite.",
+      "action": "Attendre plus de donn\u00e9es ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ],
+  "options_detail": {
+    "timestamp": "2026-01-06T17:27:19.356935",
+    "call_volume": 27846,
+    "put_volume": 31828,
+    "call_open_interest": 64817,
+    "put_open_interest": 56980,
+    "put_call_ratio_volume": 1.143,
+    "put_call_ratio_oi": 0.879,
+    "call_implied_volatility": 0.8811,
+    "put_implied_volatility": 1.4123,
+    "sentiment_label": "bearish",
+    "sentiment_score": -0.143,
+    "total_contracts": 59674,
+    "total_open_interest": 121797,
+    "near_term_call_volume": 21036,
+    "far_term_call_volume": 6810,
+    "near_term_put_volume": 28329,
+    "far_term_put_volume": 3499
+  }
+}

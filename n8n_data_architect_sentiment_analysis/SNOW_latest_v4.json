@@ -1,0 +1,169 @@
+{
+  "ticker": "SNOW",
+  "timestamp": "2026-01-06T17:35:41.608204",
+  "final_sentiment_score": 0.2449,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2205,
+  "smart_money_factor": 0.1211,
+  "components": {
+    "news_sentiment": 0.0137,
+    "news_confidence": 0.9563,
+    "news_weight": 0.4567,
+    "options_sentiment": 0.483,
+    "options_confidence": 1.0,
+    "options_weight": 0.5433,
+    "analyst_sentiment": 0,
+    "analyst_confidence": 0,
+    "analyst_weight": 0.0,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.2414,
+    "opportunity_score": 0,
+    "interpretation": "\ud83e\udd1d Consensus - Nouvelles et march\u00e9s s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 211,
+    "options_volume": 13107,
+    "analysis_depth": "DEEP",
+    "config_rationale": "SNOW est une action technologique volatil, avec des nouvelles fr\u00e9quentes et un volume important d'options. La r\u00e9activit\u00e9 du prix aux nouvelles justifie un d\u00e9croissage rapide du sentiment, tandis qu'un seuil de divergence \u00e9lev\u00e9 permet de capturer les changements rapides dans le sentiment.",
+    "version": "V4 - Dual Brain"
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.437,
+    "metrics": {
+      "avg_iv": 0.7182999999999999,
+      "iv_skew": -0.12772057865241754,
+      "pcr_volume": 0.517
+    },
+    "implications": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-22T10:34:37+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.087,
+        "impact_score": 0.02,
+        "title": "Accenture and Snowflake Launch Dedicated Business Group to Accelerate Enterprise Generative AI - TechAfrica News",
+        "matches": 1
+      },
+      {
+        "type": "legal_issues",
+        "category": "LEGAL",
+        "timestamp": "2025-12-28T14:00:00+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.024,
+        "impact_score": 0.007,
+        "title": "Snowflake CEO: Big Tech\u2019s grip on AI will loosen in 2026 \u2014 plus 6 more predictions that will define the year - Fortune",
+        "matches": 1
+      },
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2025-12-28T14:00:00+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.024,
+        "impact_score": 0.005,
+        "title": "Snowflake CEO: Big Tech\u2019s grip on AI will loosen in 2026 \u2014 plus 6 more predictions that will define the year - Fortune",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-25T20:58:08+00:00",
+        "confidence": 0.333,
+        "sentiment": 0,
+        "impact_score": 0.0,
+        "title": "Snowflake Cortex AI: Accelerating Financial Services with Agentic AI - Snowflake",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-25T10:37:28+00:00",
+        "confidence": 0.333,
+        "sentiment": 0,
+        "impact_score": 0.0,
+        "title": "AI Stocks Today (Dec. 25, 2025): Nvidia\u2019s Groq Deal, Snowflake\u2019s M&A Talks, UiPath\u2019s Index Boost, and Meta\u2019s WhatsApp AI Clash - ts2.tech",
+        "matches": 1
+      }
+    ],
+    "count": 5,
+    "most_recent": {
+      "type": "product_launch",
+      "category": "PRODUCT",
+      "timestamp": "2025-12-22T10:34:37+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.087,
+      "impact_score": 0.02,
+      "title": "Accenture and Snowflake Launch Dedicated Business Group to Accelerate Enterprise Generative AI - TechAfrica News",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "\u2713 Catalyseurs mineurs. Impact limit\u00e9 sur tendance globale.",
+    "categories_present": [
+      "PRODUCT",
+      "CORPORATE_ACTION",
+      "MANAGEMENT",
+      "ANALYST",
+      "LEGAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.617,
+    "sentiment_volatility": 0.231,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Bien s\u00fbr ! Voici les conclusions que je peux tirer \u00e0 partir de ces m\u00e9triques :\n\n\ud83d\udca1 _La tendance du sentiment de SNOW est neutre_ | Conservez votre position actuelle.\n\nLe score contrariant est nul, ce qui indique qu'il n'y a pas d'opportunit\u00e9 forte. De plus, la volatilit\u00e9 sentimentale est relativement basse (0,231), ce qui signifie que le sentiment des actionnaires ne fluctue pas de mani\u00e8re chaotique.\n\nMaintenant, si vous souhaitez prendre une d\u00e9cision de trading :\n\n**Vendre une partie de votre position de SNOW pour minimiser les pertes potentielle**."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "SMART_MONEY",
+      "icon": "\ud83d\udcb0",
+      "title": "SMART MONEY ACTIF",
+      "message": "D\u00e9tection d'activit\u00e9 institutionnelle (score: 0.121). Open Interest sugg\u00e8re positionnement de gros joueurs.",
+      "action": "Analyser leurs positions. Ils ont souvent raison \u00e0 moyen terme.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "\ud83c\udf2a\ufe0f",
+      "title": "R\u00c9GIME DE HAUTE VOLATILIT\u00c9",
+      "message": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ],
+  "options_detail": {
+    "timestamp": "2026-01-06T17:26:48.651112",
+    "call_volume": 8639,
+    "put_volume": 4468,
+    "call_open_interest": 165606,
+    "put_open_interest": 137469,
+    "put_call_ratio_volume": 0.517,
+    "put_call_ratio_oi": 0.83,
+    "call_implied_volatility": 0.7673,
+    "put_implied_volatility": 0.6693,
+    "sentiment_label": "bullish",
+    "sentiment_score": 0.483,
+    "total_contracts": 13107,
+    "total_open_interest": 303075,
+    "near_term_call_volume": 7280,
+    "far_term_call_volume": 1359,
+    "near_term_put_volume": 3534,
+    "far_term_put_volume": 934
+  }
+}

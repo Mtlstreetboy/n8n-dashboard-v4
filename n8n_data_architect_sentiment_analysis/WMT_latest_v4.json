@@ -1,0 +1,170 @@
+{
+  "ticker": "WMT",
+  "timestamp": "2026-01-03T02:58:05.202774",
+  "final_sentiment_score": 0.332,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2896,
+  "smart_money_factor": 0.1292,
+  "components": {
+    "news_sentiment": -0.0006,
+    "news_confidence": 0.5,
+    "news_weight": 0.2437,
+    "options_sentiment": 0.367,
+    "options_confidence": 1.0,
+    "options_weight": 0.6209,
+    "analyst_sentiment": 0.8214,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.1354,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.1953,
+    "opportunity_score": 0,
+    "interpretation": "\ud83e\udd1d Consensus - Nouvelles et march\u00e9s s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 18,
+    "options_volume": 40766,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "WMT est une valeur stable dans les utilities, avec des nouvelles moins fr\u00e9quentes que dans la technologie. La volatilit\u00e9 est moindre mais le volume d'options est assez important.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.35714,
+    "recommendation_count": 39,
+    "recommendation_summary": "Strong Buy consensus (Mean: 1.4)",
+    "recommendation_score": 0.821,
+    "target_mean": 121.38462,
+    "target_median": 122.0,
+    "current_price": 112.76,
+    "upside_potential": 0.07648652004256822,
+    "price_target_score": 0.152,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.559,
+    "metrics": {
+      "avg_iv": 0.7797499999999999,
+      "iv_skew": -0.3521766694843618,
+      "pcr_volume": 0.633
+    },
+    "implications": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections. | \ud83d\udcde Call skew \u00e9lev\u00e9 - Sp\u00e9culation haussi\u00e8re agressive",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2026-01-02T22:31:08+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.881,
+        "impact_score": 0.264,
+        "title": "Walmart (NASDAQ:WMT) Shares Up 1.2% - Here's Why - MarketBeat",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2026-01-01T22:46:26+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.838,
+        "impact_score": 0.14,
+        "title": "Walmart stock forecast 2026: Analysts see modest upside for WMT as tech push meets a pricey valuation - ts2.tech",
+        "matches": 1
+      }
+    ],
+    "count": 2,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2026-01-02T22:31:08+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.881,
+      "impact_score": 0.264,
+      "title": "Walmart (NASDAQ:WMT) Shares Up 1.2% - Here's Why - MarketBeat",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "\u2713 Catalyseurs mineurs. Impact limit\u00e9 sur tendance globale. | Biais POSITIF des catalyseurs.",
+    "categories_present": [
+      "ANALYST",
+      "FINANCIAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": -0.024,
+    "sentiment_volatility": 0.494,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "**\ud83d\udcca Analyse des m\u00e9triques de sentiment sur WMT**\n\n*   La **Volatilit\u00e9 Sentiment** \u00e9lev\u00e9e (0,494) sugg\u00e8re que les sentiments des investisseurs varient beaucoup, ce qui peut signifier une tendance incertaine.\n*   Le **Contrarian Score** est \u00e0 0, ce qui indique qu'il n'y a pas d'opportunit\u00e9 forte pour un trader contrarien (qui suit l'opinion inverse de la majorit\u00e9).\n*   La **Consistance** est faible (0,0), ce qui sugg\u00e8re que les sentiments sont incoh\u00e9rents et ne donnent pas de signal clair.\n\nImplication\u00a0: il est prudent pour un trader d'\u00eatre attentif \u00e0 cette volatilit\u00e9 des sentiments et peut \u00eatre utile de consid\u00e9rer une strat\u00e9gie plus conservatrice."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "SMART_MONEY",
+      "icon": "\ud83d\udcb0",
+      "title": "SMART MONEY ACTIF",
+      "message": "D\u00e9tection d'activit\u00e9 institutionnelle (score: 0.129). Open Interest sugg\u00e8re positionnement de gros joueurs.",
+      "action": "Analyser leurs positions. Ils ont souvent raison \u00e0 moyen terme.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "\ud83c\udf2a\ufe0f",
+      "title": "R\u00c9GIME DE HAUTE VOLATILIT\u00c9",
+      "message": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections. | \ud83d\udcde Call skew \u00e9lev\u00e9 - Sp\u00e9culation haussi\u00e8re agressive",
+      "action": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "\u26a0\ufe0f",
+      "title": "Donn\u00e9es Limit\u00e9es",
+      "message": "Seulement 18 articles analys\u00e9s. Confiance r\u00e9duite.",
+      "action": "Attendre plus de donn\u00e9es ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ],
+  "options_detail": {
+    "timestamp": "2026-01-03T01:49:55.563924",
+    "call_volume": 24959,
+    "put_volume": 15807,
+    "call_open_interest": 293715,
+    "put_open_interest": 306051,
+    "put_call_ratio_volume": 0.633,
+    "put_call_ratio_oi": 1.042,
+    "call_implied_volatility": 0.9464,
+    "put_implied_volatility": 0.6131,
+    "sentiment_label": "bullish",
+    "sentiment_score": 0.367,
+    "total_contracts": 40766,
+    "total_open_interest": 599766,
+    "near_term_call_volume": 20882,
+    "far_term_call_volume": 4077,
+    "near_term_put_volume": 13672,
+    "far_term_put_volume": 2135
+  }
+}

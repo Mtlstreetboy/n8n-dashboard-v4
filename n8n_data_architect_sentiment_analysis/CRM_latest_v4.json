@@ -1,0 +1,167 @@
+{
+  "ticker": "CRM",
+  "timestamp": "2026-01-06T17:35:18.330426",
+  "final_sentiment_score": -0.3035,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2804,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0066,
+    "news_confidence": 0.8906,
+    "news_weight": 0.4867,
+    "options_sentiment": -0.795,
+    "options_confidence": 1.0,
+    "options_weight": 0.5133,
+    "analyst_sentiment": 0,
+    "analyst_confidence": 0,
+    "analyst_weight": 0.0,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.3121,
+    "opportunity_score": 0,
+    "interpretation": "\ud83e\udd1d Consensus - Nouvelles et march\u00e9s s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 288,
+    "options_volume": 11986,
+    "analysis_depth": "DEEP",
+    "config_rationale": "CRM est une action technologique avec un volume de trading d'options important, donc un d\u00e9clin temporel rapide et une tol\u00e9rance aux divergences \u00e9lev\u00e9e sont n\u00e9cessaires.",
+    "version": "V4 - Dual Brain"
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "PANIC",
+    "confidence": 0.086,
+    "metrics": {
+      "avg_iv": 0.543,
+      "iv_skew": -0.03332126041289383,
+      "pcr_volume": 1.795
+    },
+    "implications": "\ud83d\udea8 PANIQUE - Les traders se couvrent agressivement. Opportunit\u00e9 contrarian possible mais risqu\u00e9e.",
+    "signal_adjustment": -0.2,
+    "recommendation": "Attendre stabilisation. Si conviction forte, petites positions avec stops serr\u00e9s."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2026-01-02T16:43:27+00:00",
+        "confidence": 0.667,
+        "sentiment": 0.838,
+        "impact_score": 0.503,
+        "title": "Salesforce (CRM) Earnings Beat Highlights Expanding AI Adoption - Finviz",
+        "matches": 2
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2026-01-01T20:12:00+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.882,
+        "impact_score": 0.147,
+        "title": "The Great Agent War: Salesforce and ServiceNow Clash Over the Future of the Enterprise AI Operating System - FinancialContent",
+        "matches": 1
+      },
+      {
+        "type": "fda_regulatory",
+        "category": "REGULATORY",
+        "timestamp": "2025-12-30T12:08:05+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.294,
+        "impact_score": 0.093,
+        "title": "China vital to Insilico\u2019s plan to build biotech\u2019s AI 'Einstein' for drug discovery - MSN",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-30T13:11:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.222,
+        "impact_score": 0.074,
+        "title": "Salesforce Acquires Qualified to Enhance AI Marketing Solutions - Small Business Trends",
+        "matches": 1
+      }
+    ],
+    "count": 4,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2026-01-02T16:43:27+00:00",
+      "confidence": 0.667,
+      "sentiment": 0.838,
+      "impact_score": 0.503,
+      "title": "Salesforce (CRM) Earnings Beat Highlights Expanding AI Adoption - Finviz",
+      "matches": 2
+    },
+    "impact_assessment": "MODERATE_IMPACT",
+    "recommendation": "\ud83d\udcca Catalyseurs mod\u00e9r\u00e9s en jeu. Ajuster positions selon d\u00e9veloppements.",
+    "categories_present": [
+      "CORPORATE_ACTION",
+      "ANALYST",
+      "FINANCIAL",
+      "REGULATORY"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.185,
+    "sentiment_volatility": 0.386,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Je suis d\u00e9sol\u00e9, mais je ne peux pas fournir d\u2019informations ou de conseils sur les investissements ou la finance. Si vous souhaitez discuter des principes g\u00e9n\u00e9raux de gestion de portefeuille ou de gestion financi\u00e8re, je serais heureux de l'aider."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "\ud83c\udf2a\ufe0f",
+      "title": "R\u00c9GIME DE HAUTE VOLATILIT\u00c9",
+      "message": "\ud83d\udea8 PANIQUE - Les traders se couvrent agressivement. Opportunit\u00e9 contrarian possible mais risqu\u00e9e.",
+      "action": "Attendre stabilisation. Si conviction forte, petites positions avec stops serr\u00e9s.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "MEDIUM",
+      "type": "CATALYST",
+      "icon": "\ud83c\udfaf",
+      "title": "Catalyseur: Earnings",
+      "message": "Salesforce (CRM) Earnings Beat Highlights Expanding AI Adoption - Finviz... (Impact: 0.50)",
+      "action": "\ud83d\udcca Catalyseurs mod\u00e9r\u00e9s en jeu. Ajuster positions selon d\u00e9veloppements.",
+      "urgency": "SOON"
+    },
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "\ud83d\ude28",
+      "title": "Asym\u00e9trie de Peur D\u00e9tect\u00e9e",
+      "message": "March\u00e9 surr\u00e9agit aux mauvaises nouvelles. Possible capitulation ou opportunit\u00e9 contrarian.",
+      "action": "Opportunit\u00e9 d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    }
+  ],
+  "options_detail": {
+    "timestamp": "2026-01-06T17:26:37.050941",
+    "call_volume": 4289,
+    "put_volume": 7697,
+    "call_open_interest": 184171,
+    "put_open_interest": 134960,
+    "put_call_ratio_volume": 1.795,
+    "put_call_ratio_oi": 0.733,
+    "call_implied_volatility": 0.5522,
+    "put_implied_volatility": 0.5338,
+    "sentiment_label": "bearish",
+    "sentiment_score": -0.795,
+    "total_contracts": 11986,
+    "total_open_interest": 319131,
+    "near_term_call_volume": 3024,
+    "far_term_call_volume": 1265,
+    "near_term_put_volume": 7026,
+    "far_term_put_volume": 671
+  }
+}

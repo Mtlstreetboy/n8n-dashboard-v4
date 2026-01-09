@@ -1,0 +1,125 @@
+{
+  "ticker": "WMT",
+  "timestamp": "2026-01-03T01:27:09.384437",
+  "final_sentiment_score": 0.393,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": -0.0006,
+    "news_confidence": 0.5,
+    "news_weight": 0.6429,
+    "options_sentiment": 0,
+    "options_confidence": 0,
+    "options_weight": 0.0,
+    "analyst_sentiment": 0.8214,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.3571,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0006,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 18,
+    "options_volume": 0,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "WMT est dans un secteur utilities, moins volatile mais avec une fréquence de nouvelles régulière. La réactivité aux nouvelles et la présence d'institutions justifient un temps de décroissance intermédiaire et un bonus institutionnel.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.35714,
+    "recommendation_count": 39,
+    "recommendation_summary": "Strong Buy consensus (Mean: 1.4)",
+    "recommendation_score": 0.821,
+    "target_mean": 121.38462,
+    "target_median": 122.0,
+    "current_price": 112.76,
+    "upside_potential": 0.07648652004256822,
+    "price_target_score": 0.152,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "UNKNOWN",
+    "confidence": 0.0,
+    "implications": "Données insuffisantes pour déterminer le régime"
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2026-01-02T22:31:08+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.881,
+        "impact_score": 0.264,
+        "title": "Walmart (NASDAQ:WMT) Shares Up 1.2% - Here's Why - MarketBeat",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2026-01-01T22:46:26+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.838,
+        "impact_score": 0.14,
+        "title": "Walmart stock forecast 2026: Analysts see modest upside for WMT as tech push meets a pricey valuation - ts2.tech",
+        "matches": 1
+      }
+    ],
+    "count": 2,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2026-01-02T22:31:08+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.881,
+      "impact_score": 0.264,
+      "title": "Walmart (NASDAQ:WMT) Shares Up 1.2% - Here's Why - MarketBeat",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale. | Biais POSITIF des catalyseurs.",
+    "categories_present": [
+      "FINANCIAL",
+      "ANALYST"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": -0.024,
+    "sentiment_volatility": 0.494,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Malheureusement, je suis incapable de fournir une analyse détaillée ou des conseils sur les actions financières. Je peux cependant vous aider à comprendre la signification générale des métriques qui ont été mentionnées:\n\n📊 La volatilité élevée (0.494) suggère que le sentiment est chaotique et instable, ce qui pourrait entraîner une baisse ou une hausse soudaine du prix.\n\n💡 Le score Contrarian de 0 signifie qu'il n'y a pas d'opportunité forte dans l'orientation du marché actuelle.\n\n📈 La conviction (0.5) suggère un sentiment mitigé, sans confiance totale ni scepticisme complet envers le cours boursier actuel."
+  },
+  "alerts": [
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 18 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

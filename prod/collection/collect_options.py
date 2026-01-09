@@ -23,13 +23,15 @@ if os.path.exists('/data/scripts'):
 else:
     # Local Execution (Windows)
     CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
-    PROJECT_ROOT = os.path.dirname(os.path.dirname(CURRENT_DIR))
-    # Add project root to path for config import
+    PROD_DIR = os.path.dirname(CURRENT_DIR)
+    PROJECT_ROOT = os.path.dirname(PROD_DIR)
+    # Add prod to path for config import
+    sys.path.append(PROD_DIR)
     sys.path.append(PROJECT_ROOT)
     DATA_DIR = os.path.join(PROJECT_ROOT, 'local_files')
 
 # Import absolute from config package to avoid relative import issues
-from prod.config.companies_config import get_all_companies
+from config.companies_config import get_all_companies
 import yfinance as yf
 from datetime import datetime, timedelta
 import time
@@ -58,6 +60,28 @@ class OptionsCollector:
         print(f"📊 {ticker} - Collecte des Options")
         print(f"{'='*60}")
         
+        # [V2 SMART CACHE] Check if we already have data for TODAY
+        today_str = datetime.now().strftime('%Y-%m-%d')
+        daily_file = os.path.join(self.output_dir, f'{ticker}_sentiment_{today_str}.json')
+        
+        if os.path.exists(daily_file) and '--force' not in sys.argv:
+            try:
+                print(f"  ⚡ [CACHE] Données du jour trouvées ({today_str}) - SKIP")
+                with open(daily_file, 'r') as f:
+                    metrics = json.load(f)
+                
+                # We return the cached data to include it in the report
+                return {
+                    'ticker': ticker,
+                    'calls_count': 0, # Placeholder, data is in metrics
+                    'puts_count': 0,
+                    'sentiment_metrics': metrics
+                }
+            except Exception as e:
+                print(f"  [!] Erreur lecture cache: {e}. Force collecte.")
+        else:
+             print(f"  🔄 Pas de données pour {today_str} - Lancement collecte...")
+        
         try:
             # Créer l'objet ticker
             stock = yf.Ticker(ticker)
@@ -65,8 +89,23 @@ class OptionsCollector:
             # Récupérer les dates d'expiration disponibles
             expirations = stock.options
             
+            # 🇨🇦 CANADIAN TICKER FALLBACK LOGIC
+            # If no options found and ticker has .TO suffix, try US ticker
+            if not expirations and ticker.endswith('.TO'):
+                us_ticker = ticker.replace('.TO', '')
+                print(f"  🔄 Aucune option pour {ticker}, tentative avec {us_ticker}...")
+                stock = yf.Ticker(us_ticker)
+                expirations = stock.options
+                
+                if expirations:
+                    print(f"  ✅ Options trouvées avec {us_ticker} ({len(expirations)} dates)")
+                    # Update ticker for the rest of the processing
+                    ticker = us_ticker
+                else:
+                    print(f"  ❌ Aucune option pour {us_ticker} non plus")
+            
             if not expirations:
-                print(f"??? Aucune option disponible pour {ticker}")
+                print(f"⚠️ Aucune option disponible pour {ticker}")
                 return None
             
             print(f"📅 {len(expirations)} dates d'expiration disponibles")
@@ -114,7 +153,7 @@ class OptionsCollector:
                     continue
             
             if not all_calls and not all_puts:
-                print(f"??? Aucune donnée collectée pour {ticker}")
+                print(f"⚠️ Aucune donnée collectée pour {ticker}")
                 return None
             
             # Combiner toutes les données
@@ -127,9 +166,9 @@ class OptionsCollector:
             # Sauvegarder
             self._save_options_data(ticker, calls_df, puts_df, sentiment_metrics)
             
-            print(f"\n??? {ticker} TERMINÉ?:")
-            print(f"   ???? Calls: {len(calls_df)}")
-            print(f"   ???? Puts: {len(puts_df)}")
+            print(f"\n✅ {ticker} TERMINÉ:")
+            print(f"   📞 Calls: {len(calls_df)}")
+            print(f"   📉 Puts: {len(puts_df)}")
             # Affichage sécurisé du Put/Call Ratio (éviter formatage sur 'N/A')
             pcr_val = sentiment_metrics.get('put_call_ratio_volume')
             try:
@@ -148,7 +187,7 @@ class OptionsCollector:
             }
             
         except Exception as e:
-            print(f"??? Erreur pour {ticker}: {str(e)}")
+            print(f"❌ Erreur pour {ticker}: {str(e)}")
             return None
     
     def _calculate_sentiment_metrics(self, ticker, calls_df, puts_df):
@@ -238,11 +277,14 @@ class OptionsCollector:
     
     def _save_options_data(self, ticker, calls_df, puts_df, sentiment_metrics):
         """
-        Sauvegarde les données d'options
+        Sauvegarde les données d'options (V2: Daily + Latest)
         """
+        # Timestamp complet pour archivage CSV
         timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        # Date jour pour cache intelligent
+        today_str = datetime.now().strftime('%Y-%m-%d')
         
-        # Sauvegarder les DataFrames
+        # Sauvegarder les DataFrames (Archives)
         if not calls_df.empty:
             calls_file = os.path.join(self.output_dir, f'{ticker}_calls_{timestamp}.csv')
             calls_df.to_csv(calls_file, index=False)
@@ -251,12 +293,17 @@ class OptionsCollector:
             puts_file = os.path.join(self.output_dir, f'{ticker}_puts_{timestamp}.csv')
             puts_df.to_csv(puts_file, index=False)
         
-        # Sauvegarder les metrics de sentiment
+        # 1. Sauvegarder DAILY Cache (pour le skip)
+        daily_file = os.path.join(self.output_dir, f'{ticker}_sentiment_{today_str}.json')
+        with open(daily_file, 'w') as f:
+            json.dump(sentiment_metrics, f, indent=2)
+            
+        # 2. Sauvegarder ARCHIVE Timestamped (historique fin)
         metrics_file = os.path.join(self.output_dir, f'{ticker}_sentiment_{timestamp}.json')
         with open(metrics_file, 'w') as f:
             json.dump(sentiment_metrics, f, indent=2)
         
-        # Maintenir un fichier "latest" pour accès rapide
+        # 3. Maintenir un fichier "latest" pour le dashboard
         latest_file = os.path.join(self.output_dir, f'{ticker}_latest_sentiment.json')
         with open(latest_file, 'w') as f:
             json.dump(sentiment_metrics, f, indent=2)

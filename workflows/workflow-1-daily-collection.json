@@ -1,0 +1,361 @@
+{
+  "name": "AI Sentiment Analyzer - Daily Collection",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 24
+            }
+          ]
+        }
+      },
+      "id": "schedule-trigger",
+      "name": "Schedule Trigger - 8h00",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "url": "https://newsapi.org/v2/everything",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpQueryAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "q",
+              "value": "artificial intelligence OR machine learning OR GPT OR LLM"
+            },
+            {
+              "name": "language",
+              "value": "en"
+            },
+            {
+              "name": "sortBy",
+              "value": "publishedAt"
+            },
+            {
+              "name": "pageSize",
+              "value": "30"
+            },
+            {
+              "name": "apiKey",
+              "value": "={{$credentials.apiKey}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "newsapi-request",
+      "name": "NewsAPI Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [450, 200],
+      "credentials": {
+        "httpQueryAuth": {
+          "id": "1",
+          "name": "NewsAPI Credentials"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "https://news.google.com/rss/search?q=artificial+intelligence+OR+machine+learning+when:1d&hl=en-US&gl=US&ceid=US:en",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "text"
+            }
+          }
+        }
+      },
+      "id": "google-news-rss",
+      "name": "Google News RSS",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [450, 400]
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineAll"
+      },
+      "id": "merge-sources",
+      "name": "Merge Sources",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 2.1,
+      "position": [650, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Normalize and deduplicate articles from different sources\nconst articles = [];\nconst seenUrls = new Set();\n\n// Process NewsAPI data\nif ($input.first().json.articles) {\n  for (const article of $input.first().json.articles) {\n    if (!seenUrls.has(article.url)) {\n      articles.push({\n        title: article.title,\n        content: article.description || article.content || '',\n        url: article.url,\n        published_at: article.publishedAt,\n        source: article.source?.name || 'NewsAPI'\n      });\n      seenUrls.add(article.url);\n    }\n  }\n}\n\n// Process Google News RSS (simplified - you'd need XML parsing)\n// For now, just a placeholder structure\nif ($input.last().json.rss) {\n  // RSS parsing would go here\n  // This is a simplified example\n}\n\n// Limit to 30 articles\nconst limitedArticles = articles.slice(0, 30);\n\nreturn { articles: limitedArticles };"
+      },
+      "id": "normalize-dedup",
+      "name": "Normalize & Deduplicate",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [850, 300]
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "// Prepare data for sentiment analysis\nconst article = $input.item.json;\n\nreturn {\n  json: {\n    articles: [article]\n  }\n};"
+      },
+      "id": "prepare-for-analysis",
+      "name": "Prepare for Analysis",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1050, 300]
+    },
+    {
+      "parameters": {
+        "command": "python3 /data/scripts/sentiment_analyzer.py",
+        "sendData": true
+      },
+      "id": "sentiment-analysis",
+      "name": "Sentiment Analysis (Ollama)",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [1250, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse the JSON response from Python script\nconst response = JSON.parse($input.item.json.stdout);\nreturn response.map(item => ({ json: item }));"
+      },
+      "id": "parse-analysis",
+      "name": "Parse Analysis Result",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1450, 300]
+    },
+    {
+      "parameters": {
+        "mode": "combineAll"
+      },
+      "id": "aggregate-results",
+      "name": "Aggregate All Results",
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [1650, 300]
+    },
+    {
+      "parameters": {
+        "fileName": "={{\"sentiment/\" + $now.format(\"YYYY-MM-DD\") + \"_articles.csv\"}}",
+        "fileContent": "={{ $json }}",
+        "options": {
+          "append": false
+        }
+      },
+      "id": "save-daily-csv",
+      "name": "Save Daily CSV",
+      "type": "n8n-nodes-base.writeBinaryFile",
+      "typeVersion": 1,
+      "position": [1850, 200]
+    },
+    {
+      "parameters": {
+        "filePath": "/data/files/sentiment_historical.json",
+        "options": {}
+      },
+      "id": "read-historical",
+      "name": "Read Historical Data",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [1850, 400]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Merge new articles with historical data\nconst newArticles = $input.first().json;\nlet historical = [];\n\ntry {\n  const historicalData = JSON.parse($input.last().binary.data.toString());\n  historical = historicalData.articles || [];\n} catch (e) {\n  // If file doesn't exist or is empty, start fresh\n  historical = [];\n}\n\n// Append new articles\nconst allArticles = [...historical, ...newArticles];\n\n// Keep only last 100 days (approx 3000 articles)\nconst maxArticles = 3000;\nconst trimmedArticles = allArticles.slice(-maxArticles);\n\nreturn [{\n  json: {\n    articles: trimmedArticles,\n    last_updated: new Date().toISOString(),\n    total_articles: trimmedArticles.length\n  }\n}];"
+      },
+      "id": "merge-historical",
+      "name": "Merge with Historical",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [2050, 300]
+    },
+    {
+      "parameters": {
+        "fileName": "sentiment_historical.json",
+        "fileContent": "={{ JSON.stringify($json, null, 2) }}",
+        "options": {}
+      },
+      "id": "save-historical",
+      "name": "Save Historical JSON",
+      "type": "n8n-nodes-base.writeBinaryFile",
+      "typeVersion": 1,
+      "position": [2250, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Log completion\nconst totalArticles = $json.total_articles;\nconst newCount = $input.all().length;\n\nconsole.log(`✅ Sentiment analysis complete: ${newCount} new articles processed`);\nconsole.log(`📊 Total historical articles: ${totalArticles}`);\n\nreturn [{\n  json: {\n    status: 'success',\n    new_articles: newCount,\n    total_articles: totalArticles,\n    completed_at: new Date().toISOString()\n  }\n}];"
+      },
+      "id": "completion-log",
+      "name": "Completion Log",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [2450, 300]
+    }
+  ],
+  "connections": {
+    "Schedule Trigger - 8h00": {
+      "main": [
+        [
+          {
+            "node": "NewsAPI Request",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google News RSS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "NewsAPI Request": {
+      "main": [
+        [
+          {
+            "node": "Merge Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google News RSS": {
+      "main": [
+        [
+          {
+            "node": "Merge Sources",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge Sources": {
+      "main": [
+        [
+          {
+            "node": "Normalize & Deduplicate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalize & Deduplicate": {
+      "main": [
+        [
+          {
+            "node": "Prepare for Analysis",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare for Analysis": {
+      "main": [
+        [
+          {
+            "node": "Sentiment Analysis (Ollama)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sentiment Analysis (Ollama)": {
+      "main": [
+        [
+          {
+            "node": "Parse Analysis Result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Analysis Result": {
+      "main": [
+        [
+          {
+            "node": "Aggregate All Results",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate All Results": {
+      "main": [
+        [
+          {
+            "node": "Save Daily CSV",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Read Historical Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Historical Data": {
+      "main": [
+        [
+          {
+            "node": "Merge with Historical",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Save Daily CSV": {
+      "main": [
+        [
+          {
+            "node": "Merge with Historical",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge with Historical": {
+      "main": [
+        [
+          {
+            "node": "Save Historical JSON",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save Historical JSON": {
+      "main": [
+        [
+          {
+            "node": "Completion Log",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

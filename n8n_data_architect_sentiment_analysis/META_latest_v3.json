@@ -1,0 +1,155 @@
+{
+  "ticker": "META",
+  "timestamp": "2025-12-14T20:30:03.541056",
+  "final_sentiment_score": 0.1859,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.1371,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0117,
+    "news_confidence": 0.4637,
+    "news_weight": 0.2293,
+    "options_sentiment": 0.1112,
+    "options_confidence": 0.8538,
+    "options_weight": 0.6333,
+    "analyst_sentiment": 0.8209,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.1374,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0994,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 433,
+    "options_volume": 364632,
+    "analysis_depth": "DEEP",
+    "config_rationale": "META is a highly volatile tech company, requiring a short temporal decay to account for rapid price movements. The momentum window is set to 7 days to capture the company's high-growth potential. A moderate volatility penalty and divergence threshold are used to balance the impact of daily price fluctuations.",
+    "version": "V3"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.35821,
+    "recommendation_count": 59,
+    "recommendation_summary": "Strong Buy consensus (Mean: 1.4)",
+    "recommendation_score": 0.821,
+    "target_mean": 837.9152,
+    "target_median": 850.0,
+    "current_price": 644.23,
+    "upside_potential": 0.3006460425624389,
+    "price_target_score": 0.538,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.811,
+    "metrics": {
+      "avg_iv": 0.9056500000000001,
+      "iv_skew": -0.04395248380129597,
+      "pcr_volume": 0.61
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-14T16:12:41+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Meta (META) Stock Pops Following Metaverse Cuts Announcement - Could it Hit $1,000 In 2026? - 24/7 Wall St.",
+        "matches": 1
+      },
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2025-12-14T07:06:54+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Who is Alexandr Wang? 28-year-old hired for 14 billion US dollar by Mark Zuckerberg to lead Meta superintelligence labs - financialexpress.com",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-12T18:26:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "MotorCity Racing Acquired; Joins META's LLama Startup AI Program - PR Newswire",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-12T13:48:32+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Meta (META) Stock News Today: Analyst Targets, AI Spending Debate and 2026 Outlook (Dec. 12, 2025) - ts2.tech",
+        "matches": 1
+      }
+    ],
+    "count": 4,
+    "most_recent": {
+      "type": "product_launch",
+      "category": "PRODUCT",
+      "timestamp": "2025-12-14T16:12:41+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.0,
+      "impact_score": 0.0,
+      "title": "Meta (META) Stock Pops Following Metaverse Cuts Announcement - Could it Hit $1,000 In 2026? - 24/7 Wall St.",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "PRODUCT",
+      "CORPORATE_ACTION",
+      "ANALYST",
+      "MANAGEMENT"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.515,
+    "sentiment_volatility": 0.293,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 1.0,
+    "llm_interpretation": "📊 Here are the key insights and recommendations:\n\n**Insight:** The sentiment is generally bearish, with a risk-adjusted Sharpe Ratio indicating moderate returns with some volatility. The Volatility Sentiment suggests stable conditions, but the Acceleration Momentum shows no significant change in trend.\n\n**Action Recommendation:** HOLD your position for now, as the Consistency score indicates a uniform sentiment and the Conviction level is relatively low (0.1371). This suggests that there's no strong opportunity or risk to take action at this time."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

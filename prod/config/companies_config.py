@@ -5,95 +5,132 @@ Inclut ticker, nom complet, et mots-cles pour Google News
 """
 
 AI_COMPANIES = [
+    # --- PORTFOLIO THÉMATIQUE (Piliers d'Investissement) ---
+    
+    # Pilier 1: Cerveau (IA & Logiciel) - 25%
     {
         "ticker": "NVDA",
         "name": "NVIDIA Corporation",
-        "search_terms": ["NVIDIA", "NVDA stock", "Jensen Huang"],
-        "sector": "AI Hardware"
-    },
-    {
-        "ticker": "MSFT",
-        "name": "Microsoft Corporation",
-        "search_terms": ["Microsoft AI", "Azure AI", "Copilot", "OpenAI Microsoft"],
-        "sector": "AI Software"
-    },
-    {
-        "ticker": "GOOGL",
-        "name": "Alphabet Inc",
-        "search_terms": ["Google AI", "Gemini AI", "DeepMind", "Alphabet stock"],
-        "sector": "AI Software"
-    },
-    {
-        "ticker": "META",
-        "name": "Meta Platforms",
-        "search_terms": ["Meta AI", "LLaMA", "Facebook AI", "Mark Zuckerberg AI"],
-        "sector": "AI Software"
-    },
-    {
-        "ticker": "AMZN",
-        "name": "Amazon.com Inc",
-        "search_terms": ["Amazon AI", "AWS AI", "Amazon Bedrock", "Alexa AI"],
-        "sector": "AI Cloud"
-    },
-    {
-        "ticker": "AMD",
-        "name": "Advanced Micro Devices",
-        "search_terms": ["AMD AI", "AMD chips", "Lisa Su", "AMD data center"],
-        "sector": "AI Hardware"
-    },
-    {
-        "ticker": "TSLA",
-        "name": "Tesla Inc",
-        "search_terms": ["Tesla AI", "Tesla FSD", "Tesla Optimus", "Tesla autonomous"],
-        "sector": "AI Automotive"
-    },
-    {
-        "ticker": "ORCL",
-        "name": "Oracle Corporation",
-        "search_terms": ["Oracle AI", "Oracle Cloud", "Oracle database AI"],
-        "sector": "AI Cloud"
-    },
-    {
-        "ticker": "CRM",
-        "name": "Salesforce Inc",
-        "search_terms": ["Salesforce AI", "Einstein AI", "Salesforce Agentforce"],
-        "sector": "AI Software"
+        "search_terms": ["NVIDIA", "NVDA stock", "Jensen Huang", "AI chips"],
+        "sector": "AI Hardware",
+        "pillar": "Cerveau"
     },
     {
         "ticker": "PLTR",
         "name": "Palantir Technologies",
         "search_terms": ["Palantir AI", "Palantir AIP", "Palantir stock"],
-        "sector": "AI Analytics"
+        "sector": "AI Analytics",
+        "pillar": "Cerveau"
     },
     {
-        "ticker": "SNOW",
-        "name": "Snowflake Inc",
-        "search_terms": ["Snowflake AI", "Snowflake data cloud", "Snowflake ML"],
-        "sector": "AI Data"
+        "ticker": "VOO",
+        "name": "Vanguard S&P 500 ETF",
+        "search_terms": ["VOO", "Vanguard S&P 500", "VOO ETF"],
+        "sector": "ETF",
+        "pillar": "Cerveau"
     },
     {
-        "ticker": "AVGO",
-        "name": "Broadcom Inc",
-        "search_terms": ["Broadcom AI", "Broadcom chips", "Broadcom semiconductor"],
-        "sector": "AI Hardware"
+        "ticker": "GOOGL",
+        "name": "Alphabet Inc",
+        "search_terms": ["Google AI", "Gemini AI", "DeepMind", "Alphabet stock"],
+        "sector": "AI Software",
+        "pillar": "Cerveau"
+    },
+
+    # Pilier 2: Carburant (Uranium & Cuivre) - 20%
+    {
+        "ticker": "CCO.TO",
+        "name": "Cameco Corporation",
+        "search_terms": ["Cameco", "uranium", "CCO.TO", "nuclear energy"],
+        "sector": "Energy",
+        "pillar": "Carburant"
     },
     {
-        "ticker": "ADBE",
-        "name": "Adobe Inc",
-        "search_terms": ["Adobe AI", "Adobe Firefly", "Adobe Sensei"],
-        "sector": "AI Creative"
+        "ticker": "FCX",
+        "name": "Freeport-McMoRan",
+        "search_terms": ["Freeport", "FCX stock", "copper mining", "Freeport copper"],
+        "sector": "Basic Materials",
+        "pillar": "Carburant"
+    },
+
+    # Pilier 3: Thermostat (Refroidissement) - 15%
+    {
+        "ticker": "VRT",
+        "name": "Vertiv Holdings",
+        "search_terms": ["Vertiv", "VRT stock", "data center cooling", "Vertiv infrastructure"],
+        "sector": "Technology",
+        "pillar": "Thermostat"
     },
     {
-        "ticker": "NOW",
-        "name": "ServiceNow Inc",
-        "search_terms": ["ServiceNow AI", "ServiceNow Now Assist"],
-        "sector": "AI Software"
+        "ticker": "MOD",
+        "name": "Modine Manufacturing",
+        "search_terms": ["Modine", "MOD stock", "thermal management", "Modine cooling"],
+        "sector": "Industrials",
+        "pillar": "Thermostat"
     },
     {
-        "ticker": "INTC",
-        "name": "Intel Corporation",
-        "search_terms": ["Intel AI", "Intel chips", "Intel Gaudi", "Intel Xeon"],
-        "sector": "AI Hardware"
+        "ticker": "HPS-A.TO",
+        "name": "Hammond Power Solutions",
+        "search_terms": ["Hammond Power", "HPS.A", "transformers", "power solutions"],
+        "sector": "Industrials",
+        "pillar": "Thermostat"
+    },
+
+    # Pilier 4: Corps (Robots) - 10%
+    {
+        "ticker": "RBOT.TO",
+        "name": "Horizons Robotics & Automation ETF",
+        "search_terms": ["RBOT", "robotics ETF", "automation ETF"],
+        "sector": "ETF",
+        "pillar": "Corps"
+    },
+    {
+        "ticker": "WSP.TO",
+        "name": "WSP Global",
+        "search_terms": ["WSP Global", "WSP engineering", "WSP.TO", "infrastructure"],
+        "sector": "Industrials",
+        "pillar": "Corps"
+    },
+
+    # Pilier 5: Espace (Défense/Satellites) - 10%
+    {
+        "ticker": "RKLB",
+        "name": "Rocket Lab USA",
+        "search_terms": ["Rocket Lab", "RKLB stock", "space launch", "satellites"],
+        "sector": "Aerospace",
+        "pillar": "Espace"
+    },
+    {
+        "ticker": "MDA.TO",
+        "name": "MDA Space",
+        "search_terms": ["MDA Space", "MDA.TO", "Canadarm", "satellite systems"],
+        "sector": "Aerospace",
+        "pillar": "Espace"
+    },
+
+    # Pilier 6: Rente (Cash Flow) - 15%
+    {
+        "ticker": "VDY.TO",
+        "name": "Vanguard FTSE Canadian High Dividend Yield",
+        "search_terms": ["VDY", "Vanguard dividend", "VDY.TO"],
+        "sector": "ETF",
+        "pillar": "Rente"
+    },
+    {
+        "ticker": "JEPI",
+        "name": "JPMorgan Equity Premium Income ETF",
+        "search_terms": ["JEPI", "JPMorgan income", "JEPI ETF"],
+        "sector": "ETF",
+        "pillar": "Rente"
+    },
+
+    # Pilier 7: Joker (Crypto) - 5%
+    {
+        "ticker": "FBTC.TO",
+        "name": "Fidelity Advantage Bitcoin ETF",
+        "search_terms": ["FBTC", "Fidelity Bitcoin", "Bitcoin ETF Canada"],
+        "sector": "Crypto",
+        "pillar": "Joker"
     }
 ]
 
@@ -122,7 +159,7 @@ PRIVATE_AI_COMPANIES = [
         "name": "Mistral AI",
         "search_terms": ["Mistral AI", "Mistral LLM"],
         "sector": "AI Research"
-    }
+    },
 ]
 
 def get_all_companies():

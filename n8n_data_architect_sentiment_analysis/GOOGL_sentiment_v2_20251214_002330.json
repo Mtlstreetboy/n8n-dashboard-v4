@@ -1,0 +1,124 @@
+{
+  "ticker": "GOOGL",
+  "timestamp": "2025-12-14T00:23:30.603787",
+  "final_sentiment_score": 0.3076,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2996,
+  "smart_money_factor": 0.117,
+  "components": {
+    "news_sentiment": 0.0216,
+    "news_confidence": 0.5965,
+    "news_weight": 0.2878,
+    "options_sentiment": 0.2828,
+    "options_confidence": 0.9839,
+    "options_weight": 0.7122,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.2612,
+    "opportunity_score": 0,
+    "interpretation": "\ud83e\udd1d Consensus - Nouvelles et march\u00e9s s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 478,
+    "options_volume": 219538,
+    "analysis_depth": "DEEP",
+    "config_rationale": "Configuration par d\u00e9faut (mod\u00e9r\u00e9e)"
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.557,
+    "metrics": {
+      "avg_iv": 0.7787,
+      "iv_skew": -0.16235988200589976,
+      "pcr_volume": 0.499
+    },
+    "implications": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-11T11:14:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.38,
+        "impact_score": 0.114,
+        "title": "Another Google founder beats Amazon founder Jeff Bezos in World's Richest ranking - Times of India",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-11T12:57:52+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.38,
+        "impact_score": 0.063,
+        "title": "Cantor Fitzgerald maintains Neutral rating on Alphabet stock amid Gemini growth - Investing.com",
+        "matches": 1
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-11T11:32:49+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Google DeepMind announces new AI research lab for UK in 2026 - Computing UK",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2025-12-11T11:14:00+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.38,
+      "impact_score": 0.114,
+      "title": "Another Google founder beats Amazon founder Jeff Bezos in World's Richest ranking - Times of India",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "\u2713 Catalyseurs mineurs. Impact limit\u00e9 sur tendance globale.",
+    "categories_present": [
+      "FINANCIAL",
+      "ANALYST",
+      "PRODUCT"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.862,
+    "sentiment_volatility": 0.315,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "M\u00e9triques standards, pas de signal particulier."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "SMART_MONEY",
+      "icon": "\ud83d\udcb0",
+      "title": "SMART MONEY ACTIF",
+      "message": "D\u00e9tection d'activit\u00e9 institutionnelle (score: 0.117). Open Interest sugg\u00e8re positionnement de gros joueurs.",
+      "action": "Analyser leurs positions. Ils ont souvent raison \u00e0 moyen terme.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "\ud83c\udf2a\ufe0f",
+      "title": "R\u00c9GIME DE HAUTE VOLATILIT\u00c9",
+      "message": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

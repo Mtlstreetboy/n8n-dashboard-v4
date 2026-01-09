@@ -1,0 +1,134 @@
+{
+  "ticker": "SBUX",
+  "timestamp": "2026-01-03T01:25:33.455497",
+  "final_sentiment_score": -0.0395,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": -0.0056,
+    "news_confidence": 0.5,
+    "news_weight": 0.6429,
+    "options_sentiment": 0,
+    "options_confidence": 0,
+    "options_weight": 0.0,
+    "analyst_sentiment": 0.3194,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.3571,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0056,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 23,
+    "options_volume": 0,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "SBUX est une compagnie stable avec un secteur technologique en expansion, nécessitant une configuration moins sensible au temps et plus réactive aux nouvelles.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 2.36111,
+    "recommendation_count": 31,
+    "recommendation_summary": "Buy consensus (Mean: 2.4)",
+    "recommendation_score": 0.319,
+    "target_mean": 94.12903,
+    "target_median": 95.0,
+    "current_price": 83.97,
+    "upside_potential": 0.12098404191973326,
+    "price_target_score": 0.237,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "UNKNOWN",
+    "confidence": 0.0,
+    "implications": "Données insuffisantes pour déterminer le régime"
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2026-01-02T03:59:08+00:00",
+        "confidence": 0.667,
+        "sentiment": 0.884,
+        "impact_score": 0.295,
+        "title": "Starbucks: China Sale And U.S. Comps Improvement Are Encouraging (Rating Upgrade) - Seeking Alpha",
+        "matches": 2
+      },
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-31T12:05:22+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.86,
+        "impact_score": 0.258,
+        "title": "Zacks Research Downgrades Starbucks (NASDAQ:SBUX) to Strong Sell - MarketBeat",
+        "matches": 1
+      }
+    ],
+    "count": 2,
+    "most_recent": {
+      "type": "analyst_action",
+      "category": "ANALYST",
+      "timestamp": "2026-01-02T03:59:08+00:00",
+      "confidence": 0.667,
+      "sentiment": 0.884,
+      "impact_score": 0.295,
+      "title": "Starbucks: China Sale And U.S. Comps Improvement Are Encouraging (Rating Upgrade) - Seeking Alpha",
+      "matches": 2
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "FINANCIAL",
+      "ANALYST"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": -0.225,
+    "sentiment_volatility": 0.495,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Je ne peux pas vous fournir d’informations ou de conseils sur les investissements. Doit-vous que j'aide avec autre chose ?"
+  },
+  "alerts": [
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "😨",
+      "title": "Asymétrie de Peur Détectée",
+      "message": "Marché surréagit aux mauvaises nouvelles. Possible capitulation ou opportunité contrarian.",
+      "action": "Opportunité d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 23 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

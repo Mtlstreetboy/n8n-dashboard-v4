@@ -1,0 +1,79 @@
+flowchart TD
+    %% --- CONFIGURATION (GLOBAL) ---
+    subgraph ConfigScope [Global Configuration]
+        direction TB
+        CONFIG["⚙️ companies_config.py<br/>(Source de Vérité - 15 tickers)"]:::config
+    end
+
+    %% --- BRANCHE 1: OPTIONS ---
+    subgraph OptionsFlow [Flux Options]
+        OPTS["📊 collect_options.py<br/>(Yahoo Finance API)"]:::collector
+        OPTS_CSV["📁 options/*.csv<br/>(Volume, DIY, IV, PCR, Skew,<br/>Expirations, Strikes)"]:::data
+        
+        OPTS -->|génère| OPTS_CSV
+    end
+
+    %% --- BRANCHE 2: NEWS (Nouveau Pipeline) ---
+    subgraph NewsFlow [Flux News - Modulaire]
+        NEWS_PIPE["🚀 news_pipeline.py<br/>(Orchestrateur News)"]:::main
+        NEWS_COLL["📰 news_collector.py<br/>(Yahoo Finance + RSS)"]:::collector
+        NEWS_ANAL["🧠 news_analyzer.py<br/>(FinBERT Contextuel)"]:::processor
+        NEWS_JSON["📁 companies/*_news.json<br/>(Titres, Dates, Sources<br/>+ Score Sentiment, Confiance)"]:::data
+        
+        NEWS_PIPE -->|1. collecte| NEWS_COLL
+        NEWS_PIPE -->|2. analyse| NEWS_ANAL
+        
+        NEWS_COLL -->|raw data| NEWS_JSON
+        NEWS_JSON -->|lecture| NEWS_ANAL
+        NEWS_ANAL -->|enrichissement| NEWS_JSON
+    end
+
+    %% --- BRANCHE 3: FINANCIALS (Fondamentaux) ---
+    subgraph FinFlow [Flux Financier]
+        FIN_COLL["💰 collect_financials.py<br/>(YF Fundamentals)"]:::collector
+        FIN_JSON["📁 financials/*.json<br/>(P/E, PEG, Marges, Growth,<br/>Analyst Targets, Revenus)"]:::data
+        
+        FIN_COLL -->|scrape| FIN_JSON
+    end
+
+    %% --- BRANCHE 4: ANALYSE GLOBALE ---
+    subgraph AnalysisFlow [Moteur Sentiment 6D]
+        GLOBAL_ORCH["🔄 analyze_all_sentiment.py<br/>(Orchestrateur Batch)"]:::main
+        ENGINE["🧠 advanced_sentiment_engine_v4.py<br/>(Moteur Multi-Dim)"]:::processor
+        
+        GLOBAL_ORCH -->|lance| ENGINE
+        
+        %% Inputs
+        OPTS_CSV -->|lecture| ENGINE
+        NEWS_JSON -->|lecture| ENGINE
+        FIN_JSON -->|lecture| ENGINE
+        
+        %% Sub-components
+        ENGINE -->|utilise| ANALYST["👔 analyst_insights.py"]:::analyzer
+        ENGINE -->|utilise| CTX["🎯 contextual_analyzer.py"]:::analyzer
+        
+        %% Output
+        FINAL_JSON["📁 sentiment_analysis/*_latest_v4.json"]:::data
+        ENGINE -->|génère| FINAL_JSON
+    end
+    
+    %% --- DASHBOARD ---
+    subgraph Viz [Visualisation]
+        DASHBOARD["🎨 dashboard_v4_dynamic.html<br/>(React + Fetch JSON)"]:::final
+    end
+
+    %% LIENS GLOBAUX (Placés à la fin pour le layout)
+    CONFIG -.->|scope| OPTS
+    CONFIG -.->|scope| NEWS_PIPE
+    CONFIG -.->|scope| FIN_COLL
+    CONFIG -.->|scope| GLOBAL_ORCH
+    FINAL_JSON -->|data| DASHBOARD
+
+    %% Styling
+    classDef config fill:#ffb600,stroke:#b88600,color:#333,stroke-width:2px
+    classDef main fill:#4a90e2,stroke:#2c5aa0,color:#fff,stroke-width:3px
+    classDef collector fill:#7ed321,stroke:#5fa319,color:#fff,stroke-width:2px
+    classDef processor fill:#9013fe,stroke:#5e0ba0,color:#fff,stroke-width:2px
+    classDef analyzer fill:#bd10e0,stroke:#7a0688,color:#fff,stroke-width:2px
+    classDef data fill:#f5a623,stroke:#c17d11,color:#fff,stroke-width:2px
+    classDef final fill:#50e3c2,stroke:#2a8a6f,color:#333,stroke-width:3px

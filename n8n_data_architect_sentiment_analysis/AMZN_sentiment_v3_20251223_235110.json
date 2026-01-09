@@ -1,0 +1,144 @@
+{
+  "ticker": "AMZN",
+  "timestamp": "2025-12-23T23:51:05.985716",
+  "final_sentiment_score": 0.4804,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.4161,
+  "smart_money_factor": 0.0916,
+  "components": {
+    "news_sentiment": 0.0271,
+    "news_confidence": 0.5398,
+    "news_weight": 0.2327,
+    "options_sentiment": 0.423,
+    "options_confidence": 1.0,
+    "options_weight": 0.6465,
+    "analyst_sentiment": 0.8327,
+    "analyst_confidence": 0.3364,
+    "analyst_weight": 0.1208,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.396,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 407,
+    "options_volume": 574605,
+    "analysis_depth": "DEEP",
+    "config_rationale": "Amazon est une compagnie technologique très volatile, avec une fréquence élevée de nouvelles et un volume de trading d'options important. Pour prendre en compte sa tendance à la croissance rapide, nous utilisons un temps d'expiration plus long pour le momentum window. La volatilité élevée nécessite une pénalité importante pour les sentiments négatifs.",
+    "version": "V3"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.32836,
+    "recommendation_count": 60,
+    "recommendation_summary": "Strong Buy consensus (Mean: 1.3)",
+    "recommendation_score": 0.836,
+    "target_mean": 295.59784,
+    "target_median": 300.0,
+    "current_price": 232.14,
+    "upside_potential": 0.27336021366416835,
+    "price_target_score": 0.498,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 0.991,
+      "pt": 0.009,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.009,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.111,
+    "metrics": {
+      "avg_iv": 0.55535,
+      "iv_skew": -0.17439184746877068,
+      "pcr_volume": 0.401
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-23T18:24:31+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.429,
+        "impact_score": 0.1,
+        "title": "Amazon Just Unveiled Some Seriously Impressive “Frontier” AI Agents. It’s Time to Buy. - 24/7 Wall St.",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-23T17:06:31+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.158,
+        "impact_score": 0.026,
+        "title": "Accelerating your marketing ideation with generative AI – Part 1: From idea to generation with the Amazon Nova foundation models - Amazon Web Services (AWS)",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-23T15:13:51+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.019,
+        "impact_score": 0.006,
+        "title": "Amazon Stock (AMZN) News Today: OpenAI Deal Talks, AWS AI Push, and Wall Street Forecasts for 2026 - ts2.tech",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "product_launch",
+      "category": "PRODUCT",
+      "timestamp": "2025-12-23T18:24:31+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.429,
+      "impact_score": 0.1,
+      "title": "Amazon Just Unveiled Some Seriously Impressive “Frontier” AI Agents. It’s Time to Buy. - 24/7 Wall St.",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "CORPORATE_ACTION",
+      "ANALYST",
+      "PRODUCT"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.894,
+    "sentiment_volatility": 0.362,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "📊 Based on these sentiment metrics:\n\n* AMZN's Sharpe Ratio is high (0.894), indicating a strong risk-adjusted sentiment, suggesting the stock may be a good investment opportunity.\n* Volatility Sentiment is moderate (0.362), indicating some price fluctuations but not chaotic, making it suitable for traders who can handle some market uncertainty.\n* Acceleration Momentum is 0, implying no significant change in the trend, so traders should be cautious and wait for a clear direction before entering or exiting positions.\n\nImplication: As a trader, you may want to consider holding onto your AMZN position (HOLD classification) with conviction level of 0.4161, but keep an eye on potential price fluctuations and be prepared to adjust your strategy if the trend changes."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

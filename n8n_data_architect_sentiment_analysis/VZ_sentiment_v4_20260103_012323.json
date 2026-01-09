@@ -1,0 +1,158 @@
+{
+  "ticker": "VZ",
+  "timestamp": "2026-01-03T01:23:14.439046",
+  "final_sentiment_score": 0.1291,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": -0.0054,
+    "news_confidence": 0.5,
+    "news_weight": 0.6185,
+    "options_sentiment": 0,
+    "options_confidence": 0,
+    "options_weight": 0.0,
+    "analyst_sentiment": 0.3471,
+    "analyst_confidence": 0.3701,
+    "analyst_weight": 0.3815,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0054,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 20,
+    "options_volume": 0,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "VZ est une compagnie de télécommunications stable avec moins de volatilité et un flux d'informations régulier, mais réactif aux nouvelles importantes.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 2.29167,
+    "recommendation_count": 21,
+    "recommendation_summary": "Buy consensus (Mean: 2.3)",
+    "recommendation_score": 0.354,
+    "target_mean": 47.16667,
+    "target_median": 46.0,
+    "current_price": 40.52,
+    "upside_potential": 0.164034304047384,
+    "price_target_score": 0.317,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 0.811,
+      "pt": 0.189,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0.9,
+      "price_target": 0.21,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "UNKNOWN",
+    "confidence": 0.0,
+    "implications": "Données insuffisantes pour déterminer le régime"
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2026-01-02T19:42:56+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.927,
+        "impact_score": 0.278,
+        "title": "Verizon stock today: VZ slips as fresh SEC filings hit tape; rates and earnings loom - ts2.tech",
+        "matches": 1
+      },
+      {
+        "type": "legal_issues",
+        "category": "LEGAL",
+        "timestamp": "2025-12-30T20:34:44+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.913,
+        "impact_score": 0.259,
+        "title": "Verizon stock today: VZ edges up as DOJ DEI probe headline hangs over telecom ahead of Jan. 30 earnings - ts2.tech",
+        "matches": 1
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-11T08:00:00+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.072,
+        "impact_score": 0.017,
+        "title": "Verizon Communications Inc. (VZ) Announces Quarterly Dividend - Yahoo Finance",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-27T06:46:44+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.009,
+        "impact_score": 0.003,
+        "title": "Verizon (VZ) Stock News Today: Dividend, Frontier Deal Updates, Analyst Forecasts — and What to Watch Before Monday’s Open - ts2.tech",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-27T06:46:44+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.009,
+        "impact_score": 0.002,
+        "title": "Verizon (VZ) Stock News Today: Dividend, Frontier Deal Updates, Analyst Forecasts — and What to Watch Before Monday’s Open - ts2.tech",
+        "matches": 1
+      }
+    ],
+    "count": 5,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2026-01-02T19:42:56+00:00",
+      "confidence": 0.333,
+      "sentiment": -0.927,
+      "impact_score": 0.278,
+      "title": "Verizon stock today: VZ slips as fresh SEC filings hit tape; rates and earnings loom - ts2.tech",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "CORPORATE_ACTION",
+      "LEGAL",
+      "PRODUCT",
+      "FINANCIAL",
+      "ANALYST"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": -0.2,
+    "sentiment_volatility": 0.537,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "<font face=\"verdana\" size=\"2\"> **💡 L’analyse montre un sentiment neutre avec une tendance à la baisse** | **Vente ou maintien de la position en fonction de votre stratégie** </font>\n\n- Le score contrarian indiquant qu'il n'y a pas d'opportunité forte, ce qui signifie que le trader ne devrait pas prendre des positions fortes.\n- La consistance à 0.0 implique une incohérence dans les tendances, il est donc recommandé de s’abstenir et d’évaluer les marchés avant la prise de décision.\n\nCependant, gardez en tête que ces indicateurs ne sont qu’une partie du tableau, il convient de considérer d’autres facteurs pour prendre une décision éclairée."
+  },
+  "alerts": [
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 20 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "ticker": "INTC",
+  "timestamp": "2026-01-03T01:23:44.054789",
+  "final_sentiment_score": 0.0732,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2658,
+  "smart_money_factor": 0.0821,
+  "components": {
+    "news_sentiment": 0.0034,
+    "news_confidence": 0.9282,
+    "news_weight": 0.3479,
+    "options_sentiment": 0.4094,
+    "options_confidence": 0.9748,
+    "options_weight": 0.548,
+    "analyst_sentiment": -0.0222,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.1041,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.406,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 327,
+    "options_volume": 195913,
+    "analysis_depth": "DEEP",
+    "config_rationale": "Intel est une entreprise tech avec des nouvelles fréquentes, donc un halflife de 3 jours pour la dépréciation temporelle et une fenêtre de momentum sur 7 jours sont appropriées. La volatilité est typiquement élevée dans le secteur technologique, ce qui justifie une pénalité de volatilité plus importante. Un seuil de divergence à 0.5 reflète les changements rapides du sentiment face aux nouvelles.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 3.04444,
+    "recommendation_count": 36,
+    "recommendation_summary": "Hold consensus (Mean: 3.0)",
+    "recommendation_score": -0.022,
+    "target_mean": 38.14028,
+    "target_median": 39.5,
+    "current_price": 39.38,
+    "upside_potential": -0.03148095479939069,
+    "price_target_score": -0.063,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.572,
+    "metrics": {
+      "avg_iv": 0.7860499999999999,
+      "iv_skew": -0.15481220657276998,
+      "pcr_volume": 0.38
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2026-01-02T22:45:16+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.842,
+        "impact_score": 0.196,
+        "title": "Intel stock jumps 7% today — INTC rides chip rally as CES “Panther Lake” launch nears - ts2.tech",
+        "matches": 1
+      },
+      {
+        "type": "legal_issues",
+        "category": "LEGAL",
+        "timestamp": "2026-01-01T13:57:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.045,
+        "impact_score": 0.013,
+        "title": "The Glass Frontier: Intel and the High-Stakes Race to Redefine AI Supercomputing - FinancialContent",
+        "matches": 1
+      }
+    ],
+    "count": 2,
+    "most_recent": {
+      "type": "product_launch",
+      "category": "PRODUCT",
+      "timestamp": "2026-01-02T22:45:16+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.842,
+      "impact_score": 0.196,
+      "title": "Intel stock jumps 7% today — INTC rides chip rally as CES “Panther Lake” launch nears - ts2.tech",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale. | Biais POSITIF des catalyseurs.",
+    "categories_present": [
+      "PRODUCT",
+      "LEGAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.088,
+    "sentiment_volatility": 0.396,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Intelligence artificielle n'est pas autorisée à fournir des conseils d'investissement."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "😨",
+      "title": "Asymétrie de Peur Détectée",
+      "message": "Marché surréagit aux mauvaises nouvelles. Possible capitulation ou opportunité contrarian.",
+      "action": "Opportunité d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    }
+  ]
+}

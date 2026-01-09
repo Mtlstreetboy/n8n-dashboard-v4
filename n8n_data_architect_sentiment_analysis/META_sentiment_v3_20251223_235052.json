@@ -1,0 +1,144 @@
+{
+  "ticker": "META",
+  "timestamp": "2025-12-23T23:50:48.064892",
+  "final_sentiment_score": 0.1943,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.1256,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0084,
+    "news_confidence": 0.4712,
+    "news_weight": 0.2362,
+    "options_sentiment": 0.1249,
+    "options_confidence": 0.8304,
+    "options_weight": 0.6245,
+    "analyst_sentiment": 0.8209,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.1393,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.1165,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 480,
+    "options_volume": 256970,
+    "analysis_depth": "DEEP",
+    "config_rationale": "META est une entreprise tech très volatile, nécessitant une décadence rapide pour prendre en compte les nouveaux signaux. Le seuil de divergence élevé reflète l'importance de confiance dans les tendances à court terme.",
+    "version": "V3"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.35821,
+    "recommendation_count": 59,
+    "recommendation_summary": "Strong Buy consensus (Mean: 1.4)",
+    "recommendation_score": 0.821,
+    "target_mean": 837.1525,
+    "target_median": 850.0,
+    "current_price": 664.94,
+    "upside_potential": 0.2589895328901855,
+    "price_target_score": 0.476,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.353,
+    "metrics": {
+      "avg_iv": 0.67655,
+      "iv_skew": 0.08618563058896093,
+      "pcr_volume": 0.566
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2025-12-23T07:56:00+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.929,
+        "impact_score": 0.186,
+        "title": "Meta CEO Mark Zuckerberg's 'highest-paid' employee is reportedly unhappy with his Boss, feels he ... - Times of India",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-22T17:36:46+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.218,
+        "impact_score": 0.073,
+        "title": "Ray-Ban Meta deal: Save 25% on smart AI glasses at Amazon - Mashable",
+        "matches": 1
+      },
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-22T18:00:00+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.039,
+        "impact_score": 0.012,
+        "title": "Column | Your chatbot keeps a file on you. Here’s how to delete it. - The Washington Post",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "executive_changes",
+      "category": "MANAGEMENT",
+      "timestamp": "2025-12-23T07:56:00+00:00",
+      "confidence": 0.333,
+      "sentiment": -0.929,
+      "impact_score": 0.186,
+      "title": "Meta CEO Mark Zuckerberg's 'highest-paid' employee is reportedly unhappy with his Boss, feels he ... - Times of India",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "MANAGEMENT",
+      "CORPORATE_ACTION",
+      "FINANCIAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.312,
+    "sentiment_volatility": 0.335,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "📊 Here are the key insights:\n\n* **Mixed Signals**: The Sharpe Ratio and Consistency metrics suggest a moderate level of positivity, while Volatility Sentiment indicates a stable market. This mixed sentiment may lead to cautious trading.\n| Hold or wait for clearer signals.\n\n* **Lack of Conviction**: The low Consistency score and Acceleration Momentum indicate no clear trend or conviction in the market. Be prepared for potential reversals.\n| Monitor closely and adjust positions accordingly.\n\nOverall, these metrics suggest a neutral-to-cautious approach, with no strong buy or sell signals. A trader may want to hold or wait for clearer indications before making any significant moves."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

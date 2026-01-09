@@ -1,0 +1,184 @@
+{
+  "ticker": "NVDA",
+  "timestamp": "2026-01-03T01:17:50.760248",
+  "final_sentiment_score": 0.1386,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2251,
+  "smart_money_factor": 0.15,
+  "components": {
+    "news_sentiment": 0.0034,
+    "news_confidence": 0.8073,
+    "news_weight": 0.3123,
+    "options_sentiment": 0.3407,
+    "options_confidence": 1.0,
+    "options_weight": 0.5803,
+    "analyst_sentiment": 0.8359,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.1075,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.3373,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 680,
+    "options_volume": 2752516,
+    "analysis_depth": "DEEP",
+    "config_rationale": "NVDA est une action technologique très volatilisée avec un flux continu d'informations. Une déclinaison temporelle de 3 jours et un seuil de divergence plus élevé reflètent sa nature tech, tandis que le pénaluckland la volatilité et l'premium institutionnel prennent en compte son impact.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.32812,
+    "recommendation_count": 57,
+    "recommendation_summary": "Strong Buy consensus (Mean: 1.3)",
+    "recommendation_score": 0.836,
+    "target_mean": 253.01825,
+    "target_median": 250.0,
+    "current_price": 188.85,
+    "upside_potential": 0.33978422028064603,
+    "price_target_score": 0.591,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 1.0,
+    "metrics": {
+      "avg_iv": 1.30685,
+      "iv_skew": -0.5754074235569847,
+      "pcr_volume": 0.452
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections. | 📞 Call skew élevé - Spéculation haussière agressive",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2026-01-02T13:17:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.182,
+        "impact_score": 0.055,
+        "title": "4 Reasons Why Nvidia Can Beat the Market Again in 2026 - The Motley Fool",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2026-01-02T14:00:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.16,
+        "impact_score": 0.053,
+        "title": "Nvidia: $20B Groq Deal, Valuation, And More (Rating Upgrade) (NASDAQ:NVDA) - Seeking Alpha",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2026-01-02T14:00:00+00:00",
+        "confidence": 0.667,
+        "sentiment": 0.16,
+        "impact_score": 0.053,
+        "title": "Nvidia: $20B Groq Deal, Valuation, And More (Rating Upgrade) (NASDAQ:NVDA) - Seeking Alpha",
+        "matches": 2
+      },
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2026-01-02T15:01:38+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.016,
+        "impact_score": 0.003,
+        "title": "CES 2026: What to expect from Nvidia CEO Jensen Huang's keynote - Yahoo Finance",
+        "matches": 1
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2026-01-02T21:02:24+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.0,
+        "impact_score": 0.0,
+        "title": "CES 2026: Nvidia, AMD, Intel, & more to make announcements - Yahoo Finance",
+        "matches": 1
+      }
+    ],
+    "count": 5,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2026-01-02T13:17:00+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.182,
+      "impact_score": 0.055,
+      "title": "4 Reasons Why Nvidia Can Beat the Market Again in 2026 - The Motley Fool",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "MANAGEMENT",
+      "ANALYST",
+      "FINANCIAL",
+      "PRODUCT",
+      "CORPORATE_ACTION"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.1,
+    "sentiment_volatility": 0.426,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "**😐 NVDA : Sentiment faible et volatilité stable**\n\n- La Sharpe Ratio de 0,1 indique que le sentiment sur NVDA est relativement neutre en termes de rentabilité ajustée au risque.\n- Le Score Contrarian à 0 suggère qu'il n'y a pas d'opportunités de contre-attaque pour un trader.\n- L'implication pour un trader est de garder une attitude neutre et patiente avant de prendre des positions, car les métriques indiquent un sentiment faible."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "SMART_MONEY",
+      "icon": "💰",
+      "title": "SMART MONEY ACTIF",
+      "message": "Détection d'activité institutionnelle (score: 0.150). Open Interest suggère positionnement de gros joueurs.",
+      "action": "Analyser leurs positions. Ils ont souvent raison à moyen terme.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections. | 📞 Call skew élevé - Spéculation haussière agressive",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "😨",
+      "title": "Asymétrie de Peur Détectée",
+      "message": "Marché surréagit aux mauvaises nouvelles. Possible capitulation ou opportunité contrarian.",
+      "action": "Opportunité d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    }
+  ]
+}

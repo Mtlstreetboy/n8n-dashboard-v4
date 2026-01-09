@@ -1,0 +1,145 @@
+{
+  "ticker": "INTC",
+  "timestamp": "2026-01-06T17:36:54.802085",
+  "final_sentiment_score": 0.1404,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.3068,
+  "smart_money_factor": 0.1432,
+  "components": {
+    "news_sentiment": 0.0034,
+    "news_confidence": 0.9282,
+    "news_weight": 0.4053,
+    "options_sentiment": 0.69,
+    "options_confidence": 1.0,
+    "options_weight": 0.5947,
+    "analyst_sentiment": 0,
+    "analyst_confidence": 0,
+    "analyst_weight": 0.0,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.4828,
+    "opportunity_score": 0,
+    "interpretation": "\ud83e\udd1d Consensus - Nouvelles et march\u00e9s s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 327,
+    "options_volume": 84826,
+    "analysis_depth": "DEEP",
+    "config_rationale": "Intel est une entreprise technologique avec des nouvelles fr\u00e9quentes, donc un decalage temporel plus court et un seuil de divergence plus \u00e9lev\u00e9 sont appropri\u00e9s pour r\u00e9agir rapidement aux changements. La volatilit\u00e9 et le volume d'options sont importants \u00e0 consid\u00e9rer en raison de l'activit\u00e9 du march\u00e9.",
+    "version": "V4 - Dual Brain"
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.849,
+    "metrics": {
+      "avg_iv": 0.92455,
+      "iv_skew": -0.2223610844068449,
+      "pcr_volume": 0.31
+    },
+    "implications": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2026-01-02T22:45:16+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.842,
+        "impact_score": 0.196,
+        "title": "Intel stock jumps 7% today \u2014 INTC rides chip rally as CES \u201cPanther Lake\u201d launch nears - ts2.tech",
+        "matches": 1
+      },
+      {
+        "type": "legal_issues",
+        "category": "LEGAL",
+        "timestamp": "2026-01-01T13:57:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.045,
+        "impact_score": 0.013,
+        "title": "The Glass Frontier: Intel and the High-Stakes Race to Redefine AI Supercomputing - FinancialContent",
+        "matches": 1
+      }
+    ],
+    "count": 2,
+    "most_recent": {
+      "type": "product_launch",
+      "category": "PRODUCT",
+      "timestamp": "2026-01-02T22:45:16+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.842,
+      "impact_score": 0.196,
+      "title": "Intel stock jumps 7% today \u2014 INTC rides chip rally as CES \u201cPanther Lake\u201d launch nears - ts2.tech",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "\u2713 Catalyseurs mineurs. Impact limit\u00e9 sur tendance globale. | Biais POSITIF des catalyseurs.",
+    "categories_present": [
+      "PRODUCT",
+      "LEGAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.088,
+    "sentiment_volatility": 0.396,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "D\u00e9sol\u00e9, mais je ne peux pas fournir de conseils sur les investissements ou les transactions financi\u00e8res. Puis-je vous aider avec autre chose ?"
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "SMART_MONEY",
+      "icon": "\ud83d\udcb0",
+      "title": "SMART MONEY ACTIF",
+      "message": "D\u00e9tection d'activit\u00e9 institutionnelle (score: 0.143). Open Interest sugg\u00e8re positionnement de gros joueurs.",
+      "action": "Analyser leurs positions. Ils ont souvent raison \u00e0 moyen terme.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "\ud83c\udf2a\ufe0f",
+      "title": "R\u00c9GIME DE HAUTE VOLATILIT\u00c9",
+      "message": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "\ud83d\ude28",
+      "title": "Asym\u00e9trie de Peur D\u00e9tect\u00e9e",
+      "message": "March\u00e9 surr\u00e9agit aux mauvaises nouvelles. Possible capitulation ou opportunit\u00e9 contrarian.",
+      "action": "Opportunit\u00e9 d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    }
+  ],
+  "options_detail": {
+    "timestamp": "2026-01-06T17:27:12.394721",
+    "call_volume": 64761,
+    "put_volume": 20065,
+    "call_open_interest": 2244802,
+    "put_open_interest": 1194909,
+    "put_call_ratio_volume": 0.31,
+    "put_call_ratio_oi": 0.532,
+    "call_implied_volatility": 1.0402,
+    "put_implied_volatility": 0.8089,
+    "sentiment_label": "bullish",
+    "sentiment_score": 0.69,
+    "total_contracts": 84826,
+    "total_open_interest": 3439711,
+    "near_term_call_volume": 50836,
+    "far_term_call_volume": 13925,
+    "near_term_put_volume": 15305,
+    "far_term_put_volume": 4760
+  }
+}

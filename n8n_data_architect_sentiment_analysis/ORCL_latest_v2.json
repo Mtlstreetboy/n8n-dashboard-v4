@@ -1,0 +1,93 @@
+{
+  "ticker": "ORCL",
+  "timestamp": "2025-12-14T18:37:37.536076",
+  "final_sentiment_score": 0.2802,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.3059,
+  "smart_money_factor": 0.0708,
+  "components": {
+    "news_sentiment": 0.0276,
+    "news_confidence": 0.513,
+    "news_weight": 0.2597,
+    "options_sentiment": 0.2337,
+    "options_confidence": 0.975,
+    "options_weight": 0.7403,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.2061,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 261,
+    "options_volume": 196413,
+    "analysis_depth": "DEEP",
+    "config_rationale": "Oracle's software and cloud services businesses are highly correlated with the tech sector, which is known for its rapid changes in sentiment. A medium decay rate (2 days) captures this volatility. The momentum window is set to 7 days to account for Oracle's relatively stable stock performance over longer periods. The volatility penalty is moderate (0.25) due to the company's strong presence in both software and hardware markets."
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 1.0,
+    "metrics": {
+      "avg_iv": 1.06445,
+      "iv_skew": -0.06040451895043714,
+      "pcr_volume": 0.5
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-12T15:34:01+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.197,
+        "impact_score": 0.059,
+        "title": "Oracle Q2 FY 2026: Cloud Grows; Capex Rises for AI Buildout - The Futurum Group",
+        "matches": 1
+      }
+    ],
+    "count": 1,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2025-12-12T15:34:01+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.197,
+      "impact_score": 0.059,
+      "title": "Oracle Q2 FY 2026: Cloud Grows; Capex Rises for AI Buildout - The Futurum Group",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "FINANCIAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.958,
+    "sentiment_volatility": 0.359,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "📈 The metrics suggest that ORCL has a strong risk-adjusted performance (Sharpe Ratio) and a stable sentiment (Volatility Sentiment), indicating a relatively calm market environment.\n\n💡 Key takeaway: With a low Acceleration Momentum, the trend is likely to continue in its current direction, making it a good time to hold onto existing positions or consider a moderate buy.\n\n👉 Recommended action: Hold or take a small position, as the contrarian score and consistency metrics do not suggest any strong buying or selling opportunities."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

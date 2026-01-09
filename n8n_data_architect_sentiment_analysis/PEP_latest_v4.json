@@ -1,0 +1,181 @@
+{
+  "ticker": "PEP",
+  "timestamp": "2026-01-03T02:55:52.409401",
+  "final_sentiment_score": -0.5696,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.4746,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": -0.007,
+    "news_confidence": 0.5,
+    "news_weight": 0.2773,
+    "options_sentiment": -0.264,
+    "options_confidence": 1.0,
+    "options_weight": 0.5514,
+    "analyst_sentiment": 0.1537,
+    "analyst_confidence": 0.3705,
+    "analyst_weight": 0.1713,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "weak_divergence",
+    "magnitude": 0.757,
+    "opportunity_score": 0.2271,
+    "interpretation": "\u26a0\ufe0f Divergence faible (force: 0.76) - Incertitude, attendre confirmation."
+  },
+  "metadata": {
+    "news_articles_count": 20,
+    "options_volume": 20747,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "PEP a une volatilit\u00e9 typique et un volume de trading d'options \u00e9lev\u00e9, n\u00e9cessitant un ajustement pour la volatilit\u00e9 et une r\u00e9activit\u00e9 aux nouvelles rapides.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 2.70833,
+    "recommendation_count": 22,
+    "recommendation_summary": "Hold consensus (Mean: 2.7)",
+    "recommendation_score": 0.146,
+    "target_mean": 155.90909,
+    "target_median": 159.5,
+    "current_price": 142.23,
+    "upside_potential": 0.09617584194614359,
+    "price_target_score": 0.19,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 0.821,
+      "pt": 0.179,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0.913,
+      "price_target": 0.198,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "NORMAL_VOLATILITY",
+    "sub_regime": "HEALTHY",
+    "confidence": 0.201,
+    "metrics": {
+      "avg_iv": 0.38995,
+      "iv_skew": -0.17139507620164127,
+      "pcr_volume": 1.264
+    },
+    "implications": "\u2705 NORMAL - Volatilit\u00e9 saine. Signaux de sentiment plus fiables.",
+    "signal_adjustment": 0.0,
+    "recommendation": "Conditions id\u00e9ales pour trading selon signaux. Suivre plan normal."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2026-01-02T20:05:14+00:00",
+        "confidence": 0.667,
+        "sentiment": -0.961,
+        "impact_score": 0.576,
+        "title": "PepsiCo stock dips today as PEP lags staples, with earnings and dividend in focus - ts2.tech",
+        "matches": 2
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2026-01-02T23:32:04+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.168,
+        "impact_score": 0.028,
+        "title": "PepsiCo (PEP) Gets Price Target Bump, but BofA Remains Cautious on Staples - Yahoo Finance UK",
+        "matches": 1
+      },
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2026-01-02T15:30:00+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.029,
+        "impact_score": 0.006,
+        "title": "\u201cAll I can say\u201d \u2013 Pep Guardiola shares honest thoughts on Enzo Maresca departure - Yahoo Sports",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2026-01-02T20:05:14+00:00",
+      "confidence": 0.667,
+      "sentiment": -0.961,
+      "impact_score": 0.576,
+      "title": "PepsiCo stock dips today as PEP lags staples, with earnings and dividend in focus - ts2.tech",
+      "matches": 2
+    },
+    "impact_assessment": "MODERATE_IMPACT",
+    "recommendation": "\ud83d\udcca Catalyseurs mod\u00e9r\u00e9s en jeu. Ajuster positions selon d\u00e9veloppements. | Biais N\u00c9GATIF des catalyseurs.",
+    "categories_present": [
+      "ANALYST",
+      "MANAGEMENT",
+      "FINANCIAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": -0.336,
+    "sentiment_volatility": 0.417,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Il semble qu'il y ait des signaux contradictoires dans les donn\u00e9es fournies. Voici quelques-unes des analyses possibles :\n\n\ud83d\udea8 **Sentiment n\u00e9gatif** | **Vente en attente**\nLa m\u00e9trique de sentiment final (-0.5696) et la classification (HOLD) sugg\u00e8rent que le march\u00e9 per\u00e7oit PEP de mani\u00e8re n\u00e9gative, mais l'analyse recommande une position neutre. Cependant, \u00e9tant donn\u00e9 les signaux contradictoires dans les donn\u00e9es, il est pr\u00e9f\u00e9rable d'\u00eatre prudent et de consid\u00e9rer la vente comme option.\n\n**Volatilit\u00e9 Sentiment** | **Prudence**\nLa volatilit\u00e9 du sentiment (0,417) indique que le march\u00e9 est instable. Cela sugg\u00e8re qu'il pourrait \u00eatre pr\u00e9matur\u00e9 de prendre une position ferme sur PEP, et qu'un trader devrait plut\u00f4t adopter une attitude prudente.\n\nLes autres m\u00e9triques fournies ne semblent pas apporter d'informations suppl\u00e9mentaires pertinentes pour cette analyse.\n\nCependant, il convient de noter que les m\u00e9triques fournies sont bas\u00e9es sur des calculs sp\u00e9cifiques et qu'une analyse plus approfondie serait n\u00e9cessaire avant de prendre une d\u00e9cision d'investissement."
+  },
+  "alerts": [
+    {
+      "priority": "MEDIUM",
+      "type": "CATALYST",
+      "icon": "\ud83c\udfaf",
+      "title": "Catalyseur: Earnings",
+      "message": "PepsiCo stock dips today as PEP lags staples, with earnings and dividend in focu... (Impact: 0.58)",
+      "action": "\ud83d\udcca Catalyseurs mod\u00e9r\u00e9s en jeu. Ajuster positions selon d\u00e9veloppements. | Biais N\u00c9GATIF des catalyseurs.",
+      "urgency": "SOON"
+    },
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "\ud83d\ude28",
+      "title": "Asym\u00e9trie de Peur D\u00e9tect\u00e9e",
+      "message": "March\u00e9 surr\u00e9agit aux mauvaises nouvelles. Possible capitulation ou opportunit\u00e9 contrarian.",
+      "action": "Opportunit\u00e9 d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "\u26a0\ufe0f",
+      "title": "Donn\u00e9es Limit\u00e9es",
+      "message": "Seulement 20 articles analys\u00e9s. Confiance r\u00e9duite.",
+      "action": "Attendre plus de donn\u00e9es ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ],
+  "options_detail": {
+    "timestamp": "2026-01-03T01:49:06.371260",
+    "call_volume": 9162,
+    "put_volume": 11585,
+    "call_open_interest": 216568,
+    "put_open_interest": 114426,
+    "put_call_ratio_volume": 1.264,
+    "put_call_ratio_oi": 0.528,
+    "call_implied_volatility": 0.4265,
+    "put_implied_volatility": 0.3534,
+    "sentiment_label": "bearish",
+    "sentiment_score": -0.264,
+    "total_contracts": 20747,
+    "total_open_interest": 330994,
+    "near_term_call_volume": 6622,
+    "far_term_call_volume": 2540,
+    "near_term_put_volume": 9894,
+    "far_term_put_volume": 1691
+  }
+}

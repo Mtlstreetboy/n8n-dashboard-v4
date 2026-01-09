@@ -1,0 +1,289 @@
+{
+  "name": "AI Sentiment Analyzer - Aggregation & Bubble Detection",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 24
+            }
+          ]
+        }
+      },
+      "id": "schedule-trigger-evening",
+      "name": "Schedule Trigger - 20h00",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "filePath": "/data/files/sentiment_historical.json",
+        "options": {}
+      },
+      "id": "read-historical-data",
+      "name": "Read Historical Data",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [450, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse historical data and prepare for aggregation\nconst historicalData = JSON.parse($input.item.binary.data.toString());\n\nreturn [{\n  json: historicalData\n}];"
+      },
+      "id": "parse-historical",
+      "name": "Parse Historical JSON",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [650, 300]
+    },
+    {
+      "parameters": {
+        "command": "python3 /data/scripts/aggregate_sentiment.py",
+        "sendData": true
+      },
+      "id": "aggregate-sentiment",
+      "name": "Aggregate & Detect Bubble",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [850, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse aggregation results\nconst result = JSON.parse($input.item.json.stdout);\nreturn [{ json: result }];"
+      },
+      "id": "parse-aggregation",
+      "name": "Parse Aggregation Result",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1050, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json.statistics.bubble_risk_level}}",
+              "operation": "equals",
+              "value2": "HIGH"
+            }
+          ]
+        }
+      },
+      "id": "check-bubble-risk",
+      "name": "Check Bubble Risk",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [1250, 300]
+    },
+    {
+      "parameters": {
+        "fileName": "={{\"reports/daily_report_\" + $now.format(\"YYYY-MM-DD\") + \".json\"}}",
+        "fileContent": "={{ JSON.stringify($json, null, 2) }}",
+        "options": {}
+      },
+      "id": "save-daily-report",
+      "name": "Save Daily Report",
+      "type": "n8n-nodes-base.writeBinaryFile",
+      "typeVersion": 1,
+      "position": [1450, 200]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Format bubble alert email\nconst stats = $json.statistics;\nconst indicators = stats.bubble_indicators.join('\\n• ');\n\nconst emailBody = `\n🚨 ALERTE BULLE DÉTECTÉE - Analyse Sentiment IA\n\n📊 STATISTIQUES CLÉS:\n• Période: ${stats.period_start} → ${stats.period_end}\n• Articles analysés: ${stats.total_articles}\n• Score moyen global: ${stats.overall_avg_score.toFixed(2)}\n\n📈 TENDANCES RÉCENTES:\n• Score quotidien actuel: ${stats.latest_daily_avg.toFixed(2)}\n• Moyenne mobile 7 jours: ${stats.latest_ma_7d.toFixed(2)}\n• Moyenne mobile 30 jours: ${stats.latest_ma_30d.toFixed(2)}\n• Volatilité 7j: ${stats.latest_volatility_7d.toFixed(2)}\n\n⚠️ NIVEAU DE RISQUE: ${stats.bubble_risk_level}\n\n🔍 SIGNAUX DÉTECTÉS:\n• ${indicators}\n\n📌 INTERPRÉTATION:\nLe marché de l'IA montre des signes d'euphorie excessive. \nLes nouvelles sont systématiquement interprétées de manière très positive, \navec une divergence notable par rapport aux tendances long terme.\n\nCe pattern historique précède souvent des corrections de 20-40%.\n\n💡 RECOMMANDATION:\n• Surveiller de près les prochaines 48-72h\n• Analyser la corrélation avec les valuations tech\n• Considérer la prise de profits sur positions spéculatives\n\n---\nRapport généré le ${new Date().toLocaleString('fr-FR')}\n`;\n\nreturn [{\n  json: {\n    subject: `🚨 ALERTE BULLE - Risque ${stats.bubble_risk_level} - ${new Date().toLocaleDateString('fr-FR')}`,\n    body: emailBody,\n    stats: stats\n  }\n}];"
+      },
+      "id": "format-alert",
+      "name": "Format Bubble Alert",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1450, 400]
+    },
+    {
+      "parameters": {
+        "fromEmail": "sentiment-analyzer@localhost",
+        "toEmail": "your-email@example.com",
+        "subject": "={{$json.subject}}",
+        "text": "={{$json.body}}",
+        "options": {}
+      },
+      "id": "send-alert-email",
+      "name": "Send Alert Email",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2,
+      "position": [1650, 400],
+      "notes": "Configure SMTP credentials in n8n settings"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Generate summary chart data (for future visualization)\nconst dailyData = $json.daily_data;\nconst last30Days = dailyData.slice(-30);\n\nconst chartData = {\n  labels: last30Days.map(d => d.date),\n  datasets: [\n    {\n      label: 'Score Quotidien',\n      data: last30Days.map(d => d.daily_avg_score)\n    },\n    {\n      label: 'MA 7 jours',\n      data: last30Days.map(d => d.ma_7d)\n    },\n    {\n      label: 'MA 30 jours',\n      data: last30Days.map(d => d.ma_30d)\n    }\n  ]\n};\n\nreturn [{\n  json: {\n    chart_data: chartData,\n    generated_at: new Date().toISOString()\n  }\n}];"
+      },
+      "id": "prepare-chart-data",
+      "name": "Prepare Chart Data",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1650, 200]
+    },
+    {
+      "parameters": {
+        "fileName": "={{\"charts/chart_data_\" + $now.format(\"YYYY-MM-DD\") + \".json\"}}",
+        "fileContent": "={{ JSON.stringify($json, null, 2) }}",
+        "options": {}
+      },
+      "id": "save-chart-data",
+      "name": "Save Chart Data",
+      "type": "n8n-nodes-base.writeBinaryFile",
+      "typeVersion": 1,
+      "position": [1850, 200]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Final completion log\nconst stats = $input.first().json.statistics || $input.first().json.stats;\n\nconsole.log('✅ Aggregation complete');\nconsole.log(`📊 Bubble Risk: ${stats.bubble_risk_level}`);\nconsole.log(`📈 Latest MA 7d: ${stats.latest_ma_7d.toFixed(2)}`);\n\nreturn [{\n  json: {\n    status: 'success',\n    bubble_risk: stats.bubble_risk_level,\n    alert_sent: stats.bubble_risk_level === 'HIGH',\n    completed_at: new Date().toISOString()\n  }\n}];"
+      },
+      "id": "final-log",
+      "name": "Final Log",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [2050, 300]
+    }
+  ],
+  "connections": {
+    "Schedule Trigger - 20h00": {
+      "main": [
+        [
+          {
+            "node": "Read Historical Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Historical Data": {
+      "main": [
+        [
+          {
+            "node": "Parse Historical JSON",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Historical JSON": {
+      "main": [
+        [
+          {
+            "node": "Aggregate & Detect Bubble",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate & Detect Bubble": {
+      "main": [
+        [
+          {
+            "node": "Parse Aggregation Result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Aggregation Result": {
+      "main": [
+        [
+          {
+            "node": "Check Bubble Risk",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Bubble Risk": {
+      "main": [
+        [
+          {
+            "node": "Format Bubble Alert",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Save Daily Report",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Save Daily Report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save Daily Report": {
+      "main": [
+        [
+          {
+            "node": "Prepare Chart Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Bubble Alert": {
+      "main": [
+        [
+          {
+            "node": "Send Alert Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Chart Data": {
+      "main": [
+        [
+          {
+            "node": "Save Chart Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save Chart Data": {
+      "main": [
+        [
+          {
+            "node": "Final Log",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Alert Email": {
+      "main": [
+        [
+          {
+            "node": "Final Log",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

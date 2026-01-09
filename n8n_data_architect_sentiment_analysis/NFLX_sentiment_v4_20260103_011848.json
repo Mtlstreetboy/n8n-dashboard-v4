@@ -1,0 +1,145 @@
+{
+  "ticker": "NFLX",
+  "timestamp": "2026-01-03T01:18:39.958717",
+  "final_sentiment_score": 0.0347,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": -0.0034,
+    "news_confidence": 0.5,
+    "news_weight": 0.6429,
+    "options_sentiment": 0,
+    "options_confidence": 0,
+    "options_weight": 0.0,
+    "analyst_sentiment": 0.5233,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.3571,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0034,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 20,
+    "options_volume": 0,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "NFLX est un stock technologique volatil avec des nouvelles fréquentes, nécessitant une dépréciation temporelle rapide et une sensibilité aux changements de tendance.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.95349,
+    "recommendation_count": 38,
+    "recommendation_summary": "Buy consensus (Mean: 2.0)",
+    "recommendation_score": 0.523,
+    "target_mean": 126.19184,
+    "target_median": 129.0,
+    "current_price": 90.99,
+    "upside_potential": 0.38687592043081664,
+    "price_target_score": 0.649,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "UNKNOWN",
+    "confidence": 0.0,
+    "implications": "Données insuffisantes pour déterminer le régime"
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-30T22:04:50+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.931,
+        "impact_score": 0.31,
+        "title": "Netflix stock dips after hours as Warner Bros seen rejecting Paramount bid in latest twist - ts2.tech",
+        "matches": 1
+      },
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2026-01-02T22:31:11+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.955,
+        "impact_score": 0.287,
+        "title": "Netflix (NASDAQ:NFLX) Trading Down 3% - Time to Sell? - MarketBeat",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-30T16:14:18+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.038,
+        "impact_score": 0.006,
+        "title": "Netflix Stock Forecast: Why Analysts Predict 40% Upside in 2026 - TipRanks",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "merger_acquisition",
+      "category": "CORPORATE_ACTION",
+      "timestamp": "2025-12-30T22:04:50+00:00",
+      "confidence": 0.333,
+      "sentiment": -0.931,
+      "impact_score": 0.31,
+      "title": "Netflix stock dips after hours as Warner Bros seen rejecting Paramount bid in latest twist - ts2.tech",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale. | Biais NÉGATIF des catalyseurs.",
+    "categories_present": [
+      "FINANCIAL",
+      "CORPORATE_ACTION",
+      "ANALYST"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": -0.136,
+    "sentiment_volatility": 0.496,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "**Bullish avec précautions**\n🚀 **Achetez avec prudence** : le sentiment est stable, mais la volatilité est élevée.\n\nL'analyse des métriques suggère que Netflix (NFLX) présente un potentiel d'investissement modeste. Le sentiment est positif, reflété par une notation de 0,0347 et une classification HOLD, mais il convient de rester prudent à cause d'une volatilité élevée et d'un score contrariant nul, indiquant qu'il n'y a pas de forte opportunité."
+  },
+  "alerts": [
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "😨",
+      "title": "Asymétrie de Peur Détectée",
+      "message": "Marché surréagit aux mauvaises nouvelles. Possible capitulation ou opportunité contrarian.",
+      "action": "Opportunité d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 20 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "ticker": "NVDA",
+  "timestamp": "2025-12-14T04:47:34.966400",
+  "final_sentiment_score": 0.3992,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.3358,
+  "smart_money_factor": 0.0899,
+  "components": {
+    "news_sentiment": 0.0248,
+    "news_confidence": 0.6139,
+    "news_weight": 0.2567,
+    "options_sentiment": 0.3121,
+    "options_confidence": 1.0,
+    "options_weight": 0.6272,
+    "analyst_sentiment": 0.8359,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.1161,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.2874,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 462,
+    "options_volume": 1239312,
+    "analysis_depth": "DEEP",
+    "config_rationale": "Compte tenu de la volatilité typique du secteur tech et de l'importance des nouvelles sur NVDA, un décaissement rapide mais non excessif est recommandé. Un seuil de divergence élevé permettra de capturer les mouvements d'opinion instantanés, tandis qu'un premium institutionnel modéré reflète la participation active des investisseurs institutionnels dans le capitalisation boursière de l'action NVDA.",
+    "version": "V3"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.32812,
+    "recommendation_count": 56,
+    "recommendation_summary": "Strong Buy consensus (Mean: 1.3)",
+    "recommendation_score": 0.836,
+    "target_mean": 250.92929,
+    "target_median": 250.0,
+    "current_price": 175.02,
+    "upside_potential": 0.43371780367957946,
+    "price_target_score": 0.7,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 1.0,
+    "metrics": {
+      "avg_iv": 1.80575,
+      "iv_skew": -0.6259178936955446,
+      "pcr_volume": 0.544
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections. | 📞 Call skew élevé - Spéculation haussière agressive",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-11T06:11:15+00:00",
+        "confidence": 0.667,
+        "sentiment": -0.38,
+        "impact_score": 0.228,
+        "title": "NVDA, AVGO, AMD: AI Chip Stocks Fall After Oracle’s Q3 Earnings Shock - TipRanks",
+        "matches": 2
+      },
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2025-12-11T11:22:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "How Nvidia CEO Jensen Huang's solution for America's 'China chip problem' may not actually work - Times of India",
+        "matches": 1
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-11T10:02:50+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Nvidia (NVDA) Stock Slides as Company Launches Location Tracking Software for AI Chips - CoinCentral",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2025-12-11T06:11:15+00:00",
+      "confidence": 0.667,
+      "sentiment": -0.38,
+      "impact_score": 0.228,
+      "title": "NVDA, AVGO, AMD: AI Chip Stocks Fall After Oracle’s Q3 Earnings Shock - TipRanks",
+      "matches": 2
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "MANAGEMENT",
+      "PRODUCT",
+      "FINANCIAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.873,
+    "sentiment_volatility": 0.354,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "📊 NVDA has a strong risk-adjusted sentiment (Sharpe Ratio: 0.873) and stable volatility (Volatility Sentiment: 0.354), indicating a positive outlook with minimal price fluctuations.\n\n💡 Key insight: The company's momentum is stagnant (Accélération Momentum: 0.0), while the contrarian score suggests no strong buying or selling opportunities.\n\n📈 Recommended action: HOLD your position, as the overall sentiment and conviction indicate a stable situation with no clear buy or sell signals."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections. | 📞 Call skew élevé - Spéculation haussière agressive",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

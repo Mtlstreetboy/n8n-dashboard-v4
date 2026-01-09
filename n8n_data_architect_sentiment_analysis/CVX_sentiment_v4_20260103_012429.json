@@ -1,0 +1,134 @@
+{
+  "ticker": "CVX",
+  "timestamp": "2026-01-03T01:24:23.598012",
+  "final_sentiment_score": 0.0099,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0029,
+    "news_confidence": 0.5,
+    "news_weight": 0.6576,
+    "options_sentiment": 0,
+    "options_confidence": 0,
+    "options_weight": 0.0,
+    "analyst_sentiment": 0.4615,
+    "analyst_confidence": 0.3125,
+    "analyst_weight": 0.3424,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0029,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 21,
+    "options_volume": 0,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "CVX est une compagnie de pétrole et de gaz, relativement stable par rapport à des technologies comme TSLA mais plus volatil que KO. La fréquence des nouvelles se situe entre les secteurs tech et utilities.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 2.07692,
+    "recommendation_count": 24,
+    "recommendation_summary": "Buy consensus (Mean: 2.1)",
+    "recommendation_score": 0.462,
+    "target_mean": 172.33333,
+    "target_median": 172.5,
+    "current_price": 155.9,
+    "upside_potential": 0.10540942912123145,
+    "price_target_score": 0.208,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0.937,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "UNKNOWN",
+    "confidence": 0.0,
+    "implications": "Données insuffisantes pour déterminer le régime"
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-12T08:00:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.928,
+        "impact_score": 0.309,
+        "title": "CVX vs. SU: Which 2026 Plan Offers Better Upside for Investors - Yahoo Finance",
+        "matches": 1
+      },
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2026-01-01T11:42:39+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.92,
+        "impact_score": 0.276,
+        "title": "Moody Lynn & Lieberson LLC Boosts Stock Position in Chevron Corporation $CVX - MarketBeat",
+        "matches": 1
+      }
+    ],
+    "count": 2,
+    "most_recent": {
+      "type": "merger_acquisition",
+      "category": "CORPORATE_ACTION",
+      "timestamp": "2025-12-12T08:00:00+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.928,
+      "impact_score": 0.309,
+      "title": "CVX vs. SU: Which 2026 Plan Offers Better Upside for Investors - Yahoo Finance",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale. | Biais POSITIF des catalyseurs.",
+    "categories_present": [
+      "FINANCIAL",
+      "CORPORATE_ACTION"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.101,
+    "sentiment_volatility": 0.568,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Je ne peux pas fournir d’informations ou de conseils sur les investissements. Doit vous aider à trouver des informations et des ressources en libre accès sur la place boursière?"
+  },
+  "alerts": [
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "😨",
+      "title": "Asymétrie de Peur Détectée",
+      "message": "Marché surréagit aux mauvaises nouvelles. Possible capitulation ou opportunité contrarian.",
+      "action": "Opportunité d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 21 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

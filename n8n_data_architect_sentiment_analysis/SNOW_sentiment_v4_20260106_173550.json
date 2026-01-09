@@ -1,0 +1,150 @@
+{
+  "ticker": "SNOW",
+  "timestamp": "2026-01-06T17:35:41.608204",
+  "final_sentiment_score": 0.2449,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2205,
+  "smart_money_factor": 0.1211,
+  "components": {
+    "news_sentiment": 0.0137,
+    "news_confidence": 0.9563,
+    "news_weight": 0.4567,
+    "options_sentiment": 0.2551,
+    "options_confidence": 0.7585,
+    "options_weight": 0.5433,
+    "analyst_sentiment": 0,
+    "analyst_confidence": 0,
+    "analyst_weight": 0.0,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.2414,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 211,
+    "options_volume": 13107,
+    "analysis_depth": "DEEP",
+    "config_rationale": "SNOW est une action technologique volatil, avec des nouvelles fréquentes et un volume important d'options. La réactivité du prix aux nouvelles justifie un décroissage rapide du sentiment, tandis qu'un seuil de divergence élevé permet de capturer les changements rapides dans le sentiment.",
+    "version": "V4 - Dual Brain"
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.437,
+    "metrics": {
+      "avg_iv": 0.7182999999999999,
+      "iv_skew": -0.12772057865241754,
+      "pcr_volume": 0.517
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-22T10:34:37+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.087,
+        "impact_score": 0.02,
+        "title": "Accenture and Snowflake Launch Dedicated Business Group to Accelerate Enterprise Generative AI - TechAfrica News",
+        "matches": 1
+      },
+      {
+        "type": "legal_issues",
+        "category": "LEGAL",
+        "timestamp": "2025-12-28T14:00:00+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.024,
+        "impact_score": 0.007,
+        "title": "Snowflake CEO: Big Tech’s grip on AI will loosen in 2026 — plus 6 more predictions that will define the year - Fortune",
+        "matches": 1
+      },
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2025-12-28T14:00:00+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.024,
+        "impact_score": 0.005,
+        "title": "Snowflake CEO: Big Tech’s grip on AI will loosen in 2026 — plus 6 more predictions that will define the year - Fortune",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-25T20:58:08+00:00",
+        "confidence": 0.333,
+        "sentiment": 0,
+        "impact_score": 0.0,
+        "title": "Snowflake Cortex AI: Accelerating Financial Services with Agentic AI - Snowflake",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-25T10:37:28+00:00",
+        "confidence": 0.333,
+        "sentiment": 0,
+        "impact_score": 0.0,
+        "title": "AI Stocks Today (Dec. 25, 2025): Nvidia’s Groq Deal, Snowflake’s M&A Talks, UiPath’s Index Boost, and Meta’s WhatsApp AI Clash - ts2.tech",
+        "matches": 1
+      }
+    ],
+    "count": 5,
+    "most_recent": {
+      "type": "product_launch",
+      "category": "PRODUCT",
+      "timestamp": "2025-12-22T10:34:37+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.087,
+      "impact_score": 0.02,
+      "title": "Accenture and Snowflake Launch Dedicated Business Group to Accelerate Enterprise Generative AI - TechAfrica News",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "PRODUCT",
+      "CORPORATE_ACTION",
+      "MANAGEMENT",
+      "ANALYST",
+      "LEGAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.617,
+    "sentiment_volatility": 0.231,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Bien sûr ! Voici les conclusions que je peux tirer à partir de ces métriques :\n\n💡 _La tendance du sentiment de SNOW est neutre_ | Conservez votre position actuelle.\n\nLe score contrariant est nul, ce qui indique qu'il n'y a pas d'opportunité forte. De plus, la volatilité sentimentale est relativement basse (0,231), ce qui signifie que le sentiment des actionnaires ne fluctue pas de manière chaotique.\n\nMaintenant, si vous souhaitez prendre une décision de trading :\n\n**Vendre une partie de votre position de SNOW pour minimiser les pertes potentielle**."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "SMART_MONEY",
+      "icon": "💰",
+      "title": "SMART MONEY ACTIF",
+      "message": "Détection d'activité institutionnelle (score: 0.121). Open Interest suggère positionnement de gros joueurs.",
+      "action": "Analyser leurs positions. Ils ont souvent raison à moyen terme.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

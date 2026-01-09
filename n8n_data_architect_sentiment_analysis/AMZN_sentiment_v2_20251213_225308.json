@@ -1,0 +1,71 @@
+{
+  "ticker": "AMZN",
+  "timestamp": "2025-12-13T22:53:08.574225",
+  "final_sentiment_score": 0.3368,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.3932,
+  "smart_money_factor": 0.0614,
+  "components": {
+    "news_sentiment": 0.0338,
+    "news_confidence": 0.5932,
+    "news_weight": 0.2834,
+    "options_sentiment": 0.3171,
+    "options_confidence": 1.0,
+    "options_weight": 0.7166,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.2833,
+    "opportunity_score": 0,
+    "interpretation": "\ud83e\udd1d Consensus - Nouvelles et march\u00e9s s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 316,
+    "options_volume": 292611,
+    "analysis_depth": "DEEP",
+    "config_rationale": "Configuration par d\u00e9faut (mod\u00e9r\u00e9e)"
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.335,
+    "metrics": {
+      "avg_iv": 0.6676500000000001,
+      "iv_skew": -0.1363572923935799,
+      "pcr_volume": 0.469
+    },
+    "implications": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [],
+    "count": 0,
+    "most_recent": null,
+    "impact_assessment": "NO_CATALYSTS",
+    "recommendation": "Pas de catalyseurs majeurs d\u00e9tect\u00e9s. Trading technique/sentiment standard.",
+    "categories_present": []
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 1.295,
+    "sentiment_volatility": 0.317,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 1.0,
+    "llm_interpretation": "\u2705 Signal coh\u00e9rent"
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "\ud83c\udf2a\ufe0f",
+      "title": "R\u00c9GIME DE HAUTE VOLATILIT\u00c9",
+      "message": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

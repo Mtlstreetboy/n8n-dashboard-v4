@@ -1,0 +1,29 @@
+{
+  "ticker": "ADBE",
+  "timestamp": "2025-12-10T01:38:24.230020",
+  "final_sentiment_score": -0.2684,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2891,
+  "components": {
+    "news_sentiment": 0.0507,
+    "news_confidence": 0.7662,
+    "news_weight": 0.4208,
+    "options_sentiment": -0.585,
+    "options_confidence": 0.7032,
+    "options_weight": 0.5792,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "bearish_divergence",
+    "magnitude": 0.6357,
+    "opportunity_score": 0.5086,
+    "interpretation": "?????? BEARISH DIVERGENCE (force: 0.64) - Le march?? ignore les bonnes nouvelles. Possible correction ?? venir ou les nouvelles sont 'priced in'."
+  },
+  "metadata": {
+    "news_articles_count": 108,
+    "options_volume": 38095,
+    "analysis_depth": "DEEP"
+  }
+}

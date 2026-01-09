@@ -1,0 +1,136 @@
+{
+  "ticker": "XOM",
+  "timestamp": "2026-01-03T01:23:56.094035",
+  "final_sentiment_score": 0.1404,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.009,
+    "news_confidence": 0.5,
+    "news_weight": 0.6102,
+    "options_sentiment": 0,
+    "options_confidence": 0,
+    "options_weight": 0.0,
+    "analyst_sentiment": 0.3461,
+    "analyst_confidence": 0.3833,
+    "analyst_weight": 0.3898,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.009,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 22,
+    "options_volume": 0,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "XOM est une compagnie pétrolière avec des nouvelles fréquentes et de haute volatilité, nécessitant un decalay moyen et un seuil de divergence modéré.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 2.22222,
+    "recommendation_count": 25,
+    "recommendation_summary": "Buy consensus (Mean: 2.2)",
+    "recommendation_score": 0.389,
+    "target_mean": 131.56,
+    "target_median": 129.0,
+    "current_price": 122.65,
+    "upside_potential": 0.07264573991031387,
+    "price_target_score": 0.144,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 0.825,
+      "pt": 0.175,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0.949,
+      "price_target": 0.201,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "UNKNOWN",
+    "confidence": 0.0,
+    "implications": "Données insuffisantes pour déterminer le régime"
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2026-01-02T10:35:09+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.919,
+        "impact_score": 0.276,
+        "title": "Smith Salley Wealth Management Boosts Stock Position in Exxon Mobil Corporation $XOM - MarketBeat",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-31T17:45:23+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.71,
+        "impact_score": 0.118,
+        "title": "Resilient Demand and Strategic Upgrades Drive XOM's Refining Success - The Globe and Mail",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-30T08:46:13+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.029,
+        "impact_score": 0.01,
+        "title": "Exxon Mobil Corporation $XOM Shares Acquired by Apollon Wealth Management LLC - MarketBeat",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2026-01-02T10:35:09+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.919,
+      "impact_score": 0.276,
+      "title": "Smith Salley Wealth Management Boosts Stock Position in Exxon Mobil Corporation $XOM - MarketBeat",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale. | Biais POSITIF des catalyseurs.",
+    "categories_present": [
+      "CORPORATE_ACTION",
+      "ANALYST",
+      "FINANCIAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.367,
+    "sentiment_volatility": 0.491,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "**<pieds nus>** Désalignement potentiel | **Ne pas faire rien**\n\nLes métriques indiquent un sentiment mitigé, mais les scores Contrarian et Consistance sont très bas, suggérant que le prix de XOM ne reflète peut-être pas une opportunité d'investissement."
+  },
+  "alerts": [
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 22 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

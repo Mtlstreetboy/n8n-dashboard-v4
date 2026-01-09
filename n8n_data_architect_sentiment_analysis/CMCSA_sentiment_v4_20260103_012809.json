@@ -1,0 +1,145 @@
+{
+  "ticker": "CMCSA",
+  "timestamp": "2026-01-03T01:27:57.306950",
+  "final_sentiment_score": -0.072,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0018,
+    "news_confidence": 0.5,
+    "news_weight": 0.6576,
+    "options_sentiment": 0,
+    "options_confidence": 0,
+    "options_weight": 0.0,
+    "analyst_sentiment": 0.2241,
+    "analyst_confidence": 0.3125,
+    "analyst_weight": 0.3424,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0018,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 20,
+    "options_volume": 0,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "CMCSA présente une volatilité moyenne et des nouvelles techniques, donc un halflife modéré de 3 jours est approprié. Un seuil de divergence de 0.5 permet d'identifier les tendances claires.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 2.55172,
+    "recommendation_count": 24,
+    "recommendation_summary": "Hold consensus (Mean: 2.6)",
+    "recommendation_score": 0.224,
+    "target_mean": 34.6875,
+    "target_median": 34.5,
+    "current_price": 29.54,
+    "upside_potential": 0.17425524712254573,
+    "price_target_score": 0.335,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0.937,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "UNKNOWN",
+    "confidence": 0.0,
+    "implications": "Données insuffisantes pour déterminer le régime"
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-30T12:52:36+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.863,
+        "impact_score": 0.259,
+        "title": "Comcast Corporation $CMCSA Position Boosted by Metropolis Capital Ltd - MarketBeat",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-28T18:05:42+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.039,
+        "impact_score": 0.007,
+        "title": "Comcast (CMCSA) Stock Holds Neutral Rating Amid Broadband Losses - Yahoo Finance",
+        "matches": 1
+      },
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2025-12-27T17:34:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.024,
+        "impact_score": 0.005,
+        "title": "Comcast Stock (CMCSA) Opinions on Co-CEO Transition and Theme Park Plans - Quiver Quantitative",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2025-12-30T12:52:36+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.863,
+      "impact_score": 0.259,
+      "title": "Comcast Corporation $CMCSA Position Boosted by Metropolis Capital Ltd - MarketBeat",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "FINANCIAL",
+      "MANAGEMENT",
+      "ANALYST"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.083,
+    "sentiment_volatility": 0.442,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Voici les insights clés et actions recommandées basées sur les métriques de sentiment fournies pour CMCSA :\n\n1. **Volatilité Sentiment élevée** 🚨 | **Prudence recommandée**: La volatilité du sentiment est élevée, ce qui suggère que le marché de CMCSA est instable et susceptible de fluctuations rapides.\n2. **Sentiment négatif avec HOLD** ⚠️ | **Ne pas agir en fonction de l'impulsivité**: Malgré un sentiment négatif, la classification reste à HOLD, ce qui suggère qu'il est préférable d'éviter les réactions impulsives et d'attendre des signaux plus clairs avant de prendre une décision.\n3. **Mouvement du sentiment faible** 💔 | **Patience requise**: L'accélération du mouvement du sentiment est nulle, ce qui indique que le sentiment ne change pas rapidement, et il convient donc d'être patient avant de prendre une décision.\n\nIl est important pour les traders de considérer ces métriques de sentiment dans leur stratégie globale."
+  },
+  "alerts": [
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "😨",
+      "title": "Asymétrie de Peur Détectée",
+      "message": "Marché surréagit aux mauvaises nouvelles. Possible capitulation ou opportunité contrarian.",
+      "action": "Opportunité d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 20 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

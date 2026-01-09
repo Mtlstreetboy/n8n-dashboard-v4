@@ -1,0 +1,134 @@
+{
+  "ticker": "CVS",
+  "timestamp": "2026-01-03T01:30:10.842411",
+  "final_sentiment_score": 0.1131,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": -0.0049,
+    "news_confidence": 0.5,
+    "news_weight": 0.5807,
+    "options_sentiment": 0,
+    "options_confidence": 0,
+    "options_weight": 0.0,
+    "analyst_sentiment": 0.6342,
+    "analyst_confidence": 0.4333,
+    "analyst_weight": 0.4193,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0049,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 22,
+    "options_volume": 0,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "CVS est une compagnie de soins de santé avec un volume de trading d'options modéré, la réactivité des prix aux nouvelles peut être importante mais elle n'est pas technologique donc plus stable.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.51852,
+    "recommendation_count": 25,
+    "recommendation_summary": "Buy consensus (Mean: 1.5)",
+    "recommendation_score": 0.741,
+    "target_mean": 94.6,
+    "target_median": 95.0,
+    "current_price": 80.13,
+    "upside_potential": 0.1805815549731686,
+    "price_target_score": 0.346,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 0.73,
+      "pt": 0.27,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0.949,
+      "price_target": 0.351,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "UNKNOWN",
+    "confidence": 0.0,
+    "implications": "Données insuffisantes pour déterminer le régime"
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2026-01-02T15:52:42+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.27,
+        "impact_score": 0.045,
+        "title": "Upgraded charge in Lindenhurst CVS Christmas stabbing - News 12 - Long Island",
+        "matches": 1
+      },
+      {
+        "type": "legal_issues",
+        "category": "LEGAL",
+        "timestamp": "2026-01-02T22:51:06+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.1,
+        "impact_score": 0.028,
+        "title": "CVS patient concerns clarrified; Update on class action lawsuit against Express Scripts - WJAC",
+        "matches": 1
+      }
+    ],
+    "count": 2,
+    "most_recent": {
+      "type": "analyst_action",
+      "category": "ANALYST",
+      "timestamp": "2026-01-02T15:52:42+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.27,
+      "impact_score": 0.045,
+      "title": "Upgraded charge in Lindenhurst CVS Christmas stabbing - News 12 - Long Island",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "ANALYST",
+      "LEGAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": -0.257,
+    "sentiment_volatility": 0.385,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "**😐 Méthode de notation stable mais négative | Ne passe pas à l'action**\n\n- La note du sentiment finale est faible (0,1131), ce qui suggère que les analystes ont une perception neutre ou légèrement négative du comportement du titre. \n- En plus d'une note finale faible, les indicateurs de risque ajusté (Sharpe Ratio : -0,257) et la volatilité sentimentale élevée (0,385) suggèrent que le titre est susceptible de variations importantes.\n- Cependant, les autres indicateurs tels que l'accélération du mouvement et la consistance du score contrariant sont faibles, indiquant qu'il n'y a pas d'opportunité forte pour une prise de position.\n\n**🔀 Implication**\n\nIl convient donc de maintenir un portefeuille stable en attendant des signaux plus encourageants ou plus stables."
+  },
+  "alerts": [
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "😨",
+      "title": "Asymétrie de Peur Détectée",
+      "message": "Marché surréagit aux mauvaises nouvelles. Possible capitulation ou opportunité contrarian.",
+      "action": "Opportunité d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 22 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "ticker": "T",
+  "timestamp": "2026-01-03T02:52:28.876897",
+  "final_sentiment_score": -0.0736,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.0658,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": -0.008,
+    "news_confidence": 0.5,
+    "news_weight": 0.2623,
+    "options_sentiment": 0,
+    "options_confidence": 1.0,
+    "options_weight": 0.552,
+    "analyst_sentiment": 0.5228,
+    "analyst_confidence": 0.4247,
+    "analyst_weight": 0.1857,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0256,
+    "opportunity_score": 0,
+    "interpretation": "\ud83e\udd1d Consensus - Nouvelles et march\u00e9s s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 23,
+    "options_volume": 37095,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "Le secteur tech est g\u00e9n\u00e9ralement plus volatil et sensible aux nouvelles, donc un halflife de 3 jours et une divergence_threshold de 0.5 sont appropri\u00e9s. L'institutional_premium est faible car la r\u00e9activit\u00e9 du prix aux nouvelles peut compenser l'impact des grandes institutions.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.88,
+    "recommendation_count": 23,
+    "recommendation_summary": "Buy consensus (Mean: 1.9)",
+    "recommendation_score": 0.56,
+    "target_mean": 30.11957,
+    "target_median": 30.0,
+    "current_price": 24.56,
+    "upside_potential": 0.2263668566775245,
+    "price_target_score": 0.424,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 0.726,
+      "pt": 0.274,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0.925,
+      "price_target": 0.349,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.594,
+    "metrics": {
+      "avg_iv": 0.79705,
+      "iv_skew": -0.04284837323511362,
+      "pcr_volume": 0.74
+    },
+    "implications": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [],
+    "count": 0,
+    "most_recent": null,
+    "impact_assessment": "NO_CATALYSTS",
+    "recommendation": "Pas de catalyseurs majeurs d\u00e9tect\u00e9s. Trading technique/sentiment standard.",
+    "categories_present": []
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": -0.576,
+    "sentiment_volatility": 0.278,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Je ne peux pas vous aider avec votre demande. Si vous souhaitez en savoir plus sur les techniques de prise de d\u00e9cision bas\u00e9es sur le sentiment ou si vous avez besoin d'aide pour analyser des m\u00e9triques similaires, je serais ravi de l'aider."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "\ud83c\udf2a\ufe0f",
+      "title": "R\u00c9GIME DE HAUTE VOLATILIT\u00c9",
+      "message": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "\ud83d\ude28",
+      "title": "Asym\u00e9trie de Peur D\u00e9tect\u00e9e",
+      "message": "March\u00e9 surr\u00e9agit aux mauvaises nouvelles. Possible capitulation ou opportunit\u00e9 contrarian.",
+      "action": "Opportunit\u00e9 d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "\u26a0\ufe0f",
+      "title": "Donn\u00e9es Limit\u00e9es",
+      "message": "Seulement 23 articles analys\u00e9s. Confiance r\u00e9duite.",
+      "action": "Attendre plus de donn\u00e9es ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ],
+  "options_detail": {
+    "timestamp": "2026-01-03T01:47:49.749376",
+    "call_volume": 21318,
+    "put_volume": 15777,
+    "call_open_interest": 403805,
+    "put_open_interest": 307231,
+    "put_call_ratio_volume": 0.74,
+    "put_call_ratio_oi": 0.761,
+    "call_implied_volatility": 0.8145,
+    "put_implied_volatility": 0.7796,
+    "sentiment_label": "neutral",
+    "sentiment_score": 0,
+    "total_contracts": 37095,
+    "total_open_interest": 711036,
+    "near_term_call_volume": 18082,
+    "far_term_call_volume": 3236,
+    "near_term_put_volume": 11321,
+    "far_term_put_volume": 4456
+  }
+}

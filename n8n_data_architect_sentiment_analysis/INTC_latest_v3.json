@@ -1,0 +1,155 @@
+{
+  "ticker": "INTC",
+  "timestamp": "2025-12-23T23:53:58.237049",
+  "final_sentiment_score": 0.2912,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.3651,
+  "smart_money_factor": 0.0616,
+  "components": {
+    "news_sentiment": 0.0163,
+    "news_confidence": 0.5028,
+    "news_weight": 0.2242,
+    "options_sentiment": 0.4453,
+    "options_confidence": 0.9748,
+    "options_weight": 0.652,
+    "analyst_sentiment": -0.0222,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.1239,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.429,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 245,
+    "options_volume": 195913,
+    "analysis_depth": "DEEP",
+    "config_rationale": "INTC is a semiconductor company with moderate volatility and moderate news frequency. The momentum window should be slightly longer to capture trends, but not too long as the stock can be affected by short-term market movements.",
+    "version": "V3"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 3.04444,
+    "recommendation_count": 36,
+    "recommendation_summary": "Hold consensus (Mean: 3.0)",
+    "recommendation_score": -0.022,
+    "target_mean": 38.14028,
+    "target_median": 39.5,
+    "current_price": 36.35,
+    "upside_potential": 0.04925116918844555,
+    "price_target_score": 0.098,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.572,
+    "metrics": {
+      "avg_iv": 0.7860499999999999,
+      "iv_skew": -0.15481220657276998,
+      "pcr_volume": 0.38
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2025-12-23T12:32:11+00:00",
+        "confidence": 0.667,
+        "sentiment": 0.589,
+        "impact_score": 0.235,
+        "title": "Samsung Hires Former Amd & Intel Executive to Boost Exynos Chip Performance - Android Headlines",
+        "matches": 2
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-20T02:12:31+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.202,
+        "impact_score": 0.047,
+        "title": "Intel to launch 4 versions of Nova Lake CPUs with bLLC: 288MB Core Ultra 9, 144MB Core Ultra 7 - TweakTown",
+        "matches": 1
+      },
+      {
+        "type": "legal_issues",
+        "category": "LEGAL",
+        "timestamp": "2025-12-22T08:30:48+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.136,
+        "impact_score": 0.039,
+        "title": "Intellias to Showcase AI-Powered Mobility & Software-Defined Vehicle Solutions at CES 2026 - AiThority",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-23T07:11:51+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.027,
+        "impact_score": 0.005,
+        "title": "Intel vs. AMD: Which Chip Stock Has More Upside Heading into 2026, According to Analysts? - TipRanks",
+        "matches": 1
+      }
+    ],
+    "count": 4,
+    "most_recent": {
+      "type": "executive_changes",
+      "category": "MANAGEMENT",
+      "timestamp": "2025-12-23T12:32:11+00:00",
+      "confidence": 0.667,
+      "sentiment": 0.589,
+      "impact_score": 0.235,
+      "title": "Samsung Hires Former Amd & Intel Executive to Boost Exynos Chip Performance - Android Headlines",
+      "matches": 2
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "MANAGEMENT",
+      "PRODUCT",
+      "LEGAL",
+      "ANALYST"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.46,
+    "sentiment_volatility": 0.424,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "📊 Here's the analysis:\n\n**Key Insight:** INTC has a moderate risk-adjusted sentiment (Sharpe Ratio: 0.46) with a stable volatility sentiment (0.424). However, there is no significant momentum or contrarian opportunity.\n\n**Recommended Action:** HOLD onto your current position and maintain a neutral conviction level (0.3651), as the overall sentiment remains stable and without strong catalysts for change."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

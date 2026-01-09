@@ -1,0 +1,124 @@
+{
+  "ticker": "ADBE",
+  "timestamp": "2025-12-14T18:38:11.740750",
+  "final_sentiment_score": -0.3305,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2891,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0374,
+    "news_confidence": 0.5946,
+    "news_weight": 0.3605,
+    "options_sentiment": -0.6129,
+    "options_confidence": 0.7032,
+    "options_weight": 0.6395,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "bearish_divergence",
+    "magnitude": 0.6503,
+    "opportunity_score": 0.5202,
+    "interpretation": "🐻 BEARISH DIVERGENCE (force: 0.65) - Le marché ignore les bonnes nouvelles. Possible correction à venir ou les nouvelles sont 'priced in'."
+  },
+  "metadata": {
+    "news_articles_count": 156,
+    "options_volume": 38095,
+    "analysis_depth": "DEEP",
+    "config_rationale": "Adobe's stock is known for its volatility, driven by the company's innovative products and changing market trends. A short temporal decay halflife of 3 days is needed to capture these fluctuations. The momentum window should be longer at 7 days to account for the company's stable long-term performance. A moderate volatility penalty of 0.25 is applied to reflect Adobe's relatively high market risk. The divergence threshold of 0.5 aims to identify significant deviations from the company's historical trends."
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.368,
+    "metrics": {
+      "avg_iv": 0.6839500000000001,
+      "iv_skew": -0.1661080573803459,
+      "pcr_volume": 1.19
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-12T15:03:51+00:00",
+        "confidence": 0.667,
+        "sentiment": 0.462,
+        "impact_score": 0.277,
+        "title": "Adobe Q4 FY 2025: Record Revenue, AI Adoption, ARR Targets - The Futurum Group",
+        "matches": 2
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-11T14:37:31+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Adobe delivers solid Q4, but slowing FY26 growth fails to quell analysts' AI concerns - Seeking Alpha",
+        "matches": 1
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-11T05:34:34+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Adobe Unveils Photoshop, Express and Acrobat for ChatGPT to Simplify Editing - digital terminal",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2025-12-12T15:03:51+00:00",
+      "confidence": 0.667,
+      "sentiment": 0.462,
+      "impact_score": 0.277,
+      "title": "Adobe Q4 FY 2025: Record Revenue, AI Adoption, ARR Targets - The Futurum Group",
+      "matches": 2
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "ANALYST",
+      "FINANCIAL",
+      "PRODUCT"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 1.369,
+    "sentiment_volatility": 0.32,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "💡 Strong sentiment with a Sharpe Ratio of 1.369 indicates a high risk-adjusted return, making it an attractive opportunity for traders.\n\n| Action recommandée: Investir dans ADBE avec une conviction modérée (0.2891) |\n\nNote: The negative Sentiment Final value (-0.3305) suggests that the overall sentiment is bearish, but the strong Sharpe Ratio and other metrics indicate a higher potential return, making it an attractive opportunity for contrarian traders."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "DIVERGENCE",
+      "icon": "🚨",
+      "title": "DIVERGENCE MAJEURE DÉTECTÉE",
+      "message": "🐻 BEARISH DIVERGENCE (force: 0.65) - Le marché ignore les bonnes nouvelles. Possible correction à venir ou les nouvelles sont 'priced in'.",
+      "action": "❌ NE PAS ACHETER malgré bonnes nouvelles. Attendre correction ou confirmation par price action.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

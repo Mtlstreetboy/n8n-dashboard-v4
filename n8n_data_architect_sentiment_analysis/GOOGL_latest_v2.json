@@ -1,0 +1,113 @@
+{
+  "ticker": "GOOGL",
+  "timestamp": "2025-12-14T18:37:07.970699",
+  "final_sentiment_score": 0.3119,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2876,
+  "smart_money_factor": 0.117,
+  "components": {
+    "news_sentiment": 0.0196,
+    "news_confidence": 0.5445,
+    "news_weight": 0.2695,
+    "options_sentiment": 0.2828,
+    "options_confidence": 0.9839,
+    "options_weight": 0.7305,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.2632,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 531,
+    "options_volume": 219538,
+    "analysis_depth": "DEEP",
+    "config_rationale": "GOOGL est une compagnie tech très volatilité, il est important de prendre en compte les nouvelles rapides et la tendance à long terme. Le penalty pour la volatilité est élevé car GOOGL est connu pour ses mouvements brusques. Le threshold de divergence est élevé car les investisseurs cherchent à identifier rapidement les changements dans l'opinion de marché."
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.557,
+    "metrics": {
+      "avg_iv": 0.7787,
+      "iv_skew": -0.16235988200589976,
+      "pcr_volume": 0.499
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-14T09:44:37+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.537,
+        "impact_score": 0.161,
+        "title": "Caxton Associates LLP Increases Stock Position in Alphabet Inc. $GOOGL - MarketBeat",
+        "matches": 1
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-14T12:40:43+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Google Gemini AI Unveils Markup Tool for Image Annotation on Android and Desktop - WebProNews",
+        "matches": 1
+      }
+    ],
+    "count": 2,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2025-12-14T09:44:37+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.537,
+      "impact_score": 0.161,
+      "title": "Caxton Associates LLP Increases Stock Position in Alphabet Inc. $GOOGL - MarketBeat",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "FINANCIAL",
+      "PRODUCT"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.796,
+    "sentiment_volatility": 0.312,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "📈 The sentiment metrics indicate a moderately positive outlook for GOOGL (Google) with a Sharpe Ratio of 0.796, suggesting a good balance between risk and return.\n\n| Key Insight: Bullish trend with controlled risk |\n| Action Recommended: Hold or slightly long positions |\n\nThe low volatility sentiment score (0.312) implies that the market is relatively stable, while the acceleration momentum score of 0.0 suggests no significant change in trend. The Consistency score of 0.0 indicates mixed signals, which could be seen as a warning sign. However, the overall sentiment remains positive, making it a good time to hold or slightly increase long positions."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "SMART_MONEY",
+      "icon": "💰",
+      "title": "SMART MONEY ACTIF",
+      "message": "Détection d'activité institutionnelle (score: 0.117). Open Interest suggère positionnement de gros joueurs.",
+      "action": "Analyser leurs positions. Ils ont souvent raison à moyen terme.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

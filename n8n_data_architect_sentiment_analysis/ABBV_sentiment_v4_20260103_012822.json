@@ -1,0 +1,134 @@
+{
+  "ticker": "ABBV",
+  "timestamp": "2026-01-03T01:28:17.013805",
+  "final_sentiment_score": 0.0555,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0109,
+    "news_confidence": 0.5,
+    "news_weight": 0.6283,
+    "options_sentiment": 0,
+    "options_confidence": 0,
+    "options_weight": 0.0,
+    "analyst_sentiment": 0.5345,
+    "analyst_confidence": 0.3549,
+    "analyst_weight": 0.3717,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0109,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 22,
+    "options_volume": 0,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "ABBV est une valeur phare du secteur pharmaceutique, avec un volume de trading d'options et des nouvelles fréquents. La volatilité est modérée mais la réactivité aux nouvelles nécessite une surveillance attentive.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.86207,
+    "recommendation_count": 28,
+    "recommendation_summary": "Buy consensus (Mean: 1.9)",
+    "recommendation_score": 0.569,
+    "target_mean": 244.68036,
+    "target_median": 244.0,
+    "current_price": 229.31,
+    "upside_potential": 0.0670287383890803,
+    "price_target_score": 0.133,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 0.921,
+      "pt": 0.079,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0.981,
+      "price_target": 0.084,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "UNKNOWN",
+    "confidence": 0.0,
+    "implications": "Données insuffisantes pour déterminer le régime"
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-31T11:32:41+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.803,
+        "impact_score": 0.241,
+        "title": "Generate Investment Management Ltd Increases Position in AbbVie Inc. $ABBV - MarketBeat",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-31T16:12:45+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.275,
+        "impact_score": 0.046,
+        "title": "AbbVie (ABBV) Maintains Immunology Dominance as Analysts Downplay Competitive Threat From J&J’s Tremfya to Skyrizi Market Share - Yahoo Finance",
+        "matches": 1
+      }
+    ],
+    "count": 2,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2025-12-31T11:32:41+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.803,
+      "impact_score": 0.241,
+      "title": "Generate Investment Management Ltd Increases Position in AbbVie Inc. $ABBV - MarketBeat",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale. | Biais POSITIF des catalyseurs.",
+    "categories_present": [
+      "FINANCIAL",
+      "ANALYST"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.583,
+    "sentiment_volatility": 0.373,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.046,
+    "llm_interpretation": "Je suis désolé, mais je ne peux pas fournir d’informations sur les actions de trading spécifiques. Pourrais-je vous aider avec autre chose ?"
+  },
+  "alerts": [
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "😨",
+      "title": "Asymétrie de Peur Détectée",
+      "message": "Marché surréagit aux mauvaises nouvelles. Possible capitulation ou opportunité contrarian.",
+      "action": "Opportunité d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 22 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "ticker": "ADBE",
+  "timestamp": "2025-12-23T23:53:35.639835",
+  "final_sentiment_score": -0.1274,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2914,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0328,
+    "news_confidence": 0.5756,
+    "news_weight": 0.2969,
+    "options_sentiment": -0.4701,
+    "options_confidence": 0.7236,
+    "options_weight": 0.5598,
+    "analyst_sentiment": 0.4625,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.1433,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "bearish_divergence",
+    "magnitude": 0.5029,
+    "opportunity_score": 0.4023,
+    "interpretation": "🐻 BEARISH DIVERGENCE (force: 0.50) - Le marché ignore les bonnes nouvelles. Possible correction à venir ou les nouvelles sont 'priced in'."
+  },
+  "metadata": {
+    "news_articles_count": 192,
+    "options_volume": 51705,
+    "analysis_depth": "DEEP",
+    "config_rationale": "As a software company with a strong track record of innovation, ADBE's sentiment tends to be driven by momentum and tech trends. The temporal decay is set relatively high due to the company's ability to adapt quickly to changing market conditions.",
+    "version": "V3"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 2.075,
+    "recommendation_count": 36,
+    "recommendation_summary": "Buy consensus (Mean: 2.1)",
+    "recommendation_score": 0.462,
+    "target_mean": 430.96472,
+    "target_median": 422.5,
+    "current_price": 352.42,
+    "upside_potential": 0.22287248169797394,
+    "price_target_score": 0.418,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "PANIC",
+    "confidence": 0.139,
+    "metrics": {
+      "avg_iv": 0.56935,
+      "iv_skew": -0.15714516912121695,
+      "pcr_volume": 2.079
+    },
+    "implications": "🚨 PANIQUE - Les traders se couvrent agressivement. Opportunité contrarian possible mais risquée.",
+    "signal_adjustment": -0.2,
+    "recommendation": "Attendre stabilisation. Si conviction forte, petites positions avec stops serrés."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "legal_issues",
+        "category": "LEGAL",
+        "timestamp": "2025-12-23T02:43:27+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.039,
+        "impact_score": 0.011,
+        "title": "Adobe Stock After Hours Today (Dec. 22, 2025): ADBE Holds Near $358 as AI Catalysts and Lawsuit Risk Shape the Setup for Tuesday’s Open - ts2.tech",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-20T07:02:21+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.022,
+        "impact_score": 0.007,
+        "title": "Adobe and Runway Ink Partnership Deal - RedShark News",
+        "matches": 1
+      }
+    ],
+    "count": 2,
+    "most_recent": {
+      "type": "legal_issues",
+      "category": "LEGAL",
+      "timestamp": "2025-12-23T02:43:27+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.039,
+      "impact_score": 0.011,
+      "title": "Adobe Stock After Hours Today (Dec. 22, 2025): ADBE Holds Near $358 as AI Catalysts and Lawsuit Risk Shape the Setup for Tuesday’s Open - ts2.tech",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "CORPORATE_ACTION",
+      "LEGAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.938,
+    "sentiment_volatility": 0.407,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "🔥 ADBE's sentiment metrics indicate a relatively bullish stance, with:\n\n* High Sharpe Ratio (0.938) suggesting strong risk-adjusted returns.\n* Low Volatility Sentiment (0.407) indicating stable market conditions.\n\nInsight: The momentum is steady, but there's no clear acceleration or deceleration.\n\nAction: HOLD your position and wait for a more pronounced sentiment shift before making any significant changes."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🚨 PANIQUE - Les traders se couvrent agressivement. Opportunité contrarian possible mais risquée.",
+      "action": "Attendre stabilisation. Si conviction forte, petites positions avec stops serrés.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "MEDIUM",
+      "type": "DIVERGENCE",
+      "icon": "⚠️",
+      "title": "Divergence Notable",
+      "message": "🐻 BEARISH DIVERGENCE (force: 0.50) - Le marché ignore les bonnes nouvelles. Possible correction à venir ou les nouvelles sont 'priced in'.",
+      "action": "Surveiller évolution dans les 24-48h",
+      "urgency": "MONITOR"
+    }
+  ]
+}

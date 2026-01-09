@@ -1,0 +1,124 @@
+{
+  "ticker": "AVGO",
+  "timestamp": "2025-12-14T18:38:04.847901",
+  "final_sentiment_score": 0.1526,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.1803,
+  "smart_money_factor": 0.0454,
+  "components": {
+    "news_sentiment": 0.0239,
+    "news_confidence": 0.4703,
+    "news_weight": 0.2469,
+    "options_sentiment": 0.062,
+    "options_confidence": 0.9565,
+    "options_weight": 0.7531,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0381,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 236,
+    "options_volume": 155735,
+    "analysis_depth": "DEEP",
+    "config_rationale": "Le secteur de la technologie est caractérisé par une volatilité élevée, ce qui nécessite une décroissance temporelle rapide pour s'adapter aux fluctuations rapides. Une fenêtre de mouvement plus large permettra de capturer les tendances à long terme. Le pénalité de volatility sera ajustée en fonction de la fréquence des nouvelles et du volume de trading d'options."
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 1.0,
+    "metrics": {
+      "avg_iv": 1.51925,
+      "iv_skew": -0.5131630456057937,
+      "pcr_volume": 0.802
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections. | 📞 Call skew élevé - Spéculation haussière agressive",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-12T19:37:00+00:00",
+        "confidence": 0.667,
+        "sentiment": 0.8,
+        "impact_score": 0.48,
+        "title": "Broadcom’s AI Surge: Record Q4 Earnings Fuel Volatility in Semiconductor Market - Markets Financial Content",
+        "matches": 2
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-12T17:17:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.38,
+        "impact_score": 0.127,
+        "title": "Broadcom Q4 2025 Earnings: 8 Things To Know From AI Strength, VMware Growth To Anthropic Deal Reveal - CRN Magazine",
+        "matches": 1
+      },
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2025-12-12T16:04:21+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Broadcom CEO Pushes Clients to Custom Chip Destiny as He Says Google’s TPU ‘Is a Transactional Move’ - TipRanks",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2025-12-12T19:37:00+00:00",
+      "confidence": 0.667,
+      "sentiment": 0.8,
+      "impact_score": 0.48,
+      "title": "Broadcom’s AI Surge: Record Q4 Earnings Fuel Volatility in Semiconductor Market - Markets Financial Content",
+      "matches": 2
+    },
+    "impact_assessment": "MODERATE_IMPACT",
+    "recommendation": "📊 Catalyseurs modérés en jeu. Ajuster positions selon développements. | Biais POSITIF des catalyseurs.",
+    "categories_present": [
+      "MANAGEMENT",
+      "FINANCIAL",
+      "CORPORATE_ACTION"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.868,
+    "sentiment_volatility": 0.349,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "📊\n\n* The Sharpe Ratio indicates a high risk-adjusted sentiment, suggesting that AVGO's recent performance is strong and consistent.\n| HOLD or even consider selling if the momentum slows down.\n\n* The Volatility Sentiment suggests a relatively stable environment, which could be beneficial for investors looking to hold onto their positions.\n| Continue holding with confidence.\n\n* The Acceleration Momentum shows no significant change in speed, indicating that AVGO's growth rate is steady but not explosive.\n| Stick with your current strategy and avoid making drastic changes.\n\nOverall, these metrics suggest a relatively stable and strong sentiment around AVGO. As a trader, it may be wise to continue holding or even consider selling if the momentum starts to slow down."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections. | 📞 Call skew élevé - Spéculation haussière agressive",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "MEDIUM",
+      "type": "CATALYST",
+      "icon": "🎯",
+      "title": "Catalyseur: Earnings",
+      "message": "Broadcom’s AI Surge: Record Q4 Earnings Fuel Volatility in Semiconductor Market ... (Impact: 0.48)",
+      "action": "📊 Catalyseurs modérés en jeu. Ajuster positions selon développements. | Biais POSITIF des catalyseurs.",
+      "urgency": "SOON"
+    }
+  ]
+}

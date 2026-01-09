@@ -1,0 +1,125 @@
+{
+  "ticker": "V",
+  "timestamp": "2026-01-03T01:24:35.804301",
+  "final_sentiment_score": 0.3705,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0035,
+    "news_confidence": 0.5,
+    "news_weight": 0.6075,
+    "options_sentiment": 0,
+    "options_confidence": 0,
+    "options_weight": 0.0,
+    "analyst_sentiment": 0.6838,
+    "analyst_confidence": 0.3877,
+    "analyst_weight": 0.3925,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0035,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 23,
+    "options_volume": 0,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "Le secteur technologique est volatil et sensible aux nouvelles, nécessitant une décroissance temporelle plus rapide et un seuil de divergence ajusté.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.5,
+    "recommendation_count": 37,
+    "recommendation_summary": "Strong Buy consensus (Mean: 1.5)",
+    "recommendation_score": 0.75,
+    "target_mean": 395.85,
+    "target_median": 405.0,
+    "current_price": 346.48,
+    "upside_potential": 0.14249018702378205,
+    "price_target_score": 0.278,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 0.86,
+      "pt": 0.14,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.163,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "UNKNOWN",
+    "confidence": 0.0,
+    "implications": "Données insuffisantes pour déterminer le régime"
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "fda_regulatory",
+        "category": "REGULATORY",
+        "timestamp": "2026-01-02T09:31:35+00:00",
+        "confidence": 0.667,
+        "sentiment": 0.502,
+        "impact_score": 0.318,
+        "title": "BioAtla and GATC Health to advance Oz-V in Phase III trial - Clinical Trials Arena",
+        "matches": 2
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2026-01-02T14:02:32+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.271,
+        "impact_score": 0.09,
+        "title": "Stellantis confirms return of Ram TRX with supercharged V-8 - Car Dealership Guy News",
+        "matches": 1
+      }
+    ],
+    "count": 2,
+    "most_recent": {
+      "type": "fda_regulatory",
+      "category": "REGULATORY",
+      "timestamp": "2026-01-02T09:31:35+00:00",
+      "confidence": 0.667,
+      "sentiment": 0.502,
+      "impact_score": 0.318,
+      "title": "BioAtla and GATC Health to advance Oz-V in Phase III trial - Clinical Trials Arena",
+      "matches": 2
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale. | Biais POSITIF des catalyseurs.",
+    "categories_present": [
+      "REGULATORY",
+      "CORPORATE_ACTION"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.497,
+    "sentiment_volatility": 0.141,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "**📊 Analyse des métriques de sentiment pour V**\n\n* La Sharpe Ratio élevée (0,497) indique que le risque est relativement faible en comparaison du rendement.\n* Une Volatilité Sentiment basse (0,141) suggère un comportement stable de l'action.\n* L'Accélération Momentum à 0 indique qu'il n'y a pas de changement significatif dans la tendance.\n* Le Score Contrarian à 0 signifie que les indicateurs contrariant les prédictions du marché ne sont pas présents.\n* Une Consistance à 0 indique un comportement incohérent.\n\nL'implication pour un trader est d'**être prudent et de surveiller l'action étroitement**, car la situation est stable, mais il n'y a pas de signaux clairs ni de tendance évidente."
+  },
+  "alerts": [
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 23 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

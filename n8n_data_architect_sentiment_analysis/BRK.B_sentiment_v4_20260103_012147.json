@@ -1,0 +1,145 @@
+{
+  "ticker": "BRK.B",
+  "timestamp": "2026-01-03T01:21:31.469677",
+  "final_sentiment_score": -0.1532,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": -0.0032,
+    "news_confidence": 0.5,
+    "news_weight": 1.0,
+    "options_sentiment": 0,
+    "options_confidence": 0,
+    "options_weight": 0.0,
+    "analyst_sentiment": 0,
+    "analyst_confidence": 0.0,
+    "analyst_weight": 0.0,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0032,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 15,
+    "options_volume": 0,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "BRK.B est un actif de valeur avec une volatilité typique mais réagit fortement aux nouvelles, nécessitant donc un déclin temporel modéré et une tolérance à la volatilité plus élevée.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": null,
+    "recommendation_count": 0,
+    "recommendation_summary": "Insufficient data",
+    "recommendation_score": 0,
+    "target_mean": null,
+    "target_median": null,
+    "current_price": null,
+    "upside_potential": null,
+    "price_target_score": 0,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 0.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0,
+      "price_target": 0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "UNKNOWN",
+    "confidence": 0.0,
+    "implications": "Données insuffisantes pour déterminer le régime"
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2026-01-01T13:29:03+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.82,
+        "impact_score": 0.164,
+        "title": "Buffett era ends: Berkshire Hathaway (BRK.B) stock dips as Greg Abel takes over - ts2.tech",
+        "matches": 1
+      },
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-16T08:00:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.1,
+        "impact_score": 0.03,
+        "title": "Berkshire Hathaway: Ready To Profit From Rising Bankruptcies (NYSE:BRK.B) - Seeking Alpha",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2026-01-02T15:57:04+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.047,
+        "impact_score": 0.016,
+        "title": "Berkshire Hathaway completes acquisition of OxyChem for $9.7B - TipRanks",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "executive_changes",
+      "category": "MANAGEMENT",
+      "timestamp": "2026-01-01T13:29:03+00:00",
+      "confidence": 0.333,
+      "sentiment": -0.82,
+      "impact_score": 0.164,
+      "title": "Buffett era ends: Berkshire Hathaway (BRK.B) stock dips as Greg Abel takes over - ts2.tech",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "FINANCIAL",
+      "MANAGEMENT",
+      "CORPORATE_ACTION"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": -0.28,
+    "sentiment_volatility": 0.231,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Voici quelques analyses possibles :\n\n1. **Risque élevé** | Réduire la position\nLa Sharpe Ratio négative (-0,28) indique que l'action BRK.B offre une rentabilité faible par rapport au risque pris, ce qui suggère que le trader devrait réduire sa position pour minimiser les pertes.\n2. **Volatilité élevée** | Attendre les fluctuations\nLa Volatilité Sentiment de 0,231 indique un sentiment instable et chaotique autour de l'action BRK.B, ce qui suggère que le trader devrait attendre les fluctuations pour entrer dans une position.\n3. **Tendances non claires** | N'investir pas\nL'Accélération Momentum à 0,0 indique un changement de vitesse nul autour de l'action BRK.B, ce qui suggère que le trader ne devrait pas investir dans cette action car les tendances sont incertaines.\n4. **Pertinence faible** | Ne rien faire\nLe Score Contrarian à 0 indique qu'il n'y a pas d'opportunité forte de contre-pourpoint autour de l'action BRK.B, ce qui suggère que le trader ne devrait pas agir car les signaux sont faibles.\n5. **Faible conviction** | N'investir pas\nLa Conviction à 0,5 indique une incertitude et un manque de confiance dans la décision d'achat ou de vente de l'action BRK.B, ce qui suggère que le trader ne devrait pas investir car il n'y a pas suffisamment de certitudes."
+  },
+  "alerts": [
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "😨",
+      "title": "Asymétrie de Peur Détectée",
+      "message": "Marché surréagit aux mauvaises nouvelles. Possible capitulation ou opportunité contrarian.",
+      "action": "Opportunité d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 15 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

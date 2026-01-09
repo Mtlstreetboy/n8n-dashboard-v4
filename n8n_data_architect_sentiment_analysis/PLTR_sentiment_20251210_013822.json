@@ -1,0 +1,29 @@
+{
+  "ticker": "PLTR",
+  "timestamp": "2025-12-10T01:38:22.968633",
+  "final_sentiment_score": -0.0991,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.3,
+  "components": {
+    "news_sentiment": 0.0202,
+    "news_confidence": 0.6776,
+    "news_weight": 0.3562,
+    "options_sentiment": -0.3204,
+    "options_confidence": 0.8163,
+    "options_weight": 0.6438,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.3407,
+    "opportunity_score": 0,
+    "interpretation": "???? Consensus - Nouvelles et march?? s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 165,
+    "options_volume": 207840,
+    "analysis_depth": "DEEP"
+  }
+}

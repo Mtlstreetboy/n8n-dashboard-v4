@@ -1,0 +1,115 @@
+{
+  "ticker": "NVDA",
+  "timestamp": "2025-12-14T18:36:51.074548",
+  "final_sentiment_score": 0.3326,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.3249,
+  "smart_money_factor": 0.0899,
+  "components": {
+    "news_sentiment": 0.0229,
+    "news_confidence": 0.5686,
+    "news_weight": 0.2749,
+    "options_sentiment": 0.3121,
+    "options_confidence": 1.0,
+    "options_weight": 0.7251,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.2892,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 503,
+    "options_volume": 1239312,
+    "analysis_depth": "DEEP",
+    "config_rationale": "Le ticker NVDA est une technologie volatile, nécessitant un décade rapide pour prendre en compte les nouvelles. Un threshold élevé permet de détecter les changements de tendance rapides dans le secteur."
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 1.0,
+    "metrics": {
+      "avg_iv": 1.80575,
+      "iv_skew": -0.6259178936955446,
+      "pcr_volume": 0.544
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections. | 📞 Call skew élevé - Spéculation haussière agressive",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-14T09:52:30+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.38,
+        "impact_score": 0.114,
+        "title": "Caxton Associates LLP Boosts Stock Holdings in NVIDIA Corporation $NVDA - MarketBeat",
+        "matches": 1
+      },
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2025-12-13T07:01:30+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "FT names Nvidia CEO Jensen Huang as their 2025 Person of the Year - Euronews.com",
+        "matches": 1
+      },
+      {
+        "type": "fda_regulatory",
+        "category": "REGULATORY",
+        "timestamp": "2025-12-12T21:49:52+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "China Turns Away Nvidia H200 Despite US Export Approval - Transport Topics",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2025-12-14T09:52:30+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.38,
+      "impact_score": 0.114,
+      "title": "Caxton Associates LLP Boosts Stock Holdings in NVIDIA Corporation $NVDA - MarketBeat",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "MANAGEMENT",
+      "REGULATORY",
+      "FINANCIAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.822,
+    "sentiment_volatility": 0.349,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 1.0,
+    "llm_interpretation": "📊 The sentiment analysis suggests:\n\n| Insight Key | Action Recommended |\n| --- | --- |\n| **Strong risk-adjusted performance** | Consider scaling up positions |\n| **Moderate volatility** | Monitor for potential mean-reversion |\n| **No momentum change** | Maintain current position or wait for signs of acceleration |\n| **Neutral contrarian signal** | No urgent action required, but keep an eye on conviction score |\n| **High consistency** | Confident in the overall sentiment |\n\nAs a trader, these metrics imply that NVDA has shown strong performance while managing risk well. While volatility is moderate, it's not extreme enough to warrant major changes. The momentum remains stable, and there are no contrarian signals suggesting an immediate reversal. With high consistency in the sentiment, traders can have confidence in their HOLD recommendation, but may want to scale up positions or wait for signs of acceleration before making significant moves."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections. | 📞 Call skew élevé - Spéculation haussière agressive",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

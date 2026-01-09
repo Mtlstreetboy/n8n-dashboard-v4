@@ -1,0 +1,153 @@
+{
+  "ticker": "ORCL",
+  "timestamp": "2026-01-03T01:27:43.150964",
+  "final_sentiment_score": -0.0686,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.0235,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0011,
+    "news_confidence": 0.9447,
+    "news_weight": 0.3835,
+    "options_sentiment": 0.0281,
+    "options_confidence": 0.8272,
+    "options_weight": 0.5037,
+    "analyst_sentiment": 0.593,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.1128,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.027,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 342,
+    "options_volume": 244650,
+    "analysis_depth": "DEEP",
+    "config_rationale": "ORCL est une entreprise de technologie avec des nouvelles fréquentes et des mouvements prix rapides, justifiant un decalage temporel modéré et un seuil de divergence plus élevé.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.81395,
+    "recommendation_count": 38,
+    "recommendation_summary": "Buy consensus (Mean: 1.8)",
+    "recommendation_score": 0.593,
+    "target_mean": 293.71246,
+    "target_median": 295.0,
+    "current_price": 195.71,
+    "upside_potential": 0.500753461754637,
+    "price_target_score": 0.762,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.404,
+    "metrics": {
+      "avg_iv": 0.7020500000000001,
+      "iv_skew": -0.14664730728616696,
+      "pcr_volume": 0.722
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2026-01-02T14:20:49+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.704,
+        "impact_score": 0.211,
+        "title": "Mizuho Reaffirms Oracle (ORCL) Outperform Rating Despite Mixed Fiscal Q2 Results - Finviz",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2026-01-02T14:20:49+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.704,
+        "impact_score": 0.117,
+        "title": "Mizuho Reaffirms Oracle (ORCL) Outperform Rating Despite Mixed Fiscal Q2 Results - Finviz",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-29T17:00:00+00:00",
+        "confidence": 0.667,
+        "sentiment": 0.064,
+        "impact_score": 0.043,
+        "title": "2025’s Biggest AI Deals, Ranked: SoftBank Will Acquire DigitalBridge for $4 Billion - Forbes",
+        "matches": 2
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2026-01-02T14:20:49+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.704,
+      "impact_score": 0.211,
+      "title": "Mizuho Reaffirms Oracle (ORCL) Outperform Rating Despite Mixed Fiscal Q2 Results - Finviz",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale. | Biais POSITIF des catalyseurs.",
+    "categories_present": [
+      "CORPORATE_ACTION",
+      "ANALYST",
+      "FINANCIAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.029,
+    "sentiment_volatility": 0.391,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "**Pas d'opportunité de contre-sensibilité 🚫 | Maintenez votre position**\n\n* La baisse du sentiment final (-0,0686) et la classification HOLD indiquent un marché neutre.\n* Le contrarian score est à 0, ce qui signifie pas d'opportunité pour un placement contraire à l'opinion générale.\n\n**Implication:**\nMaintenez votre position et attendez une variation des métriques avant de prendre une décision d'investissement."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "😨",
+      "title": "Asymétrie de Peur Détectée",
+      "message": "Marché surréagit aux mauvaises nouvelles. Possible capitulation ou opportunité contrarian.",
+      "action": "Opportunité d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    }
+  ]
+}

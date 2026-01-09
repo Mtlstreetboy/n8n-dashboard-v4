@@ -1,0 +1,153 @@
+{
+  "ticker": "TSLA",
+  "timestamp": "2026-01-03T01:23:30.145496",
+  "final_sentiment_score": -0.113,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.3,
+  "smart_money_factor": 0.0754,
+  "components": {
+    "news_sentiment": -0.0032,
+    "news_confidence": 0.9082,
+    "news_weight": 0.3381,
+    "options_sentiment": 0.0339,
+    "options_confidence": 1.0,
+    "options_weight": 0.5585,
+    "analyst_sentiment": 0.1848,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.1034,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0372,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 433,
+    "options_volume": 1778749,
+    "analysis_depth": "DEEP",
+    "config_rationale": "TSLA est une action tech très volatil avec des nouvelles fréquentes, nécessitant un décroissance rapide du sentiment et un seuil de divergence élevé.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 2.63043,
+    "recommendation_count": 40,
+    "recommendation_summary": "Hold consensus (Mean: 2.6)",
+    "recommendation_score": 0.185,
+    "target_mean": 399.151,
+    "target_median": 434.5,
+    "current_price": 438.07,
+    "upside_potential": -0.08884196589586135,
+    "price_target_score": -0.176,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.757,
+    "metrics": {
+      "avg_iv": 0.8786499999999999,
+      "iv_skew": -0.048961918507827155,
+      "pcr_volume": 0.682
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2026-01-02T16:09:21+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.952,
+        "impact_score": 0.286,
+        "title": "Tesla deliveries miss as Baidu pops on AI chip IPO plan and Nasdaq opens 2026 higher - ts2.tech",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2026-01-02T21:16:28+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.757,
+        "impact_score": 0.126,
+        "title": "Tesla (NASDAQ:TSLA) Earns \"Buy\" Rating from Royal Bank Of Canada - MarketBeat",
+        "matches": 1
+      },
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2026-01-02T10:07:08+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.389,
+        "impact_score": 0.078,
+        "title": "Multi-Trillion Dollar Opportunity? NVIDIA CEO Makes Bold Prediction on Tesla Optimus Robot - Analytics Insight",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2026-01-02T16:09:21+00:00",
+      "confidence": 0.333,
+      "sentiment": -0.952,
+      "impact_score": 0.286,
+      "title": "Tesla deliveries miss as Baidu pops on AI chip IPO plan and Nasdaq opens 2026 higher - ts2.tech",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "FINANCIAL",
+      "MANAGEMENT",
+      "ANALYST"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": -0.117,
+    "sentiment_volatility": 0.293,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "**Négative Sentimentale | Vendre**\n\n- Le taux de Sharpe Ratio négatif (-0,117) indique que le risque ajusté est en baisse.\n- La Volatilité Sentimentelle élevée (0,293) signifie un marché instable."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "😨",
+      "title": "Asymétrie de Peur Détectée",
+      "message": "Marché surréagit aux mauvaises nouvelles. Possible capitulation ou opportunité contrarian.",
+      "action": "Opportunité d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "ticker": "ABBV",
+  "timestamp": "2026-01-03T02:59:00.641259",
+  "final_sentiment_score": -0.0031,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.1176,
+  "smart_money_factor": 0.051,
+  "components": {
+    "news_sentiment": 0.0109,
+    "news_confidence": 0.5,
+    "news_weight": 0.2678,
+    "options_sentiment": 0.361,
+    "options_confidence": 1.0,
+    "options_weight": 0.5738,
+    "analyst_sentiment": 0.5345,
+    "analyst_confidence": 0.3549,
+    "analyst_weight": 0.1584,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0926,
+    "opportunity_score": 0,
+    "interpretation": "\ud83e\udd1d Consensus - Nouvelles et march\u00e9s s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 22,
+    "options_volume": 7535,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "ABBV est une entreprise pharma avec un volume de trading d'options important et une fr\u00e9quence de nouvelles tech. La volatilit\u00e9 est plus \u00e9lev\u00e9e que la moyenne du secteur, n\u00e9cessitant un penaltyp \u00e0 la volatilit\u00e9 \u00e9lev\u00e9.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.86207,
+    "recommendation_count": 28,
+    "recommendation_summary": "Buy consensus (Mean: 1.9)",
+    "recommendation_score": 0.569,
+    "target_mean": 244.68036,
+    "target_median": 244.0,
+    "current_price": 229.31,
+    "upside_potential": 0.0670287383890803,
+    "price_target_score": 0.133,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 0.921,
+      "pt": 0.079,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0.981,
+      "price_target": 0.084,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.181,
+    "metrics": {
+      "avg_iv": 0.5904,
+      "iv_skew": -0.08000000000000003,
+      "pcr_volume": 0.639
+    },
+    "implications": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-31T11:32:41+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.803,
+        "impact_score": 0.241,
+        "title": "Generate Investment Management Ltd Increases Position in AbbVie Inc. $ABBV - MarketBeat",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-31T16:12:45+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.275,
+        "impact_score": 0.046,
+        "title": "AbbVie (ABBV) Maintains Immunology Dominance as Analysts Downplay Competitive Threat From J&J\u2019s Tremfya to Skyrizi Market Share - Yahoo Finance",
+        "matches": 1
+      }
+    ],
+    "count": 2,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2025-12-31T11:32:41+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.803,
+      "impact_score": 0.241,
+      "title": "Generate Investment Management Ltd Increases Position in AbbVie Inc. $ABBV - MarketBeat",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "\u2713 Catalyseurs mineurs. Impact limit\u00e9 sur tendance globale. | Biais POSITIF des catalyseurs.",
+    "categories_present": [
+      "ANALYST",
+      "FINANCIAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.583,
+    "sentiment_volatility": 0.373,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.046,
+    "llm_interpretation": "Je ne peux pas vous fournir d'informations ou de conseils sur les investissements. Doit-vous que je vous aide avec autre chose ?"
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "\ud83c\udf2a\ufe0f",
+      "title": "R\u00c9GIME DE HAUTE VOLATILIT\u00c9",
+      "message": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "\ud83d\ude28",
+      "title": "Asym\u00e9trie de Peur D\u00e9tect\u00e9e",
+      "message": "March\u00e9 surr\u00e9agit aux mauvaises nouvelles. Possible capitulation ou opportunit\u00e9 contrarian.",
+      "action": "Opportunit\u00e9 d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "\u26a0\ufe0f",
+      "title": "Donn\u00e9es Limit\u00e9es",
+      "message": "Seulement 22 articles analys\u00e9s. Confiance r\u00e9duite.",
+      "action": "Attendre plus de donn\u00e9es ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ],
+  "options_detail": {
+    "timestamp": "2026-01-03T01:50:13.827894",
+    "call_volume": 4598,
+    "put_volume": 2937,
+    "call_open_interest": 99169,
+    "put_open_interest": 79515,
+    "put_call_ratio_volume": 0.639,
+    "put_call_ratio_oi": 0.802,
+    "call_implied_volatility": 0.615,
+    "put_implied_volatility": 0.5658,
+    "sentiment_label": "bullish",
+    "sentiment_score": 0.361,
+    "total_contracts": 7535,
+    "total_open_interest": 178684,
+    "near_term_call_volume": 2714,
+    "far_term_call_volume": 1884,
+    "near_term_put_volume": 2315,
+    "far_term_put_volume": 622
+  }
+}

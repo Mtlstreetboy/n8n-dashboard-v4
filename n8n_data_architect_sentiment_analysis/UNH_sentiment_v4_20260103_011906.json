@@ -1,0 +1,136 @@
+{
+  "ticker": "UNH",
+  "timestamp": "2026-01-03T01:18:56.112518",
+  "final_sentiment_score": 0.2881,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0103,
+    "news_confidence": 0.5,
+    "news_weight": 0.6434,
+    "options_sentiment": 0,
+    "options_confidence": 0,
+    "options_weight": 0.0,
+    "analyst_sentiment": 0.5088,
+    "analyst_confidence": 0.3325,
+    "analyst_weight": 0.3566,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0103,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 20,
+    "options_volume": 0,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "UNH est une compagnie de logistique avec un volume de trading d'options typiquement élevé, caractérisée par des nouvelles régulières et une réactivité du prix aux événements. Une configuration avec un décroissance temporelle moyenne et une pénalité de volatilité modérée permet de bien suivre les changements rapides tout en restant stable.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.96296,
+    "recommendation_count": 25,
+    "recommendation_summary": "Buy consensus (Mean: 2.0)",
+    "recommendation_score": 0.519,
+    "target_mean": 392.24,
+    "target_median": 410.0,
+    "current_price": 336.4,
+    "upside_potential": 0.16599286563614754,
+    "price_target_score": 0.32,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 0.951,
+      "pt": 0.049,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0.949,
+      "price_target": 0.049,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "UNKNOWN",
+    "confidence": 0.0,
+    "implications": "Données insuffisantes pour déterminer le régime"
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2026-01-02T11:51:09+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.91,
+        "impact_score": 0.273,
+        "title": "Sullivan Wood Capital Management LLC Boosts Position in UnitedHealth Group Incorporated $UNH - MarketBeat",
+        "matches": 1
+      },
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2025-12-13T08:00:00+00:00",
+        "confidence": 0.667,
+        "sentiment": -0.604,
+        "impact_score": 0.242,
+        "title": "UNH Announces Santos' Departure as Football Head Coach - University of New Hampshire Athletics",
+        "matches": 2
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-13T08:00:00+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.604,
+        "impact_score": 0.141,
+        "title": "UNH Announces Santos' Departure as Football Head Coach - University of New Hampshire Athletics",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2026-01-02T11:51:09+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.91,
+      "impact_score": 0.273,
+      "title": "Sullivan Wood Capital Management LLC Boosts Position in UnitedHealth Group Incorporated $UNH - MarketBeat",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "PRODUCT",
+      "MANAGEMENT",
+      "FINANCIAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.469,
+    "sentiment_volatility": 0.439,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Je suis incapable de fournir des conseils financiers ou de détenir d’opinions sur les marchés. Je peux vous donner une analyse basée sur les métriques fournies :\n\nL'analyse des métriques montre que le sentiment est neutre, et qu'il n'y a aucune opportunité à saisir. La situation du marché est stable. En fonction de cette information, voici quelques conclusions et actions possibles:\n\n1. **Évaluation neutre** | Attendre davantage d'informations.\n2. **Stabilité du marché** | Ne pas prendre des risques inutiles.\n3. **Aucune opportunité à saisir** | Étudier les données pour identifier des tendances potentielles.\n\nIl convient de noter que ces recommandations sont basées sur la seule analyse fournie et n'engagent pas mon opinion ou ma position personnelle sur le marché."
+  },
+  "alerts": [
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 20 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

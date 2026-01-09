@@ -1,0 +1,163 @@
+{
+  "ticker": "HD",
+  "timestamp": "2026-01-03T02:56:47.369949",
+  "final_sentiment_score": 0.0356,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2867,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0048,
+    "news_confidence": 0.5,
+    "news_weight": 0.271,
+    "options_sentiment": -0.874,
+    "options_confidence": 1.0,
+    "options_weight": 0.5542,
+    "analyst_sentiment": 0.5287,
+    "analyst_confidence": 0.3871,
+    "analyst_weight": 0.1749,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.2901,
+    "opportunity_score": 0,
+    "interpretation": "\ud83e\udd1d Consensus - Nouvelles et march\u00e9s s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 20,
+    "options_volume": 27571,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "HD est une compagnie de services financiers avec des nouvelles fr\u00e9quentes et un volume important d'options. La r\u00e9activit\u00e9 du prix aux nouvelles est \u00e9lev\u00e9e, mais la volatilit\u00e9 est moyenne.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.86486,
+    "recommendation_count": 33,
+    "recommendation_summary": "Buy consensus (Mean: 1.9)",
+    "recommendation_score": 0.568,
+    "target_mean": 397.0909,
+    "target_median": 405.0,
+    "current_price": 345.82,
+    "upside_potential": 0.14825892082586312,
+    "price_target_score": 0.288,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 0.861,
+      "pt": 0.139,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.161,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "MODERATE_VOLATILITY",
+    "sub_regime": "RISING",
+    "confidence": 0.7,
+    "metrics": {
+      "avg_iv": 0.47115,
+      "iv_skew": -0.19136276391554705,
+      "pcr_volume": 1.874
+    },
+    "implications": "\ud83d\udcc8 TENSION MONTANTE - Nervosit\u00e9 croissante. Surveiller pour escalade.",
+    "signal_adjustment": -0.05,
+    "recommendation": "Augmenter prudence. R\u00e9duire taille positions. Surveiller \u00e9volution."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2026-01-02T15:27:24+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.138,
+        "impact_score": 0.032,
+        "title": "Avid Launches Dante HD Option Card To Power Next Wave Of Live Sound Through VENUE | S6L systems - Live Design Online",
+        "matches": 1
+      },
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2026-01-02T09:18:25+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.038,
+        "impact_score": 0.011,
+        "title": "The Home Depot, Inc. $HD Shares Bought by Calamos Wealth Management LLC - MarketBeat",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2026-01-02T10:44:49+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.03,
+        "impact_score": 0.01,
+        "title": "6,268 Shares in The Home Depot, Inc. $HD Acquired by Shum Financial Group Inc. - MarketBeat",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "product_launch",
+      "category": "PRODUCT",
+      "timestamp": "2026-01-02T15:27:24+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.138,
+      "impact_score": 0.032,
+      "title": "Avid Launches Dante HD Option Card To Power Next Wave Of Live Sound Through VENUE | S6L systems - Live Design Online",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "\u2713 Catalyseurs mineurs. Impact limit\u00e9 sur tendance globale.",
+    "categories_present": [
+      "FINANCIAL",
+      "CORPORATE_ACTION",
+      "PRODUCT"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.529,
+    "sentiment_volatility": 0.181,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "**\ud83d\udcca Analyse des m\u00e9triques de sentiment sur HD :**\n\n* **Performance mod\u00e9r\u00e9e** | Ne pas prendre de position massive.\n* **Volatilit\u00e9 faible**, mais **sentiment neutre** | Attendre une confirmation de tendance avant investir.\n* **Acc\u00e9l\u00e9ration nulle**, **consistance inexistante** | Prudence, l'investissement n'a pas de vitesse ni de coh\u00e9rence."
+  },
+  "alerts": [
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "\u26a0\ufe0f",
+      "title": "Donn\u00e9es Limit\u00e9es",
+      "message": "Seulement 20 articles analys\u00e9s. Confiance r\u00e9duite.",
+      "action": "Attendre plus de donn\u00e9es ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ],
+  "options_detail": {
+    "timestamp": "2026-01-03T01:49:26.883821",
+    "call_volume": 9594,
+    "put_volume": 17977,
+    "call_open_interest": 69499,
+    "put_open_interest": 65428,
+    "put_call_ratio_volume": 1.874,
+    "put_call_ratio_oi": 0.941,
+    "call_implied_volatility": 0.521,
+    "put_implied_volatility": 0.4213,
+    "sentiment_label": "bearish",
+    "sentiment_score": -0.874,
+    "total_contracts": 27571,
+    "total_open_interest": 134927,
+    "near_term_call_volume": 7369,
+    "far_term_call_volume": 2225,
+    "near_term_put_volume": 13866,
+    "far_term_put_volume": 4111
+  }
+}

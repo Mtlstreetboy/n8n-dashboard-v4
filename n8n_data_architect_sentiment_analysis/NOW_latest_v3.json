@@ -1,0 +1,144 @@
+{
+  "ticker": "NOW",
+  "timestamp": "2025-12-23T23:53:45.435630",
+  "final_sentiment_score": -0.4603,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2961,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0263,
+    "news_confidence": 0.4965,
+    "news_weight": 0.2583,
+    "options_sentiment": -1.0,
+    "options_confidence": 0.7654,
+    "options_weight": 0.5972,
+    "analyst_sentiment": 0.7766,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.1445,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "bearish_divergence",
+    "magnitude": 1.0263,
+    "opportunity_score": 0.8211,
+    "interpretation": "🐻 BEARISH DIVERGENCE (force: 1.03) - Le marché ignore les bonnes nouvelles. Possible correction à venir ou les nouvelles sont 'priced in'."
+  },
+  "metadata": {
+    "news_articles_count": 154,
+    "options_volume": 96880,
+    "analysis_depth": "DEEP",
+    "config_rationale": "NOW is a technology company with high volatility and frequent news flow, particularly in the tech sector. The temporal decay halflife should be relatively short to account for this rapid change. The momentum window can be slightly longer to capture the stock's growth potential. A moderate penalty for volatility is needed to balance out the fluctuations.",
+    "version": "V3"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.44681,
+    "recommendation_count": 41,
+    "recommendation_summary": "Strong Buy consensus (Mean: 1.4)",
+    "recommendation_score": 0.777,
+    "target_mean": 228.47318,
+    "target_median": 230.0,
+    "current_price": 154.36,
+    "upside_potential": 0.4801320290230629,
+    "price_target_score": 0.744,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "MODERATE_VOLATILITY",
+    "sub_regime": "RISING",
+    "confidence": 0.7,
+    "metrics": {
+      "avg_iv": 0.48719999999999997,
+      "iv_skew": -0.4782133374980478,
+      "pcr_volume": 4.264
+    },
+    "implications": "📈 TENSION MONTANTE - Nervosité croissante. Surveiller pour escalade. | 📞 Call skew élevé - Spéculation haussière agressive",
+    "signal_adjustment": -0.05,
+    "recommendation": "Augmenter prudence. Réduire taille positions. Surveiller évolution."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-23T15:54:16+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.766,
+        "impact_score": 0.255,
+        "title": "ServiceNow Acquires Armis Security for $7.75B to Boost AI Cybersecurity - WebProNews",
+        "matches": 1
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-23T18:48:27+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.128,
+        "impact_score": 0.03,
+        "title": "ServiceNow Announces $7.75 Billion Acquisition of Cybersecurity Firm Armis - Security Boulevard",
+        "matches": 1
+      },
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2025-12-23T14:05:22+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.09,
+        "impact_score": 0.018,
+        "title": "ServiceNow's deal blitz gives it an 'AI control tower,' CEO McDermott tells CNBC - CNBC",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "merger_acquisition",
+      "category": "CORPORATE_ACTION",
+      "timestamp": "2025-12-23T15:54:16+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.766,
+      "impact_score": 0.255,
+      "title": "ServiceNow Acquires Armis Security for $7.75B to Boost AI Cybersecurity - WebProNews",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale. | Biais POSITIF des catalyseurs.",
+    "categories_present": [
+      "PRODUCT",
+      "CORPORATE_ACTION",
+      "MANAGEMENT"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 1.032,
+    "sentiment_volatility": 0.298,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "📊 The quantitative sentiment analysis suggests that NOW's sentiment is slightly bearish (-0.46), with a high Sharpe Ratio indicating a strong risk-adjusted return.\n\n| Key Insight | Action Recommended |\n| --- | --- |\n💸 High Sharpe Ratio | Consider long positions, as the stock's performance is likely to be robust even in volatile markets."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "DIVERGENCE",
+      "icon": "🚨",
+      "title": "DIVERGENCE MAJEURE DÉTECTÉE",
+      "message": "🐻 BEARISH DIVERGENCE (force: 1.03) - Le marché ignore les bonnes nouvelles. Possible correction à venir ou les nouvelles sont 'priced in'.",
+      "action": "❌ NE PAS ACHETER malgré bonnes nouvelles. Attendre correction ou confirmation par price action.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

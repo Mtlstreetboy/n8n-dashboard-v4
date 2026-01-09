@@ -1,0 +1,135 @@
+{
+  "ticker": "NOW",
+  "timestamp": "2025-12-14T18:38:17.168179",
+  "final_sentiment_score": -0.477,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2805,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0277,
+    "news_confidence": 0.5302,
+    "news_weight": 0.3607,
+    "options_sentiment": -0.813,
+    "options_confidence": 0.6263,
+    "options_weight": 0.6393,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "bearish_divergence",
+    "magnitude": 0.8406,
+    "opportunity_score": 0.6725,
+    "interpretation": "🐻 BEARISH DIVERGENCE (force: 0.84) - Le marché ignore les bonnes nouvelles. Possible correction à venir ou les nouvelles sont 'priced in'."
+  },
+  "metadata": {
+    "news_articles_count": 121,
+    "options_volume": 12030,
+    "analysis_depth": "DEEP",
+    "config_rationale": "NOW's sentiment is influenced by the tech sector's high volatility, with a strong reaction to news and options trading volume. A relatively short temporal decay halflife reflects this rapid reactivity. The momentum window is set slightly longer to account for the company's growth prospects."
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "PANIC",
+    "confidence": 0.15,
+    "metrics": {
+      "avg_iv": 0.575,
+      "iv_skew": -0.1361426256077795,
+      "pcr_volume": 2.615
+    },
+    "implications": "🚨 PANIQUE - Les traders se couvrent agressivement. Opportunité contrarian possible mais risquée.",
+    "signal_adjustment": -0.2,
+    "recommendation": "Attendre stabilisation. Si conviction forte, petites positions avec stops serrés."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-12T20:49:06+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.38,
+        "impact_score": 0.114,
+        "title": "ServiceNow Agrees To Buy Veza To Govern AI Agent Permissions At Scale - Forbes",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-14T10:55:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "ServiceNow nears up to US7 billion deal for cybersecurity startup Armis - The Business Times",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-12T17:43:43+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "ServiceNow (NOW) Stock News: 5-for-1 Split Approaches as AI Expansion and Analyst Forecasts Keep Shares in Focus (Dec. 12, 2025) - ts2.tech",
+        "matches": 1
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-11T15:20:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "3E and ServiceNow Announce Partnership to Provide Chemical Management Solution - Markets Financial Content",
+        "matches": 1
+      }
+    ],
+    "count": 4,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2025-12-12T20:49:06+00:00",
+      "confidence": 0.333,
+      "sentiment": -0.38,
+      "impact_score": 0.114,
+      "title": "ServiceNow Agrees To Buy Veza To Govern AI Agent Permissions At Scale - Forbes",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "ANALYST",
+      "PRODUCT",
+      "FINANCIAL",
+      "CORPORATE_ACTION"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 1.093,
+    "sentiment_volatility": 0.317,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "📊 Here are the key insights and recommended actions:\n\n**Insight:** The sentiment metrics suggest a relatively stable sentiment, with a Sharpe Ratio indicating high risk-adjusted returns. However, the Volatility Sentiment indicates some chaos, which may be reflected in the market's fluctuations.\n\n**Action:** Hold or slightly adjust your position, as the momentum is neutral (Accélération Momentum: 0) and there isn't a strong contrarian opportunity (Score Contrarian: 0). The Consistance score suggests an inconsistent sentiment, so it's essential to monitor the situation closely."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "DIVERGENCE",
+      "icon": "🚨",
+      "title": "DIVERGENCE MAJEURE DÉTECTÉE",
+      "message": "🐻 BEARISH DIVERGENCE (force: 0.84) - Le marché ignore les bonnes nouvelles. Possible correction à venir ou les nouvelles sont 'priced in'.",
+      "action": "❌ NE PAS ACHETER malgré bonnes nouvelles. Attendre correction ou confirmation par price action.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🚨 PANIQUE - Les traders se couvrent agressivement. Opportunité contrarian possible mais risquée.",
+      "action": "Attendre stabilisation. Si conviction forte, petites positions avec stops serrés.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

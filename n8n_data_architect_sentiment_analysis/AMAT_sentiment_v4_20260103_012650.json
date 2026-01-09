@@ -1,0 +1,136 @@
+{
+  "ticker": "AMAT",
+  "timestamp": "2026-01-03T01:26:41.229058",
+  "final_sentiment_score": 0.2065,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0068,
+    "news_confidence": 0.5,
+    "news_weight": 0.6429,
+    "options_sentiment": 0,
+    "options_confidence": 0,
+    "options_weight": 0.0,
+    "analyst_sentiment": 0.5658,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.3571,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0068,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 20,
+    "options_volume": 0,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "AMAT est une compagnie technologique avec des nouvelles fréquentes et un volume de trading d'options important, nécessitant un modèle réactif et sensible à la volatilité.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.86842,
+    "recommendation_count": 32,
+    "recommendation_summary": "Buy consensus (Mean: 1.9)",
+    "recommendation_score": 0.566,
+    "target_mean": 261.1875,
+    "target_median": 260.0,
+    "current_price": 268.87,
+    "upside_potential": -0.02857328820619632,
+    "price_target_score": -0.057,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "UNKNOWN",
+    "confidence": 0.0,
+    "implications": "Données insuffisantes pour déterminer le régime"
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-30T04:40:47+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.92,
+        "impact_score": 0.153,
+        "title": "AMAT Stock Surges 6% With A 7-day Winning Spree On Analyst Price Hikes - Trefis",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2026-01-02T12:59:18+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.023,
+        "impact_score": 0.008,
+        "title": "Applied Materials (AMAT): “The Arms Dealer of the Semiconductor Revolution.” - Yahoo Finance",
+        "matches": 1
+      },
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-31T15:22:20+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.016,
+        "impact_score": 0.005,
+        "title": "St. Mary's Academy vs Bishop Amat | Girls Basketball | 1/6/2026 - MaxPreps.com",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "analyst_action",
+      "category": "ANALYST",
+      "timestamp": "2025-12-30T04:40:47+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.92,
+      "impact_score": 0.153,
+      "title": "AMAT Stock Surges 6% With A 7-day Winning Spree On Analyst Price Hikes - Trefis",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale. | Biais POSITIF des catalyseurs.",
+    "categories_present": [
+      "FINANCIAL",
+      "CORPORATE_ACTION",
+      "ANALYST"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.283,
+    "sentiment_volatility": 0.483,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "**L'analyse de ces métriques de sentiment pour AMAT suggère :**\n\n🚀 Le sentiment est stable avec une volatilité sentimentale modérée (0,483) et un risque ajusté faible (Sharpe Ratio: 0.283), ce qui indique que l'opportunité d'investissement est limitée.\n\n💡 Cependant, la classification reste en HOLD et le score contrariant est égal à zéro, suggérant qu'il n'y a pas d'opportunité forte de prendre position.\n \n📉 En conséquence, il est recommandé de conserver une posture neutre pour cette action, à moins que des changements importants dans les métriques ne surviennent."
+  },
+  "alerts": [
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 20 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

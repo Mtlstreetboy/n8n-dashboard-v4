@@ -1,0 +1,29 @@
+{
+  "ticker": "INTC",
+  "timestamp": "2025-12-10T01:29:15.592244",
+  "final_sentiment_score": 0.1327,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2374,
+  "components": {
+    "news_sentiment": 0.0365,
+    "news_confidence": 0.7402,
+    "news_weight": 0.3788,
+    "options_sentiment": 0.0303,
+    "options_confidence": 0.8091,
+    "options_weight": 0.6212,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0062,
+    "opportunity_score": 0,
+    "interpretation": "???? Consensus - Nouvelles et march?? s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 112,
+    "options_volume": 186540,
+    "analysis_depth": "DEEP"
+  }
+}

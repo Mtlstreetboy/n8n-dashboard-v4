@@ -1,0 +1,136 @@
+{
+  "ticker": "HD",
+  "timestamp": "2026-01-03T01:25:45.364570",
+  "final_sentiment_score": 0.3103,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0048,
+    "news_confidence": 0.5,
+    "news_weight": 0.6078,
+    "options_sentiment": 0,
+    "options_confidence": 0,
+    "options_weight": 0.0,
+    "analyst_sentiment": 0.5287,
+    "analyst_confidence": 0.3871,
+    "analyst_weight": 0.3922,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0048,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 20,
+    "options_volume": 0,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "HD est une valeur stable avec un faible volume d'options et des nouvelles peu fréquentes, donc un decalage temporel moyen et un seuil de divergence modéré.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.86486,
+    "recommendation_count": 33,
+    "recommendation_summary": "Buy consensus (Mean: 1.9)",
+    "recommendation_score": 0.568,
+    "target_mean": 397.0909,
+    "target_median": 405.0,
+    "current_price": 345.82,
+    "upside_potential": 0.14825892082586312,
+    "price_target_score": 0.288,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 0.861,
+      "pt": 0.139,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.161,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "UNKNOWN",
+    "confidence": 0.0,
+    "implications": "Données insuffisantes pour déterminer le régime"
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2026-01-02T15:27:24+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.138,
+        "impact_score": 0.032,
+        "title": "Avid Launches Dante HD Option Card To Power Next Wave Of Live Sound Through VENUE | S6L systems - Live Design Online",
+        "matches": 1
+      },
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2026-01-02T09:18:25+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.038,
+        "impact_score": 0.011,
+        "title": "The Home Depot, Inc. $HD Shares Bought by Calamos Wealth Management LLC - MarketBeat",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2026-01-02T10:44:49+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.03,
+        "impact_score": 0.01,
+        "title": "6,268 Shares in The Home Depot, Inc. $HD Acquired by Shum Financial Group Inc. - MarketBeat",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "product_launch",
+      "category": "PRODUCT",
+      "timestamp": "2026-01-02T15:27:24+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.138,
+      "impact_score": 0.032,
+      "title": "Avid Launches Dante HD Option Card To Power Next Wave Of Live Sound Through VENUE | S6L systems - Live Design Online",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "FINANCIAL",
+      "PRODUCT",
+      "CORPORATE_ACTION"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.529,
+    "sentiment_volatility": 0.181,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Ce scénario nécessite quelques ajustements en termes de formulation.\n\n1. **Sentiment Stable mais Pas Convaincant** | Attendre davantage d'indices avant d'investir : Le Sharpe Ratio et la Volatilité Sentiment indiquent un sentiment relativement stable, avec une volatilité faible. Cela suggère que l'action n'est pas sujette à des fluctuations soudaines. Cependant, le score Contrarian très bas (0) signifie qu'il n'y a aucune opportunité forte pour acheter ou vendre l'action."
+  },
+  "alerts": [
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 20 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "ticker": "DIS",
+  "timestamp": "2026-01-03T01:20:23.628000",
+  "final_sentiment_score": -0.1554,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": -0.0054,
+    "news_confidence": 0.5,
+    "news_weight": 1.0,
+    "options_sentiment": 0,
+    "options_confidence": 0,
+    "options_weight": 0.0,
+    "analyst_sentiment": 0,
+    "analyst_confidence": 0.0,
+    "analyst_weight": 0.0,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0054,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 20,
+    "options_volume": 0,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "DIS est une compagnie utilities, avec des nouvelles lessicales mais fréquentes. La volatilité est moyenne et les traders institutionnels ont un impact significatif.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": null,
+    "recommendation_count": 28,
+    "recommendation_summary": "Insufficient data",
+    "recommendation_score": 0,
+    "target_mean": 132.50357,
+    "target_median": 134.5,
+    "current_price": 111.85,
+    "upside_potential": 0.18465417970496203,
+    "price_target_score": 0.353,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 0.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "UNKNOWN",
+    "confidence": 0.0,
+    "implications": "Données insuffisantes pour déterminer le régime"
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-31T09:44:06+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.894,
+        "impact_score": 0.268,
+        "title": "Diversified Trust Co Cuts Stake in The Walt Disney Company $DIS - MarketBeat",
+        "matches": 1
+      }
+    ],
+    "count": 1,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2025-12-31T09:44:06+00:00",
+      "confidence": 0.333,
+      "sentiment": -0.894,
+      "impact_score": 0.268,
+      "title": "Diversified Trust Co Cuts Stake in The Walt Disney Company $DIS - MarketBeat",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale. | Biais NÉGATIF des catalyseurs.",
+    "categories_present": [
+      "FINANCIAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": -0.308,
+    "sentiment_volatility": 0.353,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Vous souhaitez des conseils basés sur les analyses de sentiment. Voici quelques-unes des principales conclusions et actions possibles :\n\n1. **Baisse du Sentiment Négatif** : La baisse du sentiment négatif (-0,1554) suggère que le trader ne doit pas être trop pessimiste sur DIS, mais il est encore prudent de surveiller l’évolution.\n\n2. **Volatilité Sentiment élevée** : La volatilité élevée (0,353) signifie que les opinions sur la société sont changeantes et instables, ce qui rend difficile une prise de décision claire. Le trader devrait donc être prêt à ajuster sa stratégie.\n\n3. **Accélération du Momentum à 0** : Un changement de vitesse (mouvement) nul signifie que DIS ne monte pas ou ne descend pas rapidement, ce qui pourrait suggérer un mouvement plat, mais il faut surveiller les variations futures.\n\n4. **Contrarian Score de 0** : Le score contrariant à 0 indique qu'il n'y a pas d'opportunité forte pour investir dans DIS en fonction du sentiment actuel. Cela signifie que le trader ne devrait peut-être pas prendre des positions fortes ou des positions longues.\n\n5. **Consistance de 0** : La consistance à 0 suggère qu'il n'y a pas d'orientation cohérente parmi les opinions, ce qui rend difficile la prédiction du comportement futur du marché.\n\nEn synthèse, le trader devrait être prudent et patient en regardant DIS, avec une attitude de neutralité. Il est important de suivre attentivement les évolutions des métriques afin d'ajuster sa stratégie au besoin."
+  },
+  "alerts": [
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "😨",
+      "title": "Asymétrie de Peur Détectée",
+      "message": "Marché surréagit aux mauvaises nouvelles. Possible capitulation ou opportunité contrarian.",
+      "action": "Opportunité d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 20 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

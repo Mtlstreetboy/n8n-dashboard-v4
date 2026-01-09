@@ -1,0 +1,142 @@
+{
+  "ticker": "AVGO",
+  "timestamp": "2025-12-23T23:53:20.747581",
+  "final_sentiment_score": 0.4501,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.396,
+  "smart_money_factor": 0.15,
+  "components": {
+    "news_sentiment": 0.0116,
+    "news_confidence": 0.5009,
+    "news_weight": 0.2198,
+    "options_sentiment": 0.544,
+    "options_confidence": 1.0,
+    "options_weight": 0.6583,
+    "analyst_sentiment": 0.8646,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.1219,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "weak_divergence",
+    "magnitude": 0.5325,
+    "opportunity_score": 0.1597,
+    "interpretation": "⚠️ Divergence faible (force: 0.53) - Incertitude, attendre confirmation."
+  },
+  "metadata": {
+    "news_articles_count": 311,
+    "options_volume": 495550,
+    "analysis_depth": "DEEP",
+    "config_rationale": "AVGO is a technology company with a strong momentum, but also subject to volatility. A temporal decay halflife of 3 days reflects the fast-changing nature of the tech sector. The divergence threshold is set relatively high (0.5) to account for the company's strong growth potential.",
+    "version": "V3"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.27083,
+    "recommendation_count": 43,
+    "recommendation_summary": "Strong Buy consensus (Mean: 1.3)",
+    "recommendation_score": 0.865,
+    "target_mean": 456.802,
+    "target_median": 462.0,
+    "current_price": 349.32,
+    "upside_potential": 0.30768922477957183,
+    "price_target_score": 0.548,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.932,
+    "metrics": {
+      "avg_iv": 0.9661500000000001,
+      "iv_skew": -0.41757431823765456,
+      "pcr_volume": 0.324
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections. | 📞 Call skew élevé - Spéculation haussière agressive",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-22T18:09:40+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.781,
+        "impact_score": 0.234,
+        "title": "Broadcom: Expecting Over 150% AI Revenue And 60% FCF Growth For FY2026 (Upgrade) (AVGO) - Seeking Alpha",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-22T18:09:40+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.781,
+        "impact_score": 0.13,
+        "title": "Broadcom: Expecting Over 150% AI Revenue And 60% FCF Growth For FY2026 (Upgrade) (AVGO) - Seeking Alpha",
+        "matches": 1
+      }
+    ],
+    "count": 2,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2025-12-22T18:09:40+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.781,
+      "impact_score": 0.234,
+      "title": "Broadcom: Expecting Over 150% AI Revenue And 60% FCF Growth For FY2026 (Upgrade) (AVGO) - Seeking Alpha",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale. | Biais POSITIF des catalyseurs.",
+    "categories_present": [
+      "FINANCIAL",
+      "ANALYST"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.268,
+    "sentiment_volatility": 0.509,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "📊\n\nInsight: AVGO's sentiment metrics indicate a slightly positive outlook (Sharpe Ratio: 0.268) with moderate volatility (Volatility Sentiment: 0.509), but no clear momentum or contrarian opportunity.\n\nAction: Hold onto your position, as the overall sentiment is somewhat stable and there's little incentive to take an immediate action."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "SMART_MONEY",
+      "icon": "💰",
+      "title": "SMART MONEY ACTIF",
+      "message": "Détection d'activité institutionnelle (score: 0.150). Open Interest suggère positionnement de gros joueurs.",
+      "action": "Analyser leurs positions. Ils ont souvent raison à moyen terme.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections. | 📞 Call skew élevé - Spéculation haussière agressive",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

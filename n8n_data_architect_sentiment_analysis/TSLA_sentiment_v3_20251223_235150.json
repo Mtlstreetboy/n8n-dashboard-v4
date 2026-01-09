@@ -1,0 +1,144 @@
+{
+  "ticker": "TSLA",
+  "timestamp": "2025-12-23T23:51:43.082153",
+  "final_sentiment_score": 0.0503,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.0862,
+  "smart_money_factor": 0.0942,
+  "components": {
+    "news_sentiment": 0.0106,
+    "news_confidence": 0.4499,
+    "news_weight": 0.202,
+    "options_sentiment": 0.0373,
+    "options_confidence": 1.0,
+    "options_weight": 0.6734,
+    "analyst_sentiment": 0.1848,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.1247,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0267,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 355,
+    "options_volume": 1778749,
+    "analysis_depth": "DEEP",
+    "config_rationale": "TSLA's highly volatile nature requires a rapid temporal decay to adjust for market fluctuations. The momentum window is set to capture longer-term trends, while the divergence threshold and institutional premium account for the stock's high sensitivity to news and market sentiment.",
+    "version": "V3"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 2.63043,
+    "recommendation_count": 40,
+    "recommendation_summary": "Hold consensus (Mean: 2.6)",
+    "recommendation_score": 0.185,
+    "target_mean": 399.151,
+    "target_median": 434.5,
+    "current_price": 485.56,
+    "upside_potential": -0.17795741000082377,
+    "price_target_score": -0.342,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.757,
+    "metrics": {
+      "avg_iv": 0.8786499999999999,
+      "iv_skew": -0.048961918507827155,
+      "pcr_volume": 0.682
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-22T17:07:59+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.008,
+        "impact_score": 0.002,
+        "title": "Tesla’s Elon Musk gives timeframe for FSD’s release in UAE - Teslarati",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-23T00:17:08+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.013,
+        "impact_score": 0.002,
+        "title": "Tesla Analyst Predicts $3 Trillion Market Cap by 2026 on AI Pivot - WebProNews",
+        "matches": 1
+      },
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2025-12-22T21:55:43+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.006,
+        "impact_score": 0.001,
+        "title": "Pickle Robot taps Tesla alum for CFO - CFO Dive",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "product_launch",
+      "category": "PRODUCT",
+      "timestamp": "2025-12-22T17:07:59+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.008,
+      "impact_score": 0.002,
+      "title": "Tesla’s Elon Musk gives timeframe for FSD’s release in UAE - Teslarati",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "ANALYST",
+      "PRODUCT",
+      "MANAGEMENT"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.402,
+    "sentiment_volatility": 0.347,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.096,
+    "llm_interpretation": "🚀 Based on these metrics, here's what stands out:\n\n0.402 Sharpe Ratio indicates a moderate risk-adjusted sentiment, suggesting TSLA has some upside potential while still being relatively stable.\n\n| Action recommended: Take a balanced approach with small to medium-sized positions.\n\n0.347 Volatility Sentiment shows a slightly chaotic market, which might indicate increased uncertainty and volatility ahead.\n\n| Action recommended: Be prepared for market swings and adjust your positions accordingly.\n\nWith an Accélération Momentum of 0.0, there's no clear trend or direction, making it harder to predict short-term movements.\n\n| Action recommended: Focus on long-term strategies and diversification to minimize risk.\n\nThe Score Contrarian is 0, indicating no strong contrarian opportunity, so it might be wise to avoid trying to \"beat the market\" with extreme positions.\n\n| Action recommended: Play it safe and stick to your original strategy.\n\nLastly, a Consistance score of 0.096 suggests some inconsistency in sentiment, which could lead to whipsaws or false signals if not properly managed.\n\n| Action recommended: Monitor TSLA's performance closely and be prepared to adjust your positions based on changing market conditions."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

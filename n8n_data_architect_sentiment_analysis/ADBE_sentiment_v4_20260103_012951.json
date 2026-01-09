@@ -1,0 +1,142 @@
+{
+  "ticker": "ADBE",
+  "timestamp": "2026-01-03T01:29:38.427994",
+  "final_sentiment_score": -0.3575,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2914,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0133,
+    "news_confidence": 0.9557,
+    "news_weight": 0.4682,
+    "options_sentiment": -0.4019,
+    "options_confidence": 0.7236,
+    "options_weight": 0.5318,
+    "analyst_sentiment": 0,
+    "analyst_confidence": 0.0,
+    "analyst_weight": 0.0,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.4152,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 204,
+    "options_volume": 51705,
+    "analysis_depth": "DEEP",
+    "config_rationale": "ADBÉ est une entreprise technologique avec des nouvelles fréquentes et volatilité importante, nécessitant un ajustement du déclin temporel pour réagir rapidement aux changements de sentiment.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": null,
+    "recommendation_count": 36,
+    "recommendation_summary": "Insufficient data",
+    "recommendation_score": 0,
+    "target_mean": 430.96472,
+    "target_median": 422.5,
+    "current_price": 333.3,
+    "upside_potential": 0.29302346234623455,
+    "price_target_score": 0.527,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 0.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "PANIC",
+    "confidence": 0.139,
+    "metrics": {
+      "avg_iv": 0.56935,
+      "iv_skew": -0.15714516912121695,
+      "pcr_volume": 2.079
+    },
+    "implications": "🚨 PANIQUE - Les traders se couvrent agressivement. Opportunité contrarian possible mais risquée.",
+    "signal_adjustment": -0.2,
+    "recommendation": "Attendre stabilisation. Si conviction forte, petites positions avec stops serrés."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "legal_issues",
+        "category": "LEGAL",
+        "timestamp": "2025-12-23T02:43:27+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.007,
+        "impact_score": 0.002,
+        "title": "Adobe Stock After Hours Today (Dec. 22, 2025): ADBE Holds Near $358 as AI Catalysts and Lawsuit Risk Shape the Setup for Tuesday’s Open - ts2.tech",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-24T19:06:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0,
+        "impact_score": 0.0,
+        "title": "Adobe’s AI Crossroads: Valuation Tensions Mount as Semrush Acquisition Takes Center Stage - FinancialContent",
+        "matches": 1
+      }
+    ],
+    "count": 2,
+    "most_recent": {
+      "type": "legal_issues",
+      "category": "LEGAL",
+      "timestamp": "2025-12-23T02:43:27+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.007,
+      "impact_score": 0.002,
+      "title": "Adobe Stock After Hours Today (Dec. 22, 2025): ADBE Holds Near $358 as AI Catalysts and Lawsuit Risk Shape the Setup for Tuesday’s Open - ts2.tech",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "LEGAL",
+      "CORPORATE_ACTION"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.398,
+    "sentiment_volatility": 0.351,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Il semble que les métriques de sentiment indiquent une situation mitigée pour ADBE. Voici quelques pistes d'analyse :\n\n 1. **Risque ajusté faible** : La ratio Sharpe à 0,398 suggère un risque relativement faible et donc une position investissement rentable.\n2. **Stabilité de l’opinion** : Une volatilité du sentiment à 0,351 montre qu'il y a encore du mouvement mais que le marché n’est pas ébranlé.\n3. **Pas d'opportunité contrariane** : Un score Contrarian de 0 signifie que le cours ne reflète pas l’opinion des investisseurs et donc il n’y a pas d’occasions d’investissement.\n4. **Consistance faible de l’opinion** : Une Consistance à 0,0 suggère un manque de cohérence entre les analystes.\n\n Implication pour le trader : Cela signifie que même si ADBE semble être une position investissante rentable et stable, il est difficile de prédire avec certitude l’orientation du cours. Une stratégie prudente serait donc d’attendre la formation d’une tendance claire avant d’intervenir."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🚨 PANIQUE - Les traders se couvrent agressivement. Opportunité contrarian possible mais risquée.",
+      "action": "Attendre stabilisation. Si conviction forte, petites positions avec stops serrés.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "😨",
+      "title": "Asymétrie de Peur Détectée",
+      "message": "Marché surréagit aux mauvaises nouvelles. Possible capitulation ou opportunité contrarian.",
+      "action": "Opportunité d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    }
+  ]
+}

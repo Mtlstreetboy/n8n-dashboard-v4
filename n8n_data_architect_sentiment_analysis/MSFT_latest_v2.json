@@ -1,0 +1,104 @@
+{
+  "ticker": "MSFT",
+  "timestamp": "2025-12-14T18:37:00.839291",
+  "final_sentiment_score": 0.1669,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.1848,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0221,
+    "news_confidence": 0.5755,
+    "news_weight": 0.3277,
+    "options_sentiment": 0.0888,
+    "options_confidence": 0.7872,
+    "options_weight": 0.6723,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0668,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 472,
+    "options_volume": 134233,
+    "analysis_depth": "DEEP",
+    "config_rationale": "MSFT est une entreprise du secteur TIC avec un volume de trading élevé. La volatilité typique est moyenne, ce qui signifie que les mouvements de prix sont influencés par la fréquence des nouvelles. Pour prendre en compte cela, nous avons choisi un temps de décroissance rapide (5 jours) pour prioriser les informations récentes et élevé le seuil de divergence (0.45) pour ne pas trop pénaliser les mouvements rapides."
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.154,
+    "metrics": {
+      "avg_iv": 0.57715,
+      "iv_skew": -0.14331671224063064,
+      "pcr_volume": 0.673
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "legal_issues",
+        "category": "LEGAL",
+        "timestamp": "2025-12-12T11:50:00+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.38,
+        "impact_score": 0.108,
+        "title": "OpenAI, Microsoft slammed with lawsuit after ChatGPT allegedly drives disturbing murder-suicide: 'Validated a user's paranoid delusions' - Yahoo",
+        "matches": 1
+      },
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2025-12-14T06:57:11+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Microsoft AI CEO Slams Exorbitant Pay Packages As Meta Escalates Talent War - Benzinga",
+        "matches": 1
+      }
+    ],
+    "count": 2,
+    "most_recent": {
+      "type": "legal_issues",
+      "category": "LEGAL",
+      "timestamp": "2025-12-12T11:50:00+00:00",
+      "confidence": 0.333,
+      "sentiment": -0.38,
+      "impact_score": 0.108,
+      "title": "OpenAI, Microsoft slammed with lawsuit after ChatGPT allegedly drives disturbing murder-suicide: 'Validated a user's paranoid delusions' - Yahoo",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "MANAGEMENT",
+      "LEGAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.78,
+    "sentiment_volatility": 0.354,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "📊\n\n**Insight:** MSFT's sentiment is slightly positive (0.1669) but not overly optimistic, indicating a HOLD position.\n\n**Action:** As the Sharpe Ratio is high (0.78), it may be a good time to consider taking a long position, with caution due to moderate volatility (0.354). However, the lack of acceleration momentum and consistent sentiment suggest no strong conviction to hold or sell."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "ticker": "MSFT",
+  "timestamp": "2025-12-23T23:50:16.137619",
+  "final_sentiment_score": 0.1966,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.3,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0177,
+    "news_confidence": 0.5666,
+    "news_weight": 0.2771,
+    "options_sentiment": -0.0427,
+    "options_confidence": 0.8,
+    "options_weight": 0.587,
+    "analyst_sentiment": 0.8596,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.1359,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0603,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 538,
+    "options_volume": 162761,
+    "analysis_depth": "DEEP",
+    "config_rationale": "MSFT has a relatively stable stock with moderate volatility. The sentiment analysis should focus on medium-term trends, considering both momentum and value factors. A decay halflife of 2 days allows for quick adaptation to changing market conditions, while the divergence threshold of 0.5 detects significant departures from historical norms.",
+    "version": "V3"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.2807,
+    "recommendation_count": 53,
+    "recommendation_summary": "Strong Buy consensus (Mean: 1.3)",
+    "recommendation_score": 0.86,
+    "target_mean": 622.51416,
+    "target_median": 630.0,
+    "current_price": 486.85,
+    "upside_potential": 0.27865699907569047,
+    "price_target_score": 0.506,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "MODERATE_VOLATILITY",
+    "sub_regime": "RISING",
+    "confidence": 0.7,
+    "metrics": {
+      "avg_iv": 0.46205,
+      "iv_skew": -0.12821551549524007,
+      "pcr_volume": 0.763
+    },
+    "implications": "📈 TENSION MONTANTE - Nervosité croissante. Surveiller pour escalade.",
+    "signal_adjustment": -0.05,
+    "recommendation": "Augmenter prudence. Réduire taille positions. Surveiller évolution."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-23T14:05:12+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.441,
+        "impact_score": 0.103,
+        "title": "Microsoft and NASA Introduce AI Tools to Improve Access to Flood and Water Risk Data - Program Business",
+        "matches": 1
+      },
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2025-12-23T06:37:00+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.172,
+        "impact_score": 0.034,
+        "title": "Microsoft CEO Satya Nadella has started a weekly meeting which he does not want senior managers to attend - Times of India",
+        "matches": 1
+      },
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-22T18:00:00+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.039,
+        "impact_score": 0.012,
+        "title": "Column | Your chatbot keeps a file on you. Here’s how to delete it. - The Washington Post",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "product_launch",
+      "category": "PRODUCT",
+      "timestamp": "2025-12-23T14:05:12+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.441,
+      "impact_score": 0.103,
+      "title": "Microsoft and NASA Introduce AI Tools to Improve Access to Flood and Water Risk Data - Program Business",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "MANAGEMENT",
+      "FINANCIAL",
+      "PRODUCT"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.547,
+    "sentiment_volatility": 0.403,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "📊 **Momentum Slowdown**: The Sharpe Ratio is high (0.547) and Volatility Sentiment is relatively low (0.403), indicating a stable sentiment with some upward momentum, but it's slowing down.\n\n**No Contrarian Opportunity**: The Score Contrarian is 0, suggesting no strong contrarian opportunity to buy or sell MSFT.\n\n**Consistency Concerns**: The Consistency score is 0.0, implying inconsistent sentiment signals, which may lead to uncertainty in trading decisions.\n\nFor a trader: **Hold On**: Given the stable and slightly upward momentum, it's reasonable to hold on to existing positions or consider buying MSFT at current levels, but be cautious of potential slowing momentum and inconsistent sentiment signals."
+  },
+  "alerts": []
+}

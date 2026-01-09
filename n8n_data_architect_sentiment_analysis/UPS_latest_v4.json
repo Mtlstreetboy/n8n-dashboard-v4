@@ -1,0 +1,181 @@
+{
+  "ticker": "UPS",
+  "timestamp": "2026-01-03T02:55:13.282235",
+  "final_sentiment_score": -0.2943,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2276,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": -0.0038,
+    "news_confidence": 0.5,
+    "news_weight": 0.2752,
+    "options_sentiment": 0,
+    "options_confidence": 1.0,
+    "options_weight": 0.5628,
+    "analyst_sentiment": 0.3618,
+    "analyst_confidence": 0.3533,
+    "analyst_weight": 0.162,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.355,
+    "opportunity_score": 0,
+    "interpretation": "\ud83e\udd1d Consensus - Nouvelles et march\u00e9s s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 24,
+    "options_volume": 27584,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "UPS est une entreprise utility avec un volume de trading d'options mod\u00e9r\u00e9 et des nouvelles r\u00e9guli\u00e8res, n\u00e9cessitant une configuration interm\u00e9diaire pour ajuster le d\u00e9crochage temporel et l'accent sur la volatilit\u00e9.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 2.23333,
+    "recommendation_count": 29,
+    "recommendation_summary": "Buy consensus (Mean: 2.2)",
+    "recommendation_score": 0.383,
+    "target_mean": 103.82759,
+    "target_median": 104.0,
+    "current_price": 101.02,
+    "upside_potential": 0.027792417343100423,
+    "price_target_score": 0.056,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 0.934,
+      "pt": 0.066,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0.99,
+      "price_target": 0.069,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.091,
+    "metrics": {
+      "avg_iv": 0.5454,
+      "iv_skew": -0.031402273957769504,
+      "pcr_volume": 0.985
+    },
+    "implications": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2026-01-02T15:34:00+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.906,
+        "impact_score": 0.272,
+        "title": "One in four women in Norway found to miss postpartum check-ups - News-Medical",
+        "matches": 1
+      },
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2025-12-31T21:31:52+00:00",
+        "confidence": 0.667,
+        "sentiment": -0.273,
+        "impact_score": 0.109,
+        "title": "CEO shake-ups in 2026: Why Berkshire isn't the one to watch - Yahoo Finance",
+        "matches": 2
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2026-01-02T19:14:45+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.11,
+        "impact_score": 0.037,
+        "title": "Bao You Like It pop-ups offer a satisfying snack after hitting the slopes in Vail - VailDaily.com",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2026-01-02T15:34:00+00:00",
+      "confidence": 0.333,
+      "sentiment": -0.906,
+      "impact_score": 0.272,
+      "title": "One in four women in Norway found to miss postpartum check-ups - News-Medical",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "\u2713 Catalyseurs mineurs. Impact limit\u00e9 sur tendance globale. | Biais N\u00c9GATIF des catalyseurs.",
+    "categories_present": [
+      "CORPORATE_ACTION",
+      "MANAGEMENT",
+      "FINANCIAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": -0.256,
+    "sentiment_volatility": 0.298,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "\ud83d\udcca **Mauvais risque/rendement** | Vendez UPS.\n\nLa note Sharpe de -0,256 et le sentiment final \u00e0 -0.2943 indiquent un mauvais \u00e9quilibre entre risque et rendement. Cela sugg\u00e8re que l'investissement n'est pas attractif pour les traders \u00e0 court terme.\n\n\ud83d\udd04 **Volatilit\u00e9 \u00e9lev\u00e9e** | N'achetez pas UPS.\n\nLa volatilit\u00e9 sentimentale de 0,298 signifie qu'il y a des risques importants associ\u00e9s au placement. Cela pourrait entra\u00eener de fortes fluctuations et de possibles pertes.\n\n\ud83d\udcaa **Ralentissement du mouvement** | Patientez avant d'investir dans UPS.\n\nL'acc\u00e9l\u00e9ration du mouvement est \u00e0 0, ce qui signifie que le rythme actuel ne sera pas maintenu dans un futur proche. Il convient peut-\u00eatre de reporter l\u2019achat ou la vente pour attendre un signal plus clair."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "\ud83c\udf2a\ufe0f",
+      "title": "R\u00c9GIME DE HAUTE VOLATILIT\u00c9",
+      "message": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "\ud83d\ude28",
+      "title": "Asym\u00e9trie de Peur D\u00e9tect\u00e9e",
+      "message": "March\u00e9 surr\u00e9agit aux mauvaises nouvelles. Possible capitulation ou opportunit\u00e9 contrarian.",
+      "action": "Opportunit\u00e9 d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "\u26a0\ufe0f",
+      "title": "Donn\u00e9es Limit\u00e9es",
+      "message": "Seulement 24 articles analys\u00e9s. Confiance r\u00e9duite.",
+      "action": "Attendre plus de donn\u00e9es ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ],
+  "options_detail": {
+    "timestamp": "2026-01-03T01:48:51.049835",
+    "call_volume": 13895,
+    "put_volume": 13689,
+    "call_open_interest": 202100,
+    "put_open_interest": 102269,
+    "put_call_ratio_volume": 0.985,
+    "put_call_ratio_oi": 0.506,
+    "call_implied_volatility": 0.5541,
+    "put_implied_volatility": 0.5367,
+    "sentiment_label": "neutral",
+    "sentiment_score": 0,
+    "total_contracts": 27584,
+    "total_open_interest": 304369,
+    "near_term_call_volume": 10524,
+    "far_term_call_volume": 3371,
+    "near_term_put_volume": 11696,
+    "far_term_put_volume": 1993
+  }
+}

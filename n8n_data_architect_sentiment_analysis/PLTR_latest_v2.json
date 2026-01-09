@@ -1,0 +1,126 @@
+{
+  "ticker": "PLTR",
+  "timestamp": "2025-12-14T18:37:52.326975",
+  "final_sentiment_score": -0.2618,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.3,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0135,
+    "news_confidence": 0.4823,
+    "news_weight": 0.2826,
+    "options_sentiment": -0.3702,
+    "options_confidence": 0.8163,
+    "options_weight": 0.7174,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.3838,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 265,
+    "options_volume": 207840,
+    "analysis_depth": "DEEP",
+    "config_rationale": "PLTR is a high-growth technology company with a volatile stock price and frequent newsflow in the tech sector. This configuration balances the need for momentum tracking with a relatively short decay period to capture sudden changes, while also considering the impact of institutional trading."
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.959,
+    "metrics": {
+      "avg_iv": 0.9797,
+      "iv_skew": -0.09748519273715898,
+      "pcr_volume": 1.005
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "legal_issues",
+        "category": "LEGAL",
+        "timestamp": "2025-12-12T19:24:54+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.664,
+        "impact_score": 0.188,
+        "title": "Palantir Stock Is Falling -- The Lawsuit Is a Growing Pain - Yahoo Finance",
+        "matches": 1
+      },
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-12T16:52:08+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.537,
+        "impact_score": 0.161,
+        "title": "Forget Palantir, This ‘Strong Buy’ AI Stock Beats PLTR on Value - Yahoo Finance",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-12T13:48:32+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.38,
+        "impact_score": 0.127,
+        "title": "Palantir Stock (PLTR) News Today: Navy ShipOS Deal, Lawsuit Escalation, and 2026 Forecasts (Dec. 12, 2025) - ts2.tech",
+        "matches": 1
+      },
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2025-12-11T20:26:29+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Palantir sues former employees, says Percepta AI CEO set out to 'pillage' top developers - CNBC",
+        "matches": 1
+      }
+    ],
+    "count": 4,
+    "most_recent": {
+      "type": "legal_issues",
+      "category": "LEGAL",
+      "timestamp": "2025-12-12T19:24:54+00:00",
+      "confidence": 0.333,
+      "sentiment": -0.664,
+      "impact_score": 0.188,
+      "title": "Palantir Stock Is Falling -- The Lawsuit Is a Growing Pain - Yahoo Finance",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "CORPORATE_ACTION",
+      "FINANCIAL",
+      "LEGAL",
+      "MANAGEMENT"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.469,
+    "sentiment_volatility": 0.377,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "💡 PLTR's sentiment metrics suggest a relatively stable market sentiment with some caution.\n\nKey insight: Despite a negative final sentiment, the Sharpe Ratio indicates that this bearishness is risk-adjusted and not excessively pessimistic. The Volatility Sentiment is also relatively low, indicating a stable environment.\n\nAction recommendation: Hold your position with moderate conviction (0.3) as the market sentiment suggests some stability, but be cautious of potential acceleration or unexpected changes in momentum."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

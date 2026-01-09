@@ -1,0 +1,172 @@
+{
+  "ticker": "XOM",
+  "timestamp": "2026-01-03T02:55:00.102493",
+  "final_sentiment_score": 0.2414,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2313,
+  "smart_money_factor": 0.1431,
+  "components": {
+    "news_sentiment": 0.009,
+    "news_confidence": 0.5,
+    "news_weight": 0.2307,
+    "options_sentiment": 0.55,
+    "options_confidence": 1.0,
+    "options_weight": 0.622,
+    "analyst_sentiment": 0.3461,
+    "analyst_confidence": 0.3833,
+    "analyst_weight": 0.1474,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.2937,
+    "opportunity_score": 0,
+    "interpretation": "\ud83e\udd1d Consensus - Nouvelles et march\u00e9s s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 22,
+    "options_volume": 75611,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "XOM est une compagnie p\u00e9troli\u00e8re avec des nouvelles fr\u00e9quentes et un volume important d'options, ce qui n\u00e9cessite une r\u00e9activit\u00e9 \u00e0 la volatilit\u00e9 et aux mouvements de march\u00e9.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 2.22222,
+    "recommendation_count": 25,
+    "recommendation_summary": "Buy consensus (Mean: 2.2)",
+    "recommendation_score": 0.389,
+    "target_mean": 131.56,
+    "target_median": 129.0,
+    "current_price": 122.65,
+    "upside_potential": 0.07264573991031387,
+    "price_target_score": 0.144,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 0.825,
+      "pt": 0.175,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0.949,
+      "price_target": 0.201,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "MODERATE_VOLATILITY",
+    "sub_regime": "RISING",
+    "confidence": 0.7,
+    "metrics": {
+      "avg_iv": 0.45765,
+      "iv_skew": 0.013418389793224801,
+      "pcr_volume": 0.45
+    },
+    "implications": "\ud83d\udcc8 TENSION MONTANTE - Nervosit\u00e9 croissante. Surveiller pour escalade.",
+    "signal_adjustment": -0.05,
+    "recommendation": "Augmenter prudence. R\u00e9duire taille positions. Surveiller \u00e9volution."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2026-01-02T10:35:09+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.919,
+        "impact_score": 0.276,
+        "title": "Smith Salley Wealth Management Boosts Stock Position in Exxon Mobil Corporation $XOM - MarketBeat",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-31T17:45:23+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.71,
+        "impact_score": 0.118,
+        "title": "Resilient Demand and Strategic Upgrades Drive XOM's Refining Success - The Globe and Mail",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-30T08:46:13+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.029,
+        "impact_score": 0.01,
+        "title": "Exxon Mobil Corporation $XOM Shares Acquired by Apollon Wealth Management LLC - MarketBeat",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2026-01-02T10:35:09+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.919,
+      "impact_score": 0.276,
+      "title": "Smith Salley Wealth Management Boosts Stock Position in Exxon Mobil Corporation $XOM - MarketBeat",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "\u2713 Catalyseurs mineurs. Impact limit\u00e9 sur tendance globale. | Biais POSITIF des catalyseurs.",
+    "categories_present": [
+      "ANALYST",
+      "FINANCIAL",
+      "CORPORATE_ACTION"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.367,
+    "sentiment_volatility": 0.491,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "**\ud83d\udcca\ufe0f L'analyse de XOM sugg\u00e8re une performance moyenne avec un sentiment stabilis\u00e9.**\n** | ** HOLD (aucune r\u00e9vision des strat\u00e9gies)**\n\nLes m\u00e9triques de sentiment indiquent une Sharpe Ratio en dessous du seuil de 0,4 et une volatilit\u00e9 sentimentale \u00e9lev\u00e9e \u00e0 0,49, ce qui sugg\u00e8re un march\u00e9 instable. En revanche, l'acc\u00e9l\u00e9ration de la vitesse est nulle, ce qui signifie que le march\u00e9 a atteint un plateau. Les autres indicateurs, comme le score contrariant et la constance, sont \u00e9galement neutres, ce qui renforce cette analyse. La classification reste \u00e0 HOLD sans r\u00e9vision des strat\u00e9gies."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "SMART_MONEY",
+      "icon": "\ud83d\udcb0",
+      "title": "SMART MONEY ACTIF",
+      "message": "D\u00e9tection d'activit\u00e9 institutionnelle (score: 0.143). Open Interest sugg\u00e8re positionnement de gros joueurs.",
+      "action": "Analyser leurs positions. Ils ont souvent raison \u00e0 moyen terme.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "\u26a0\ufe0f",
+      "title": "Donn\u00e9es Limit\u00e9es",
+      "message": "Seulement 22 articles analys\u00e9s. Confiance r\u00e9duite.",
+      "action": "Attendre plus de donn\u00e9es ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ],
+  "options_detail": {
+    "timestamp": "2026-01-03T01:48:45.918827",
+    "call_volume": 52136,
+    "put_volume": 23475,
+    "call_open_interest": 290563,
+    "put_open_interest": 224250,
+    "put_call_ratio_volume": 0.45,
+    "put_call_ratio_oi": 0.772,
+    "call_implied_volatility": 0.4546,
+    "put_implied_volatility": 0.4607,
+    "sentiment_label": "bullish",
+    "sentiment_score": 0.55,
+    "total_contracts": 75611,
+    "total_open_interest": 514813,
+    "near_term_call_volume": 37681,
+    "far_term_call_volume": 14455,
+    "near_term_put_volume": 18215,
+    "far_term_put_volume": 5260
+  }
+}

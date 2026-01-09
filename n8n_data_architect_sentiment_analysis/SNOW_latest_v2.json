@@ -1,0 +1,135 @@
+{
+  "ticker": "SNOW",
+  "timestamp": "2025-12-14T18:37:59.051569",
+  "final_sentiment_score": 0.3423,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.4077,
+  "smart_money_factor": 0.15,
+  "components": {
+    "news_sentiment": 0.0365,
+    "news_confidence": 0.5782,
+    "news_weight": 0.3053,
+    "options_sentiment": 0.3328,
+    "options_confidence": 0.8772,
+    "options_weight": 0.6947,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.2963,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 165,
+    "options_volume": 57840,
+    "analysis_depth": "DEEP",
+    "config_rationale": "SNOW is a volatile tech company with high growth expectations, requiring a moderate decay rate and a higher threshold to capture significant sentiment shifts."
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.772,
+    "metrics": {
+      "avg_iv": 0.88625,
+      "iv_skew": -0.19592875318066158,
+      "pcr_volume": 0.438
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-12T10:45:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.38,
+        "impact_score": 0.114,
+        "title": "Prediction: This Artificial Intelligence (AI) Stock Could Beat Palantir in 2026. Now Is a Great Time to Buy It Hand Over Fist - The Motley Fool",
+        "matches": 1
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-11T09:38:59+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.197,
+        "impact_score": 0.046,
+        "title": "Snowflake launches AI platform for Japan enterprises - Digital Watch Observatory",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-11T13:42:09+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.197,
+        "impact_score": 0.033,
+        "title": "Snowflake and AWS: Accelerating Enterprise Data and AI Adoption - Snowflake",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-12T19:13:45+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Snowflake Stock (SNOW) News Today: Q3 Earnings, Anthropic AI Deal, Analyst Price Targets and 2026 Outlook (Dec. 12, 2025) - ts2.tech",
+        "matches": 1
+      }
+    ],
+    "count": 4,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2025-12-12T10:45:00+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.38,
+      "impact_score": 0.114,
+      "title": "Prediction: This Artificial Intelligence (AI) Stock Could Beat Palantir in 2026. Now Is a Great Time to Buy It Hand Over Fist - The Motley Fool",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "CORPORATE_ACTION",
+      "ANALYST",
+      "PRODUCT",
+      "FINANCIAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 1.421,
+    "sentiment_volatility": 0.301,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "🔥 High-conviction trade possible! | Focus on buying SNOW with a long-term perspective, leveraging the strong Sharpe Ratio and sentiment momentum.\n\nOr:\n\n❓ Mixed signals, but trending up | Monitor the Consistency metric to confirm a stable trend, then consider buying SNOW for the long haul."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "SMART_MONEY",
+      "icon": "💰",
+      "title": "SMART MONEY ACTIF",
+      "message": "Détection d'activité institutionnelle (score: 0.150). Open Interest suggère positionnement de gros joueurs.",
+      "action": "Analyser leurs positions. Ils ont souvent raison à moyen terme.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "ticker": "BAC",
+  "timestamp": "2026-01-03T01:25:04.800949",
+  "final_sentiment_score": 0.0729,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": -0.0056,
+    "news_confidence": 0.5,
+    "news_weight": 0.5751,
+    "options_sentiment": 0,
+    "options_confidence": 0,
+    "options_weight": 0.0,
+    "analyst_sentiment": 0.5322,
+    "analyst_confidence": 0.4432,
+    "analyst_weight": 0.4249,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0056,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 20,
+    "options_volume": 0,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "BAC présente une volatilité typique moyenne et des nouvelles qui sont essentiellement financières, donc le modèle est ajusté pour une réactivité modérée aux changements de sentiment.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.6,
+    "recommendation_count": 24,
+    "recommendation_summary": "Buy consensus (Mean: 1.6)",
+    "recommendation_score": 0.7,
+    "target_mean": 59.64583,
+    "target_median": 59.25,
+    "current_price": 55.95,
+    "upside_potential": 0.06605594280607674,
+    "price_target_score": 0.131,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 0.705,
+      "pt": 0.295,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0.937,
+      "price_target": 0.392,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "UNKNOWN",
+    "confidence": 0.0,
+    "implications": "Données insuffisantes pour déterminer le régime"
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-16T08:00:00+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.921,
+        "impact_score": 0.276,
+        "title": "Bank of America (BAC) Target Cut at Morgan Stanley on Earnings Revisions - Yahoo Finance",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2026-01-01T11:58:50+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.03,
+        "impact_score": 0.01,
+        "title": "Analysts Offer Insights on Financial Companies: Robinhood (HOOD) and Bank of America (BAC) - The Globe and Mail",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2026-01-01T11:58:50+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.03,
+        "impact_score": 0.005,
+        "title": "Analysts Offer Insights on Financial Companies: Robinhood (HOOD) and Bank of America (BAC) - The Globe and Mail",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2025-12-16T08:00:00+00:00",
+      "confidence": 0.333,
+      "sentiment": -0.921,
+      "impact_score": 0.276,
+      "title": "Bank of America (BAC) Target Cut at Morgan Stanley on Earnings Revisions - Yahoo Finance",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "FINANCIAL",
+      "ANALYST",
+      "CORPORATE_ACTION"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": -0.331,
+    "sentiment_volatility": 0.338,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "**📉 Méthode de détection des opportunités de trading émotionnel** | **Évitez les actions à court terme, attendez une stabilisation du sentiment.**\n\nLa métrique de contrarian score indique qu'il n'y a pas d'opportunité forte pour trader sur BAC, ce qui suggère que l'on ne devrait pas fortement investir ou vendre en fonction de ces données.\n\nCette indication est renforcée par les niveaux faibles du sentiment final (0.0729), de la consistance (0.0) et des valeurs négatives de Sharpe Ratio (-0.331) et Accélération Momentum (0.0).\n\nIl est conseillé aux traders d'attendre une stabilisation ou un changement significatif dans ces métriques avant de prendre une décision."
+  },
+  "alerts": [
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "😨",
+      "title": "Asymétrie de Peur Détectée",
+      "message": "Marché surréagit aux mauvaises nouvelles. Possible capitulation ou opportunité contrarian.",
+      "action": "Opportunité d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 20 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

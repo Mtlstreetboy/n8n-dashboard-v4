@@ -1,0 +1,133 @@
+{
+  "ticker": "MSFT",
+  "timestamp": "2025-12-14T20:29:39.129281",
+  "final_sentiment_score": 0.276,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.1832,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0217,
+    "news_confidence": 0.5676,
+    "news_weight": 0.2801,
+    "options_sentiment": 0.0899,
+    "options_confidence": 0.7872,
+    "options_weight": 0.5828,
+    "analyst_sentiment": 0.8571,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.1371,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0682,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 480,
+    "options_volume": 134233,
+    "analysis_depth": "DEEP",
+    "config_rationale": "As a technology company, MSFT is influenced by tech news and trends. The decay halflife is moderate to reflect the relatively stable growth of the company. The momentum window is longer due to the slow and steady increase in sentiment over time. Volatility penalty is moderate as MSFT has exhibited relatively low volatility compared to some other tech stocks.",
+    "version": "V3"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.28571,
+    "recommendation_count": 52,
+    "recommendation_summary": "Strong Buy consensus (Mean: 1.3)",
+    "recommendation_score": 0.857,
+    "target_mean": 625.4096,
+    "target_median": 634.15,
+    "current_price": 478.53,
+    "upside_potential": 0.3069391678682632,
+    "price_target_score": 0.547,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.154,
+    "metrics": {
+      "avg_iv": 0.57715,
+      "iv_skew": -0.14331671224063064,
+      "pcr_volume": 0.673
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "legal_issues",
+        "category": "LEGAL",
+        "timestamp": "2025-12-12T14:55:00+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.38,
+        "impact_score": 0.108,
+        "title": "OpenAI, Microsoft Face Lawsuit in Case Alleging ChatGPT Drove Man to Commit Murder-Suicide - Law.com",
+        "matches": 1
+      },
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2025-12-14T06:57:11+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Microsoft AI CEO Slams Exorbitant Pay Packages As Meta Escalates Talent War - Benzinga",
+        "matches": 1
+      }
+    ],
+    "count": 2,
+    "most_recent": {
+      "type": "legal_issues",
+      "category": "LEGAL",
+      "timestamp": "2025-12-12T14:55:00+00:00",
+      "confidence": 0.333,
+      "sentiment": -0.38,
+      "impact_score": 0.108,
+      "title": "OpenAI, Microsoft Face Lawsuit in Case Alleging ChatGPT Drove Man to Commit Murder-Suicide - Law.com",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "MANAGEMENT",
+      "LEGAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.769,
+    "sentiment_volatility": 0.353,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "📊 Here are the key insights and recommendations:\n\n**Strong Risk-Adjusted Performance**: 0.769 Sharpe Ratio indicates MSFT has a strong risk-adjusted performance, making it a good investment.\n\n**Neutral Sentiment**: Volatility Sentiment of 0.353 suggests a neutral market sentiment, neither extremely optimistic nor pessimistic.\n\n**No Clear Trend**: Accélération Momentum of 0.0 indicates no clear trend or change in momentum, implying stability rather than excitement.\n\n**Hold Recommendation**: Given the neutral sentiment and stable performance, the HOLD classification and low Conviction score (0.1832) suggest waiting for a clearer market direction before making a move.\n\nAction recommendation: **Monitor and wait for a clear signal**, as MSFT's current performance doesn't offer a compelling reason to buy or sell immediately."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

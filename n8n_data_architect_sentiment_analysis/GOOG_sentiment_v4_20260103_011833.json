@@ -1,0 +1,145 @@
+{
+  "ticker": "GOOG",
+  "timestamp": "2026-01-03T01:18:28.110063",
+  "final_sentiment_score": 0.1027,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.007,
+    "news_confidence": 0.5,
+    "news_weight": 0.6773,
+    "options_sentiment": 0,
+    "options_confidence": 0,
+    "options_weight": 0.0,
+    "analyst_sentiment": 0.7687,
+    "analyst_confidence": 0.2858,
+    "analyst_weight": 0.3227,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.007,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 20,
+    "options_volume": 0,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "GOOG est une action tech avec une volatilité typique élevée, des nouvelles fréquentes et un volume de trading d'options important. La réactivité du prix aux nouvelles justifie un déclin temporel rapide et une fenêtre de momentum moyenne.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.46269,
+    "recommendation_count": 18,
+    "recommendation_summary": "Strong Buy consensus (Mean: 1.5)",
+    "recommendation_score": 0.769,
+    "target_mean": 328.20557,
+    "target_median": 340.0,
+    "current_price": 315.32,
+    "upside_potential": 0.040865057719142554,
+    "price_target_score": 0.082,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0.857,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "UNKNOWN",
+    "confidence": 0.0,
+    "implications": "Données insuffisantes pour déterminer le régime"
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2026-01-01T15:14:37+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.812,
+        "impact_score": 0.135,
+        "title": "GOOG stock today: Analyst lifts Alphabet target to $385 as AI-search optimism kicks off 2026 - ts2.tech",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2026-01-02T10:35:04+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.045,
+        "impact_score": 0.015,
+        "title": "Permanent Capital Management LP Acquires Shares of 6,397 Alphabet Inc. $GOOG - MarketBeat",
+        "matches": 1
+      },
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2026-01-02T10:35:04+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.045,
+        "impact_score": 0.014,
+        "title": "Permanent Capital Management LP Acquires Shares of 6,397 Alphabet Inc. $GOOG - MarketBeat",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "analyst_action",
+      "category": "ANALYST",
+      "timestamp": "2026-01-01T15:14:37+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.812,
+      "impact_score": 0.135,
+      "title": "GOOG stock today: Analyst lifts Alphabet target to $385 as AI-search optimism kicks off 2026 - ts2.tech",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale. | Biais POSITIF des catalyseurs.",
+    "categories_present": [
+      "CORPORATE_ACTION",
+      "ANALYST",
+      "FINANCIAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.242,
+    "sentiment_volatility": 0.577,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Je ne peux pas fournir de conseils d'investissement spécifiques. Puis-je vous aider à comprendre les métriques que vous avez mentionnées en les reliant au contexte ?"
+  },
+  "alerts": [
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "😨",
+      "title": "Asymétrie de Peur Détectée",
+      "message": "Marché surréagit aux mauvaises nouvelles. Possible capitulation ou opportunité contrarian.",
+      "action": "Opportunité d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 20 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

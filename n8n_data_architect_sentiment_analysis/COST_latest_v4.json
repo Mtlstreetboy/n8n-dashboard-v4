@@ -1,0 +1,161 @@
+{
+  "ticker": "COST",
+  "timestamp": "2026-01-03T02:59:25.756706",
+  "final_sentiment_score": -0.1949,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.3027,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": -0.005,
+    "news_confidence": 0.5,
+    "news_weight": 0.2704,
+    "options_sentiment": -1.034,
+    "options_confidence": 1.0,
+    "options_weight": 0.5794,
+    "analyst_sentiment": 0.5278,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.1502,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.4657,
+    "opportunity_score": 0,
+    "interpretation": "\ud83e\udd1d Consensus - Nouvelles et march\u00e9s s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 20,
+    "options_volume": 45053,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "COST est une entreprise dans le secteur de l'industrie alimentaire, avec des nouvelles rares mais importantes. La volatilit\u00e9 est mod\u00e9r\u00e9e et la r\u00e9activit\u00e9 du prix aux nouvelles est importante.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.94444,
+    "recommendation_count": 31,
+    "recommendation_summary": "Buy consensus (Mean: 1.9)",
+    "recommendation_score": 0.528,
+    "target_mean": 1031.4517,
+    "target_median": 1045.0,
+    "current_price": 854.5,
+    "upside_potential": 0.207082153306027,
+    "price_target_score": 0.392,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "PANIC",
+    "confidence": 0.01,
+    "metrics": {
+      "avg_iv": 0.5051,
+      "iv_skew": -0.020768025078369796,
+      "pcr_volume": 2.034
+    },
+    "implications": "\ud83d\udea8 PANIQUE - Les traders se couvrent agressivement. Opportunit\u00e9 contrarian possible mais risqu\u00e9e.",
+    "signal_adjustment": -0.2,
+    "recommendation": "Attendre stabilisation. Si conviction forte, petites positions avec stops serr\u00e9s."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "fda_regulatory",
+        "category": "REGULATORY",
+        "timestamp": "2026-01-02T10:37:28+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.589,
+        "impact_score": 0.186,
+        "title": "Ultragenyx plans major cost-cutting push after flunking phase 3 brittle bone trials - Fierce Biotech",
+        "matches": 1
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-31T03:49:07+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.027,
+        "impact_score": 0.006,
+        "title": "Pentagon Releases Cost of Living, BAH Rates for 2026 - Air & Space Forces Magazine",
+        "matches": 1
+      }
+    ],
+    "count": 2,
+    "most_recent": {
+      "type": "fda_regulatory",
+      "category": "REGULATORY",
+      "timestamp": "2026-01-02T10:37:28+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.589,
+      "impact_score": 0.186,
+      "title": "Ultragenyx plans major cost-cutting push after flunking phase 3 brittle bone trials - Fierce Biotech",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "\u2713 Catalyseurs mineurs. Impact limit\u00e9 sur tendance globale.",
+    "categories_present": [
+      "REGULATORY",
+      "PRODUCT"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": -0.248,
+    "sentiment_volatility": 0.406,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Je ne peux pas vous fournir de conseils sur les investissements. Pour plus d\u2019informations, peut-\u00eatre que je peux vous aider \u00e0 comprendre ce que signifient ces m\u00e9triques ?"
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "\ud83c\udf2a\ufe0f",
+      "title": "R\u00c9GIME DE HAUTE VOLATILIT\u00c9",
+      "message": "\ud83d\udea8 PANIQUE - Les traders se couvrent agressivement. Opportunit\u00e9 contrarian possible mais risqu\u00e9e.",
+      "action": "Attendre stabilisation. Si conviction forte, petites positions avec stops serr\u00e9s.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "\u26a0\ufe0f",
+      "title": "Donn\u00e9es Limit\u00e9es",
+      "message": "Seulement 20 articles analys\u00e9s. Confiance r\u00e9duite.",
+      "action": "Attendre plus de donn\u00e9es ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ],
+  "options_detail": {
+    "timestamp": "2026-01-03T01:50:24.222644",
+    "call_volume": 14850,
+    "put_volume": 30203,
+    "call_open_interest": 97071,
+    "put_open_interest": 79102,
+    "put_call_ratio_volume": 2.034,
+    "put_call_ratio_oi": 0.815,
+    "call_implied_volatility": 0.5104,
+    "put_implied_volatility": 0.4998,
+    "sentiment_label": "bearish",
+    "sentiment_score": -1.034,
+    "total_contracts": 45053,
+    "total_open_interest": 176173,
+    "near_term_call_volume": 12367,
+    "far_term_call_volume": 2483,
+    "near_term_put_volume": 26503,
+    "far_term_put_volume": 3700
+  }
+}

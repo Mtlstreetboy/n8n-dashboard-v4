@@ -1,0 +1,104 @@
+{
+  "ticker": "AMZN",
+  "timestamp": "2025-12-14T18:37:19.937182",
+  "final_sentiment_score": 0.339,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.3766,
+  "smart_money_factor": 0.0614,
+  "components": {
+    "news_sentiment": 0.0311,
+    "news_confidence": 0.5633,
+    "news_weight": 0.273,
+    "options_sentiment": 0.3171,
+    "options_confidence": 1.0,
+    "options_weight": 0.727,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.2861,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 342,
+    "options_volume": 292611,
+    "analysis_depth": "DEEP",
+    "config_rationale": "AMZN is a highly volatile tech giant with frequent news and trading activity. A relatively short temporal decay halflife is needed to capture the rapid sentiment shifts, while a larger momentum window is required to smooth out the noise. The volatility penalty should be moderate to reflect the sector's typical fluctuations."
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.335,
+    "metrics": {
+      "avg_iv": 0.6676500000000001,
+      "iv_skew": -0.1363572923935799,
+      "pcr_volume": 0.469
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-13T12:41:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Amazon launches its first AI-powered ever colour Kindle Scribe: Price, availability and all you need to k - The Times of India",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-12T13:58:32+00:00",
+        "confidence": 0.667,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Amazon Stock (AMZN) News Today: EU Parcel Duty, Analyst Price Targets, and AWS AI Outlook for 2026 (Dec. 12, 2025) - ts2.tech",
+        "matches": 2
+      }
+    ],
+    "count": 2,
+    "most_recent": {
+      "type": "product_launch",
+      "category": "PRODUCT",
+      "timestamp": "2025-12-13T12:41:00+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.0,
+      "impact_score": 0.0,
+      "title": "Amazon launches its first AI-powered ever colour Kindle Scribe: Price, availability and all you need to k - The Times of India",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "ANALYST",
+      "PRODUCT"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 1.139,
+    "sentiment_volatility": 0.339,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "📊\n\n* \"Sentiment stable avec potential de dynamisme\" | HOLD or wait for market noise to settle before making a move.\n* The low Sharpe Ratio and Volatility Sentiment indicate that the sentiment is relatively stable, with some potential for volatility. The Accélération Momentum score of 0 suggests no significant changes in momentum, while the Consistance score of 0.0 indicates inconsistent behavior.\n\nAction recommandée:\n📈 HOLD or wait for market noise to settle before making a move.\n\nNote: The Score Contrarian is 0, indicating no contrarian opportunity at this time."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

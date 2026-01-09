@@ -1,0 +1,153 @@
+{
+  "ticker": "NVDA",
+  "timestamp": "2025-12-23T23:49:59.699127",
+  "final_sentiment_score": 0.4631,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.3567,
+  "smart_money_factor": 0.15,
+  "components": {
+    "news_sentiment": 0.0192,
+    "news_confidence": 0.5524,
+    "news_weight": 0.2371,
+    "options_sentiment": 0.4021,
+    "options_confidence": 1.0,
+    "options_weight": 0.6437,
+    "analyst_sentiment": 0.8359,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.1192,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.3829,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 591,
+    "options_volume": 2752516,
+    "analysis_depth": "DEEP",
+    "config_rationale": "Le ticker NVDA est une technologie volatilisante, nécessitant un decay moyen pour prendre en compte les fluctuations rapides. Le momentum_window plus longue permet de capturer les tendances à plus long terme. La pénalité de volatilité modérée reflète l'importance des mouvements brusques dans le secteur tech.",
+    "version": "V3"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.32812,
+    "recommendation_count": 57,
+    "recommendation_summary": "Strong Buy consensus (Mean: 1.3)",
+    "recommendation_score": 0.836,
+    "target_mean": 253.01825,
+    "target_median": 250.0,
+    "current_price": 189.21,
+    "upside_potential": 0.33723508271233016,
+    "price_target_score": 0.588,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 1.0,
+    "metrics": {
+      "avg_iv": 1.30685,
+      "iv_skew": -0.5754074235569847,
+      "pcr_volume": 0.452
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections. | 📞 Call skew élevé - Spéculation haussière agressive",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "legal_issues",
+        "category": "LEGAL",
+        "timestamp": "2025-12-23T10:08:29+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.134,
+        "impact_score": 0.038,
+        "title": "US Probes Nvidia’s Biggest Chip Buyer in Southeast Asia for Smuggling - Bloomberg.com",
+        "matches": 1
+      },
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2025-12-23T11:50:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.082,
+        "impact_score": 0.016,
+        "title": "Elon Musk agrees with the way Nvidia CEO Jensen Huang teaches his employees ‘how to think,’ not just what - Times of India",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-23T14:38:11+00:00",
+        "confidence": 0.667,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "NVIDIA Stock (NVDA) News Today: China H200 Export Shift, Analyst Price Targets, and 2026 Outlook (Dec. 23, 2025) - ts2.tech",
+        "matches": 2
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "legal_issues",
+      "category": "LEGAL",
+      "timestamp": "2025-12-23T10:08:29+00:00",
+      "confidence": 0.333,
+      "sentiment": -0.134,
+      "impact_score": 0.038,
+      "title": "US Probes Nvidia’s Biggest Chip Buyer in Southeast Asia for Smuggling - Bloomberg.com",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "LEGAL",
+      "MANAGEMENT",
+      "ANALYST"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.598,
+    "sentiment_volatility": 0.396,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "📊 NVDA has a **bullish sentiment** with a Sharpe Ratio of 0.598, indicating that its price movements have been relatively strong and risk-adjusted.\n\n| 💡 Insight: The market is pricing in a stable and steady growth for NVDA, suggesting it's a good holding period.\n| 📊 Action: Hold or even accumulate more shares, as the sentiment suggests a moderate upside potential."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "SMART_MONEY",
+      "icon": "💰",
+      "title": "SMART MONEY ACTIF",
+      "message": "Détection d'activité institutionnelle (score: 0.150). Open Interest suggère positionnement de gros joueurs.",
+      "action": "Analyser leurs positions. Ils ont souvent raison à moyen terme.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections. | 📞 Call skew élevé - Spéculation haussière agressive",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

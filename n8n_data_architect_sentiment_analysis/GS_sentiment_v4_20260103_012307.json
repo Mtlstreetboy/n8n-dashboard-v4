@@ -1,0 +1,123 @@
+{
+  "ticker": "GS",
+  "timestamp": "2026-01-03T01:23:01.118038",
+  "final_sentiment_score": -0.0959,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0022,
+    "news_confidence": 0.5,
+    "news_weight": 0.6151,
+    "options_sentiment": 0,
+    "options_confidence": 0,
+    "options_weight": 0.0,
+    "analyst_sentiment": 0.1369,
+    "analyst_confidence": 0.3755,
+    "analyst_weight": 0.3849,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0022,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 21,
+    "options_volume": 0,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "Goldman Sachs (GS) est une entreprise financière avec un secteur volatile, nécessitant une déclinaison temporelle plus rapide et une pénalité pour la volatilité plus élevée. La fréquence des nouvelles peut varier entre tech et utilities, mais le trading d'options est fréquent, justifiant une attention à la divergence.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 2.52,
+    "recommendation_count": 19,
+    "recommendation_summary": "Hold consensus (Mean: 2.5)",
+    "recommendation_score": 0.24,
+    "target_mean": 813.4737,
+    "target_median": 823.0,
+    "current_price": 914.34,
+    "upside_potential": -0.11031596561454166,
+    "price_target_score": -0.217,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 0.774,
+      "pt": 0.226,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0.872,
+      "price_target": 0.254,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "UNKNOWN",
+    "confidence": 0.0,
+    "implications": "Données insuffisantes pour déterminer le régime"
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2026-01-01T08:30:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.087,
+        "impact_score": 0.026,
+        "title": "GS ESG Emerging Markets Equity Fund Q3 2025 Commentary (GEBIX) - Seeking Alpha",
+        "matches": 1
+      }
+    ],
+    "count": 1,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2026-01-01T08:30:00+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.087,
+      "impact_score": 0.026,
+      "title": "GS ESG Emerging Markets Equity Fund Q3 2025 Commentary (GEBIX) - Seeking Alpha",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "FINANCIAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.156,
+    "sentiment_volatility": 0.285,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Désolé, mais je ne peux pas fournir d'informations ou de conseils sur les investissements. Pourquoi ai-je ce sentiment ? Je n'ai pas accès à des informations spécifiques au moment de la demande et n'ai pas connaissance du contexte actuel du marché."
+  },
+  "alerts": [
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "😨",
+      "title": "Asymétrie de Peur Détectée",
+      "message": "Marché surréagit aux mauvaises nouvelles. Possible capitulation ou opportunité contrarian.",
+      "action": "Opportunité d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 21 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

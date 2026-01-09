@@ -23,11 +23,13 @@ import glob
 from datetime import datetime
 
 # Output dir setup
-if os.path.exists('/data/sentiment_analysis'):
+# Output dir setup
+if sys.platform != 'win32' and os.path.exists('/data/sentiment_analysis'):
     OUTPUT_DIR = '/data/sentiment_analysis'
 else:
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    project_root = os.path.dirname(os.path.dirname(current_dir))
+    # Windows Local environment - Force path relative to project root based on SCRIPT location
+    # Script is in prod/analysis/analyze_all_sentiment.py -> Root is ../..
+    project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     OUTPUT_DIR = os.path.join(project_root, 'local_files', 'sentiment_analysis')
 
 def analyze_all_companies():
@@ -56,24 +58,55 @@ def analyze_all_companies():
                 cmd = ['python3', '/data/scripts/advanced_sentiment_engine_v4.py', ticker]
                 cwd = '/data/scripts'
             else:
-                # Windows Local environment
-                current_dir = os.path.dirname(os.path.abspath(__file__))
-                script_path = os.path.join(current_dir, 'advanced_sentiment_engine_v4.py')
-                cmd = [sys.executable, script_path, ticker]
-                cwd = current_dir
+                # Windows Local environment - use absolute path
+                script_dir = os.path.dirname(os.path.abspath(__file__))
+                engine_path = os.path.join(script_dir, 'advanced_sentiment_engine_v4.py')
+                cmd = [sys.executable, engine_path, ticker]
+                
+                # Pass --no-llm if present in parent args
+                if '--no-llm' in sys.argv:
+                    cmd.append('--no-llm')
+                
+                cwd = os.getcwd()
 
-            # Lancer l'analyse avec sortie en temps réel (V4 DUEL BRAIN)
-            result = subprocess.run(
-                cmd,
-                capture_output=False,
-                timeout=300, # Augmenté pour V4 (chargement modèles)
-                env=os.environ.copy(), # Hériter de l'environnement actuel
-                cwd=cwd
-            )
+            # SMART CACHE CHECK (User request: skip < 7 days)
+            should_run = True
+            latest_file = os.path.join(OUTPUT_DIR, f"{ticker}_latest_v4.json")
             
-            if result.returncode != 0:
-                print(f"  [!] Erreur execution (code {result.returncode})")
-                continue
+            if os.path.exists(latest_file) and '--force' not in sys.argv:
+                try:
+                    with open(latest_file, 'r', encoding='utf-8') as f:
+                        cached_data = json.load(f)
+                        ts_str = cached_data.get('timestamp')
+                        if ts_str:
+                            last_run = datetime.fromisoformat(ts_str) if 'T' in ts_str else datetime.now()
+                            age_days = (datetime.now() - last_run).days
+                            
+                            if age_days < 7:
+                                print(f"  ⚡ [CACHE] Skip analyse (Données récentes: {age_days} jours < 7. Use --force to override)")
+                                should_run = False
+                                
+                                # Add to results for potential consolidated report
+                                results.append(cached_data) 
+                except Exception:
+                    pass # Force analysis on error
+
+            if should_run:
+                # Lancer l'analyse avec sortie en temps réel (V4 DUEL BRAIN)
+                result = subprocess.run(
+                    cmd,
+                    capture_output=False,
+                    timeout=300, # Augmenté pour V4 (chargement modèles)
+                    env=os.environ.copy(), # Hériter de l'environnement actuel
+                    cwd=cwd
+                )
+                
+                if result.returncode != 0:
+                    print(f"  [!] Erreur execution (code {result.returncode})")
+                    continue
+            else:
+                # If skipped, ensure we consider it a success for the loop's continuation
+                pass
             
             # Charger le fichier _latest_v4.json cr???? par advanced_sentiment_engine_v4.py
             latest_file = os.path.join(OUTPUT_DIR, f"{ticker}_latest_v4.json")
@@ -183,8 +216,26 @@ def generate_consolidated_report(results):
     
     with open(json_file, 'w') as f:
         json.dump(consolidated, f, indent=2)
-    
+
     print(f"[EXPORT] JSON: {json_file}")
+
+    # [NEW] Export specific for Dashboard V4 (Dict format, prod/dashboard)
+    # Format expected by dashboard: { "TICKER": { ... }, ... }
+    dashboard_data = {r['ticker']: r for r in results}
+    
+    # Determine dashboard path (assuming standard structure)
+    # script is in prod/analysis, dashboard is in prod/dashboard
+    # we can use relative path or hardcoded based on known structure
+    dashboard_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'dashboard')
+    
+    if os.path.exists(dashboard_dir):
+        dashboard_file = os.path.join(dashboard_dir, 'consolidated_sentiment_data.json')
+        with open(dashboard_file, 'w', encoding='utf-8') as f:
+            json.dump(dashboard_data, f, indent=2)
+        print(f"[EXPORT] DASHBOARD DATA: {dashboard_file}")
+    else:
+        print(f"[!] Dashboard directory not found: {dashboard_dir}")
+
     print("="*80 + "\n")
 
 if __name__ == "__main__":

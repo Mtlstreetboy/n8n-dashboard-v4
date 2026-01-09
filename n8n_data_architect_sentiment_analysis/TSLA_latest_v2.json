@@ -1,0 +1,104 @@
+{
+  "ticker": "TSLA",
+  "timestamp": "2025-12-14T18:37:31.205337",
+  "final_sentiment_score": 0.0955,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.3,
+  "smart_money_factor": 0.0836,
+  "components": {
+    "news_sentiment": 0.0141,
+    "news_confidence": 0.4651,
+    "news_weight": 0.2367,
+    "options_sentiment": -0.0103,
+    "options_confidence": 1.0,
+    "options_weight": 0.7633,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0244,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 284,
+    "options_volume": 1525739,
+    "analysis_depth": "DEEP",
+    "config_rationale": "TSLA est une action très volatile et sujette à des fluctuations rapides en réponse aux nouvelles. Il est donc important de prendre en compte la décroissance temporelle rapide pour ne pas être influencé par les bruits de fond et d'ajouter un penalty de volatilité pour réduire l'impact des mouvements à court terme."
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 1.0,
+    "metrics": {
+      "avg_iv": 1.0423,
+      "iv_skew": 0.022901504124211613,
+      "pcr_volume": 0.701
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-12T22:16:55+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.38,
+        "impact_score": 0.114,
+        "title": "How Rivian Is Trying to Beat Tesla to the First AI Car - Heatmap News",
+        "matches": 1
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-13T08:13:23+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "2025.44.25.5 (FSD 14.2.1.25) Official Tesla Release Notes - Software Updates - Not a Tesla App",
+        "matches": 1
+      }
+    ],
+    "count": 2,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2025-12-12T22:16:55+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.38,
+      "impact_score": 0.114,
+      "title": "How Rivian Is Trying to Beat Tesla to the First AI Car - Heatmap News",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "PRODUCT",
+      "FINANCIAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.572,
+    "sentiment_volatility": 0.326,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "💡 The Sharpe Ratio of 0.572 suggests that the sentiment is generally positive and risk-adjusted, indicating a relatively strong upward trend.\n\n🔄 However, the Volatility Sentiment of 0.326 indicates that the market is still somewhat chaotic, which may make it challenging to pinpoint exact entry or exit points.\n\n💡 Given the low Accélération Momentum (0) and Consistance (0.0), there is no clear indication of a strong change in sentiment or momentum, which might be a neutral factor for traders.\n\n📊 Overall, considering the Score Contrarian (0), Conviction (0.3), and Sentiment Final (0.0955), it seems that the market is not overly bullish or bearish, and a HOLD recommendation is reasonable.\n\nFor traders, this analysis suggests:\n\n* Be cautious of entry points due to market volatility.\n* Consider holding or waiting for clearer signals rather than making strong bets.\n* Monitor sentiment and momentum metrics closely for any potential changes."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

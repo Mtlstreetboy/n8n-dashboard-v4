@@ -1,0 +1,137 @@
+{
+  "ticker": "INTC",
+  "timestamp": "2025-12-14T18:38:22.659697",
+  "final_sentiment_score": 0.1259,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.1423,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0209,
+    "news_confidence": 0.4717,
+    "news_weight": 0.2799,
+    "options_sentiment": 0.0278,
+    "options_confidence": 0.8091,
+    "options_weight": 0.7201,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0068,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 191,
+    "options_volume": 186540,
+    "analysis_depth": "DEEP",
+    "config_rationale": "INTC is a tech company with moderate volatility, relatively stable price movements and institutional investors playing a significant role in its trading dynamics."
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.919,
+    "metrics": {
+      "avg_iv": 0.9597,
+      "iv_skew": -0.17790013290298073,
+      "pcr_volume": 0.732
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-11T23:48:23+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.664,
+        "impact_score": 0.199,
+        "title": "Texas Instruments, Intel Corporation microchips in Russian missiles, lawsuits say - Axios",
+        "matches": 1
+      },
+      {
+        "type": "legal_issues",
+        "category": "LEGAL",
+        "timestamp": "2025-12-11T23:48:23+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.664,
+        "impact_score": 0.188,
+        "title": "Texas Instruments, Intel Corporation microchips in Russian missiles, lawsuits say - Axios",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-13T16:31:56+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Intel Nears $1.6 Billion Deal for AI Chip Startup SambaNova - TradeAlgo",
+        "matches": 1
+      },
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2025-12-11T14:32:45+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Intel Stock (INTC) Outlook 2026: AI Deals, CEO Scrutiny and Price Targets After a 100% Rally - ts2.tech",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-11T14:32:45+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Intel Stock (INTC) Outlook 2026: AI Deals, CEO Scrutiny and Price Targets After a 100% Rally - ts2.tech",
+        "matches": 1
+      }
+    ],
+    "count": 5,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2025-12-11T23:48:23+00:00",
+      "confidence": 0.333,
+      "sentiment": -0.664,
+      "impact_score": 0.199,
+      "title": "Texas Instruments, Intel Corporation microchips in Russian missiles, lawsuits say - Axios",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "CORPORATE_ACTION",
+      "ANALYST",
+      "MANAGEMENT",
+      "FINANCIAL",
+      "LEGAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.778,
+    "sentiment_volatility": 0.345,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "🔓 INTC's quantitative sentiment analysis suggests:\n\n**Stable but underperforming**: Sharpe Ratio indicates a good risk-adjusted performance, while Volatility Sentiment shows moderate stability. However, the Acceleration Momentum is flat, indicating no significant change in trend. This might be an opportunity to buy or hold.\n\n**Recommendation:** Hold or consider buying INTC for its stable and relatively strong risk-adjusted performance, but with caution due to the lack of momentum and potential underperformance.\n\n(Note: As a quantitative analyst, my insights are based solely on the provided metrics and do not take into account fundamental analysis or external market conditions.)"
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

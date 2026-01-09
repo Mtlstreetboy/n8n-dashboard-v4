@@ -1,0 +1,190 @@
+{
+  "ticker": "CSCO",
+  "timestamp": "2026-01-03T02:56:58.725808",
+  "final_sentiment_score": 0.3226,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2927,
+  "smart_money_factor": 0.15,
+  "components": {
+    "news_sentiment": -0.001,
+    "news_confidence": 0.5,
+    "news_weight": 0.2688,
+    "options_sentiment": 0.762,
+    "options_confidence": 1.0,
+    "options_weight": 0.7115,
+    "analyst_sentiment": 0.2422,
+    "analyst_confidence": 0.044,
+    "analyst_weight": 0.0197,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "bullish_divergence",
+    "magnitude": 0.539,
+    "opportunity_score": 0.6468,
+    "interpretation": "\ud83d\udc02 BULLISH DIVERGENCE (force: 0.54) - Le march\u00e9 ach\u00e8te malgr\u00e9 les mauvaises nouvelles. Smart money voit une opportunit\u00e9. Signal d'achat potentiel."
+  },
+  "metadata": {
+    "news_articles_count": 24,
+    "options_volume": 61665,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "CSCO est une valeur technologique avec des nouvelles fr\u00e9quentes, n\u00e9cessitant un temps de d\u00e9cay mod\u00e9r\u00e9 et une grande r\u00e9activit\u00e9 au sentiment.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": null,
+    "recommendation_count": 21,
+    "recommendation_summary": "Insufficient data",
+    "recommendation_score": 0,
+    "target_mean": 85.43381,
+    "target_median": 86.0,
+    "current_price": 76.04,
+    "upside_potential": 0.12353774329300352,
+    "price_target_score": 0.242,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 0.0,
+      "pt": 1.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0,
+      "price_target": 0.132,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.011,
+    "metrics": {
+      "avg_iv": 0.5055000000000001,
+      "iv_skew": 0.054878048780487854,
+      "pcr_volume": 0.238
+    },
+    "implications": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2026-01-02T22:55:14+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.95,
+        "impact_score": 0.285,
+        "title": "Cisco Systems (NASDAQ:CSCO) Stock Price Down 1.3% - Time to Sell? - MarketBeat",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-29T14:15:09+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.084,
+        "impact_score": 0.014,
+        "title": "Why Analysts Are Split on Cisco Systems, Inc. (CSCO) - Yahoo Finance",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2026-01-02T10:08:31+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.035,
+        "impact_score": 0.012,
+        "title": "First Pacific Financial Acquires 16,472 Shares of Cisco Systems, Inc. $CSCO - MarketBeat",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2026-01-02T22:55:14+00:00",
+      "confidence": 0.333,
+      "sentiment": -0.95,
+      "impact_score": 0.285,
+      "title": "Cisco Systems (NASDAQ:CSCO) Stock Price Down 1.3% - Time to Sell? - MarketBeat",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "\u2713 Catalyseurs mineurs. Impact limit\u00e9 sur tendance globale. | Biais N\u00c9GATIF des catalyseurs.",
+    "categories_present": [
+      "FINANCIAL",
+      "CORPORATE_ACTION",
+      "ANALYST"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": -0.034,
+    "sentiment_volatility": 0.577,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "\ud83d\udcca Voici les insights cl\u00e9s :\n\n **Faible sentiment et volatilit\u00e9** : La Sharpe Ratio n\u00e9gative (-0,034) sugg\u00e8re un sentiment mitig\u00e9. De m\u00eame, la Volatilit\u00e9 Sentiment \u00e9lev\u00e9e (0,577) indique que le march\u00e9 est en \u00e9tat de grande agitation. Cela peut \u00eatre une opportunit\u00e9 pour les traders \u00e0 moyen et long terme.\n\n **P\u00e9rennit\u00e9 et incoh\u00e9rence** : Le Consistance basse (0,0) implique une faible coh\u00e9rence dans les donn\u00e9es sentimentales, ce qui signifie que le trader devra rester vigilant et s'adapter rapidement aux changements du march\u00e9."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "DIVERGENCE",
+      "icon": "\ud83d\udea8",
+      "title": "DIVERGENCE MAJEURE D\u00c9TECT\u00c9E",
+      "message": "\ud83d\udc02 BULLISH DIVERGENCE (force: 0.54) - Le march\u00e9 ach\u00e8te malgr\u00e9 les mauvaises nouvelles. Smart money voit une opportunit\u00e9. Signal d'achat potentiel.",
+      "action": "\u2705 OPPORTUNIT\u00c9 D'ACHAT potentielle. Smart money accumule malgr\u00e9 sentiment n\u00e9gatif. Entrer graduellement.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "HIGH",
+      "type": "SMART_MONEY",
+      "icon": "\ud83d\udcb0",
+      "title": "SMART MONEY ACTIF",
+      "message": "D\u00e9tection d'activit\u00e9 institutionnelle (score: 0.150). Open Interest sugg\u00e8re positionnement de gros joueurs.",
+      "action": "Analyser leurs positions. Ils ont souvent raison \u00e0 moyen terme.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "\ud83c\udf2a\ufe0f",
+      "title": "R\u00c9GIME DE HAUTE VOLATILIT\u00c9",
+      "message": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "\u26a0\ufe0f",
+      "title": "Donn\u00e9es Limit\u00e9es",
+      "message": "Seulement 24 articles analys\u00e9s. Confiance r\u00e9duite.",
+      "action": "Attendre plus de donn\u00e9es ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ],
+  "options_detail": {
+    "timestamp": "2026-01-03T01:49:32.090497",
+    "call_volume": 49817,
+    "put_volume": 11848,
+    "call_open_interest": 272015,
+    "put_open_interest": 321521,
+    "put_call_ratio_volume": 0.238,
+    "put_call_ratio_oi": 1.182,
+    "call_implied_volatility": 0.492,
+    "put_implied_volatility": 0.519,
+    "sentiment_label": "bullish",
+    "sentiment_score": 0.762,
+    "total_contracts": 61665,
+    "total_open_interest": 593536,
+    "near_term_call_volume": 44727,
+    "far_term_call_volume": 5090,
+    "near_term_put_volume": 9761,
+    "far_term_put_volume": 2087
+  }
+}

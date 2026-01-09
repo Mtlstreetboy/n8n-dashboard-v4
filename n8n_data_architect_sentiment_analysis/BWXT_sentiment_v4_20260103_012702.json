@@ -1,0 +1,123 @@
+{
+  "ticker": "BWXT",
+  "timestamp": "2026-01-03T01:26:56.763064",
+  "final_sentiment_score": -0.1415,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0014,
+    "news_confidence": 0.5,
+    "news_weight": 0.9824,
+    "options_sentiment": 0,
+    "options_confidence": 0,
+    "options_weight": 0.0,
+    "analyst_sentiment": 0.4078,
+    "analyst_confidence": 0.0107,
+    "analyst_weight": 0.0176,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0014,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 16,
+    "options_volume": 0,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "BWXT est une compagnie utilities avec des nouvelles fréquentes et un volume important d'options. La volatilité est typiquement plus élevée dans ce secteur, justifiant un ajustement de la temporal decay et du volatility penalty.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": null,
+    "recommendation_count": 9,
+    "recommendation_summary": "Insufficient data",
+    "recommendation_score": 0,
+    "target_mean": 221.22221,
+    "target_median": 225.0,
+    "current_price": 181.85,
+    "upside_potential": 0.21650926587847125,
+    "price_target_score": 0.408,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 0.0,
+      "pt": 1.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0,
+      "price_target": 0.032,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "UNKNOWN",
+    "confidence": 0.0,
+    "implications": "Données insuffisantes pour déterminer le régime"
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-29T13:00:25+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.931,
+        "impact_score": 0.279,
+        "title": "Voya Investment Management LLC Reduces Position in BWX Technologies, Inc. $BWXT - MarketBeat",
+        "matches": 1
+      }
+    ],
+    "count": 1,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2025-12-29T13:00:25+00:00",
+      "confidence": 0.333,
+      "sentiment": -0.931,
+      "impact_score": 0.279,
+      "title": "Voya Investment Management LLC Reduces Position in BWX Technologies, Inc. $BWXT - MarketBeat",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale. | Biais NÉGATIF des catalyseurs.",
+    "categories_present": [
+      "FINANCIAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.076,
+    "sentiment_volatility": 0.353,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Je ne peux pas fournir d’analyses ou de conseils financiers. Il me semble qu’une analyse plus approfondie serait nécessaire pour comprendre pleinement ces métriques."
+  },
+  "alerts": [
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "😨",
+      "title": "Asymétrie de Peur Détectée",
+      "message": "Marché surréagit aux mauvaises nouvelles. Possible capitulation ou opportunité contrarian.",
+      "action": "Opportunité d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 16 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

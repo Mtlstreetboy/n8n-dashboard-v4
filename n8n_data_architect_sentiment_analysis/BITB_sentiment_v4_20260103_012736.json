@@ -1,0 +1,101 @@
+{
+  "ticker": "BITB",
+  "timestamp": "2026-01-03T01:27:26.167579",
+  "final_sentiment_score": -0.1537,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": -0.0037,
+    "news_confidence": 0.5,
+    "news_weight": 1.0,
+    "options_sentiment": 0,
+    "options_confidence": 0,
+    "options_weight": 0.0,
+    "analyst_sentiment": 0,
+    "analyst_confidence": 0.0,
+    "analyst_weight": 0.0,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0037,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 18,
+    "options_volume": 0,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "BITB呈现技术波动性，需要快速反应市场变化和情绪。",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": null,
+    "recommendation_count": 0,
+    "recommendation_summary": "Insufficient data",
+    "recommendation_score": 0,
+    "target_mean": null,
+    "target_median": null,
+    "current_price": 48.8,
+    "upside_potential": null,
+    "price_target_score": 0,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 0.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0,
+      "price_target": 0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "UNKNOWN",
+    "confidence": 0.0,
+    "implications": "Données insuffisantes pour déterminer le régime"
+  },
+  "catalysts": {
+    "catalysts_detected": [],
+    "count": 0,
+    "most_recent": null,
+    "impact_assessment": "NO_CATALYSTS",
+    "recommendation": "Pas de catalyseurs majeurs détectés. Trading technique/sentiment standard.",
+    "categories_present": []
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": -0.212,
+    "sentiment_volatility": 0.344,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "**🚨 Analyse de Sentiment Négatif | Réduire Exposure**\n\n- La **Sharpe Ratio négative** (-0.212) suggère que le sentiment actuel est plus risqué que profitable.\n- La **Volatilité élevée du Sentiment** (0.344) indique une situation chaotique sur les marchés, ce qui peut générer des pertes significatives.\n\nIl convient donc de **réduire l'exposition aux actifs impliqués dans BITB**, en particulier si la volatilité élevée du sentiment est due à des facteurs spécifiques tels que la baisse des prix ou le ralentissement de l'activité."
+  },
+  "alerts": [
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "😨",
+      "title": "Asymétrie de Peur Détectée",
+      "message": "Marché surréagit aux mauvaises nouvelles. Possible capitulation ou opportunité contrarian.",
+      "action": "Opportunité d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 18 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

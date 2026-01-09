@@ -1,0 +1,144 @@
+{
+  "ticker": "PLTR",
+  "timestamp": "2025-12-23T23:52:43.289494",
+  "final_sentiment_score": 0.1357,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2021,
+  "smart_money_factor": 0.0865,
+  "components": {
+    "news_sentiment": 0.0138,
+    "news_confidence": 0.4973,
+    "news_weight": 0.2216,
+    "options_sentiment": 0.1983,
+    "options_confidence": 1.0,
+    "options_weight": 0.6686,
+    "analyst_sentiment": 0.0,
+    "analyst_confidence": 0.2955,
+    "analyst_weight": 0.1098,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.1845,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 312,
+    "options_volume": 410236,
+    "analysis_depth": "DEEP",
+    "config_rationale": "Le moteur de sentiment PLTR est configuré pour prendre en compte la volatilité élevée de la société, son importance dans le contexte des technologies de sécurité et sa réactivité aux nouvelles. Le décroissement temporel est fixé à 3 jours, ce qui permet de prendre en compte les tendances à court terme, tandis que la fenêtre de mouvement est fixée à 7 jours pour évaluer l'impact à long terme des nouveaux produits et services.",
+    "version": "V3"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 3.0,
+    "recommendation_count": 20,
+    "recommendation_summary": "Hold consensus (Mean: 3.0)",
+    "recommendation_score": 0.0,
+    "target_mean": 184.65,
+    "target_median": 200.0,
+    "current_price": 194.13,
+    "upside_potential": -0.04883325606552305,
+    "price_target_score": -0.097,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0.887,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.784,
+    "metrics": {
+      "avg_iv": 0.8918999999999999,
+      "iv_skew": -0.10031948881789132,
+      "pcr_volume": 0.557
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-23T04:19:54+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.783,
+        "impact_score": 0.131,
+        "title": "Palantir (PLTR) vs. Oracle (ORCL): AI Analyst Picks the Best AI Stock for 2026 - TipRanks",
+        "matches": 1
+      },
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-22T19:37:43+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.033,
+        "impact_score": 0.01,
+        "title": "3 Reasons Palantir Is Unavoidable in AI Infrastructure by 2026 - MarketBeat",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-23T15:28:51+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.01,
+        "impact_score": 0.003,
+        "title": "Palantir Stock (PLTR) Holds Near $194 on Dec. 23, 2025: New Defense Deals, Earnings Guidance, and What Analysts Forecast for 2026 - ts2.tech",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "analyst_action",
+      "category": "ANALYST",
+      "timestamp": "2025-12-23T04:19:54+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.783,
+      "impact_score": 0.131,
+      "title": "Palantir (PLTR) vs. Oracle (ORCL): AI Analyst Picks the Best AI Stock for 2026 - TipRanks",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "CORPORATE_ACTION",
+      "FINANCIAL",
+      "ANALYST"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.413,
+    "sentiment_volatility": 0.412,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "📊 Based on the sentiment metrics, here are the key insights and implications for a trader:\n\n🔴 **Bullish Trend**: The Sharpe Ratio (0.413) indicates a moderate risk-adjusted positive sentiment, suggesting a bullish trend.\n| Hold or wait for a clearer signal to enter or add to positions.\n\n💡 **Stable Sentiment**: The Volatility Sentiment (0.412) shows a relatively stable sentiment, indicating low uncertainty and potential for gradual price movements.\n| Stay cautious and avoid impulsive decisions, as the market may be consolidating before making a significant move.\n\n🚨 **No Clear Direction**: The Acceleration Momentum (0.0) and Consistency scores indicate no clear direction or momentum, suggesting a lack of conviction in the current trend.\n| Avoid entering new positions or taking aggressive actions, and instead focus on managing existing ones or waiting for clearer signs before making decisions.\n\n💪 **Conservative Approach**: With a low Conviction score (0.2021), it's essential to adopt a conservative approach and prioritize risk management.\n| Prioritize preserving capital over generating returns, and be prepared to adjust your strategy as market conditions change."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

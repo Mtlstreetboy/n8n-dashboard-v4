@@ -1,0 +1,126 @@
+{
+  "ticker": "META",
+  "timestamp": "2025-12-14T18:37:13.316437",
+  "final_sentiment_score": 0.0842,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.1393,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0121,
+    "news_confidence": 0.4781,
+    "news_weight": 0.2718,
+    "options_sentiment": 0.1112,
+    "options_confidence": 0.8538,
+    "options_weight": 0.7282,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0991,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 420,
+    "options_volume": 364632,
+    "analysis_depth": "DEEP",
+    "config_rationale": "META is a tech company with a history of rapid growth and high volatility. The temporal decay halflife reflects this rapid change, while the momentum window is longer to capture the company's long-term trends. The divergence threshold is set higher due to the company's tendency to surprise investors."
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.811,
+    "metrics": {
+      "avg_iv": 0.9056500000000001,
+      "iv_skew": -0.04395248380129597,
+      "pcr_volume": 0.61
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2025-12-14T07:06:54+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Who is Alexandr Wang? 28-year-old hired for 14 billion US dollar by Mark Zuckerberg to lead Meta superintelligence labs - financialexpress.com",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-12T18:26:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "MotorCity Racing Acquired; Joins META's LLama Startup AI Program - PR Newswire",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-12T13:48:32+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Meta (META) Stock News Today: Analyst Targets, AI Spending Debate and 2026 Outlook (Dec. 12, 2025) - ts2.tech",
+        "matches": 1
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-12T11:13:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Mark Zuckerberg’s million-dollar hires are under pressure to deliver after Llama 4’s ‘botched launch’ - The Times of India",
+        "matches": 1
+      }
+    ],
+    "count": 4,
+    "most_recent": {
+      "type": "executive_changes",
+      "category": "MANAGEMENT",
+      "timestamp": "2025-12-14T07:06:54+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.0,
+      "impact_score": 0.0,
+      "title": "Who is Alexandr Wang? 28-year-old hired for 14 billion US dollar by Mark Zuckerberg to lead Meta superintelligence labs - financialexpress.com",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "PRODUCT",
+      "ANALYST",
+      "MANAGEMENT",
+      "CORPORATE_ACTION"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.526,
+    "sentiment_volatility": 0.297,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 1.0,
+    "llm_interpretation": "📊 The sentiment analysis suggests:\n\n* **Moderate bullishness**: Sharpe Ratio of 0.526 indicates a moderate level of risk-adjusted optimism, making it a relatively attractive investment opportunity.\n* **Stable sentiment**: Volatility Sentiment of 0.297 indicates that the overall sentiment is stable and not overly extreme, reducing the risk of sudden changes.\n* **No strong momentum**: Accélération Momentum of 0.0 suggests no significant change in the trend or momentum.\n\nAction recommandée: HOLD | Consider holding onto your META position as it appears to be in a relatively stable and moderately bullish state, with no urgent need for immediate action."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

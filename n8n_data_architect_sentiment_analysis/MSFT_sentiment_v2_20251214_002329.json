@@ -1,0 +1,115 @@
+{
+  "ticker": "MSFT",
+  "timestamp": "2025-12-14T00:23:29.549158",
+  "final_sentiment_score": 0.1659,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.1936,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0237,
+    "news_confidence": 0.6101,
+    "news_weight": 0.3407,
+    "options_sentiment": 0.0877,
+    "options_confidence": 0.7872,
+    "options_weight": 0.6593,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.064,
+    "opportunity_score": 0,
+    "interpretation": "\ud83e\udd1d Consensus - Nouvelles et march\u00e9s s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 440,
+    "options_volume": 134233,
+    "analysis_depth": "DEEP",
+    "config_rationale": "Configuration par d\u00e9faut (mod\u00e9r\u00e9e)"
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.154,
+    "metrics": {
+      "avg_iv": 0.57715,
+      "iv_skew": -0.14331671224063064,
+      "pcr_volume": 0.673
+    },
+    "implications": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "legal_issues",
+        "category": "LEGAL",
+        "timestamp": "2025-12-11T14:41:43+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.38,
+        "impact_score": 0.108,
+        "title": "Open AI, Microsoft face lawsuit over ChatGPT\u2019s alleged role in Connecticut deaths - KRON4",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-11T14:32:23+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Will IREN's (IREN) US$9.7 Billion Microsoft AI Deal and Capital Raise Change Its Narrative? - simplywall.st",
+        "matches": 1
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-11T11:28:11+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Microsoft unveils 7 AI trends for 2026 - Microsoft Source",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "legal_issues",
+      "category": "LEGAL",
+      "timestamp": "2025-12-11T14:41:43+00:00",
+      "confidence": 0.333,
+      "sentiment": -0.38,
+      "impact_score": 0.108,
+      "title": "Open AI, Microsoft face lawsuit over ChatGPT\u2019s alleged role in Connecticut deaths - KRON4",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "\u2713 Catalyseurs mineurs. Impact limit\u00e9 sur tendance globale.",
+    "categories_present": [
+      "LEGAL",
+      "PRODUCT",
+      "CORPORATE_ACTION"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.827,
+    "sentiment_volatility": 0.355,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 1.0,
+    "llm_interpretation": "\u2705 Signal coh\u00e9rent"
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "\ud83c\udf2a\ufe0f",
+      "title": "R\u00c9GIME DE HAUTE VOLATILIT\u00c9",
+      "message": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

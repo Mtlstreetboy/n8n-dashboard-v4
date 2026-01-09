@@ -1,0 +1,137 @@
+{
+  "ticker": "INTC",
+  "timestamp": "2025-12-13T22:53:10.683048",
+  "final_sentiment_score": 0.1283,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.1584,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0234,
+    "news_confidence": 0.5063,
+    "news_weight": 0.2944,
+    "options_sentiment": 0.0303,
+    "options_confidence": 0.8091,
+    "options_weight": 0.7056,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.007,
+    "opportunity_score": 0,
+    "interpretation": "\ud83e\udd1d Consensus - Nouvelles et march\u00e9s s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 174,
+    "options_volume": 186540,
+    "analysis_depth": "DEEP",
+    "config_rationale": "Configuration par d\u00e9faut (mod\u00e9r\u00e9e)"
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.919,
+    "metrics": {
+      "avg_iv": 0.9597,
+      "iv_skew": -0.17790013290298073,
+      "pcr_volume": 0.732
+    },
+    "implications": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-11T12:56:14+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.38,
+        "impact_score": 0.127,
+        "title": "Intel CEO Lip-Bu Tan Faces Conflict of Interest Concerns Amid AI Chip Acquisition Push - TECHi",
+        "matches": 1
+      },
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-10T21:08:02+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.38,
+        "impact_score": 0.114,
+        "title": "Intel, AMD Accused of Allowing Chips in Russian Missiles - Bloomberg.com",
+        "matches": 1
+      },
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2025-12-11T12:56:14+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.38,
+        "impact_score": 0.076,
+        "title": "Intel CEO Lip-Bu Tan Faces Conflict of Interest Concerns Amid AI Chip Acquisition Push - TECHi",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-11T14:32:45+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Intel Stock (INTC) Outlook 2026: AI Deals, CEO Scrutiny and Price Targets After a 100% Rally - ts2.tech",
+        "matches": 1
+      },
+      {
+        "type": "legal_issues",
+        "category": "LEGAL",
+        "timestamp": "2025-12-10T16:27:58+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Ukrainians file lawsuits against Intel, AMD and Texas Instruments: report (AMD:NASDAQ) - Seeking Alpha",
+        "matches": 1
+      }
+    ],
+    "count": 5,
+    "most_recent": {
+      "type": "merger_acquisition",
+      "category": "CORPORATE_ACTION",
+      "timestamp": "2025-12-11T12:56:14+00:00",
+      "confidence": 0.333,
+      "sentiment": -0.38,
+      "impact_score": 0.127,
+      "title": "Intel CEO Lip-Bu Tan Faces Conflict of Interest Concerns Amid AI Chip Acquisition Push - TECHi",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "\u2713 Catalyseurs mineurs. Impact limit\u00e9 sur tendance globale.",
+    "categories_present": [
+      "ANALYST",
+      "FINANCIAL",
+      "LEGAL",
+      "CORPORATE_ACTION",
+      "MANAGEMENT"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.876,
+    "sentiment_volatility": 0.34,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "M\u00e9triques standards, pas de signal particulier."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "\ud83c\udf2a\ufe0f",
+      "title": "R\u00c9GIME DE HAUTE VOLATILIT\u00c9",
+      "message": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

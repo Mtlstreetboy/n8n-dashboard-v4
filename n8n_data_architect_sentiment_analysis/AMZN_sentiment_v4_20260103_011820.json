@@ -1,0 +1,151 @@
+{
+  "ticker": "AMZN",
+  "timestamp": "2026-01-03T01:18:05.846344",
+  "final_sentiment_score": 0.1622,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.3189,
+  "smart_money_factor": 0.1222,
+  "components": {
+    "news_sentiment": 0.0132,
+    "news_confidence": 0.9234,
+    "news_weight": 0.3418,
+    "options_sentiment": 0.3993,
+    "options_confidence": 1.0,
+    "options_weight": 0.5553,
+    "analyst_sentiment": 0.8358,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.1028,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.3861,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 452,
+    "options_volume": 574605,
+    "analysis_depth": "DEEP",
+    "config_rationale": "AMZN est une action tech avec des nouvelles fréquentes et une forte volatilité. La réactivité aux nouvelles nécessite un décay rapide, tandis que le sentiment institutional est important en raison de la nature du secteur.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.32836,
+    "recommendation_count": 60,
+    "recommendation_summary": "Strong Buy consensus (Mean: 1.3)",
+    "recommendation_score": 0.836,
+    "target_mean": 295.59784,
+    "target_median": 300.0,
+    "current_price": 226.5,
+    "upside_potential": 0.3050677262693158,
+    "price_target_score": 0.544,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.111,
+    "metrics": {
+      "avg_iv": 0.55535,
+      "iv_skew": -0.17439184746877068,
+      "pcr_volume": 0.401
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2026-01-02T16:53:05+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.919,
+        "impact_score": 0.153,
+        "title": "Amazon (AMZN) AWS AI momentum supports higher price target at BMO Capital - MSN",
+        "matches": 1
+      },
+      {
+        "type": "fda_regulatory",
+        "category": "REGULATORY",
+        "timestamp": "2025-12-30T15:16:58+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.075,
+        "impact_score": 0.024,
+        "title": "Ex-Amazon AI engineer bets six figures of his own money to disrupt drug discovery - GeekWire",
+        "matches": 1
+      }
+    ],
+    "count": 2,
+    "most_recent": {
+      "type": "analyst_action",
+      "category": "ANALYST",
+      "timestamp": "2026-01-02T16:53:05+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.919,
+      "impact_score": 0.153,
+      "title": "Amazon (AMZN) AWS AI momentum supports higher price target at BMO Capital - MSN",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale. | Biais POSITIF des catalyseurs.",
+    "categories_present": [
+      "REGULATORY",
+      "ANALYST"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.419,
+    "sentiment_volatility": 0.336,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Bien sûr ! Voici mes analyses :\n\n1. **Prix stabilisé** 📉 | **Ne pas prendre de position**\n    - Le score Contrarian (0) et la Consistance (0,0) suggèrent qu'il n'y a pas d'opportunité ou de tendance significative pour AMZN.\n2. **Volatilité élevée** 🚀 | **Préparez-vous à des fluctuations**\n    - La Volatilité Sentiment (0,336) indique un sentiment instable. Il convient donc d'être attentif aux mouvements de prix et de tenir compte du risque.\n3. **Accélération nulle** ⏱️ | **Analysez les tendances à long terme**\n    - L'Accélération Momentum (0,0) suggère qu'il n'y a pas de changement significatif dans la vitesse des prix. Il convient donc d’analyser les tendances à long terme et l’évolution à long terme du sentiment.\n\nCe qui ressort est que le sentiment actuel autour d'AMZN est instable, ce qui nécessite une attention accrue aux fluctuations de prix et une analyse approfondie des tendances à long terme."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "SMART_MONEY",
+      "icon": "💰",
+      "title": "SMART MONEY ACTIF",
+      "message": "Détection d'activité institutionnelle (score: 0.122). Open Interest suggère positionnement de gros joueurs.",
+      "action": "Analyser leurs positions. Ils ont souvent raison à moyen terme.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "😨",
+      "title": "Asymétrie de Peur Détectée",
+      "message": "Marché surréagit aux mauvaises nouvelles. Possible capitulation ou opportunité contrarian.",
+      "action": "Opportunité d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    }
+  ]
+}

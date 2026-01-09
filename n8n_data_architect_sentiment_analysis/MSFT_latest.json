@@ -1,0 +1,29 @@
+{
+  "ticker": "MSFT",
+  "timestamp": "2025-12-10T01:38:19.605795",
+  "final_sentiment_score": 0.1652,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2273,
+  "components": {
+    "news_sentiment": 0.0293,
+    "news_confidence": 0.7393,
+    "news_weight": 0.3851,
+    "options_sentiment": 0.0877,
+    "options_confidence": 0.7872,
+    "options_weight": 0.6149,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0584,
+    "opportunity_score": 0,
+    "interpretation": "???? Consensus - Nouvelles et march?? s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 352,
+    "options_volume": 134233,
+    "analysis_depth": "DEEP"
+  }
+}

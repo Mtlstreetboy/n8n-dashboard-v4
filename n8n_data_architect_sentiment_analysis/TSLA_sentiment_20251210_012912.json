@@ -1,0 +1,29 @@
+{
+  "ticker": "TSLA",
+  "timestamp": "2025-12-10T01:29:12.533223",
+  "final_sentiment_score": 0.101,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.3,
+  "components": {
+    "news_sentiment": 0.0246,
+    "news_confidence": 0.7171,
+    "news_weight": 0.3234,
+    "options_sentiment": -0.0103,
+    "options_confidence": 1.0,
+    "options_weight": 0.6766,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0349,
+    "opportunity_score": 0,
+    "interpretation": "???? Consensus - Nouvelles et march?? s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 170,
+    "options_volume": 1525739,
+    "analysis_depth": "DEEP"
+  }
+}

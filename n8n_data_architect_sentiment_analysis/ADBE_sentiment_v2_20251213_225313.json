@@ -1,0 +1,133 @@
+{
+  "ticker": "ADBE",
+  "timestamp": "2025-12-13T22:53:13.458895",
+  "final_sentiment_score": -0.2998,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2891,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0402,
+    "news_confidence": 0.6363,
+    "news_weight": 0.3763,
+    "options_sentiment": -0.585,
+    "options_confidence": 0.7032,
+    "options_weight": 0.6237,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "bearish_divergence",
+    "magnitude": 0.6252,
+    "opportunity_score": 0.5002,
+    "interpretation": "\ud83d\udc3b BEARISH DIVERGENCE (force: 0.63) - Le march\u00e9 ignore les bonnes nouvelles. Possible correction \u00e0 venir ou les nouvelles sont 'priced in'."
+  },
+  "metadata": {
+    "news_articles_count": 142,
+    "options_volume": 38095,
+    "analysis_depth": "DEEP",
+    "config_rationale": "Configuration par d\u00e9faut (mod\u00e9r\u00e9e)"
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.368,
+    "metrics": {
+      "avg_iv": 0.6839500000000001,
+      "iv_skew": -0.1661080573803459,
+      "pcr_volume": 1.19
+    },
+    "implications": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-10T22:37:59+00:00",
+        "confidence": 1.0,
+        "sentiment": 0.664,
+        "impact_score": 0.598,
+        "title": "Adobe beats earnings expectations as AI tools drive double-digit revenue growth - SiliconANGLE",
+        "matches": 3
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-11T14:37:31+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Adobe delivers solid Q4, but slowing FY26 growth fails to quell analysts' AI concerns - Seeking Alpha",
+        "matches": 1
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-11T05:34:34+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Adobe Unveils Photoshop, Express and Acrobat for ChatGPT to Simplify Editing - digital terminal",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2025-12-10T22:37:59+00:00",
+      "confidence": 1.0,
+      "sentiment": 0.664,
+      "impact_score": 0.598,
+      "title": "Adobe beats earnings expectations as AI tools drive double-digit revenue growth - SiliconANGLE",
+      "matches": 3
+    },
+    "impact_assessment": "MODERATE_IMPACT",
+    "recommendation": "\ud83d\udcca Catalyseurs mod\u00e9r\u00e9s en jeu. Ajuster positions selon d\u00e9veloppements.",
+    "categories_present": [
+      "FINANCIAL",
+      "ANALYST",
+      "PRODUCT"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 1.515,
+    "sentiment_volatility": 0.311,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "\ud83d\udcc8 Excellent risk/reward"
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "DIVERGENCE",
+      "icon": "\ud83d\udea8",
+      "title": "DIVERGENCE MAJEURE D\u00c9TECT\u00c9E",
+      "message": "\ud83d\udc3b BEARISH DIVERGENCE (force: 0.63) - Le march\u00e9 ignore les bonnes nouvelles. Possible correction \u00e0 venir ou les nouvelles sont 'priced in'.",
+      "action": "\u274c NE PAS ACHETER malgr\u00e9 bonnes nouvelles. Attendre correction ou confirmation par price action.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "\ud83c\udf2a\ufe0f",
+      "title": "R\u00c9GIME DE HAUTE VOLATILIT\u00c9",
+      "message": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "MEDIUM",
+      "type": "CATALYST",
+      "icon": "\ud83c\udfaf",
+      "title": "Catalyseur: Earnings",
+      "message": "Adobe beats earnings expectations as AI tools drive double-digit revenue growth ... (Impact: 0.60)",
+      "action": "\ud83d\udcca Catalyseurs mod\u00e9r\u00e9s en jeu. Ajuster positions selon d\u00e9veloppements.",
+      "urgency": "SOON"
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "ticker": "VZ",
+  "timestamp": "2026-01-03T02:54:13.210698",
+  "final_sentiment_score": 0.2506,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2922,
+  "smart_money_factor": 0.1279,
+  "components": {
+    "news_sentiment": -0.0054,
+    "news_confidence": 0.5,
+    "news_weight": 0.2354,
+    "options_sentiment": 0.545,
+    "options_confidence": 1.0,
+    "options_weight": 0.6193,
+    "analyst_sentiment": 0.3471,
+    "analyst_confidence": 0.3701,
+    "analyst_weight": 0.1452,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.3306,
+    "opportunity_score": 0,
+    "interpretation": "\ud83e\udd1d Consensus - Nouvelles et march\u00e9s s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 20,
+    "options_volume": 57582,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "Le secteur des t\u00e9l\u00e9communications est g\u00e9n\u00e9ralement moins volatile et plus influenc\u00e9 par les nouvelles de fond, donc un halflife moyen et une p\u00e9nalit\u00e9 de volatilit\u00e9 mod\u00e9r\u00e9e sont appropri\u00e9s. La r\u00e9activit\u00e9 aux nouvelles justifie une fen\u00eatre moyenne pour la momentum et un seuil de divergence \u00e9lev\u00e9.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 2.29167,
+    "recommendation_count": 21,
+    "recommendation_summary": "Buy consensus (Mean: 2.3)",
+    "recommendation_score": 0.354,
+    "target_mean": 47.16667,
+    "target_median": 46.0,
+    "current_price": 40.52,
+    "upside_potential": 0.164034304047384,
+    "price_target_score": 0.317,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 0.811,
+      "pt": 0.189,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0.9,
+      "price_target": 0.21,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.121,
+    "metrics": {
+      "avg_iv": 0.5606,
+      "iv_skew": -0.08603618982587914,
+      "pcr_volume": 0.455
+    },
+    "implications": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2026-01-02T19:42:56+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.927,
+        "impact_score": 0.278,
+        "title": "Verizon stock today: VZ slips as fresh SEC filings hit tape; rates and earnings loom - ts2.tech",
+        "matches": 1
+      },
+      {
+        "type": "legal_issues",
+        "category": "LEGAL",
+        "timestamp": "2025-12-30T20:34:44+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.913,
+        "impact_score": 0.259,
+        "title": "Verizon stock today: VZ edges up as DOJ DEI probe headline hangs over telecom ahead of Jan. 30 earnings - ts2.tech",
+        "matches": 1
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-11T08:00:00+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.072,
+        "impact_score": 0.017,
+        "title": "Verizon Communications Inc. (VZ) Announces Quarterly Dividend - Yahoo Finance",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-27T06:46:44+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.009,
+        "impact_score": 0.003,
+        "title": "Verizon (VZ) Stock News Today: Dividend, Frontier Deal Updates, Analyst Forecasts \u2014 and What to Watch Before Monday\u2019s Open - ts2.tech",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-27T06:46:44+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.009,
+        "impact_score": 0.002,
+        "title": "Verizon (VZ) Stock News Today: Dividend, Frontier Deal Updates, Analyst Forecasts \u2014 and What to Watch Before Monday\u2019s Open - ts2.tech",
+        "matches": 1
+      }
+    ],
+    "count": 5,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2026-01-02T19:42:56+00:00",
+      "confidence": 0.333,
+      "sentiment": -0.927,
+      "impact_score": 0.278,
+      "title": "Verizon stock today: VZ slips as fresh SEC filings hit tape; rates and earnings loom - ts2.tech",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "\u2713 Catalyseurs mineurs. Impact limit\u00e9 sur tendance globale.",
+    "categories_present": [
+      "CORPORATE_ACTION",
+      "PRODUCT",
+      "FINANCIAL",
+      "ANALYST",
+      "LEGAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": -0.2,
+    "sentiment_volatility": 0.537,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Voici les r\u00e9sultats d\u2019analyse en 2-3 phrases courtes et actionnables\u00a0:\n\n\ud83d\udcca Le sentiment actuel sur Verizon (VZ) est neutre (-0.25) avec un score Contrarian de 0, sugg\u00e9rant qu'il n'y a pas d'opportunit\u00e9 forte \u00e0 saisir | **Conserver une approche neutre**.\n\n\ud83d\udca1 L'acc\u00e9l\u00e9ration du momentum est faible (0,0), et la volatilit\u00e9 sentimentale est mod\u00e9r\u00e9e (0.537) ce qui indique que le march\u00e9 est relativement stable | **Surveiller les fluctuations de prix**.\n\n\ud83d\udcc8 La conviction du mod\u00e8le est \u00e9lev\u00e9e (0.2922), mais le score Contrarian est faible, sugg\u00e9rant qu'il y a peu d'opportunit\u00e9 forte \u00e0 saisir | **Conserver une approche prudente et \u00e9viter les prises de positions agressives**."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "SMART_MONEY",
+      "icon": "\ud83d\udcb0",
+      "title": "SMART MONEY ACTIF",
+      "message": "D\u00e9tection d'activit\u00e9 institutionnelle (score: 0.128). Open Interest sugg\u00e8re positionnement de gros joueurs.",
+      "action": "Analyser leurs positions. Ils ont souvent raison \u00e0 moyen terme.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "\ud83c\udf2a\ufe0f",
+      "title": "R\u00c9GIME DE HAUTE VOLATILIT\u00c9",
+      "message": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "\u26a0\ufe0f",
+      "title": "Donn\u00e9es Limit\u00e9es",
+      "message": "Seulement 20 articles analys\u00e9s. Confiance r\u00e9duite.",
+      "action": "Attendre plus de donn\u00e9es ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ],
+  "options_detail": {
+    "timestamp": "2026-01-03T01:48:29.700225",
+    "call_volume": 39567,
+    "put_volume": 18015,
+    "call_open_interest": 419598,
+    "put_open_interest": 312952,
+    "put_call_ratio_volume": 0.455,
+    "put_call_ratio_oi": 0.746,
+    "call_implied_volatility": 0.5858,
+    "put_implied_volatility": 0.5354,
+    "sentiment_label": "bullish",
+    "sentiment_score": 0.545,
+    "total_contracts": 57582,
+    "total_open_interest": 732550,
+    "near_term_call_volume": 24793,
+    "far_term_call_volume": 14774,
+    "near_term_put_volume": 14708,
+    "far_term_put_volume": 3307
+  }
+}

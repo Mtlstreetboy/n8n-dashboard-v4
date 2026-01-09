@@ -1,0 +1,108 @@
+{
+  "ticker": "AMD",
+  "timestamp": "2026-01-06T17:34:38.876909",
+  "final_sentiment_score": 0.152,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2269,
+  "smart_money_factor": 0.0952,
+  "components": {
+    "news_sentiment": 0.0142,
+    "news_confidence": 0.8823,
+    "news_weight": 0.3786,
+    "options_sentiment": 0.2359,
+    "options_confidence": 0.9653,
+    "options_weight": 0.6214,
+    "analyst_sentiment": 0,
+    "analyst_confidence": 0,
+    "analyst_weight": 0.0,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.2217,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 439,
+    "options_volume": 173991,
+    "analysis_depth": "DEEP",
+    "config_rationale": "AMD est une action technologique avec des nouvelles fréquentes, donc un halflife de temporal_decay de 3 jours pour réagir rapidement aux changements. Le seuil de divergence est élevé à 0.5 en raison de la volatilité et du sentiment intense.",
+    "version": "V4 - Dual Brain"
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.741,
+    "metrics": {
+      "avg_iv": 0.8707,
+      "iv_skew": -0.5342984597256123,
+      "pcr_volume": 0.626
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections. | 📞 Call skew élevé - Spéculation haussière agressive",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "fda_regulatory",
+        "category": "REGULATORY",
+        "timestamp": "2026-01-02T19:01:03+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.899,
+        "impact_score": 0.285,
+        "title": "AMD Attracts Fresh Optimism as AI Products Set Up a New Growth Phase - Investing.com",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2026-01-02T20:18:08+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.911,
+        "impact_score": 0.152,
+        "title": "AMD Shares Are Climbing -- AI Memory Demand Fuels Analyst Optimi - GuruFocus",
+        "matches": 1
+      }
+    ],
+    "count": 2,
+    "most_recent": {
+      "type": "fda_regulatory",
+      "category": "REGULATORY",
+      "timestamp": "2026-01-02T19:01:03+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.899,
+      "impact_score": 0.285,
+      "title": "AMD Attracts Fresh Optimism as AI Products Set Up a New Growth Phase - Investing.com",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale. | Biais POSITIF des catalyseurs.",
+    "categories_present": [
+      "ANALYST",
+      "REGULATORY"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.397,
+    "sentiment_volatility": 0.385,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.364,
+    "llm_interpretation": "Voici les conclusions à partir des métriques fournies :\n\n📊 **Sentiment neutre avec potentiel** | **Surveiller la tendance future**\n- La moyenne Sharpe Ratio de 0.397 indique un sentiment ajusté pour le risque, mais pas excédentaire.\n- La Volatilité Sentiment est élevée à 0.385, ce qui suggère un marché instable.\n\n🚀 **Présence d'une opportunité contrarienne** | **Envisager une prise de position**\n- Le score Contrarian est de 1, indiquant une forte opportunité pour les traders contrarians.\n\n💪 **Conviction et cohérence faibles** | **Évaluer la stratégie et le plan d'action**\n- La conviction à 0.2269 est faible, indiquant un sentiment mitigé.\n- Les valeurs de Consistance sont basses à 0.364, ce qui suggère que les tendances ne sont pas cohérentes."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections. | 📞 Call skew élevé - Spéculation haussière agressive",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

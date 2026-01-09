@@ -1,0 +1,144 @@
+{
+  "ticker": "SNOW",
+  "timestamp": "2025-12-23T23:53:06.183864",
+  "final_sentiment_score": 0.1278,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2892,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0333,
+    "news_confidence": 0.5266,
+    "news_weight": 0.2831,
+    "options_sentiment": -0.1534,
+    "options_confidence": 0.7039,
+    "options_weight": 0.5676,
+    "analyst_sentiment": 0.7059,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.1493,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.1866,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 199,
+    "options_volume": 38502,
+    "analysis_depth": "DEEP",
+    "config_rationale": "Le moteur de sentiment SNOW est conçu pour prendre en compte la volatilité modérée du secteur et la fréquence élevée des nouvelles techniques. La décroissance temporelle est ajustée pour refléter la rapidité à laquelle les informations sont assimilées par le marché. Le seuil de divergence est élevé pour réagir aux explossions de prix, mais pas trop élevé pour éviter d'être trop sensible aux fluctuations aléatoires.",
+    "version": "V3"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.58824,
+    "recommendation_count": 46,
+    "recommendation_summary": "Buy consensus (Mean: 1.6)",
+    "recommendation_score": 0.706,
+    "target_mean": 283.1637,
+    "target_median": 283.5,
+    "current_price": 225.1,
+    "upside_potential": 0.2579462461128388,
+    "price_target_score": 0.475,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.53,
+    "metrics": {
+      "avg_iv": 0.7648,
+      "iv_skew": -0.043739608645606866,
+      "pcr_volume": 0.833
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-17T14:00:00+00:00",
+        "confidence": 0.667,
+        "sentiment": 0.396,
+        "impact_score": 0.185,
+        "title": "TileDB Announces Integration with Snowflake to Launch TileDB Carrara to Bridge Scientific and Multimodal Data in AI Data Cloud - Yahoo Finance",
+        "matches": 2
+      },
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-13T22:27:40+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.039,
+        "impact_score": 0.012,
+        "title": "Did Snowflake’s AI Partnerships and Q3 Results Just Shift Snowflake's (SNOW) Investment Narrative? - simplywall.st",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-14T14:04:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.009,
+        "impact_score": 0.003,
+        "title": "Snowflake Inc. Stock (SNOW) Opinions on Q3 Earnings and Anthropic AI Deal - Quiver Quantitative",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "product_launch",
+      "category": "PRODUCT",
+      "timestamp": "2025-12-17T14:00:00+00:00",
+      "confidence": 0.667,
+      "sentiment": 0.396,
+      "impact_score": 0.185,
+      "title": "TileDB Announces Integration with Snowflake to Launch TileDB Carrara to Bridge Scientific and Multimodal Data in AI Data Cloud - Yahoo Finance",
+      "matches": 2
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "CORPORATE_ACTION",
+      "FINANCIAL",
+      "PRODUCT"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 1.226,
+    "sentiment_volatility": 0.305,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.103,
+    "llm_interpretation": "🔥 Strong sentiment with a Sharpe Ratio of 1.226, indicating a high risk-adjusted return.\n\n| Consider taking a contrarian view to capitalize on the strong sentiment |\n\n💸 The low Score Contrarian (0) suggests that many are already bullish, implying potential opportunities for those willing to go against the crowd.\n\n| Use caution and consider scaling back or hedging existing positions |"
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

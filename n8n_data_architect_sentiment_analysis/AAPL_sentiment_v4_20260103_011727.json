@@ -1,0 +1,160 @@
+{
+  "ticker": "AAPL",
+  "timestamp": "2026-01-03T01:17:03.738260",
+  "final_sentiment_score": 0.1774,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2694,
+  "smart_money_factor": 0.15,
+  "components": {
+    "news_sentiment": 0.0046,
+    "news_confidence": 0.5,
+    "news_weight": 0.2194,
+    "options_sentiment": 0.4031,
+    "options_confidence": 1.0,
+    "options_weight": 0.6582,
+    "analyst_sentiment": 0.4986,
+    "analyst_confidence": 0.3346,
+    "analyst_weight": 0.1224,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.3985,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 20,
+    "options_volume": 486737,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "AAPL est une valeur technologique avec un volume important d'options et de nouvelles régulières, nécessitant une configuration plus réactive et prête à des mouvements de prix importants.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 2.0,
+    "recommendation_count": 41,
+    "recommendation_summary": "Buy consensus (Mean: 2.0)",
+    "recommendation_score": 0.5,
+    "target_mean": 287.70682,
+    "target_median": 300.0,
+    "current_price": 271.01,
+    "upside_potential": 0.06160960850153132,
+    "price_target_score": 0.123,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 0.996,
+      "pt": 0.004,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.004,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.702,
+    "metrics": {
+      "avg_iv": 0.85105,
+      "iv_skew": -0.0994863778472532,
+      "pcr_volume": 0.358
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2026-01-02T08:29:15+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.918,
+        "impact_score": 0.275,
+        "title": "Apeiron RIA LLC Boosts Holdings in Apple Inc. $AAPL - MarketBeat",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2026-01-02T09:01:20+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.075,
+        "impact_score": 0.013,
+        "title": "Here’s Why Top Raymond James Analyst Is Sidelined on Apple (AAPL) Stock - TipRanks",
+        "matches": 1
+      }
+    ],
+    "count": 2,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2026-01-02T08:29:15+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.918,
+      "impact_score": 0.275,
+      "title": "Apeiron RIA LLC Boosts Holdings in Apple Inc. $AAPL - MarketBeat",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale. | Biais POSITIF des catalyseurs.",
+    "categories_present": [
+      "FINANCIAL",
+      "ANALYST"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.224,
+    "sentiment_volatility": 0.41,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Je suis désolé, mais je ne peux pas fournir d'informations ou de conseils sur les investissements. Cependant, je peux vous aider à comprendre ces métriques et leur signification potentielle.\n\n*   L&#39;indicateur de Sharpe est de 0,224, ce qui suggère un risque ajusté relativement élevé pour la performance de l&#39;action. Cela pourrait indiquer qu&#39;il convient d&#39;être prudent dans les investissements dans AAPL.\n*   La volatilité sentimentale est de 0,41, ce qui signifie que le comportement du marché n'est pas stable et peut varier rapidement. Ceci suggère la nécessité d'une position plus flexible sur le marché.\n*   L'accélération Momentum est de 0,0, indiquant qu'il y a peu ou aucune variation dans les performances du titre récemment.\n*   Le score Contrarian est de 0, ce qui signifie qu&#39;il n&#39;y a pas d&#39;opportunités significatives pour un investissement contraire à l&#39;opinion dominante. Cela pourrait suggérer que le marché est déjà prédit et que les prévisions actuelles ne reflètent pas une opportunité de spéculation.\n*   La constance est également de 0,0, ce qui indique qu'il y a peu ou aucune cohérence dans les performances historiques du titre.\n\nEn fonction de ces métriques, il pourrait être prudent pour un trader d&#39;attendre une amélioration des paramètres avant de prendre position sur AAPL."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "SMART_MONEY",
+      "icon": "💰",
+      "title": "SMART MONEY ACTIF",
+      "message": "Détection d'activité institutionnelle (score: 0.150). Open Interest suggère positionnement de gros joueurs.",
+      "action": "Analyser leurs positions. Ils ont souvent raison à moyen terme.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "😨",
+      "title": "Asymétrie de Peur Détectée",
+      "message": "Marché surréagit aux mauvaises nouvelles. Possible capitulation ou opportunité contrarian.",
+      "action": "Opportunité d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 20 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "ticker": "NOW",
+  "timestamp": "2025-12-13T22:53:15.435195",
+  "final_sentiment_score": -0.4457,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2805,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0297,
+    "news_confidence": 0.5585,
+    "news_weight": 0.3728,
+    "options_sentiment": -0.7839,
+    "options_confidence": 0.6263,
+    "options_weight": 0.6272,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "bearish_divergence",
+    "magnitude": 0.8136,
+    "opportunity_score": 0.6509,
+    "interpretation": "\ud83d\udc3b BEARISH DIVERGENCE (force: 0.81) - Le march\u00e9 ignore les bonnes nouvelles. Possible correction \u00e0 venir ou les nouvelles sont 'priced in'."
+  },
+  "metadata": {
+    "news_articles_count": 112,
+    "options_volume": 12030,
+    "analysis_depth": "DEEP",
+    "config_rationale": "Configuration par d\u00e9faut (mod\u00e9r\u00e9e)"
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "PANIC",
+    "confidence": 0.15,
+    "metrics": {
+      "avg_iv": 0.575,
+      "iv_skew": -0.1361426256077795,
+      "pcr_volume": 2.615
+    },
+    "implications": "\ud83d\udea8 PANIQUE - Les traders se couvrent agressivement. Opportunit\u00e9 contrarian possible mais risqu\u00e9e.",
+    "signal_adjustment": -0.2,
+    "recommendation": "Attendre stabilisation. Si conviction forte, petites positions avec stops serr\u00e9s."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-08T00:00:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.4,
+        "impact_score": 0.12,
+        "title": "Checkmate in the Cloud: ServiceNow's Shopping Spree - MarketBeat",
+        "matches": 1
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-08T00:00:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.4,
+        "impact_score": 0.093,
+        "title": "The Big ServiceNow AI Experience Announcement: A Closer Look - CX Today",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-11T14:06:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Agentic AI is accelerating the evolution of ServiceNow services models - Yahoo Finance",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2025-12-08T00:00:00+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.4,
+      "impact_score": 0.12,
+      "title": "Checkmate in the Cloud: ServiceNow's Shopping Spree - MarketBeat",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "\u2713 Catalyseurs mineurs. Impact limit\u00e9 sur tendance globale.",
+    "categories_present": [
+      "ANALYST",
+      "FINANCIAL",
+      "PRODUCT"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 1.181,
+    "sentiment_volatility": 0.312,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "M\u00e9triques standards, pas de signal particulier."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "DIVERGENCE",
+      "icon": "\ud83d\udea8",
+      "title": "DIVERGENCE MAJEURE D\u00c9TECT\u00c9E",
+      "message": "\ud83d\udc3b BEARISH DIVERGENCE (force: 0.81) - Le march\u00e9 ignore les bonnes nouvelles. Possible correction \u00e0 venir ou les nouvelles sont 'priced in'.",
+      "action": "\u274c NE PAS ACHETER malgr\u00e9 bonnes nouvelles. Attendre correction ou confirmation par price action.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "\ud83c\udf2a\ufe0f",
+      "title": "R\u00c9GIME DE HAUTE VOLATILIT\u00c9",
+      "message": "\ud83d\udea8 PANIQUE - Les traders se couvrent agressivement. Opportunit\u00e9 contrarian possible mais risqu\u00e9e.",
+      "action": "Attendre stabilisation. Si conviction forte, petites positions avec stops serr\u00e9s.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

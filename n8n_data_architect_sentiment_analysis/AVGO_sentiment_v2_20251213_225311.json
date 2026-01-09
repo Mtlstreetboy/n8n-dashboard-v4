@@ -1,0 +1,115 @@
+{
+  "ticker": "AVGO",
+  "timestamp": "2025-12-13T22:53:11.442470",
+  "final_sentiment_score": 0.1532,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.207,
+  "smart_money_factor": 0.0454,
+  "components": {
+    "news_sentiment": 0.0283,
+    "news_confidence": 0.5084,
+    "news_weight": 0.2617,
+    "options_sentiment": 0.062,
+    "options_confidence": 0.9565,
+    "options_weight": 0.7383,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0336,
+    "opportunity_score": 0,
+    "interpretation": "\ud83e\udd1d Consensus - Nouvelles et march\u00e9s s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 190,
+    "options_volume": 155735,
+    "analysis_depth": "DEEP",
+    "config_rationale": "Configuration par d\u00e9faut (mod\u00e9r\u00e9e)"
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 1.0,
+    "metrics": {
+      "avg_iv": 1.51925,
+      "iv_skew": -0.5131630456057937,
+      "pcr_volume": 0.802
+    },
+    "implications": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections. | \ud83d\udcde Call skew \u00e9lev\u00e9 - Sp\u00e9culation haussi\u00e8re agressive",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-10T19:37:06+00:00",
+        "confidence": 0.667,
+        "sentiment": 0.537,
+        "impact_score": 0.322,
+        "title": "Broadcom Q4 Preview: After 74% Surge in 2025, Can Earnings Keep Rally Alive? - Broadcom (NASDAQ:AVGO) - Benzinga",
+        "matches": 2
+      },
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2025-12-11T11:56:20+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Broadcom \u2018Primed for Disappointment\u2019 After Blistering 180% Rally - Bloomberg.com",
+        "matches": 1
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-10T18:06:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.0,
+        "impact_score": 0.0,
+        "title": "Broadcom Launches New Tech To Help Small Businesses Build Private Clouds - Benzinga",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2025-12-10T19:37:06+00:00",
+      "confidence": 0.667,
+      "sentiment": 0.537,
+      "impact_score": 0.322,
+      "title": "Broadcom Q4 Preview: After 74% Surge in 2025, Can Earnings Keep Rally Alive? - Broadcom (NASDAQ:AVGO) - Benzinga",
+      "matches": 2
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "\u2713 Catalyseurs mineurs. Impact limit\u00e9 sur tendance globale.",
+    "categories_present": [
+      "PRODUCT",
+      "FINANCIAL",
+      "MANAGEMENT"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 1.027,
+    "sentiment_volatility": 0.336,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "M\u00e9triques standards, pas de signal particulier."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "\ud83c\udf2a\ufe0f",
+      "title": "R\u00c9GIME DE HAUTE VOLATILIT\u00c9",
+      "message": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections. | \ud83d\udcde Call skew \u00e9lev\u00e9 - Sp\u00e9culation haussi\u00e8re agressive",
+      "action": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

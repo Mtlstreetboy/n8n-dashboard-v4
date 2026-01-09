@@ -1,0 +1,212 @@
+{
+  "ticker": "FDX",
+  "timestamp": "2026-01-03T02:57:23.333952",
+  "final_sentiment_score": -0.2776,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2793,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0096,
+    "news_confidence": 0.5,
+    "news_weight": 0.2948,
+    "options_sentiment": -0.165,
+    "options_confidence": 1.0,
+    "options_weight": 0.5446,
+    "analyst_sentiment": 0.5,
+    "analyst_confidence": 0.3269,
+    "analyst_weight": 0.1606,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "bearish_divergence",
+    "magnitude": 0.746,
+    "opportunity_score": 0.5968,
+    "interpretation": "\ud83d\udc3b BEARISH DIVERGENCE (force: 0.75) - Le march\u00e9 ignore les bonnes nouvelles. Possible correction \u00e0 venir ou les nouvelles sont 'priced in'."
+  },
+  "metadata": {
+    "news_articles_count": 20,
+    "options_volume": 10281,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "FDX est une compagnie de transport a\u00e9rien avec des nouvelles fr\u00e9quentes li\u00e9es \u00e0 la logistique et aux op\u00e9rations, n\u00e9cessitant un ajustement du mod\u00e8le pour sa volatilit\u00e9 typique et son exposure au sentiment des investisseurs.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 2.0,
+    "recommendation_count": 28,
+    "recommendation_summary": "Buy consensus (Mean: 2.0)",
+    "recommendation_score": 0.5,
+    "target_mean": 300.10715,
+    "target_median": 309.0,
+    "current_price": 293.13,
+    "upside_potential": 0.023802237914918277,
+    "price_target_score": 0.048,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0.981,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.265,
+    "metrics": {
+      "avg_iv": 0.63235,
+      "iv_skew": 0.3036429872495445,
+      "pcr_volume": 1.165
+    },
+    "implications": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections. | \u26a0\ufe0f Put skew \u00e9lev\u00e9 - Protection tail risk demand\u00e9e",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-18T08:00:00+00:00",
+        "confidence": 0.667,
+        "sentiment": 0.738,
+        "impact_score": 0.443,
+        "title": "FDX Earnings: FedEx\u2019s Financial Results Beat Wall Street Estimates - TipRanks",
+        "matches": 2
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2026-01-02T16:30:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.715,
+        "impact_score": 0.167,
+        "title": "FedEx Singapore and Zero Waste SG Launch 'Sort It Out' Campaign To Boost Community Recycling - Yahoo! Finance Canada",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-31T07:25:25+00:00",
+        "confidence": 0.667,
+        "sentiment": 0.35,
+        "impact_score": 0.117,
+        "title": "FedEx Corporation (NYSE:FDX) Given Consensus Rating of \"Moderate Buy\" by Analysts - MarketBeat",
+        "matches": 2
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-28T09:02:58+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.005,
+        "impact_score": 0.002,
+        "title": "FedEx Corporation $FDX Shares Acquired by Cwm LLC - MarketBeat",
+        "matches": 1
+      },
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2025-12-26T17:25:07+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.006,
+        "impact_score": 0.001,
+        "title": "FedEx (FDX) CEO is Playing Offense, Says Jim Cramer - Yahoo Finance",
+        "matches": 1
+      }
+    ],
+    "count": 5,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2025-12-18T08:00:00+00:00",
+      "confidence": 0.667,
+      "sentiment": 0.738,
+      "impact_score": 0.443,
+      "title": "FDX Earnings: FedEx\u2019s Financial Results Beat Wall Street Estimates - TipRanks",
+      "matches": 2
+    },
+    "impact_assessment": "MODERATE_IMPACT",
+    "recommendation": "\ud83d\udcca Catalyseurs mod\u00e9r\u00e9s en jeu. Ajuster positions selon d\u00e9veloppements. | Biais POSITIF des catalyseurs.",
+    "categories_present": [
+      "ANALYST",
+      "FINANCIAL",
+      "CORPORATE_ACTION",
+      "MANAGEMENT",
+      "PRODUCT"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.619,
+    "sentiment_volatility": 0.31,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "**Les commentaires sont bas\u00e9s sur une analyse quantitatique hypoth\u00e9tique**\n\n\ud83d\udcca L'acc\u00e9l\u00e9ration du sentiment et la volatilit\u00e9 sont stables (Acc\u00e9l\u00e9ration Momentum : 0,0 ; Volatilit\u00e9 Sentiment : 0.31), tandis que le score contrariant est faible (Contrarian Score : 0), indiquant que l'opinion de Wall Street sur FDX n'est pas tr\u00e8s divergente.\n\n\ud83d\udcc8 L\u2019indice Sharpe ajust\u00e9 \u00e0 0,619 et un Sentiment Final \u00e0 -0,2776 sugg\u00e8re une performance relativement faible par rapport au risque associ\u00e9. \n\n\ud83d\udca1 **Insight cl\u00e9** | Action recommand\u00e9e : Le trader devrait consid\u00e9rer une strat\u00e9gie de court terme pour ajuster la position de trading, car le sentiment actuel n'a pas d'implication forte.\n\nAttention: l\u2019analyse a \u00e9t\u00e9 simplifi\u00e9e et est susceptible de ne pas refl\u00e9ter fid\u00e8lement les comportements du march\u00e9 r\u00e9els."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "DIVERGENCE",
+      "icon": "\ud83d\udea8",
+      "title": "DIVERGENCE MAJEURE D\u00c9TECT\u00c9E",
+      "message": "\ud83d\udc3b BEARISH DIVERGENCE (force: 0.75) - Le march\u00e9 ignore les bonnes nouvelles. Possible correction \u00e0 venir ou les nouvelles sont 'priced in'.",
+      "action": "\u274c NE PAS ACHETER malgr\u00e9 bonnes nouvelles. Attendre correction ou confirmation par price action.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "\ud83c\udf2a\ufe0f",
+      "title": "R\u00c9GIME DE HAUTE VOLATILIT\u00c9",
+      "message": "\ud83c\udfa2 EUPHORIE - Volatilit\u00e9 \u00e9lev\u00e9e avec optimisme. Attention aux corrections. | \u26a0\ufe0f Put skew \u00e9lev\u00e9 - Protection tail risk demand\u00e9e",
+      "action": "Prendre profits partiels. R\u00e9duire exposition. Volatilit\u00e9 = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "MEDIUM",
+      "type": "CATALYST",
+      "icon": "\ud83c\udfaf",
+      "title": "Catalyseur: Earnings",
+      "message": "FDX Earnings: FedEx\u2019s Financial Results Beat Wall Street Estimates - TipRanks... (Impact: 0.44)",
+      "action": "\ud83d\udcca Catalyseurs mod\u00e9r\u00e9s en jeu. Ajuster positions selon d\u00e9veloppements. | Biais POSITIF des catalyseurs.",
+      "urgency": "SOON"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "\u26a0\ufe0f",
+      "title": "Donn\u00e9es Limit\u00e9es",
+      "message": "Seulement 20 articles analys\u00e9s. Confiance r\u00e9duite.",
+      "action": "Attendre plus de donn\u00e9es ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ],
+  "options_detail": {
+    "timestamp": "2026-01-03T01:49:42.299298",
+    "call_volume": 4749,
+    "put_volume": 5532,
+    "call_open_interest": 31818,
+    "put_open_interest": 37381,
+    "put_call_ratio_volume": 1.165,
+    "put_call_ratio_oi": 1.175,
+    "call_implied_volatility": 0.549,
+    "put_implied_volatility": 0.7157,
+    "sentiment_label": "bearish",
+    "sentiment_score": -0.165,
+    "total_contracts": 10281,
+    "total_open_interest": 69199,
+    "near_term_call_volume": 3831,
+    "far_term_call_volume": 918,
+    "near_term_put_volume": 1758,
+    "far_term_put_volume": 3774
+  }
+}

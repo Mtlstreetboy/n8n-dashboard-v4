@@ -1,0 +1,109 @@
+{
+  "ticker": "GOOGL",
+  "timestamp": "2026-01-03T01:19:34.114649",
+  "final_sentiment_score": 0.0345,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.1296,
+  "smart_money_factor": 0.0859,
+  "components": {
+    "news_sentiment": 0.0036,
+    "news_confidence": 0.8562,
+    "news_weight": 0.325,
+    "options_sentiment": 0.1795,
+    "options_confidence": 1.0,
+    "options_weight": 0.5695,
+    "analyst_sentiment": 0.7687,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.1055,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": -0.15
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.1759,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 819,
+    "options_volume": 315345,
+    "analysis_depth": "DEEP",
+    "config_rationale": "GOOGL est une entreprise technologique volatil avec des nouvelles fréquentes, nécessitant un déclin temporel et une fenêtre de momentum courtes pour réagir rapidement aux changements. La pénalité à la volatilité doit être modérée en raison du haut niveau d'activité, mais il est crucial de détecter les divergences importantes.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.46269,
+    "recommendation_count": 54,
+    "recommendation_summary": "Strong Buy consensus (Mean: 1.5)",
+    "recommendation_score": 0.769,
+    "target_mean": 330.2437,
+    "target_median": 330.0,
+    "current_price": 315.15,
+    "upside_potential": 0.04789370141202606,
+    "price_target_score": 0.095,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.372,
+    "metrics": {
+      "avg_iv": 0.6857500000000001,
+      "iv_skew": -0.06912572152611576,
+      "pcr_volume": 0.566
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [],
+    "count": 0,
+    "most_recent": null,
+    "impact_assessment": "NO_CATALYSTS",
+    "recommendation": "Pas de catalyseurs majeurs détectés. Trading technique/sentiment standard.",
+    "categories_present": []
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.115,
+    "sentiment_volatility": 0.355,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "**Analyse des métriques de sentiment GOOGL :**\n\n📊 *Baisse de conviction mais Sentiment stable* | **Maintenir une posture neutre avec une surveillance serrée**\n\nCes métriques indiquent un Sharpe Ratio faible, ce qui signifie que le risque ajusté est élevé. La volatilité sentimentale est élevée, ce qui suggère des changements imprévus dans l'opinion du marché sur GOOGL. L'accélération de la vitesse est nulle, indiquant un manque d'élan. Le score contrariant est 0, signifiant aucune opportunité de prise de risque. La consistance est également faible, ce qui suggère que l'opinion sur GOOGL est incohérente.\n\nCela signifie pour un trader qu'il vaut mieux maintenir une posture neutre avec une surveillance serrée pour anticiper les changements imprévus dans l'opinion du marché."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "MEDIUM",
+      "type": "PSYCHOLOGY",
+      "icon": "😨",
+      "title": "Asymétrie de Peur Détectée",
+      "message": "Marché surréagit aux mauvaises nouvelles. Possible capitulation ou opportunité contrarian.",
+      "action": "Opportunité d'achat si fondamentaux solides. Attendre stabilisation.",
+      "urgency": "MONITOR"
+    }
+  ]
+}
