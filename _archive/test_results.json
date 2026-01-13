@@ -1,0 +1,15 @@
+{
+  "senate_github": {
+    "status": "HTTP 404"
+  },
+  "house_s3": {
+    "status": "HTTP 403"
+  },
+  "sec_ticker_lookup": {
+    "status": "HTTP 404"
+  },
+  "sec_form4": null,
+  "sec_13f": {
+    "status": "HTTP 404"
+  }
+}

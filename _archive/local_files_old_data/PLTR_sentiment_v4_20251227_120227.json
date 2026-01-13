@@ -1,0 +1,144 @@
+{
+  "ticker": "PLTR",
+  "timestamp": "2025-12-27T12:02:02.722324",
+  "final_sentiment_score": 0.1168,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.1756,
+  "smart_money_factor": 0.0977,
+  "components": {
+    "news_sentiment": 0.0123,
+    "news_confidence": 0.4866,
+    "news_weight": 0.2177,
+    "options_sentiment": 0.1702,
+    "options_confidence": 0.9993,
+    "options_weight": 0.6705,
+    "analyst_sentiment": 0.0,
+    "analyst_confidence": 0.3,
+    "analyst_weight": 0.1118,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.1579,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 334,
+    "options_volume": 265989,
+    "analysis_depth": "DEEP",
+    "config_rationale": "PLTR est une action tech avec des nouvelles fréquentes, une volatilité typique et un volume de trading d'options important. Le sentiment peut être influencé par la communauté investisseuse en raison du statut de 'meme stock'.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 3.0,
+    "recommendation_count": 21,
+    "recommendation_summary": "Hold consensus (Mean: 3.0)",
+    "recommendation_score": 0.0,
+    "target_mean": 186.80952,
+    "target_median": 200.0,
+    "current_price": 188.71,
+    "upside_potential": -0.010070902442901892,
+    "price_target_score": -0.02,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 0.9,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.897,
+    "metrics": {
+      "avg_iv": 0.9485,
+      "iv_skew": -0.11018131101813113,
+      "pcr_volume": 0.557
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-26T20:45:05+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.959,
+        "impact_score": 0.32,
+        "title": "Palantir (PLTR) Stock Today: Shares Slip in Thin Post‑Christmas Trading as Navy “ShipOS” Deal and AI Data‑Center Push Keep 2026 in Focus - ts2.tech",
+        "matches": 1
+      },
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-27T10:23:15+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.924,
+        "impact_score": 0.277,
+        "title": "Palantir Technologies Inc. $PLTR Stock Position Reduced by Carnegie Investment Counsel - MarketBeat",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-26T15:00:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.255,
+        "impact_score": 0.043,
+        "title": "New Palantir Price Target as Stock Strength Grows - TheStreet Pro",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "merger_acquisition",
+      "category": "CORPORATE_ACTION",
+      "timestamp": "2025-12-26T20:45:05+00:00",
+      "confidence": 0.333,
+      "sentiment": -0.959,
+      "impact_score": 0.32,
+      "title": "Palantir (PLTR) Stock Today: Shares Slip in Thin Post‑Christmas Trading as Navy “ShipOS” Deal and AI Data‑Center Push Keep 2026 in Focus - ts2.tech",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale. | Biais NÉGATIF des catalyseurs.",
+    "categories_present": [
+      "ANALYST",
+      "CORPORATE_ACTION",
+      "FINANCIAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.355,
+    "sentiment_volatility": 0.421,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Bien que je ne puisse pas fournir de conseils d’investissement spécifiques, je peux analyser les données et vous fournir une interprétation basée sur ces métriques.\n\n**0.355 (Sharpe Ratio) | **_Ne pas prendre de décision à court terme, analyse plus approfondie nécessaire._ \nLa Sharpe Ratio indique que l'investissement PLTR offre un rendement supérieur au risque par rapport aux actifs du marché. Cependant, il s’agit d’une notation à long terme et peut nécessiter une réévaluation régulière.\n\n**0.421 (Volatilité Sentiment) | **_Surveillez les fluctuations du prix pour ajuster votre stratégie._ \nLa volatilité sentimentale de 0,421 montre que le sentiment autour d'PLTR change régulièrement. Il est conseillé aux traders de surveiller ces changements pour ajuster leurs stratégies.\n\n**0.0 (Accélération Momentum) | **_Pas d’opportunité de trading à court terme._ \nUn accélération momentum de 0 indique qu'il n'y a pas de tendance significative ou de révélation de mouvement à court terme pour un trader.\n\n**0 (Score Contrarian) | **_Ne suivre pas la tendance actuelle, considérer une stratégie différente._ \nLe score contrariant de 0 indique qu'il n'y a pas d'opportunité claire pour un investissement. Les traders peuvent réfléchir à des stratégies plus innovantes ou à suivre les signaux de la tendance actuelle avec prudence.\n\n**0.1168 (Sentiment Final) | **_Évaluation neutre du sentiment._ \nLa notation finale indique qu'il n'y a pas d'opinion claire sur l'action. Il est possible que le marché soit attiré ou repoussé en fonction de la stratégie et des prévisions.\n\n**HOLD (Classification) | **_Conservatisme dans les décisions._ \nLa classification HOLD indique qu'il n'y a pas d'urgence à acheter ou vendre, donc un trader peut adopter une approche plus prudente.\n\n**0.1756 (Conviction) | **_Prudence pour l’investissement._ \nLa conviction de 0,1756 montre que les traders ne sont pas convaincus du potentiel d'investissement à long terme en PLTR, ce qui peut conduire à une prise plus prudente des décisions.\n\nEn résumé, ces métriques suggèrent qu'un trader devrait adopter un point de vue plus neutre et attentif à l'évolution potentielle du marché, plutôt que d'investir ou vendre sans réflexion."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

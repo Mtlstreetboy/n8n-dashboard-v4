@@ -1,0 +1,50 @@
+graph LR
+    subgraph "1️⃣ DÉVELOPPEMENT (VS Code)"
+        A1[Ouvrir VS Code] --> A2[Éditer local_scripts/clean_data.py]
+        A2 --> A3[Sauvegarder Ctrl+S]
+        A3 --> A4[Changement disponible<br/>IMMÉDIATEMENT dans n8n]
+        
+        style A1 fill:#e1f5ff
+        style A4 fill:#c8e6c9
+    end
+
+    subgraph "2️⃣ ORCHESTRATION (n8n Web UI)"
+        B1[Ouvrir http://localhost:5678] --> B2[Créer un Workflow]
+        B2 --> B3[Ajouter nœud Webhook]
+        B3 --> B4[Ajouter nœud Execute Command]
+        B4 --> B5[Command: python3 /data/scripts/clean_data.py]
+        B5 --> B6[Ajouter nœud Ollama]
+        B6 --> B7[Config: Base URL = http://ollama:11434]
+        B7 --> B8[Model = llama3]
+        B8 --> B9[Activer le Workflow]
+        
+        style B1 fill:#fff9c4
+        style B9 fill:#c8e6c9
+    end
+
+    subgraph "3️⃣ EXÉCUTION (Runtime)"
+        C1[Trigger Webhook avec Postman/cURL] --> C2[n8n exécute Python]
+        C2 --> C3[Python traite les données]
+        C3 --> C4[n8n appelle Ollama]
+        C4 --> C5[Ollama génère réponse IA]
+        C5 --> C6[n8n retourne résultat]
+        
+        style C1 fill:#ffccbc
+        style C6 fill:#c8e6c9
+    end
+
+    subgraph "4️⃣ MAINTENANCE"
+        D1{Besoin de changer<br/>la logique Python?} -->|Oui| D2[Éditer dans VS Code]
+        D1 -->|Non| D3{Besoin d'un autre<br/>modèle IA?}
+        D2 --> D4[Pas besoin de rebuild Docker]
+        D3 -->|Oui| D5[docker exec -it ollama_local_ai<br/>ollama pull mistral]
+        D3 -->|Non| D6[Modifier workflow n8n<br/>via l'interface web]
+        
+        style D2 fill:#e1f5ff
+        style D5 fill:#ffe0b2
+        style D6 fill:#fff9c4
+    end
+
+    A4 -.-> B4
+    B9 -.-> C1
+    C6 -.-> D1

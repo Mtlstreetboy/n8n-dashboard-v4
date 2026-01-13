@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis V3 Dashboard</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        // Icônes SVG simplifiées
+        const TrendingUp = () => (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+            </svg>
+        );
+
+        const Activity = () => (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+        );
+
+        const Target = () => (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+        );
+
+        const Zap = () => (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+        );
+
+        const Users = () => (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+        );
+
+        const AlertTriangle = () => (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+        );
+
+        const SentimentDashboard = () => {
+            const [ticker, setTicker] = useState('');
+            const [availableTickers, setAvailableTickers] = useState([]);
+            const [data, setData] = useState(null);
+            const [loading, setLoading] = useState(false);
+            const [error, setError] = useState(null);
+
+            useEffect(() => {
+                loadAvailableTickers();
+            }, []);
+
+            const loadAvailableTickers = async () => {
+                try {
+                    const response = await fetch('/list-tickers');
+                    const tickers = await response.json();
+                    setAvailableTickers(tickers);
+                    if (tickers.length > 0) {
+                        setTicker(tickers[0]);
+                        loadData(tickers[0]);
+                    }
+                } catch (err) {
+                    console.error('Erreur chargement tickers:', err);
+                }
+            };
+
+            const loadData = async (selectedTicker) => {
+                setLoading(true);
+                setError(null);
+                try {
+                    const response = await fetch(`/sentiment/${selectedTicker}`);
+                    if (!response.ok) throw new Error('Données non disponibles');
+                    const jsonData = await response.json();
+                    setData(jsonData);
+                } catch (err) {
+                    setError(err.message);
+                } finally {
+                    setLoading(false);
+                }
+            };
+
+            const handleTickerChange = (e) => {
+                const newTicker = e.target.value;
+                setTicker(newTicker);
+                loadData(newTicker);
+            };
+
+            const getSentimentColor = (score) => {
+                if (score > 0.5) return 'text-green-600';
+                if (score > 0.2) return 'text-green-400';
+                if (score < -0.5) return 'text-red-600';
+                if (score < -0.2) return 'text-red-400';
+                return 'text-yellow-500';
+            };
+
+            const getSentimentBg = (score) => {
+                if (score > 0.5) return 'bg-green-500';
+                if (score > 0.2) return 'bg-green-400';
+                if (score < -0.5) return 'bg-red-500';
+                if (score < -0.2) return 'bg-red-400';
+                return 'bg-yellow-500';
+            };
+
+            if (loading) {
+                return (
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+                        <div className="text-white text-2xl">Chargement...</div>
+                    </div>
+                );
+            }
+
+            if (error) {
+                return (
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+                        <div className="text-red-400 text-2xl">Erreur: {error}</div>
+                    </div>
+                );
+            }
+
+            if (!data) {
+                return (
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+                        <div className="text-white text-2xl">Sélectionnez un ticker</div>
+                    </div>
+                );
+            }
+
+            const gaugePosition = ((data.final_sentiment_score + 1) / 2) * 100;
+
+            return (
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-6">
+                    <div className="max-w-7xl mx-auto space-y-6">
+                        
+                        {/* Header avec sélecteur de ticker */}
+                        <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-6">
+                            <div className="flex items-center justify-between">
+                                <div className="flex items-center gap-4">
+                                    <select 
+                                        value={ticker}
+                                        onChange={handleTickerChange}
+                                        className="bg-slate-700 text-white text-3xl font-bold px-4 py-2 rounded-lg border border-slate-600 focus:outline-none focus:border-cyan-500"
+                                    >
+                                        {availableTickers.map(t => (
+                                            <option key={t} value={t}>{t}</option>
+                                        ))}
+                                    </select>
+                                    <div>
+                                        <span className="text-2xl text-slate-400">Analyse Multi-Dimensionnelle V3</span>
+                                        <p className="text-slate-400 text-sm">
+                                            {new Date(data.timestamp).toLocaleString('fr-FR')} • 6 Dimensions + Analyst Insights
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="text-right">
+                                    <div className={`text-5xl font-bold ${getSentimentColor(data.final_sentiment_score)}`}>
+                                        {data.final_sentiment_score > 0 ? '+' : ''}{(data.final_sentiment_score * 100).toFixed(2)}
+                                    </div>
+                                    <div className="text-slate-400 text-sm mt-1">Score Final</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Classification & Conviction */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6">
+                                <div className="flex items-center gap-3 mb-2">
+                                    <Target />
+                                    <span className="text-slate-400 text-sm">Classification</span>
+                                </div>
+                                <div className={`text-3xl font-bold ${getSentimentColor(data.final_sentiment_score)}`}>
+                                    {data.classification}
+                                </div>
+                            </div>
+
+                            <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6">
+                                <div className="flex items-center gap-3 mb-2">
+                                    <Zap />
+                                    <span className="text-slate-400 text-sm">Conviction</span>
+                                </div>
+                                <div className="text-3xl font-bold text-white">
+                                    {(data.conviction_score * 100).toFixed(1)}%
+                                </div>
+                                <div className="w-full bg-slate-700 rounded-full h-2 mt-3">
+                                    <div 
+                                        className="bg-gradient-to-r from-yellow-500 to-orange-500 h-2 rounded-full transition-all duration-500"
+                                        style={{ width: `${data.conviction_score * 100}%` }}
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6">
+                                <div className="flex items-center gap-3 mb-2">
+                                    <Activity />
+                                    <span className="text-slate-400 text-sm">Confiance</span>
+                                </div>
+                                <div className="text-3xl font-bold text-white">
+                                    {data.confidence_level}
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Jauge de sentiment principal */}
+                        <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8">
+                            <h2 className="text-xl font-semibold text-white mb-6 flex items-center gap-2">
+                                <TrendingUp />
+                                Sentiment Global
+                            </h2>
+                            
+                            <div className="relative">
+                                <div className="flex justify-between text-xs text-slate-400 mb-2">
+                                    <span>Bearish Fort</span>
+                                    <span>Neutre</span>
+                                    <span>Bullish Fort</span>
+                                </div>
+                                
+                                <div className="relative h-12 rounded-xl overflow-hidden bg-gradient-to-r from-red-600 via-yellow-500 to-green-600">
+                                    <div className="absolute inset-0 flex justify-between px-1">
+                                        <div className="w-px bg-white/30 h-full"></div>
+                                        <div className="w-px bg-white/50 h-full"></div>
+                                        <div className="w-px bg-white/30 h-full"></div>
+                                    </div>
+                                    
+                                    <div 
+                                        className="absolute top-0 bottom-0 w-1 bg-white shadow-lg transition-all duration-700"
+                                        style={{ left: `${gaugePosition}%` }}
+                                    >
+                                        <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-white text-slate-900 px-3 py-1 rounded-lg text-sm font-bold whitespace-nowrap shadow-lg">
+                                            {data.final_sentiment_score > 0 ? '+' : ''}{data.final_sentiment_score.toFixed(4)}
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div className="flex justify-between text-xs text-slate-500 mt-2">
+                                    <span>-1.00</span>
+                                    <span>-0.50</span>
+                                    <span>0.00</span>
+                                    <span>+0.50</span>
+                                    <span>+1.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* NOUVEAU: Analyst Insights Card */}
+                        {data.analyst_insights && (
+                            <div className="bg-gradient-to-br from-purple-900/30 to-blue-900/30 backdrop-blur-sm border border-purple-700/50 rounded-2xl p-8">
+                                <h2 className="text-xl font-semibold text-white mb-6 flex items-center gap-2">
+                                    <Users />
+                                    Analyst Insights - Consensus Professionnel
+                                    <span className="ml-auto text-sm bg-purple-600 px-3 py-1 rounded-full">
+                                        {data.analyst_insights.recommendation_count} analystes
+                                    </span>
+                                </h2>
+                                
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                                    {/* Recommandation */}
+                                    <div className="bg-slate-800/50 rounded-xl p-5 border border-purple-600/30">
+                                        <div className="flex items-center justify-between mb-3">
+                                            <span className="text-slate-300 text-sm">Recommandation</span>
+                                            <span className={`font-bold text-lg ${getSentimentColor(data.components.analyst_sentiment)}`}>
+                                                {data.components.analyst_sentiment > 0 ? '+' : ''}{(data.components.analyst_sentiment * 100).toFixed(1)}
+                                            </span>
+                                        </div>
+                                        <div className="text-2xl font-bold text-white mb-2">
+                                            {data.analyst_insights.recommendation_summary}
+                                        </div>
+                                        <div className="text-sm text-slate-400">
+                                            Moyenne: {data.analyst_insights.recommendation_mean?.toFixed(2) || 'N/A'}/5.0
+                                        </div>
+                                        <div className="w-full bg-slate-700 rounded-full h-2 mt-3">
+                                            <div 
+                                                className="bg-gradient-to-r from-purple-500 to-blue-500 h-2 rounded-full transition-all duration-500"
+                                                style={{ width: `${(data.analyst_insights.component_confidences?.recommendation || 0) * 100}%` }}
+                                            />
+                                        </div>
+                                    </div>
+
+                                    {/* Price Target */}
+                                    <div className="bg-slate-800/50 rounded-xl p-5 border border-blue-600/30">
+                                        <div className="flex items-center justify-between mb-3">
+                                            <span className="text-slate-300 text-sm">Price Target</span>
+                                            {data.analyst_insights.upside_potential != null && (
+                                                <span className={`font-bold text-lg ${data.analyst_insights.upside_potential > 0 ? 'text-green-400' : 'text-red-400'}`}>
+                                                    {data.analyst_insights.upside_potential > 0 ? '+' : ''}{(data.analyst_insights.upside_potential * 100).toFixed(1)}%
+                                                </span>
+                                            )}
+                                        </div>
+                                        <div className="text-2xl font-bold text-white mb-2">
+                                            {data.analyst_insights.target_mean ? `$${data.analyst_insights.target_mean.toFixed(2)}` : 'N/A'}
+                                        </div>
+                                        <div className="text-sm text-slate-400">
+                                            Prix actuel: {data.analyst_insights.current_price ? `$${data.analyst_insights.current_price.toFixed(2)}` : 'N/A'}
+                                        </div>
+                                        {data.analyst_insights.target_median && (
+                                            <div className="flex justify-between text-xs text-slate-500 mt-2">
+                                                <span>Médiane: ${data.analyst_insights.target_median.toFixed(2)}</span>
+                                            </div>
+                                        )}
+                                    </div>
+
+                                    {/* Momentum Révisions */}
+                                    <div className="bg-slate-800/50 rounded-xl p-5 border border-cyan-600/30">
+                                        <div className="flex items-center justify-between mb-3">
+                                            <span className="text-slate-300 text-sm">Révisions 30j</span>
+                                            <span className={`font-bold text-lg ${(data.analyst_insights.net_changes_30d || 0) > 0 ? 'text-green-400' : 'text-red-400'}`}>
+                                                {(data.analyst_insights.net_changes_30d || 0) > 0 ? '+' : ''}{data.analyst_insights.net_changes_30d || 0}
+                                            </span>
+                                        </div>
+                                        <div className="flex gap-4 mb-2">
+                                            <div>
+                                                <div className="text-xl font-bold text-green-400">
+                                                    ↑ {data.analyst_insights.upgrades_30d || 0}
+                                                </div>
+                                                <div className="text-xs text-slate-400">Upgrades</div>
+                                            </div>
+                                            <div>
+                                                <div className="text-xl font-bold text-red-400">
+                                                    ↓ {data.analyst_insights.downgrades_30d || 0}
+                                                </div>
+                                                <div className="text-xs text-slate-400">Downgrades</div>
+                                            </div>
+                                        </div>
+                                        <div className="text-sm text-slate-400 mt-2">
+                                            Momentum: {((data.analyst_insights.momentum_score || 0) * 100).toFixed(0)}%
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Pondération des composantes analyst */}
+                                {data.analyst_insights.weights && (
+                                    <div className="bg-slate-800/30 rounded-xl p-4 border border-purple-600/20">
+                                        <div className="text-sm text-slate-400 mb-3">Composition du score analystes:</div>
+                                        <div className="grid grid-cols-3 gap-4">
+                                            <div>
+                                                <div className="flex justify-between text-xs text-slate-400 mb-1">
+                                                    <span>Recommandations</span>
+                                                    <span>{((data.analyst_insights.weights.rec || 0) * 100).toFixed(0)}%</span>
+                                                </div>
+                                                <div className="w-full bg-slate-700 rounded-full h-1.5">
+                                                    <div 
+                                                        className="bg-purple-500 h-1.5 rounded-full"
+                                                        style={{ width: `${(data.analyst_insights.weights.rec || 0) * 100}%` }}
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div className="flex justify-between text-xs text-slate-400 mb-1">
+                                                    <span>Price Targets</span>
+                                                    <span>{((data.analyst_insights.weights.pt || 0) * 100).toFixed(0)}%</span>
+                                                </div>
+                                                <div className="w-full bg-slate-700 rounded-full h-1.5">
+                                                    <div 
+                                                        className="bg-blue-500 h-1.5 rounded-full"
+                                                        style={{ width: `${(data.analyst_insights.weights.pt || 0) * 100}%` }}
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div className="flex justify-between text-xs text-slate-400 mb-1">
+                                                    <span>Momentum</span>
+                                                    <span>{((data.analyst_insights.weights.momentum || 0) * 100).toFixed(0)}%</span>
+                                                </div>
+                                                <div className="w-full bg-slate-700 rounded-full h-1.5">
+                                                    <div 
+                                                        className="bg-cyan-500 h-1.5 rounded-full"
+                                                        style={{ width: `${(data.analyst_insights.weights.momentum || 0) * 100}%` }}
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                        )}
+
+                        {/* Composantes du sentiment - 6 dimensions */}
+                        <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8">
+                            <h2 className="text-xl font-semibold text-white mb-6 flex items-center gap-2">
+                                <Activity />
+                                6 Dimensions de Sentiment
+                            </h2>
+                            
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                {/* News Sentiment */}
+                                <div className="space-y-3">
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-white font-medium">📰 Sentiment Nouvelles</span>
+                                        <span className={`font-bold ${getSentimentColor(data.components.news_sentiment)}`}>
+                                            {data.components.news_sentiment > 0 ? '+' : ''}{data.components.news_sentiment.toFixed(4)}
+                                        </span>
+                                    </div>
+                                    <div className="w-full bg-slate-700 rounded-full h-3 overflow-hidden">
+                                        <div 
+                                            className={`${getSentimentBg(data.components.news_sentiment)} h-3 transition-all duration-500`}
+                                            style={{ 
+                                                width: `${Math.abs(data.components.news_sentiment) * 100}%`,
+                                                marginLeft: data.components.news_sentiment < 0 ? `${100 - Math.abs(data.components.news_sentiment) * 100}%` : '0'
+                                            }}
+                                        />
+                                    </div>
+                                    <div className="flex justify-between text-xs text-slate-400">
+                                        <span>Confiance: {(data.components.news_confidence * 100).toFixed(1)}%</span>
+                                        <span>Poids: {(data.components.news_weight * 100).toFixed(1)}%</span>
+                                    </div>
+                                </div>
+
+                                {/* Options Sentiment */}
+                                <div className="space-y-3">
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-white font-medium">📊 Sentiment Options</span>
+                                        <span className={`font-bold ${getSentimentColor(data.components.options_sentiment)}`}>
+                                            {data.components.options_sentiment > 0 ? '+' : ''}{data.components.options_sentiment.toFixed(4)}
+                                        </span>
+                                    </div>
+                                    <div className="w-full bg-slate-700 rounded-full h-3 overflow-hidden">
+                                        <div 
+                                            className={`${getSentimentBg(data.components.options_sentiment)} h-3 transition-all duration-500`}
+                                            style={{ 
+                                                width: `${Math.abs(data.components.options_sentiment) * 100}%`,
+                                                marginLeft: data.components.options_sentiment < 0 ? `${100 - Math.abs(data.components.options_sentiment) * 100}%` : '0'
+                                            }}
+                                        />
+                                    </div>
+                                    <div className="flex justify-between text-xs text-slate-400">
+                                        <span>Confiance: {(data.components.options_confidence * 100).toFixed(1)}%</span>
+                                        <span>Poids: {(data.components.options_weight * 100).toFixed(1)}%</span>
+                                    </div>
+                                </div>
+
+                                {/* NOUVEAU: Analyst Sentiment */}
+                                <div className="space-y-3 bg-purple-900/20 p-4 rounded-lg border border-purple-600/30">
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-white font-medium">👥 Sentiment Analystes</span>
+                                        <span className={`font-bold ${getSentimentColor(data.components.analyst_sentiment)}`}>
+                                            {data.components.analyst_sentiment > 0 ? '+' : ''}{data.components.analyst_sentiment.toFixed(4)}
+                                        </span>
+                                    </div>
+                                    <div className="w-full bg-slate-700 rounded-full h-3 overflow-hidden">
+                                        <div 
+                                            className="bg-gradient-to-r from-purple-500 to-blue-500 h-3 transition-all duration-500"
+                                            style={{ 
+                                                width: `${Math.abs(data.components.analyst_sentiment) * 100}%`,
+                                                marginLeft: data.components.analyst_sentiment < 0 ? `${100 - Math.abs(data.components.analyst_sentiment) * 100}%` : '0'
+                                            }}
+                                        />
+                                    </div>
+                                    <div className="flex justify-between text-xs text-slate-400">
+                                        <span>Confiance: {(data.components.analyst_confidence * 100).toFixed(1)}%</span>
+                                        <span>Poids: {(data.components.analyst_weight * 100).toFixed(1)}%</span>
+                                    </div>
+                                </div>
+
+                                {/* Momentum */}
+                                <div className="space-y-3">
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-white font-medium">🚀 Momentum Narratif</span>
+                                        <span className={`font-bold ${getSentimentColor(data.components.narrative_momentum)}`}>
+                                            {data.components.narrative_momentum > 0 ? '+' : ''}{data.components.narrative_momentum.toFixed(4)}
+                                        </span>
+                                    </div>
+                                    <div className="w-full bg-slate-700 rounded-full h-3 overflow-hidden">
+                                        <div 
+                                            className={`${getSentimentBg(data.components.narrative_momentum)} h-3 transition-all duration-500`}
+                                            style={{ 
+                                                width: `${Math.abs(data.components.narrative_momentum) * 100}%`,
+                                                marginLeft: data.components.narrative_momentum < 0 ? `${100 - Math.abs(data.components.narrative_momentum) * 100}%` : '0'
+                                            }}
+                                        />
+                                    </div>
+                                </div>
+
+                                {/* Fear/Greed */}
+                                <div className="space-y-3">
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-white font-medium">😨 Peur/Greed Asymétrie</span>
+                                        <span className={`font-bold ${getSentimentColor(data.components.fear_greed_asymmetry)}`}>
+                                            {data.components.fear_greed_asymmetry > 0 ? '+' : ''}{data.components.fear_greed_asymmetry.toFixed(4)}
+                                        </span>
+                                    </div>
+                                    <div className="w-full bg-slate-700 rounded-full h-3 overflow-hidden">
+                                        <div 
+                                            className={`${getSentimentBg(data.components.fear_greed_asymmetry)} h-3 transition-all duration-500`}
+                                            style={{ 
+                                                width: `${Math.abs(data.components.fear_greed_asymmetry) * 100}%`,
+                                                marginLeft: data.components.fear_greed_asymmetry < 0 ? `${100 - Math.abs(data.components.fear_greed_asymmetry) * 100}%` : '0'
+                                            }}
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Graphique de pondération des 3 sources principales */}
+                            <div className="mt-8 pt-6 border-t border-slate-700">
+                                <h3 className="text-sm font-semibold text-slate-300 mb-4">Pondération des Sources</h3>
+                                <div className="flex gap-2 h-8">
+                                    <div 
+                                        className="bg-blue-500 rounded flex items-center justify-center text-white text-xs font-semibold transition-all duration-500"
+                                        style={{ width: `${data.components.news_weight * 100}%` }}
+                                    >
+                                        News {(data.components.news_weight * 100).toFixed(0)}%
+                                    </div>
+                                    <div 
+                                        className="bg-cyan-500 rounded flex items-center justify-center text-white text-xs font-semibold transition-all duration-500"
+                                        style={{ width: `${data.components.options_weight * 100}%` }}
+                                    >
+                                        Options {(data.components.options_weight * 100).toFixed(0)}%
+                                    </div>
+                                    <div 
+                                        className="bg-purple-500 rounded flex items-center justify-center text-white text-xs font-semibold transition-all duration-500"
+                                        style={{ width: `${data.components.analyst_weight * 100}%` }}
+                                    >
+                                        Analysts {(data.components.analyst_weight * 100).toFixed(0)}%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Analyse de divergence */}
+                        <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8">
+                            <h2 className="text-xl font-semibold text-white mb-6 flex items-center gap-2">
+                                <AlertTriangle />
+                                Détection de Divergence
+                            </h2>
+                            
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <div>
+                                    <div className="text-slate-400 text-sm mb-2">Type</div>
+                                    <div className="text-2xl font-bold text-white">{data.divergence_analysis.type.replace('_', ' ').toUpperCase()}</div>
+                                </div>
+                                <div>
+                                    <div className="text-slate-400 text-sm mb-2">Magnitude</div>
+                                    <div className="text-2xl font-bold text-cyan-400">{data.divergence_analysis.magnitude.toFixed(4)}</div>
+                                </div>
+                                <div>
+                                    <div className="text-slate-400 text-sm mb-2">Score d'Opportunité</div>
+                                    <div className="text-2xl font-bold text-purple-400">{data.divergence_analysis.opportunity_score.toFixed(4)}</div>
+                                </div>
+                            </div>
+                            
+                            <div className="mt-6 p-4 bg-slate-700/50 rounded-xl border border-slate-600">
+                                <div className="text-white">{data.divergence_analysis.interpretation}</div>
+                            </div>
+                        </div>
+
+                        {/* Métadonnées */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6">
+                                <div className="text-slate-400 text-sm mb-1">Articles Analysés</div>
+                                <div className="text-3xl font-bold text-white">{data.metadata.news_articles_count}</div>
+                            </div>
+                            <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6">
+                                <div className="text-slate-400 text-sm mb-1">Volume Options</div>
+                                <div className="text-3xl font-bold text-white">{data.metadata.options_volume.toLocaleString()}</div>
+                            </div>
+                            <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6">
+                                <div className="text-slate-400 text-sm mb-1">Version / Profondeur</div>
+                                <div className="text-3xl font-bold text-white">
+                                    {data.metadata.version || 'V3'} / {data.metadata.analysis_depth}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        ReactDOM.render(<SentimentDashboard />, document.getElementById('root'));
+    </script>
+</body>
+</html>

@@ -13,15 +13,19 @@ Thumbs.db
 
 # Data & Logs
 local_files/
-_archive/
-_archive_cleanup/
-_archive_split_cleanup/
+archive/
 *_cache/
 logs/
 *.log
 *.csv
 +!docs/**/*.json
-!prod/dashboard/config/*.json
+!prod/config/*.json
+
+# Generated artifacts (new structure)
+build/
+prod/dashboards/html/*.html
+prod/dashboards/html/*.json
+!prod/dashboards/html/.gitkeep
 
 # Large/Generated files
 +!docs/**/*.mmd

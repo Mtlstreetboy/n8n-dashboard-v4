@@ -1,0 +1,133 @@
+{
+  "ticker": "AMZN",
+  "timestamp": "2025-12-27T12:00:29.292083",
+  "final_sentiment_score": 0.4079,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.3382,
+  "smart_money_factor": 0.085,
+  "components": {
+    "news_sentiment": 0.0255,
+    "news_confidence": 0.5244,
+    "news_weight": 0.232,
+    "options_sentiment": 0.3085,
+    "options_confidence": 0.9701,
+    "options_weight": 0.6438,
+    "analyst_sentiment": 0.8322,
+    "analyst_confidence": 0.3369,
+    "analyst_weight": 0.1242,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.2829,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 426,
+    "options_volume": 184549,
+    "analysis_depth": "DEEP",
+    "config_rationale": "AMZN est une valeur technologique avec des nouvelles fréquentes, donc un decalage de temps court et une tolérance à la divergence légèrement plus grande. La volatilité est élevée, ce qui nécessite un pénalisation importante pour les mouvements de prix.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.32836,
+    "recommendation_count": 60,
+    "recommendation_summary": "Strong Buy consensus (Mean: 1.3)",
+    "recommendation_score": 0.836,
+    "target_mean": 295.59784,
+    "target_median": 300.0,
+    "current_price": 232.52,
+    "upside_potential": 0.2712792017890934,
+    "price_target_score": 0.495,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 0.989,
+      "pt": 0.011,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.011,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.098,
+    "metrics": {
+      "avg_iv": 0.5488,
+      "iv_skew": -0.12119137281752838,
+      "pcr_volume": 0.466
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-27T15:05:52+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.821,
+        "impact_score": 0.137,
+        "title": "Amazon Stock Lags as AI Threat Looms, Analysts See Upside - TipRanks",
+        "matches": 1
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-23T18:24:31+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.429,
+        "impact_score": 0.1,
+        "title": "Amazon Just Unveiled Some Seriously Impressive “Frontier” AI Agents. It’s Time to Buy. - 24/7 Wall St.",
+        "matches": 1
+      }
+    ],
+    "count": 2,
+    "most_recent": {
+      "type": "analyst_action",
+      "category": "ANALYST",
+      "timestamp": "2025-12-27T15:05:52+00:00",
+      "confidence": 0.333,
+      "sentiment": -0.821,
+      "impact_score": 0.137,
+      "title": "Amazon Stock Lags as AI Threat Looms, Analysts See Upside - TipRanks",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "PRODUCT",
+      "ANALYST"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.825,
+    "sentiment_volatility": 0.37,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Je ne peux pas fournir d’informations ou de conseils sur les investissements spécifiques, mais je peux vous donner des informations générales sur la façon dont ces métriques pourraient être interprétées. Pourrai-je vous aider avec autre chose?"
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

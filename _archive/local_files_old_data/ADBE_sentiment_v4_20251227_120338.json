@@ -1,0 +1,133 @@
+{
+  "ticker": "ADBE",
+  "timestamp": "2025-12-27T12:03:25.032905",
+  "final_sentiment_score": 0.09,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2876,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0319,
+    "news_confidence": 0.5684,
+    "news_weight": 0.3021,
+    "options_sentiment": -0.1598,
+    "options_confidence": 0.6901,
+    "options_weight": 0.5502,
+    "analyst_sentiment": 0.4625,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.1477,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.1917,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 196,
+    "options_volume": 31282,
+    "analysis_depth": "DEEP",
+    "config_rationale": "Configuration par défaut (modérée)",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 2.075,
+    "recommendation_count": 36,
+    "recommendation_summary": "Buy consensus (Mean: 2.1)",
+    "recommendation_score": 0.462,
+    "target_mean": 430.96472,
+    "target_median": 422.5,
+    "current_price": 353.8,
+    "upside_potential": 0.21810265686828711,
+    "price_target_score": 0.41,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "PANIC",
+    "confidence": 0.073,
+    "metrics": {
+      "avg_iv": 0.53645,
+      "iv_skew": -0.17160872528970691,
+      "pcr_volume": 1.65
+    },
+    "implications": "🚨 PANIQUE - Les traders se couvrent agressivement. Opportunité contrarian possible mais risquée.",
+    "signal_adjustment": -0.2,
+    "recommendation": "Attendre stabilisation. Si conviction forte, petites positions avec stops serrés."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-24T19:06:00+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.629,
+        "impact_score": 0.21,
+        "title": "Adobe’s AI Crossroads: Valuation Tensions Mount as Semrush Acquisition Takes Center Stage - FinancialContent",
+        "matches": 1
+      },
+      {
+        "type": "legal_issues",
+        "category": "LEGAL",
+        "timestamp": "2025-12-23T02:43:27+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.039,
+        "impact_score": 0.011,
+        "title": "Adobe Stock After Hours Today (Dec. 22, 2025): ADBE Holds Near $358 as AI Catalysts and Lawsuit Risk Shape the Setup for Tuesday’s Open - ts2.tech",
+        "matches": 1
+      }
+    ],
+    "count": 2,
+    "most_recent": {
+      "type": "merger_acquisition",
+      "category": "CORPORATE_ACTION",
+      "timestamp": "2025-12-24T19:06:00+00:00",
+      "confidence": 0.333,
+      "sentiment": -0.629,
+      "impact_score": 0.21,
+      "title": "Adobe’s AI Crossroads: Valuation Tensions Mount as Semrush Acquisition Takes Center Stage - FinancialContent",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "CORPORATE_ACTION",
+      "LEGAL"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.905,
+    "sentiment_volatility": 0.412,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Voici les analyses basées sur les métriques fournies :\n\n📊 **L'investissement dans ADBE est neutre mais avec une certaine volatilité** | Maintenir la position actuelle et ajuster en fonction des fluctuations.\n\n- La Sharpe Ratio de 0,905 indique un sentiment soutenu par rapport au risque.\n- Une Volatilité Sentiment élevée à 0,412 suggère que les sentiments peuvent changer rapidement.\n- L'Accélération Momentum est nulle, ce qui signifie qu'il n'y a pas de changement significatif dans la vitesse des mouvements.\n\n📊 **Pas d'opportunité claire pour investir en ADBE** | Attendre une accélération plus forte ou un signal de changement avant investir.\n\n- Le Score Contrarian est à 0, ce qui suggère qu'il n'y a pas d'opportunité spécifique à saisir.\n- La Consistance est également à 0, ce qui indique des sentiments incohérents.\n\n📊 **Conviction modérée mais volatilité élevée** | Investir avec prudence et ajuster les positions en fonction de l'évolution du sentiment."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🚨 PANIQUE - Les traders se couvrent agressivement. Opportunité contrarian possible mais risquée.",
+      "action": "Attendre stabilisation. Si conviction forte, petites positions avec stops serrés.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

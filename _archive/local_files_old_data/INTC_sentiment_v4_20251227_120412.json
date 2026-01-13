@@ -1,0 +1,144 @@
+{
+  "ticker": "INTC",
+  "timestamp": "2025-12-27T12:04:06.244507",
+  "final_sentiment_score": 0.2124,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.275,
+  "smart_money_factor": 0.0654,
+  "components": {
+    "news_sentiment": 0.0133,
+    "news_confidence": 0.491,
+    "news_weight": 0.2245,
+    "options_sentiment": 0.3272,
+    "options_confidence": 0.9456,
+    "options_weight": 0.6485,
+    "analyst_sentiment": -0.0222,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.127,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.3139,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 269,
+    "options_volume": 135935,
+    "analysis_depth": "DEEP",
+    "config_rationale": "Intel (INTC) est une entreprise technologique avec des nouvelles fréquentes dans le secteur tech. La volatilité et les volumes d'options sont importants à considérer, ainsi que la réactivité du prix aux nouvelles.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 3.04444,
+    "recommendation_count": 36,
+    "recommendation_summary": "Hold consensus (Mean: 3.0)",
+    "recommendation_score": -0.022,
+    "target_mean": 38.14028,
+    "target_median": 39.5,
+    "current_price": 36.2,
+    "upside_potential": 0.05359889502762415,
+    "price_target_score": 0.107,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.677,
+    "metrics": {
+      "avg_iv": 0.8387,
+      "iv_skew": -0.03491096532333651,
+      "pcr_volume": 0.407
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-26T14:18:05+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.849,
+        "impact_score": 0.255,
+        "title": "Intel displays tech to build extreme multi-chiplet packages 12 times the size of the largest AI processors, beating TSMC's biggest — floorplan the size of a cellphone, armed with HBM5, 14A compute tiles and 18A SRAM - Tom's Hardware",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-24T15:51:36+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.084,
+        "impact_score": 0.028,
+        "title": "How a Silicon Valley dealmaker charmed Trump and gave Intel a lifeline - Reuters",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-27T02:00:43+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.003,
+        "impact_score": 0.001,
+        "title": "Intel Stock (INTC) Update: Latest News, Analyst Forecasts, and What Investors Should Watch Before the Next Market Session - ts2.tech",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2025-12-26T14:18:05+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.849,
+      "impact_score": 0.255,
+      "title": "Intel displays tech to build extreme multi-chiplet packages 12 times the size of the largest AI processors, beating TSMC's biggest — floorplan the size of a cellphone, armed with HBM5, 14A compute tiles and 18A SRAM - Tom's Hardware",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale. | Biais POSITIF des catalyseurs.",
+    "categories_present": [
+      "ANALYST",
+      "FINANCIAL",
+      "CORPORATE_ACTION"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.359,
+    "sentiment_volatility": 0.443,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "Je suis désolé, mais je ne peux pas fournir d’informations ou de conseils sur les investissements. Si vous avez des questions sur la formation et le développement personnel, je serais ravi de l’aider !"
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

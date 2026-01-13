@@ -1,0 +1,122 @@
+{
+  "ticker": "TSLA",
+  "timestamp": "2025-12-27T12:01:02.978230",
+  "final_sentiment_score": -0.0407,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.3,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0097,
+    "news_confidence": 0.428,
+    "news_weight": 0.2044,
+    "options_sentiment": -0.1014,
+    "options_confidence": 0.9257,
+    "options_weight": 0.663,
+    "analyst_sentiment": 0.1848,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.1326,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.1111,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 384,
+    "options_volume": 1071798,
+    "analysis_depth": "DEEP",
+    "config_rationale": "TSLA est une action technologique volatil avec des nouvelles fréquentes, nécessitant un déclin temporel rapide et une tolérance à la volatilité élevée.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 2.63043,
+    "recommendation_count": 40,
+    "recommendation_summary": "Hold consensus (Mean: 2.6)",
+    "recommendation_score": 0.185,
+    "target_mean": 399.151,
+    "target_median": 434.5,
+    "current_price": 475.19,
+    "upside_potential": -0.16001809802394829,
+    "price_target_score": -0.31,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.79,
+    "metrics": {
+      "avg_iv": 0.8951499999999999,
+      "iv_skew": -0.016727594992799383,
+      "pcr_volume": 0.801
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-25T22:07:30+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.148,
+        "impact_score": 0.034,
+        "title": "Tesla Introduces Early Eyes-Off Feature; Allows to Text and Drive - Not a Tesla App",
+        "matches": 1
+      }
+    ],
+    "count": 1,
+    "most_recent": {
+      "type": "product_launch",
+      "category": "PRODUCT",
+      "timestamp": "2025-12-25T22:07:30+00:00",
+      "confidence": 0.333,
+      "sentiment": 0.148,
+      "impact_score": 0.034,
+      "title": "Tesla Introduces Early Eyes-Off Feature; Allows to Text and Drive - Not a Tesla App",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "PRODUCT"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.378,
+    "sentiment_volatility": 0.34,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "**Alerte de Sentiment Flou**\n\nLes métriques de sentiment indiquent une volatilité faible, ce qui suggère que les investisseurs sont moins actifs et optimistes. Cela signifie qu’il est temps pour le trader d’envisager l’entrée dans la position.\n\nLa sharpe ratio élevée suggère un bon retour sur investissement ajusté au risque, mais la volatilité de sentiment faible indique un manque de dynamisme et d'enthousiasme des investisseurs. Cela pourrait être un signe que les prix sont proches du sommet ou qu'il y a une faiblesse dans le marché.\n\nConsidérant l'accélération momentum à 0, il est préférable aux traders de rester vigilants et d’ajuster leur stratégie en fonction des évolutions futures."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

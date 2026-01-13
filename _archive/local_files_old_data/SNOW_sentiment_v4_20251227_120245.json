@@ -1,0 +1,144 @@
+{
+  "ticker": "SNOW",
+  "timestamp": "2025-12-27T12:02:36.134977",
+  "final_sentiment_score": 0.1982,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2862,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0316,
+    "news_confidence": 0.5049,
+    "news_weight": 0.2806,
+    "options_sentiment": -0.0348,
+    "options_confidence": 0.6777,
+    "options_weight": 0.565,
+    "analyst_sentiment": 0.7059,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.1544,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0.1
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0664,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 211,
+    "options_volume": 25989,
+    "analysis_depth": "DEEP",
+    "config_rationale": "SNOW est une action de technologie avec des nouvelles fréquentes et un volume d'options important, nécessitant une réactivité plus rapide mais pas excessive.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.58824,
+    "recommendation_count": 47,
+    "recommendation_summary": "Buy consensus (Mean: 1.6)",
+    "recommendation_score": 0.706,
+    "target_mean": 283.5219,
+    "target_median": 285.0,
+    "current_price": 223.88,
+    "upside_potential": 0.26640119706985893,
+    "price_target_score": 0.488,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.476,
+    "metrics": {
+      "avg_iv": 0.73815,
+      "iv_skew": -0.1719910846953938,
+      "pcr_volume": 0.786
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-24T19:36:46+00:00",
+        "confidence": 0.667,
+        "sentiment": 0.487,
+        "impact_score": 0.325,
+        "title": "Snowflake in Talks to Acquire Observe to Expand Range of AI Offerings - PYMNTS.com",
+        "matches": 2
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-25T20:58:08+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.127,
+        "impact_score": 0.021,
+        "title": "Snowflake Cortex AI: Accelerating Financial Services with Agentic AI - Snowflake",
+        "matches": 1
+      },
+      {
+        "type": "product_launch",
+        "category": "PRODUCT",
+        "timestamp": "2025-12-22T10:34:37+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.083,
+        "impact_score": 0.019,
+        "title": "Accenture and Snowflake Launch Dedicated Business Group to Accelerate Enterprise Generative AI - TechAfrica News",
+        "matches": 1
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "merger_acquisition",
+      "category": "CORPORATE_ACTION",
+      "timestamp": "2025-12-24T19:36:46+00:00",
+      "confidence": 0.667,
+      "sentiment": 0.487,
+      "impact_score": 0.325,
+      "title": "Snowflake in Talks to Acquire Observe to Expand Range of AI Offerings - PYMNTS.com",
+      "matches": 2
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "ANALYST",
+      "CORPORATE_ACTION",
+      "PRODUCT"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 1.157,
+    "sentiment_volatility": 0.306,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.052,
+    "llm_interpretation": "Bien sûr ! Voici mes conclusions :\n\n1. **Bonne rentabilité avec faible risque** | Considérer une mise en place d'une position longue sur SNOW.\n2. **Volatilité basse, mais accélération de la tendance** | Surveiller étroitement les prochaines données pour confirmer l'orientation de la tendance actuelle.\n3. **Opportunités contraires peu présentes** | Attendre que les métriques augmentent avant d'ajouter à sa position.\n\nCe sont des indications basées sur les métriques fournies et qui peuvent orienter le trader dans son analyse."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+sequenceDiagram
+    participant User as 👤 Utilisateur
+    participant N8N as 🎯 n8n (Orchestrateur)
+    participant Python as 🐍 Script Python Local
+    participant Ollama as 🤖 Ollama (IA)
+    participant Storage as 📁 Stockage Local
+
+    Note over User,Storage: Exemple de Workflow Agentique n8n
+
+    User->>N8N: 1. POST /webhook<br/>{raw_data: "..."}
+    activate N8N
+
+    Note over N8N: Nœud: Webhook Trigger
+
+    N8N->>Python: 2. Execute Command<br/>python3 /data/scripts/clean_data.py<br/>(avec input JSON via stdin)
+    activate Python
+    Note over Python: Traitement Data Engineering:<br/>- Normalisation<br/>- Validation<br/>- Ajout timestamp
+    Python-->>N8N: 3. Retourne données nettoyées<br/>(JSON via stdout)
+    deactivate Python
+
+    Note over N8N: Nœud: Ollama Chat Model
+
+    N8N->>Ollama: 4. POST http://ollama:11434/api/generate<br/>{model: "llama3", prompt: "Analyse..."}
+    activate Ollama
+    Note over Ollama: Inférence du modèle LLM:<br/>- Analyse sémantique<br/>- Génération de texte<br/>- Classification
+    Ollama-->>N8N: 5. Réponse IA<br/>{response: "..."}
+    deactivate Ollama
+
+    Note over N8N: Nœud: Write Binary File
+
+    N8N->>Storage: 6. Écrit résultat<br/>/data/files/output_TIMESTAMP.json
+    activate Storage
+    Storage-->>N8N: 7. Confirmation écriture
+    deactivate Storage
+
+    Note over N8N: Nœud: Webhook Response
+
+    N8N-->>User: 8. HTTP 200 OK<br/>{status: "success", result: "..."}
+    deactivate N8N
+
+    Note over User: Résultat reçu en quelques secondes<br/>grâce au traitement local

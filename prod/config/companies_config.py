@@ -36,6 +36,34 @@ AI_COMPANIES = [
         "sector": "AI Software",
         "pillar": "Cerveau"
     },
+    {
+        "ticker": "AMZN",
+        "name": "Amazon.com Inc",
+        "search_terms": ["Amazon AI", "AWS Bedrock", "Amazon stock"],
+        "sector": "AI Software",
+        "pillar": "Cerveau"
+    },
+    {
+        "ticker": "CRWD",
+        "name": "CrowdStrike Holdings",
+        "search_terms": ["CrowdStrike", "CRWD stock", "cybersecurity AI"],
+        "sector": "Cybersecurity",
+        "pillar": "Cerveau"
+    },
+    {
+        "ticker": "MU",
+        "name": "Micron Technology",
+        "search_terms": ["Micron", "MU stock", "HBM memory", "AI memory"],
+        "sector": "Semiconductors",
+        "pillar": "Cerveau"
+    },
+    {
+        "ticker": "AIA",
+        "name": "iShares Asia 50 ETF",
+        "search_terms": ["AIA ETF", "Asian tech stocks", "TSMC Samsung"],
+        "sector": "ETF",
+        "pillar": "Cerveau"
+    },
 
     # Pilier 2: Carburant (Uranium & Cuivre) - 20%
     {
@@ -50,6 +78,20 @@ AI_COMPANIES = [
         "name": "Freeport-McMoRan",
         "search_terms": ["Freeport", "FCX stock", "copper mining", "Freeport copper"],
         "sector": "Basic Materials",
+        "pillar": "Carburant"
+    },
+    {
+        "ticker": "URA",
+        "name": "Global X Uranium ETF",
+        "search_terms": ["URA ETF", "uranium stocks", "nuclear energy"],
+        "sector": "ETF",
+        "pillar": "Carburant"
+    },
+    {
+        "ticker": "BLDP.TO",
+        "name": "Ballard Power Systems",
+        "search_terms": ["Ballard Power", "BLDP.TO", "fuel cells", "hydrogen"],
+        "sector": "Energy",
         "pillar": "Carburant"
     },
 
@@ -120,6 +162,20 @@ AI_COMPANIES = [
         "ticker": "JEPI",
         "name": "JPMorgan Equity Premium Income ETF",
         "search_terms": ["JEPI", "JPMorgan income", "JEPI ETF"],
+        "sector": "ETF",
+        "pillar": "Rente"
+    },
+    {
+        "ticker": "JEPQ",
+        "name": "JPMorgan Nasdaq Equity Premium",
+        "search_terms": ["JEPQ", "JEPQ ETF", "Nasdaq income"],
+        "sector": "ETF",
+        "pillar": "Rente"
+    },
+    {
+        "ticker": "DGS.TO",
+        "name": "Dividend Growth Split Corp",
+        "search_terms": ["DGS.TO", "Dividend Growth Split", "Brompton Funds"],
         "sector": "ETF",
         "pillar": "Rente"
     },

@@ -1,0 +1,100 @@
+{
+  "ticker": "MSFT",
+  "timestamp": "2025-12-27T11:44:38.367487",
+  "final_sentiment_score": -0.0672,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0,
+    "news_confidence": 0,
+    "news_weight": 0.0,
+    "options_sentiment": -0.2895,
+    "options_confidence": 0.7723,
+    "options_weight": 0.8066,
+    "analyst_sentiment": 0.8596,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.1934,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.2895,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 0,
+    "options_volume": 107412,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "Configuration par défaut (modérée)",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.2807,
+    "recommendation_count": 53,
+    "recommendation_summary": "Strong Buy consensus (Mean: 1.3)",
+    "recommendation_score": 0.86,
+    "target_mean": 622.51416,
+    "target_median": 630.0,
+    "current_price": 487.71,
+    "upside_potential": 0.27640228824506363,
+    "price_target_score": 0.503,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "MODERATE_VOLATILITY",
+    "sub_regime": "RISING",
+    "confidence": 0.7,
+    "metrics": {
+      "avg_iv": 0.46145,
+      "iv_skew": -0.1298885511651469,
+      "pcr_volume": 0.937
+    },
+    "implications": "📈 TENSION MONTANTE - Nervosité croissante. Surveiller pour escalade.",
+    "signal_adjustment": -0.05,
+    "recommendation": "Augmenter prudence. Réduire taille positions. Surveiller évolution."
+  },
+  "catalysts": {
+    "catalysts_detected": [],
+    "count": 0,
+    "most_recent": null,
+    "impact_assessment": "NO_DATA",
+    "recommendation": "Pas de données articles disponibles pour détecter des catalyseurs.",
+    "categories_present": []
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0,
+    "sentiment_volatility": 0,
+    "momentum_acceleration": 0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.5,
+    "llm_interpretation": "Métriques standards, pas de signal particulier."
+  },
+  "alerts": [
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 0 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "ticker": "META",
+  "timestamp": "2025-12-27T11:45:04.705164",
+  "final_sentiment_score": 0.303,
+  "classification": "HOLD",
+  "confidence_level": "MEDIUM",
+  "conviction_score": 0.5,
+  "smart_money_factor": 0.062,
+  "components": {
+    "news_sentiment": 0,
+    "news_confidence": 0,
+    "news_weight": 0.0,
+    "options_sentiment": 0.2055,
+    "options_confidence": 0.9846,
+    "options_weight": 0.8417,
+    "analyst_sentiment": 0.8209,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.1583,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.2055,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 0,
+    "options_volume": 221319,
+    "analysis_depth": "SHALLOW",
+    "config_rationale": "Configuration par défaut (modérée)",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.35821,
+    "recommendation_count": 59,
+    "recommendation_summary": "Strong Buy consensus (Mean: 1.4)",
+    "recommendation_score": 0.821,
+    "target_mean": 837.1525,
+    "target_median": 850.0,
+    "current_price": 663.29,
+    "upside_potential": 0.2621213948649913,
+    "price_target_score": 0.481,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.368,
+    "metrics": {
+      "avg_iv": 0.6838,
+      "iv_skew": 0.06274509803921564,
+      "pcr_volume": 0.497
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [],
+    "count": 0,
+    "most_recent": null,
+    "impact_assessment": "NO_DATA",
+    "recommendation": "Pas de données articles disponibles pour détecter des catalyseurs.",
+    "categories_present": []
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0,
+    "sentiment_volatility": 0,
+    "momentum_acceleration": 0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.5,
+    "llm_interpretation": "Métriques standards, pas de signal particulier."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    },
+    {
+      "priority": "LOW",
+      "type": "DATA_QUALITY",
+      "icon": "⚠️",
+      "title": "Données Limitées",
+      "message": "Seulement 0 articles analysés. Confiance réduite.",
+      "action": "Attendre plus de données ou croiser avec autres sources.",
+      "urgency": "INFO"
+    }
+  ]
+}

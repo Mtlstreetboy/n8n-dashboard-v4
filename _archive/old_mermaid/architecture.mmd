@@ -1,0 +1,51 @@
+graph TB
+    subgraph MachineLocale["Machine Locale - Windows + Docker Desktop"]
+        subgraph VSCodeWS["VS Code Workspace"]
+            VSCode["VS Code Editeur"]
+            LocalScripts["local_scripts/ Scripts Python"]
+            LocalFiles["local_files/ Donnees CSV/JSON"]
+        end
+
+        subgraph DockerStack["Docker Stack - docker-compose"]
+            subgraph ConteneurN8N["Conteneur n8n"]
+                N8N["n8n Orchestrateur Port:5678"]
+                N8NScripts["/data/scripts Volume mappe"]
+                N8NFiles["/data/files Volume mappe"]
+            end
+
+            subgraph ConteneurOllama["Conteneur Ollama"]
+                Ollama["Ollama AI Engine LLM Local Port:11434"]
+                Models["Modeles: llama3, mistral"]
+            end
+
+            DockerNetwork(("Reseau Docker n8n-local-stack"))
+        end
+    end
+
+    User["Utilisateur"] -->|"http://localhost:5678"| N8N
+
+    VSCode -->|"Edite en temps reel"| LocalScripts
+    VSCode -->|"Depose/Lit fichiers"| LocalFiles
+    LocalScripts -.->|"Volume Binding"| N8NScripts
+    LocalFiles -.->|"Volume Binding"| N8NFiles
+
+    N8N -->|"1. Trigger Webhook"| N8N
+    N8N -->|"2. Execute Command python3"| N8NScripts
+    N8NScripts -->|"3. Retourne JSON nettoye"| N8N
+    N8N -->|"4. Appel API ollama:11434"| Ollama
+    Ollama -->|"5. Reponse IA generee"| N8N
+    N8N -->|"6. Stocke resultat"| N8NFiles
+    N8N -->|"7. Webhook Response"| User
+
+    N8N -.->|"Reseau interne"| DockerNetwork
+    Ollama -.->|"Reseau interne"| DockerNetwork
+
+    classDef vscode fill:#007ACC,stroke:#005A9E,color:#fff
+    classDef docker fill:#2496ED,stroke:#1E7FBB,color:#fff
+    classDef ai fill:#FF6B35,stroke:#D94A1F,color:#fff
+    classDef storage fill:#4CAF50,stroke:#388E3C,color:#fff
+
+    class VSCode,LocalScripts,LocalFiles vscode
+    class N8N,N8NScripts,N8NFiles docker
+    class Ollama,Models ai
+    class DockerNetwork storage

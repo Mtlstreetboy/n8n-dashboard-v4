@@ -1,0 +1,155 @@
+{
+  "ticker": "ORCL",
+  "timestamp": "2025-12-27T12:01:24.305821",
+  "final_sentiment_score": 0.1101,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.113,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0151,
+    "news_confidence": 0.5434,
+    "news_weight": 0.2737,
+    "options_sentiment": 0.0393,
+    "options_confidence": 0.7763,
+    "options_weight": 0.5865,
+    "analyst_sentiment": 0.593,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.1399,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.0242,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 322,
+    "options_volume": 114108,
+    "analysis_depth": "DEEP",
+    "config_rationale": "ORCL est une compagnie technologique avec des nouvelles fréquentes, donc un décadrage plus court et un seuil de divergence plus élevé. La volatilité du secteur tech est également à prendre en compte.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.81395,
+    "recommendation_count": 39,
+    "recommendation_summary": "Buy consensus (Mean: 1.8)",
+    "recommendation_score": 0.593,
+    "target_mean": 290.87622,
+    "target_median": 290.0,
+    "current_price": 197.99,
+    "upside_potential": 0.46914601747562995,
+    "price_target_score": 0.734,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "EUPHORIA",
+    "confidence": 0.39,
+    "metrics": {
+      "avg_iv": 0.69505,
+      "iv_skew": -0.09366428963247383,
+      "pcr_volume": 0.698
+    },
+    "implications": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+    "signal_adjustment": -0.15,
+    "recommendation": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-26T14:59:24+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.958,
+        "impact_score": 0.288,
+        "title": "Oracle Stock Heads for Worst Quarter Since 2001 as AI Spending Fears Collide With OpenAI, TikTok, and Hollywood Bets - ts2.tech",
+        "matches": 1
+      },
+      {
+        "type": "executive_changes",
+        "category": "MANAGEMENT",
+        "timestamp": "2025-12-26T12:00:01+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.941,
+        "impact_score": 0.188,
+        "title": "Oracle shares on pace for worst quarter since 2001 as new CEOs face concerns about AI build-out - CNBC",
+        "matches": 1
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-25T23:23:22+00:00",
+        "confidence": 0.333,
+        "sentiment": -0.133,
+        "impact_score": 0.044,
+        "title": "Oracle Stock (ORCL) Before the Market Opens Friday, Dec. 26, 2025: TikTok Deal Tailwinds, AI Capex Fears, and Wall Street’s Next Read - ts2.tech",
+        "matches": 1
+      },
+      {
+        "type": "fda_regulatory",
+        "category": "REGULATORY",
+        "timestamp": "2025-12-24T18:35:00+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.09,
+        "impact_score": 0.028,
+        "title": "Forget The Chips: Oracle Wins Phase 2 of AI - Yahoo Finance",
+        "matches": 1
+      }
+    ],
+    "count": 4,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2025-12-26T14:59:24+00:00",
+      "confidence": 0.333,
+      "sentiment": -0.958,
+      "impact_score": 0.288,
+      "title": "Oracle Stock Heads for Worst Quarter Since 2001 as AI Spending Fears Collide With OpenAI, TikTok, and Hollywood Bets - ts2.tech",
+      "matches": 1
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale. | Biais NÉGATIF des catalyseurs.",
+    "categories_present": [
+      "CORPORATE_ACTION",
+      "REGULATORY",
+      "FINANCIAL",
+      "MANAGEMENT"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.35,
+    "sentiment_volatility": 0.509,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "**Analyse**\n\nL'analyse des métriques de sentiment d'ORCL suggère que le titre est en situation neutre. La Sharpe Ratio dénote un ajustement du risque, et la Volatilité Sentiment indique une tendance à l'équilibre entre stabilité et incertitude.\n\n**Action**\n\n- **Niveau de neutralité** : Aucune décision d'achat ou de vente ne semble recommandée.\n- **Surveillance** : Il est conseillé de surveiller les indicateurs pour identifier un potentiel changement dans la tendance du titre."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🎢 EUPHORIE - Volatilité élevée avec optimisme. Attention aux corrections.",
+      "action": "Prendre profits partiels. Réduire exposition. Volatilité = risque bidirectionnel.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

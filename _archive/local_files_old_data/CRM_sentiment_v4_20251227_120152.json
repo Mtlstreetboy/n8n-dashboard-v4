@@ -1,0 +1,144 @@
+{
+  "ticker": "CRM",
+  "timestamp": "2025-12-27T12:01:43.062086",
+  "final_sentiment_score": -0.0393,
+  "classification": "HOLD",
+  "confidence_level": "LOW",
+  "conviction_score": 0.2876,
+  "smart_money_factor": 0,
+  "components": {
+    "news_sentiment": 0.0175,
+    "news_confidence": 0.4864,
+    "news_weight": 0.2704,
+    "options_sentiment": -0.2594,
+    "options_confidence": 0.6898,
+    "options_weight": 0.5752,
+    "analyst_sentiment": 0.681,
+    "analyst_confidence": 0.3333,
+    "analyst_weight": 0.1544,
+    "narrative_momentum": 0.0,
+    "fear_greed_asymmetry": 0
+  },
+  "divergence_analysis": {
+    "type": "aligned",
+    "magnitude": 0.2769,
+    "opportunity_score": 0,
+    "interpretation": "🤝 Consensus - Nouvelles et marchés s'accordent"
+  },
+  "metadata": {
+    "news_articles_count": 266,
+    "options_volume": 31162,
+    "analysis_depth": "DEEP",
+    "config_rationale": "CRM est une compagnie tech avec des nouvelles fréquentes, donc une décay rapide et un seuil de divergence élevé. La volatilité du secteur nécessite une pénalité sur la volatilité.",
+    "version": "V4 - Dual Brain"
+  },
+  "analyst_insights": {
+    "recommendation_mean": 1.63793,
+    "recommendation_count": 53,
+    "recommendation_summary": "Buy consensus (Mean: 1.6)",
+    "recommendation_score": 0.681,
+    "target_mean": 330.06265,
+    "target_median": 335.0,
+    "current_price": 266.08,
+    "upside_potential": 0.24046395820805788,
+    "price_target_score": 0.447,
+    "upgrades_30d": 0,
+    "downgrades_30d": 0,
+    "net_changes_30d": 0,
+    "momentum_score": 0,
+    "weights": {
+      "rec": 1.0,
+      "pt": 0.0,
+      "momentum": 0.0
+    },
+    "component_confidences": {
+      "recommendation": 1.0,
+      "price_target": 0.0,
+      "momentum": 0
+    }
+  },
+  "volatility_regime": {
+    "regime": "HIGH_VOLATILITY",
+    "sub_regime": "PANIC",
+    "confidence": 0.08,
+    "metrics": {
+      "avg_iv": 0.5398499999999999,
+      "iv_skew": -0.05108303249097491,
+      "pcr_volume": 1.734
+    },
+    "implications": "🚨 PANIQUE - Les traders se couvrent agressivement. Opportunité contrarian possible mais risquée.",
+    "signal_adjustment": -0.2,
+    "recommendation": "Attendre stabilisation. Si conviction forte, petites positions avec stops serrés."
+  },
+  "catalysts": {
+    "catalysts_detected": [
+      {
+        "type": "earnings",
+        "category": "FINANCIAL",
+        "timestamp": "2025-12-24T04:22:00+00:00",
+        "confidence": 0.667,
+        "sentiment": 0.108,
+        "impact_score": 0.065,
+        "title": "How Investors May Respond To Salesforce (CRM) Q3 Beat And Surging Enterprise AI Adoption - Yahoo Finance",
+        "matches": 2
+      },
+      {
+        "type": "merger_acquisition",
+        "category": "CORPORATE_ACTION",
+        "timestamp": "2025-12-26T20:25:09+00:00",
+        "confidence": 0.333,
+        "sentiment": 0.033,
+        "impact_score": 0.011,
+        "title": "Salesforce (CRM) Stock Today: AI “Agentforce” Momentum, New Deals, and What Wall Street Expects Next - ts2.tech",
+        "matches": 1
+      },
+      {
+        "type": "analyst_action",
+        "category": "ANALYST",
+        "timestamp": "2025-12-27T04:46:11+00:00",
+        "confidence": 0.667,
+        "sentiment": -0.006,
+        "impact_score": 0.002,
+        "title": "Salesforce (CRM) Stock News Today: Agentforce AI Momentum, Analyst Price Targets, and What to Watch Before Monday’s Open - ts2.tech",
+        "matches": 2
+      }
+    ],
+    "count": 3,
+    "most_recent": {
+      "type": "earnings",
+      "category": "FINANCIAL",
+      "timestamp": "2025-12-24T04:22:00+00:00",
+      "confidence": 0.667,
+      "sentiment": 0.108,
+      "impact_score": 0.065,
+      "title": "How Investors May Respond To Salesforce (CRM) Q3 Beat And Surging Enterprise AI Adoption - Yahoo Finance",
+      "matches": 2
+    },
+    "impact_assessment": "LOW_IMPACT",
+    "recommendation": "✓ Catalyseurs mineurs. Impact limité sur tendance globale.",
+    "categories_present": [
+      "FINANCIAL",
+      "ANALYST",
+      "CORPORATE_ACTION"
+    ]
+  },
+  "advanced_metrics": {
+    "sharpe_ratio": 0.534,
+    "sentiment_volatility": 0.392,
+    "momentum_acceleration": 0.0,
+    "contrarian_score": 0,
+    "sentiment_consistency": 0.0,
+    "llm_interpretation": "**Analyse des métriques de sentiment :**\n\n📊 L'investissement a un **résultat modéré** (Sharpe Ratio de 0,534) et est considéré comme **stabilisé** (Volatilité Sentiment de 0,392).\n\n💡 Le score Contrarian (0) suggère qu'il n'y a **pas d'opportunité significative** pour une position courageuse.\n\n📈 La Conviction est faible (0,2876), ce qui signifie que les données sont en **confusion**, vous devriez donc être prudent."
+  },
+  "alerts": [
+    {
+      "priority": "HIGH",
+      "type": "VOLATILITY",
+      "icon": "🌪️",
+      "title": "RÉGIME DE HAUTE VOLATILITÉ",
+      "message": "🚨 PANIQUE - Les traders se couvrent agressivement. Opportunité contrarian possible mais risquée.",
+      "action": "Attendre stabilisation. Si conviction forte, petites positions avec stops serrés.",
+      "urgency": "IMMEDIATE"
+    }
+  ]
+}

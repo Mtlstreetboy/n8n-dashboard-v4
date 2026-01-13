@@ -1,0 +1,107 @@
+---
+title: AI Sentiment Pipeline - Architecture
+---
+flowchart TB
+    subgraph SOURCES["📥 SOURCES EXTERNES"]
+        direction TB
+        GNEWS["🔍 Google News<br/>gnews library"]
+        YAHOO["📊 Yahoo Finance<br/>yfinance API"]
+        OLLAMA["🤖 Ollama LLM<br/>localhost:11434"]
+    end
+
+    subgraph CONFIG["⚙️ CONFIGURATION"]
+        COMPANIES["companies_config.py<br/>15 AI Tickers"]
+    end
+
+    subgraph COLLECTORS["📦 PHASE 1: COLLECTE"]
+        direction TB
+        BATCH["batch_loader_v2.py<br/>⏱️ Parallel: 3 tickers × 8 workers<br/>📅 160 jours historique"]
+        COLLECT_NEWS["collect_companies.py<br/>📰 Single ticker collection"]
+        COLLECT_OPT["collect_options.py<br/>📈 Options + Greeks"]
+    end
+
+    subgraph DATA_LAYER["💾 STOCKAGE DONNÉES"]
+        direction LR
+        NEWS_JSON["/data/files/companies/<br/>TICKER_news.json"]
+        OPTIONS_JSON["/data/options_data/<br/>TICKER_latest_sentiment.json"]
+        SENTIMENT_JSON["/data/sentiment_analysis/<br/>TICKER_latest_v3.json"]
+    end
+
+    subgraph ANALYZERS["🧠 PHASE 2: ANALYSE SENTIMENT V3"]
+        direction TB
+        V3_ENGINE["advanced_sentiment_engine_v3.py"]
+        
+        subgraph DIMENSIONS["6 Dimensions d'Analyse"]
+            direction LR
+            DIM1["📰 News<br/>LLM Enhanced"]
+            DIM2["📊 Options<br/>Put/Call Ratio"]
+            DIM3["🎯 Analysts<br/>Yahoo Insights"]
+            DIM4["🌪️ Volatility<br/>Regime Detection"]
+            DIM5["🔍 Catalysts<br/>Auto Detection"]
+            DIM6["🚨 Alerts<br/>Smart System"]
+        end
+        
+        ANALYST["analyst_insights_integration.py<br/>Recommendations + Targets"]
+        AGGREGATE["analyze_all_sentiment.py<br/>Batch all tickers"]
+    end
+
+    subgraph DASHBOARDS["📊 PHASE 3: VISUALISATION"]
+        direction TB
+        SERVER["sentiment_server.py<br/>HTTP API :8501"]
+        DASH_SENT["dashboard_sentiment.html<br/>React + Tailwind"]
+        DASH_OPT["dashboard_options.py<br/>Streamlit"]
+        DASH_TIME["dashboard_timeline.py<br/>Streamlit"]
+    end
+
+    subgraph N8N_ORCH["🔄 ORCHESTRATION n8n"]
+        direction TB
+        TRIGGER["⏰ Schedule Trigger<br/>Daily 6h00"]
+        WORKFLOW["Workflow Pipeline"]
+        NOTIF["📧 Notifications<br/>Slack/Email"]
+        ERROR["🚨 Error Handler"]
+    end
+
+    GNEWS --> BATCH
+    GNEWS --> COLLECT_NEWS
+    YAHOO --> COLLECT_OPT
+    YAHOO --> ANALYST
+    CONFIG --> BATCH
+    CONFIG --> COLLECT_OPT
+
+    BATCH --> NEWS_JSON
+    COLLECT_NEWS --> NEWS_JSON
+    COLLECT_OPT --> OPTIONS_JSON
+
+    NEWS_JSON --> V3_ENGINE
+    OPTIONS_JSON --> V3_ENGINE
+    ANALYST --> V3_ENGINE
+    OLLAMA --> V3_ENGINE
+
+    V3_ENGINE --> DIMENSIONS
+    V3_ENGINE --> SENTIMENT_JSON
+    V3_ENGINE --> AGGREGATE
+
+    SENTIMENT_JSON --> SERVER
+    OPTIONS_JSON --> DASH_OPT
+    SERVER --> DASH_SENT
+
+    TRIGGER --> WORKFLOW
+    WORKFLOW -.-> BATCH
+    WORKFLOW -.-> COLLECT_OPT
+    WORKFLOW -.-> V3_ENGINE
+    WORKFLOW --> NOTIF
+    WORKFLOW --> ERROR
+
+    classDef source fill:#e1f5fe,stroke:#01579b
+    classDef collector fill:#fff3e0,stroke:#e65100
+    classDef analyzer fill:#f3e5f5,stroke:#7b1fa2
+    classDef data fill:#e8f5e9,stroke:#2e7d32
+    classDef dashboard fill:#fce4ec,stroke:#c2185b
+    classDef n8n fill:#fff8e1,stroke:#f57f17
+
+    class GNEWS,YAHOO,OLLAMA source
+    class BATCH,COLLECT_NEWS,COLLECT_OPT collector
+    class V3_ENGINE,ANALYST,AGGREGATE,DIM1,DIM2,DIM3,DIM4,DIM5,DIM6 analyzer
+    class NEWS_JSON,OPTIONS_JSON,SENTIMENT_JSON data
+    class SERVER,DASH_SENT,DASH_OPT,DASH_TIME dashboard
+    class TRIGGER,WORKFLOW,NOTIF,ERROR n8n

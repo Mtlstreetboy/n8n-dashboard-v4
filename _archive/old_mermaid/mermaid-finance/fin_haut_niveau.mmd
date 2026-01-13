@@ -1,0 +1,102 @@
+graph TD
+    %% --- STYLE : MODE SOMBRE & CONTRASTE ÉLEVÉ ---
+    classDef arch fill:#2c0e37,stroke:#bd93f9,stroke-width:2px,color:#fff;
+    classDef vcpe fill:#0d253f,stroke:#8be9fd,stroke-width:2px,color:#fff;
+    classDef market fill:#004a40,stroke:#00e676,stroke-width:2px,color:#fff;
+    classDef distress fill:#4a1212,stroke:#ff5555,stroke-width:2px,color:#fff;
+    classDef agency fill:#5c3a00,stroke:#ffb86c,stroke-width:3px,color:#fff;
+    classDef gouv fill:#1a1a1a,stroke:#d1d1d1,stroke-width:2px,color:#fff,stroke-dasharray: 5 5;
+
+    %% --- S11 : ARCHITECTURE (Le Cadre) ---
+    subgraph S11 [S11: ARCHITECTURE & COUVERTURE]
+        direction TB
+        Arch_Biz(<b>Architecture d'Affaires</b><br/>Actifs & Environnement):::arch
+        Arch_Fin(<b>Architecture Financière</b><br/>Contrats & Structure):::arch
+        
+        Hedging(<b>Gestion des Risques</b><br/>Produits Dérivés & Assurance):::arch
+        Reasons_Hedge[<b>Pourquoi se couvrir ?</b><br/>1. Convexité Fiscale<br/>2. Coûts de Détresse<br/>3. Sous-Investissement<br/>4. Aversion au Risque Manager]:::arch
+        
+        Arch_Biz <-->|Alignement| Arch_Fin
+        Arch_Fin -->|Mise en oeuvre| Hedging
+        Hedging -.->|Motivations| Reasons_Hedge
+    end
+
+    %% --- S8 : CAPITAL PRIVÉ / RISQUE ---
+    subgraph S8 [S8: CAPITAL DE RISQUE & INVESTISSEMENT]
+        direction TB
+        StartUp(<b>Jeune Pousse / Start-up</b><br/>Actifs Intangibles):::vcpe
+        VC_Funds(<b>Capital de Risque</b><br/>Surveillance Active):::vcpe
+        
+        Mechanism_VC[<b>Mécanismes de Contrôle :</b><br/>- Financement par étapes<br/>- Actions Privilégiées<br/>- Sièges au CA]:::vcpe
+        
+        LBO_Fund(<b>LBO / Capital-Investissement</b><br/>Dette Disciplinaire):::vcpe
+        
+        StartUp -->|Besoin de fonds| VC_Funds
+        VC_Funds -->|Utilise| Mechanism_VC
+    end
+
+    %% --- S9 : MARCHÉS DES CAPITAUX ---
+    subgraph S9 [S9: MARCHÉS PUBLICS]
+        direction TB
+        IPO(<b>PAPE / Introduction Bourse</b><br/>Appel Public à l'Épargne):::market
+        Underpricing(<b>Escompte d'émission</b><br/>Sous-tarification):::market
+        
+        Mature_Firm(<b>Firme Publique Mature</b><br/>Actionnariat Dispersé):::market
+        
+        Div_Policy(<b>Politique de Dividende</b><br/>Modèle de Lintner):::market
+        
+        VC_Funds -->|Stratégie de Sortie| IPO
+        IPO -->|Phénomène| Underpricing
+        IPO -->|Résultat| Mature_Firm
+        Mature_Firm -->|Signal| Div_Policy
+    end
+
+    %% --- LE PROBLÈME CENTRAL (JENSEN) ---
+    Prob_Agency{<b>Théorie de l'Agence</b><br/>Michael Jensen<br/>Flux de Trésorerie Disponible}:::agency
+
+    %% --- S12 : GOUVERNANCE ---
+    subgraph S12 [S12: GOUVERNANCE & ACTIVISME]
+        direction TB
+        Board(<b>Conseil d'Administration</b>):::gouv
+        Audit(<b>Comité d'Audit</b><br/>Loi 52-110 / SOX):::gouv
+        Expert(<b>Expert Financier</b><br/>Agrawal & Chadha):::gouv
+        
+        Board -->|Délègue| Audit
+        Audit -->|Exige| Expert
+    end
+
+    %% --- S10 : DÉTRESSE & FAILLITE ---
+    subgraph S10 [S10: DÉTRESSE FINANCIÈRE]
+        direction TB
+        Distress_Event(<b>Détresse Financière</b><br/>Insolvabilité):::distress
+        Restruct(<b>Restructuration Privée</b><br/>Problème de résistance):::distress
+        Legal_Pro(<b>Faillite / LACC</b><br/>Protection des Créanciers):::distress
+        
+        DIP(<b>Financement DIP</b><br/>Super-priorité):::distress
+        APR(<b>Règle de Priorité Absolue</b><br/>Violations RPA):::distress
+        
+        Distress_Event -->|Tentative| Restruct
+        Restruct -->|Échec| Legal_Pro
+        Legal_Pro -->|Outil clé| DIP
+        Legal_Pro -->|Principe| APR
+    end
+
+    %% --- LES LIENS DE CAUSALITÉ PRÉCIS ---
+
+    %% 1. Le lien Jensen (S9 -> Problème -> S8)
+    Mature_Firm -->|Génère trop de liquidités| Prob_Agency
+    Prob_Agency -->|Solution Radicale| LBO_Fund
+    LBO_Fund -->|Réduit les coûts d'agence| Mature_Firm
+
+    %% 2. Le lien Agrawal & Chadha (S12 -> S9)
+    Expert -->|Réduit prob. Redressement| Mature_Firm
+    Audit -.->|Crédibilise États Fin.| Underpricing
+
+    %% 3. Le lien Hedging & Détresse (S11 -> S10)
+    Hedging -->|Réduit probabilité| Distress_Event
+    
+    %% 4. Le lien Levier & Détresse (S8 -> S10)
+    LBO_Fund -.->|Risque de Levier Excessif| Distress_Event
+
+    %% 5. Le lien Architecture & Dividende (S11 -> S9)
+    Arch_Fin -.->|Détermine contraintes| Div_Policy

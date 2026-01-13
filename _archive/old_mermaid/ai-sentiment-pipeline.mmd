@@ -1,0 +1,71 @@
+graph LR
+    subgraph Collection["1. COLLECTION DE DONNEES"]
+        API1["NewsAPI.org"]
+        API2["Google News RSS"]
+        API3["Reddit AI subs"]
+        API4["HackerNews API"]
+    end
+
+    subgraph Enrichment["2. ENRICHISSEMENT"]
+        Dedup["Deduplication par titre/URL"]
+        Filter["Filtrage mots-cles: AI, LLM, GPT, etc"]
+        Extract["Extraction texte complet scraping"]
+    end
+
+    subgraph Analysis["3. ANALYSE SENTIMENT IA"]
+        Ollama["Ollama llama3<br/>Prompt ingenierie"]
+        Score["Score -10 a +10<br/>Justification<br/>Mots-cles extraits"]
+    end
+
+    subgraph Storage["4. STOCKAGE"]
+        CSV["CSV par jour<br/>local_files/sentiment_YYYY-MM-DD.csv"]
+        JSON["JSON historique<br/>local_files/historical_data.json"]
+    end
+
+    subgraph Aggregation["5. AGREGATION ET LISSAGE"]
+        Daily["Moyenne quotidienne"]
+        MA7["Moyenne mobile 7 jours"]
+        MA30["Moyenne mobile 30 jours"]
+        Volatility["Calcul volatilite<br/>Detection anomalies"]
+    end
+
+    subgraph Visualization["6. VISUALISATION"]
+        Dashboard["Graphique pandas/matplotlib"]
+        Alert["Alertes si score > seuil"]
+        Report["Rapport HTML genere"]
+    end
+
+    API1 --> Dedup
+    API2 --> Dedup
+    API3 --> Dedup
+    API4 --> Dedup
+    
+    Dedup --> Filter
+    Filter --> Extract
+    Extract --> Ollama
+    
+    Ollama --> Score
+    Score --> CSV
+    Score --> JSON
+    
+    CSV --> Daily
+    JSON --> Daily
+    Daily --> MA7
+    MA7 --> MA30
+    MA30 --> Volatility
+    
+    Volatility --> Dashboard
+    Dashboard --> Alert
+    Dashboard --> Report
+
+    classDef collect fill:#4CAF50,stroke:#388E3C,color:#fff
+    classDef process fill:#2196F3,stroke:#1976D2,color:#fff
+    classDef ai fill:#FF6B35,stroke:#D94A1F,color:#fff
+    classDef store fill:#9C27B0,stroke:#7B1FA2,color:#fff
+    classDef viz fill:#FFC107,stroke:#FFA000,color:#000
+
+    class API1,API2,API3,API4 collect
+    class Dedup,Filter,Extract,Daily,MA7,MA30,Volatility process
+    class Ollama,Score ai
+    class CSV,JSON store
+    class Dashboard,Alert,Report viz
