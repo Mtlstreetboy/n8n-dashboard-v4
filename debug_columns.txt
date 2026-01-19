@@ -1,0 +1,3 @@
+Columns: ['Firm', 'ToGrade', 'FromGrade', 'Action', 'priceTargetAction', 'currentPriceTarget', 'priorPriceTarget']
+Sample Row:
+{'Firm': 'Goldman Sachs', 'ToGrade': 'Buy', 'FromGrade': 'Buy', 'Action': 'main', 'priceTargetAction': 'Raises', 'currentPriceTarget': 375.0, 'priorPriceTarget': 330.0}

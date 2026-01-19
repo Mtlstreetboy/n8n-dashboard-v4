@@ -13,7 +13,7 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 # Installation des librairies Data & IA essentielles
 # Adapte cette liste selon tes besoins (ex: numpy, requests, pandas)
-RUN pip install pandas requests numpy gnews newspaper3k lxml_html_clean
+RUN pip install pandas requests numpy gnews newspaper3k lxml_html_clean streamlit yfinance plotly scipy scikit-learn
 
 # Retour à l'utilisateur node pour la sécurité (Least Privilege Principle)
 USER node

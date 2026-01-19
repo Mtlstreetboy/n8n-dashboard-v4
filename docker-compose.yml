@@ -8,6 +8,8 @@ services:
     ports:
       - "5678:5678"
       - "8501:8501"
+      - "8502:8502"
+      - "8503:8503"
     environment:
       - N8N_HOST=localhost
       - N8N_PORT=5678

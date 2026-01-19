@@ -178,82 +178,104 @@ class AnalystInsightsIntegration:
             Dict avec upgrades_count, downgrades_count, net_changes, momentum
         """
         try:
-            rec_history = self.yf_ticker.recommendations
+            # Patcher pour utiliser upgrades_downgrades qui est plus complet
+            # Contient 'Action', 'priceTargetAction', 'ToGrade', 'FromGrade'
+            try:
+                history = self.yf_ticker.upgrades_downgrades
+            except:
+                history = None
             
-            if rec_history is None or rec_history.empty:
-                return {'upgrades': 0, 'downgrades': 0, 'net': 0}
+            if history is None or history.empty:
+                # Fallback sur recommendations si upgrades_downgrades vide (anciens tickers ou bug)
+                history = self.yf_ticker.recommendations
+                if history is None or history.empty:
+                     return {'upgrades': 0, 'downgrades': 0, 'net': 0}
             
             # Filtrer les 30 derniers jours
             from datetime import timezone
             cutoff = datetime.now(timezone.utc) - timedelta(days=30)
             
-            # Ensure index is datetime
-            if not isinstance(rec_history.index, pd.DatetimeIndex):
-                # Try to find a date column
-                date_cols = [c for c in rec_history.columns if 'date' in c.lower()]
+            # Gestion des index datetime / timezone
+            # upgrades_downgrades a souvent un index 'GradeDate' ou index sans nom
+            if not isinstance(history.index, pd.DatetimeIndex):
+                # Tenter de trouver une colonne date
+                date_cols = [c for c in history.columns if 'date' in c.lower()]
                 if date_cols:
-                    rec_history = rec_history.set_index(date_cols[0])
-                    rec_history.index = pd.to_datetime(rec_history.index, utc=True)
-                else:
-                    return {'upgrades': 0, 'downgrades': 0, 'net': 0} # Impossible to filter
-
-            # Ensure index is timezone aware for comparison
-            if rec_history.index.tz is None:
-                rec_history.index = rec_history.index.tz_localize('UTC')
+                    history = history.set_index(date_cols[0])
             
-            recent = rec_history[rec_history.index > cutoff]
+            # Normaliser timezone
+            if isinstance(history.index, pd.DatetimeIndex):
+                 if history.index.tz is None:
+                     history.index = history.index.tz_localize('UTC')
+                 else:
+                     history.index = history.index.tz_convert('UTC')
+            
+            recent = history[history.index > cutoff]
             
             if recent.empty:
                 return {'upgrades': 0, 'downgrades': 0, 'net': 0}
             
-            # Mapper les grades à des scores numériques
+            # Mapper les grades à des scores numériques pour comparaison
             grade_map = {
-                'Strong Buy': 5, 'Buy': 4, 'Outperform': 4,
-                'Hold': 3, 'Neutral': 3, 'Market Perform': 3,
-                'Underperform': 2, 'Sell': 1, 'Strong Sell': 0
+                'Strong Buy': 5, 'Buy': 4, 'Outperform': 4, 'Overweight': 4,
+                'Hold': 3, 'Neutral': 3, 'Market Perform': 3, 'Equal-Weight': 3, 'Sector Perform': 3,
+                'Underperform': 2, 'Sell': 1, 'Strong Sell': 0, 'Underweight': 2
             }
             
             upgrades = 0
             downgrades = 0
+            momentum_sum = 0
             
+            # Analyser chaque événement
             for _, row in recent.iterrows():
-                from_grade = row.get('From Grade', '')
-                to_grade = row.get('To Grade', '')
+                is_upgrade = False
+                is_downgrade = False
                 
-                from_score = grade_map.get(from_grade, 3)
-                to_score = grade_map.get(to_grade, 3)
+                # 1. Analyse via changement de Note (Grade)
+                from_grade = row.get('FromGrade', '')
+                to_grade = row.get('ToGrade', '')
                 
-                if to_score > from_score:
-                    upgrades += 1
-                elif to_score < from_score:
-                    downgrades += 1
-            
-            net_changes = upgrades - downgrades
-            
-            # Calculer le momentum (pondéré par récence)
-            momentum = 0
-            if len(recent) > 0:
-                for i, (_, row) in enumerate(recent.iterrows()):
-                    from_grade = row.get('From Grade', '')
-                    to_grade = row.get('To Grade', '')
-                    
+                if from_grade and to_grade:
                     from_score = grade_map.get(from_grade, 3)
                     to_score = grade_map.get(to_grade, 3)
                     
-                    change = to_score - from_score
-                    # Pondération exponentielle (plus récent = plus important)
-                    weight = np.exp(-i / len(recent))
-                    momentum += change * weight
+                    if to_score > from_score:
+                        is_upgrade = True
+                    elif to_score < from_score:
+                        is_downgrade = True
                 
-                momentum = momentum / len(recent)
+                # 2. Analyse via Price Target Action (Raises/Lowers)
+                # C'est souvent là que se trouve l'info "Maintains... but hikes target"
+                pt_action = str(row.get('priceTargetAction', '')).lower()
+                action = str(row.get('Action', '')).lower() # Parfois 'up', 'down'
+                
+                if 'raises' in pt_action or 'up' in action:
+                    is_upgrade = True
+                elif 'lowers' in pt_action or 'down' in action:
+                    is_downgrade = True
+                
+                # Appliquer (un seul compte par ligne)
+                if is_upgrade and not is_downgrade: # Priorité upgrade si conflit (rare)
+                    upgrades += 1
+                    momentum_sum += 1
+                elif is_downgrade:
+                    downgrades += 1
+                    momentum_sum -= 1
+            
+            net_changes = upgrades - downgrades
+            
+            # Momentum normalisé (-1 à 1)
+            momentum_score = 0
+            if len(recent) > 0:
+                momentum_score = momentum_sum / len(recent)
             
             return {
                 'upgrades': upgrades,
                 'downgrades': downgrades,
                 'net': net_changes,
-                'momentum': momentum,
+                'momentum': momentum_score,
                 'total_changes': len(recent),
-                'recent_changes': recent.tail(3).to_dict('records') if not recent.empty else []
+                'recent_changes': recent.tail(3).to_dict('records') # Pour debug/affichage
             }
             
         except Exception as e:

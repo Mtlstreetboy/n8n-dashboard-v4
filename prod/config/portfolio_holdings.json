@@ -1,0 +1,121 @@
+[
+    {
+        "ticker": "VRT",
+        "qty": 13,
+        "avg_price": 162.4686,
+        "currentPrice": 176.8,
+        "currentMarketValue": 2298.4
+    },
+    {
+        "ticker": "FBTC.TO",
+        "qty": 100,
+        "avg_price": 41.23,
+        "currentPrice": 43.6,
+        "currentMarketValue": 4360.0
+    },
+    {
+        "ticker": "MU",
+        "qty": 10,
+        "avg_price": 331.9971,
+        "currentPrice": 359.55,
+        "currentMarketValue": 3595.5
+    },
+    {
+        "ticker": "AIA",
+        "qty": 30,
+        "avg_price": 104.4842,
+        "currentPrice": 105.46,
+        "currentMarketValue": 3163.7999999999997
+    },
+    {
+        "ticker": "DGS.TO",
+        "qty": 563,
+        "avg_price": 7.8,
+        "currentPrice": 8.21,
+        "currentMarketValue": 4622.2300000000005
+    },
+    {
+        "ticker": "URA",
+        "qty": 40,
+        "avg_price": 52.26,
+        "currentPrice": 54.21,
+        "currentMarketValue": 2168.4
+    },
+    {
+        "ticker": "GOOGL",
+        "qty": 23,
+        "avg_price": 314.6683,
+        "currentPrice": 329.66,
+        "currentMarketValue": 7582.18
+    },
+    {
+        "ticker": "NVDA",
+        "qty": 35,
+        "avg_price": 189.661111,
+        "currentPrice": 187.74,
+        "currentMarketValue": 6570.900000000001
+    },
+    {
+        "ticker": "CRWD",
+        "qty": 10,
+        "avg_price": 466.01,
+        "currentPrice": 454.51,
+        "currentMarketValue": 4545.1
+    },
+    {
+        "ticker": "FCX",
+        "qty": 94,
+        "avg_price": 53.7996,
+        "currentPrice": 58.71,
+        "currentMarketValue": 5518.74
+    },
+    {
+        "ticker": "RBOT.TO",
+        "qty": 133,
+        "avg_price": 35.09,
+        "currentPrice": 35.49,
+        "currentMarketValue": 4720.17
+    },
+    {
+        "ticker": "VOO",
+        "qty": 5.02,
+        "avg_price": 625.842835,
+        "currentPrice": 636.49,
+        "currentMarketValue": 3195.1798
+    },
+    {
+        "ticker": "JEPQ",
+        "qty": 92,
+        "avg_price": 58.649,
+        "currentPrice": 58.97,
+        "currentMarketValue": 5425.24
+    },
+    {
+        "ticker": "WSP.TO",
+        "qty": 10,
+        "avg_price": 258.22,
+        "currentPrice": 272.62,
+        "currentMarketValue": 2726.2
+    },
+    {
+        "ticker": "AMZN",
+        "qty": 20,
+        "avg_price": 246.33473,
+        "currentPrice": 238.55,
+        "currentMarketValue": 4771.0
+    },
+    {
+        "ticker": "RKLB",
+        "qty": 45,
+        "avg_price": 84.3133,
+        "currentPrice": 97.24,
+        "currentMarketValue": 4375.8
+    },
+    {
+        "ticker": "CCO.TO",
+        "qty": 25,
+        "avg_price": 143.57,
+        "currentPrice": 162.18,
+        "currentMarketValue": 4054.5
+    }
+]

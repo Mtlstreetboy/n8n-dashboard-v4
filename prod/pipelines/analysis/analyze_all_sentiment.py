@@ -29,8 +29,8 @@ if sys.platform != 'win32' and os.path.exists('/data/sentiment_analysis'):
     OUTPUT_DIR = '/data/sentiment_analysis'
 else:
     # Windows Local environment - Force path relative to project root based on SCRIPT location
-    # Script is in prod/analysis/analyze_all_sentiment.py -> Root is ../../..
-    project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    # Script is in prod/analysis/analyze_all_sentiment.py -> Root is ../../../..
+    project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
     OUTPUT_DIR = os.path.join(project_root, 'local_files', 'sentiment_analysis')
 
 def analyze_all_companies():
@@ -225,9 +225,10 @@ def generate_consolidated_report(results):
     dashboard_data = {r['ticker']: r for r in results}
     
     # Determine dashboard path (assuming standard structure)
-    # script is in prod/analysis, dashboard is in prod/dashboard
-    # we can use relative path or hardcoded based on known structure
-    dashboard_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'dashboard')
+    # script is in prod/analysis, dashboard is in prod/dashboards/generators
+    # We want: .../prod/dashboards/generators
+    prod_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    dashboard_dir = os.path.join(prod_dir, 'dashboards', 'generators')
     
     if os.path.exists(dashboard_dir):
         dashboard_file = os.path.join(dashboard_dir, 'consolidated_sentiment_data.json')

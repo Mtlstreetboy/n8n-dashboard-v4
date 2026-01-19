@@ -20,6 +20,10 @@ import json
 import os
 from datetime import datetime
 from pathlib import Path
+import plotly.io as pio
+
+# Set default plotly template to dark
+pio.templates.default = "plotly_dark"
 
 def get_data_dir():
     """Détermine le répertoire de données selon l'environnement (Docker ou local)"""
@@ -90,9 +94,36 @@ def get_current_stock_price(ticker):
     if calls_df is None or calls_df.empty:
         return None
     
-    # Prix approximatif = strike of call et put ont des prix similaires
-    # Ou simplement la moyenne des strikes
-    return calls_df['strike'].median()
+    # Amélioration V2: Utiliser la parité Put-Call pour trouver le strike ATM
+    # Le strike où |Price(Call) - Price(Put)| est minimal est généralement le plus proche du prix actuel
+    try:
+        # On travaille sur la première expiration disponible pour plus de précision (liquidité max)
+        nearest_expiry = sorted(calls_df['expiration'].unique())[0]
+        
+        c = calls_df[calls_df['expiration'] == nearest_expiry].set_index('strike')['lastPrice']
+        p = puts_df[puts_df['expiration'] == nearest_expiry].set_index('strike')['lastPrice']
+        
+        # Intersection des strikes communs
+        common_indices = c.index.intersection(p.index)
+        if len(common_indices) == 0:
+            return calls_df['strike'].median()
+            
+        c = c.loc[common_indices]
+        p = p.loc[common_indices]
+        
+        # Trouver le strike où la différence est minimale
+        diff = (c - p).abs()
+        atm_strike = diff.idxmin()
+        
+        # Le prix est environ: Strike + Call - Put
+        # S = K + C - P (approximation Put-Call Parity sans taux/dividendes)
+        spot_est = atm_strike + c[atm_strike] - p[atm_strike]
+        
+        return spot_est
+        
+    except Exception as e:
+        print(f"Erreur estimation prix: {e}")
+        return calls_df['strike'].median()
 
 def create_volatility_smile(calls_df, puts_df, current_price):
     """
@@ -674,13 +705,22 @@ def main():
     # Récupérer les tickers disponibles
     available_tickers = get_available_tickers()
     
-    # Sélection du ticker
+    # 1. Lire les paramètres d'URL
+    query_params = st.query_params
+    default_ticker_index = 0
+    
+    if "ticker" in query_params:
+        target_ticker = query_params["ticker"]
+        if target_ticker in available_tickers:
+            default_ticker_index = available_tickers.index(target_ticker)
+    
+    # 2. Utiliser l'index par défaut dans la selectbox
     col1, col2 = st.columns([3, 1])
     with col1:
         ticker = st.selectbox(
             "Sélectionner un ticker",
             options=available_tickers,
-            index=0 if available_tickers else None
+            index=default_ticker_index
         )
     with col2:
         if st.button("📊 Analyser", type="primary", use_container_width=True):
@@ -704,28 +744,53 @@ def main():
         # Calculer le score composite
         scores = calculate_composite_score(calls_df.copy(), puts_df.copy(), current_price)
         
+        # Calculer Max Pain (Le point de douleur max pour les vendeurs d'options)
+        # C'est souvent vu comme une "cible" ou un aimant pour le prix à l'expiration
+        try:
+            calls_g = calls_df.groupby('strike')['openInterest'].sum()
+            puts_g = puts_df.groupby('strike')['openInterest'].sum()
+            merged_oi = pd.DataFrame({'call_oi': calls_g, 'put_oi': puts_g}).fillna(0)
+            merged_oi['total_oi'] = merged_oi['call_oi'] + merged_oi['put_oi']
+            max_pain = merged_oi['total_oi'].idxmax()
+        except:
+            max_pain = current_price
+            
         # Métriques clés
         col1, col2, col3, col4, col5 = st.columns(5)
         
         with col1:
-            st.metric("Prix Estimé", f"${current_price:.2f}")
+            # Prix Spot (Calculé via PC Parity)
+            st.metric("Prix Spot (Calculé)", f"${current_price:.2f}", help="Calculé via Parité Put-Call (Strike ATM)")
         
         with col2:
-            total_call_vol = calls_df['volume'].sum()
-            st.metric("Call Volume", f"{total_call_vol:,.0f}")
+            # Max Pain (Sentiment Market Maker)
+            delta_pain = max_pain - current_price
+            icon = "🎯"
+            st.metric("Max Pain (Cible)", f"${max_pain:.2f}", f"{delta_pain:+.2f}", help="Prix où le maximum d'options expirent sans valeur (Aimant)")
         
         with col3:
+            total_call_vol = calls_df['volume'].sum()
             total_put_vol = puts_df['volume'].sum()
-            st.metric("Put Volume", f"{total_put_vol:,.0f}")
+            pcr_vol = total_put_vol / max(total_call_vol, 1)
+            st.metric("Put/Call Ratio (Vol)", f"{pcr_vol:.2f}", delta="Bearish" if pcr_vol > 1 else "Bullish", delta_color="inverse")
         
         with col4:
-            pcr = total_put_vol / max(total_call_vol, 1)
-            st.metric("Put/Call Ratio", f"{pcr:.2f}")
-        
+            # Sentiment Market Check: Où est le plus gros volume today ?
+            max_vol_call = calls_df.loc[calls_df['volume'].idxmax()]
+            max_vol_put = puts_df.loc[puts_df['volume'].idxmax()]
+            
+            # Si le volume call est > volume put
+            if max_vol_call['volume'] > max_vol_put['volume']:
+                 target_strike = max_vol_call['strike']
+                 st.metric("Gros Pari (Call)", f"${target_strike:.0f}", f"Vol: {max_vol_call['volume']/1000:.1f}k")
+            else:
+                 target_strike = max_vol_put['strike']
+                 st.metric("Gros Pari (Put)", f"${target_strike:.0f}", f"Vol: {max_vol_put['volume']/1000:.1f}k", delta_color="inverse")
+
         with col5:
             composite = scores['composite']
             sentiment = "📈 Bullish" if composite > 0.15 else "📉 Bearish" if composite < -0.15 else "⚖️ Neutral"
-            st.metric("Options Score", f"{composite:.2f}", sentiment)
+            st.metric("Score Global", f"{composite:.2f}", sentiment)
         
         # Score détaillé
         with st.expander("📊 Décomposition du Score Composite"):
@@ -820,71 +885,11 @@ def main():
             )
             
             st.markdown("""
-            ### 📊 Interprétation:
-            - **Pics 3D** = Zones de forte activité (intérêt massif)
-            - **Vallées** = Strikes ignorés
-            - **Pente temporelle** = Évolution des attentes dans le temps
-            - **Patterns** = Formations répétitives (ex: escalier = hedging progressif)
+            ### 📊 Interprétation (3D):
+            - **Pics verts** = Forts volumes Calls (pression haussière)
+            - **Pics rouges** = Forts volumes Puts (pression baissière)
+            - **Carte topographique** = Visualisez les "montagnes" de liquidité
             """)
-        
-        # Section Scénarios
-        st.markdown("---")
-        st.subheader("📊 Scénarios Détectés")
-        
-        # Analyser les patterns
-        composite = scores['composite']
-        iv_skew = scores['volatility_skew']
-        flow_ratio = scores['money_flow_ratio']
-        
-        scenarios = []
-        
-        # Scénario Bullish
-        if composite > 0.2 and flow_ratio > 0.2:
-            scenarios.append({
-                'type': '📈 BULLISH SETUP',
-                'confidence': 'Élevée',
-                'indicators': [
-                    f"📊 Score Composite: {composite:.2f}",
-                    f"📊 Money Flow Ratio: {flow_ratio:.2f}",
-                    f"📊 Volume Concentration: {scores['volume_concentration']:.2f}"
-                ],
-                'signal': 'FORTE CONVICTION BULLISH - Calls dominants'
-            })
-        
-        # Scénario Bearish
-        if composite < -0.2 and iv_skew < -0.1:
-            scenarios.append({
-                'type': '📉 BEARISH HEDGE',
-                'confidence': 'Élevée',
-                'indicators': [
-                    f"📊 Score Composite: {composite:.2f}",
-                    f"📊 Volatility Skew: {iv_skew:.2f}",
-                    f"📊 Money Flow Ratio: {flow_ratio:.2f}"
-                ],
-                'signal': 'PROTECTION MASSIVE - Puts dominants'
-            })
-        
-        # Scénario Squeeze
-        if abs(composite) < 0.1 and abs(flow_ratio) < 0.1:
-            scenarios.append({
-                'type': '🤏 SQUEEZE SETUP',
-                'confidence': 'Moyenne',
-                'indicators': [
-                    f"🤏 Score Composite proche de 0: {composite:.2f}",
-                    f"🤏 Flow déséquilibré: {flow_ratio:.2f}",
-                    f"🤏 Max Pain proche: {scores['max_pain_distance']:.2%}"
-                ],
-                'signal': 'COMPRESSION - Breakout imminent'
-            })
-        
-        if scenarios:
-            for scenario in scenarios:
-                with st.expander(f"{scenario['type']} - Confiance: {scenario['confidence']}"):
-                    for indicator in scenario['indicators']:
-                        st.markdown(indicator)
-                    st.info(f"**Signal:** {scenario['signal']}")
-        else:
-            st.info("Aucun scénario clair détecté - Marché indécis")
 
 if __name__ == "__main__":
     main()
