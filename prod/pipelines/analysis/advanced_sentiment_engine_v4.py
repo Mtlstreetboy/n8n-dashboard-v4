@@ -48,6 +48,7 @@ MODEL_LOGIC = "qwen2.5:7b"      # Pour structures, JSON, maths
 MODEL_NARRATIVE = "llama3.1:8b" # Pour texte, nuance, synthèse
 
 import json
+import yfinance as yf
 import os
 from datetime import datetime, timedelta
 import pandas as pd
@@ -506,8 +507,56 @@ class AdvancedSentimentEngineV4:
         
         return weights
     
-    def calculate_narrative_momentum(self, signals: List[SentimentSignal]) -> float:
-        """🧮 INNOVATION: Détecte la VITESSE du changement de sentiment"""
+    def calculate_price_momentum(self, window_days: int = 10) -> float:
+        """📊 Price Momentum: Traditional price change over N days"""
+        try:
+            ticker_data = yf.Ticker(self.ticker)
+            hist = ticker_data.history(period='1mo', interval='1d')
+            
+            if len(hist) < window_days:
+                return 0.0
+            
+            current_price = hist['Close'].iloc[-1]
+            old_price = hist['Close'].iloc[-window_days]
+            
+            if old_price == 0:
+                return 0.0
+            
+            # Normalize to -1 to +1 range (±20% price change = ±1.0)
+            price_change_pct = (current_price - old_price) / old_price
+            momentum = np.clip(price_change_pct * 5, -1, 1)
+            
+            return momentum
+        except Exception as e:
+            print(f"⚠️ Price momentum calculation failed for {self.ticker}: {e}")
+            return 0.0
+    
+    def calculate_volume_momentum(self, window_days: int = 10) -> float:
+        """📈 Volume Momentum: Recent volume vs average"""
+        try:
+            ticker_data = yf.Ticker(self.ticker)
+            hist = ticker_data.history(period='1mo', interval='1d')
+            
+            if len(hist) < window_days:
+                return 0.0
+            
+            recent_volume = hist['Volume'].iloc[-3:].mean()  # Last 3 days average
+            avg_volume = hist['Volume'].iloc[-window_days:].mean()
+            
+            if avg_volume == 0:
+                return 0.0
+            
+            # Normalize to -1 to +1 range (2x volume = +1.0, 0.5x = -1.0)
+            volume_ratio = recent_volume / avg_volume
+            momentum = np.clip((volume_ratio - 1) * 2, -1, 1)
+            
+            return momentum
+        except Exception as e:
+            print(f"⚠️ Volume momentum calculation failed for {self.ticker}: {e}")
+            return 0.0
+    
+    def calculate_news_momentum(self, signals: List[SentimentSignal]) -> float:
+        """📰 News Momentum: Velocity of sentiment change (original narrative momentum)"""
         if len(signals) < 2:
             return 0.0
         
@@ -541,6 +590,68 @@ class AdvancedSentimentEngineV4:
         momentum = np.clip(momentum, -1, 1)
         
         return momentum
+    
+    def calculate_smart_momentum(self, signals: List[SentimentSignal]) -> Dict:
+        """🚀 SMART MOMENTUM MULTI-DIMENSIONNEL
+        
+        Combines 3 momentum indicators:
+        - Price Momentum (50%): Traditional 10-day price change
+        - News Momentum (30%): Sentiment velocity from articles
+        - Volume Momentum (20%): Trading volume acceleration
+        
+        Returns comprehensive momentum analysis with divergence detection
+        """
+        # Calculate individual components
+        price_mom = self.calculate_price_momentum(window_days=10)
+        news_mom = self.calculate_news_momentum(signals)
+        volume_mom = self.calculate_volume_momentum(window_days=10)
+        
+        # Weighted combination
+        smart_momentum = (price_mom * 0.5) + (news_mom * 0.3) + (volume_mom * 0.2)
+        smart_momentum = np.clip(smart_momentum, -1, 1)
+        
+        # Divergence detection: Price vs News
+        divergence_detected = False
+        divergence_type = None
+        divergence_magnitude = abs(price_mom - news_mom)
+        
+        if divergence_magnitude > 0.5:  # Significant divergence
+            divergence_detected = True
+            if price_mom > 0.3 and news_mom < -0.3:
+                divergence_type = "🐂 BULLISH DIVERGENCE: Price rising despite negative news (Smart Money buying)"
+            elif price_mom < -0.3 and news_mom > 0.3:
+                divergence_type = "🐻 BEARISH DIVERGENCE: Price falling despite positive news (Smart Money selling)"
+        
+        # Actionable interpretation
+        if smart_momentum > 0.5:
+            signal = "🚀 STRONG BUY MOMENTUM"
+            interpretation = "All indicators converging upward - high confidence trend"
+        elif smart_momentum > 0.2:
+            signal = "📈 Building Momentum"
+            interpretation = "Positive trend developing - watch for continuation"
+        elif smart_momentum > -0.2:
+            signal = "➡️ Consolidation"
+            interpretation = "Sideways movement - awaiting catalyst"
+        elif smart_momentum > -0.5:
+            signal = "📉 Weakening"
+            interpretation = "Negative momentum building - consider risk management"
+        else:
+            signal = "💥 STRONG SELL MOMENTUM"
+            interpretation = "All indicators converging downward - high risk"
+        
+        return {
+            'smart_momentum': round(smart_momentum, 4),
+            'components': {
+                'price_momentum': round(price_mom, 4),
+                'news_momentum': round(news_mom, 4),
+                'volume_momentum': round(volume_mom, 4)
+            },
+            'signal': signal,
+            'interpretation': interpretation,
+            'divergence_detected': divergence_detected,
+            'divergence_type': divergence_type,
+            'divergence_magnitude': round(divergence_magnitude, 4) if divergence_detected else 0
+        }
     
     def detect_divergence(self, news_signal: float, options_signal: float) -> Dict:
         """🔍 INNOVATION: Détecte les divergences entre ce que les gens DISENT et FONT"""
@@ -1088,10 +1199,10 @@ Exemples de profils:
             sentiment_volatility = 0
         
         # 3. Momentum Acceleration
-        momentum_current = report['components']['narrative_momentum']
+        momentum_current = report['components'].get('narrative_momentum', 0)
         if len(news_signals) > 10:
             older_signals = news_signals[-10:]
-            older_momentum = self.calculate_narrative_momentum(older_signals)
+            older_momentum = self.calculate_news_momentum(older_signals)
             momentum_acceleration = momentum_current - older_momentum
         else:
             momentum_acceleration = 0
@@ -1243,7 +1354,10 @@ Format: <emoji> <insight clé> | <action recommandée>"""
         financial_sentiment = financial_signal.score if financial_signal else 0
         financial_confidence = financial_signal.confidence if financial_signal else 0
         
-        momentum = self.calculate_narrative_momentum(news_signals)
+        # 🚀 SMART MOMENTUM V6: Multi-dimensional momentum analysis
+        momentum_analysis = self.calculate_smart_momentum(news_signals)
+        momentum = momentum_analysis['smart_momentum']
+        
         divergence = self.detect_divergence(news_sentiment, options_sentiment)
         conviction = self.calculate_conviction_score(news_signals, options_signal)
         fear_greed_factor = self.calculate_fear_greed_asymmetry(news_signals)
@@ -1320,7 +1434,9 @@ Format: <emoji> <insight clé> | <action recommandée>"""
                 'financial_sentiment': round(financial_sentiment, 4), # ⬅️ NOUVEAU V5
                 'financial_confidence': round(financial_confidence, 4),
                 'financial_weight': round(financial_weight, 4),
+                'strategic_bias': 'BULLISH' if base_sentiment > 0 else 'BEARISH',
                 'narrative_momentum': round(momentum, 4),
+                'smart_momentum': momentum_analysis,  # 🚀 V6: Full breakdown
                 'fear_greed_asymmetry': round(fear_greed_factor, 4)
             },
             

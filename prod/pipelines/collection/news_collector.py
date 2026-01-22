@@ -365,10 +365,19 @@ def collect_single_ticker(company: dict, days: int) -> dict:
     return collector.run(days)
 
 
-def collect_all(days: int = DAYS_DEFAULT, only_public: bool = True):
+def collect_all(days: int = DAYS_DEFAULT, only_public: bool = True, tickers: list = None):
     """Collecte pour tous les tickers"""
     
-    companies = get_public_companies() if only_public else get_all_companies()
+    if tickers:
+        all_companies = get_all_companies()
+        companies = [c for c in all_companies if c['ticker'] in tickers]
+        # Fallback for unknown tickers
+        known_tickers = {c['ticker'] for c in companies}
+        for t in tickers:
+            if t not in known_tickers:
+                companies.append({'ticker': t, 'name': t, 'search_terms': [t]})
+    else:
+        companies = get_public_companies() if only_public else get_all_companies()
     
     console.print("\n" + "="*70, style="bold cyan")
     console.print("📰 NEWS COLLECTOR V2 - Yahoo + RSS Backfill", style="bold cyan", justify="center")
@@ -464,12 +473,26 @@ def main():
     days = DAYS_DEFAULT
     
     if len(sys.argv) > 1:
-        try:
-            days = int(sys.argv[1])
-        except:
-            pass
-    
-    stats = collect_all(days=days)
+        # Check for ticker args (non-numeric, not starting with -)
+        tickers = [arg.upper() for arg in sys.argv[1:] if not arg.isdigit() and not arg.startswith('-')]
+        
+        # Check for days arg
+        for arg in sys.argv[1:]:
+             if arg.isdigit():
+                 days = int(arg)
+                 break
+                 
+        if tickers:
+            # Monkey patch collect_all to only process specific tickers
+            pass # The logic below will need to handle this.
+            # Actually, easiest is to filter companies list inside get_public_companies call OR filter in collect_all.
+            # But specific args aren't passed to collect_all in original code.
+            
+            # Since I can't easily change the signature of collect_all without checking all callers (though likely few),
+            # I will modify collect_all to accept a list of tickers too.
+            
+    # I'll modify collect_all instead to be clean.
+    stats = collect_all(days=days, tickers=tickers if 'tickers' in locals() and tickers else None)
     
     console.print("\n✅ Collecte terminée! Lancez maintenant:", style="bold green")
     console.print("   python news_analyzer.py", style="yellow")

@@ -44,6 +44,13 @@ AI_COMPANIES = [
         "pillar": "Cerveau"
     },
     {
+        "ticker": "NFLX",
+        "name": "Netflix Inc",
+        "search_terms": ["Netflix", "NFLX stock", "streaming wars", "Netflix subscriber growth"],
+        "sector": "Entertainment",
+        "pillar": "Cerveau"
+    },
+    {
         "ticker": "CRWD",
         "name": "CrowdStrike Holdings",
         "search_terms": ["CrowdStrike", "CRWD stock", "cybersecurity AI"],
@@ -62,6 +69,13 @@ AI_COMPANIES = [
         "name": "iShares Asia 50 ETF",
         "search_terms": ["AIA ETF", "Asian tech stocks", "TSMC Samsung"],
         "sector": "ETF",
+        "pillar": "Cerveau"
+    },
+    {
+        "ticker": "WYFI",
+        "name": "WhiteFiber Inc",
+        "search_terms": ["WhiteFiber", "WYFI stock", "AI cloud services", "HPC infrastructure"],
+        "sector": "AI Infrastructure",
         "pillar": "Cerveau"
     },
 

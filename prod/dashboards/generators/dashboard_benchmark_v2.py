@@ -51,6 +51,29 @@ def get_tickers():
     tickers = [c['ticker'] for c in AI_COMPANIES if c.get('ticker')]
     return sorted(list(set(tickers)))
 
+def get_portfolio_tickers():
+    """Get tickers from Questrade portfolio"""
+    portfolio = load_portfolio_config()
+    return [item['ticker'] for item in portfolio]
+
+def get_all_tickers_no_duplicates():
+    """Get all tickers (portfolio + watchlist) without duplicates"""
+    portfolio_tickers = get_portfolio_tickers()
+    watchlist_tickers = get_tickers()
+    
+    # Combine and remove duplicates
+    all_tickers = list(set(portfolio_tickers + watchlist_tickers))
+    return sorted(all_tickers)
+
+def get_watchlist_only():
+    """Get tickers from watchlist that are NOT in portfolio (no duplicates)"""
+    portfolio_tickers = set(get_portfolio_tickers())
+    watchlist_tickers = get_tickers()
+    
+    # Filter out portfolio tickers
+    watchlist_only = [t for t in watchlist_tickers if t not in portfolio_tickers]
+    return sorted(watchlist_only)
+
 def load_portfolio_config():
     """Load portfolio data from JSON"""
     portfolio_file = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../prod/config/portfolio_holdings.json'))
@@ -451,7 +474,10 @@ def main():
         st.header("⚙️ Configuration")
         
         # Mode Selection
-        mode = st.radio("Mode d'analyse", ["🎯 Ticker Unique", "🌍 Portfolio Global"], index=0)
+        mode = st.radio("Mode d'analyse", 
+                       ["🎯 Ticker Unique", "🌍 Portfolio Global", "👀 Watch List"], 
+                       index=0,
+                       help="Ticker Unique: Analyse individuelle | Portfolio: Vue d'ensemble | Watch List: Tickers à surveiller")
         st.divider()
         
         benchmark_ticker = st.selectbox(
@@ -489,7 +515,9 @@ def main():
     if mode == "🎯 Ticker Unique":
         with st.sidebar:
             st.divider()
-            available_tickers = get_tickers()
+            # Get all tickers (portfolio + watchlist) without duplicates
+            available_tickers = get_all_tickers_no_duplicates()
+            portfolio_tickers = get_portfolio_tickers()
             
             query_params = st.query_params
             default_index = 0
@@ -500,8 +528,25 @@ def main():
                     default_index = available_tickers.index(url_ticker)
             elif "NVDA" in available_tickers:
                 default_index = available_tickers.index("NVDA")
-                
-            selected_ticker = st.selectbox("Ticker à analyser", available_tickers, index=default_index)
+            
+            # Format ticker display with portfolio indicator
+            ticker_labels = []
+            for t in available_tickers:
+                if t in portfolio_tickers:
+                    ticker_labels.append(f"💼 {t} (Portfolio)")
+                else:
+                    ticker_labels.append(f"👀 {t} (Watchlist)")
+            
+            selected_idx = st.selectbox(
+                "Ticker à analyser", 
+                range(len(available_tickers)),
+                format_func=lambda i: ticker_labels[i],
+                index=default_index
+            )
+            selected_ticker = available_tickers[selected_idx]
+            
+            # Show ticker count info
+            st.caption(f"📊 {len(available_tickers)} tickers disponibles ({len(portfolio_tickers)} en portfolio, {len(available_tickers) - len(portfolio_tickers)} en watchlist)")
 
         if selected_ticker and benchmark_ticker:
             st.subheader(f"Analyse: {selected_ticker} vs {benchmark_ticker}")
@@ -720,8 +765,206 @@ def main():
             fig_rs.update_layout(height=350, hovermode="x unified", title="Force Relative (Ratio)")
             st.plotly_chart(fig_rs, use_container_width=True)
 
+    # --- MODE 3: WATCH LIST ---
+    elif mode == "👀 Watch List":
+        st.subheader("👀 Watch List - Tickers à Surveiller")
+        
+        watchlist_tickers = get_watchlist_only()
+        
+        if not watchlist_tickers:
+            st.warning("⚠️ Aucun ticker dans la watchlist qui ne soit pas déjà dans votre portfolio.")
+            st.info("💡 Tous les tickers de `companies_config.py` sont déjà dans votre portfolio Questrade!")
+            return
+        
+        st.info(f"📊 {len(watchlist_tickers)} tickers en watchlist (exclus du portfolio)")
+        
+        with st.spinner("Chargement des données pour la watchlist..."):
+            all_tickers = list(set(watchlist_tickers + [benchmark_ticker]))
+            data = load_data_batch(all_tickers, start_date)
+            
+            if data is None:
+                st.error("Impossible de charger les données")
+                return
+        
+        # Calculate metrics for each watchlist ticker
+        watchlist_metrics = []
+        
+        bench_series = data[benchmark_ticker] if benchmark_ticker in data.columns else None
+        bench_returns = bench_series.pct_change().dropna() if bench_series is not None else None
+        
+        for ticker in watchlist_tickers:
+            if ticker not in data.columns:
+                continue
+            
+            price_series = data[ticker]
+            returns = price_series.pct_change().dropna()
+            
+            # Calculate metrics
+            current_price = price_series.iloc[-1]
+            start_price = price_series.iloc[0]
+            perf = (current_price / start_price - 1) * 100
+            
+            beta, alpha, r_squared = calculate_beta(returns, bench_returns) if bench_returns is not None else (None, None, None)
+            volatility = calculate_volatility(returns) * 100
+            sharpe = calculate_sharpe_ratio(returns, risk_free_rate)
+            max_dd, _, _ = calculate_max_drawdown(price_series)
+            
+            # 52W Range Position
+            high_52w = price_series.rolling(min(252, len(price_series))).max().iloc[-1]
+            low_52w = price_series.rolling(min(252, len(price_series))).min().iloc[-1]
+            range_52w_pct = ((current_price - low_52w) / (high_52w - low_52w) * 100) if (high_52w - low_52w) > 0 else 50
+            
+            watchlist_metrics.append({
+                'Ticker': ticker,
+                'Prix': current_price,
+                'Perf (%)': perf,
+                'Beta': beta if beta is not None else 0,
+                'Vol (%)': volatility,
+                'Sharpe': sharpe,
+                'Max DD (%)': max_dd * 100,
+                '52W Position (%)': range_52w_pct,
+                'R²': r_squared if r_squared is not None else 0
+            })
+        
+        df_watchlist = pd.DataFrame(watchlist_metrics)
+        
+        if df_watchlist.empty:
+            st.warning("Aucune donnée disponible pour la watchlist.")
+            return
+        
+        # Sort by Performance by default
+        df_watchlist = df_watchlist.sort_values('Perf (%)', ascending=False)
+        
+        # ==================== WATCHLIST KPIs ====================
+        st.markdown("---")
+        col1, col2, col3, col4, col5 = st.columns(5)
+        
+        with col1:
+            avg_perf = df_watchlist['Perf (%)'].mean()
+            st.metric("Perf Moyenne", f"{avg_perf:+.1f}%")
+        
+        with col2:
+            best_ticker = df_watchlist.nlargest(1, 'Perf (%)').iloc[0]
+            st.metric("Meilleur", f"{best_ticker['Ticker']}", f"{best_ticker['Perf (%)']:+.1f}%")
+        
+        with col3:
+            worst_ticker = df_watchlist.nsmallest(1, 'Perf (%)').iloc[0]
+            st.metric("Pire", f"{worst_ticker['Ticker']}", f"{worst_ticker['Perf (%)']:+.1f}%")
+        
+        with col4:
+            avg_sharpe = df_watchlist['Sharpe'].mean()
+            st.metric("Sharpe Moyen", f"{avg_sharpe:.2f}")
+        
+        with col5:
+            avg_vol = df_watchlist['Vol (%)'].mean()
+            st.metric("Vol Moyenne", f"{avg_vol:.1f}%")
+        
+        # ==================== WATCHLIST TABLE ====================
+        st.markdown("---")
+        st.subheader("📋 Tableau Détaillé")
+        
+        # Color coding functions
+        def color_perf(val):
+            if val > 10: return 'background-color: rgba(76, 175, 80, 0.4)'
+            if val > 0: return 'background-color: rgba(139, 195, 74, 0.3)'
+            if val > -10: return 'background-color: rgba(255, 152, 0, 0.3)'
+            return 'background-color: rgba(255, 82, 82, 0.4)'
+        
+        def color_beta(val):
+            if val > 1.5: return 'background-color: rgba(255, 82, 82, 0.3)'
+            if val > 1.2: return 'background-color: rgba(255, 152, 0, 0.3)'
+            if val > 0.8: return 'background-color: rgba(255, 235, 59, 0.3)'
+            return 'background-color: rgba(76, 175, 80, 0.3)'
+        
+        def color_52w(val):
+            if val > 90: return 'background-color: rgba(255, 82, 82, 0.3)'  # Near high
+            if val < 20: return 'background-color: rgba(76, 175, 80, 0.3)'  # Near low (opportunity)
+            return 'background-color: rgba(255, 235, 59, 0.2)'
+        
+        st.dataframe(
+            df_watchlist.style.format({
+                'Prix': '${:.2f}',
+                'Perf (%)': '{:+.1f}%',
+                'Beta': '{:.2f}',
+                'Vol (%)': '{:.1f}%',
+                'Sharpe': '{:.2f}',
+                'Max DD (%)': '{:.1f}%',
+                '52W Position (%)': '{:.0f}%',
+                'R²': '{:.2f}'
+            }).applymap(color_perf, subset=['Perf (%)']).applymap(color_beta, subset=['Beta']).applymap(color_52w, subset=['52W Position (%)']),
+            use_container_width=True,
+            height=500
+        )
+        
+        st.caption("💡 **52W Position**: <20% = Proche du bas (opportunité), >90% = Proche du haut (prudence)")
+        
+        # ==================== WATCHLIST PERFORMANCE CHART ====================
+        st.markdown("---")
+        st.subheader("📈 Performance Comparée (Base 100)")
+        
+        fig_watch = go.Figure()
+        
+        # Add Benchmark
+        bench_norm = (data[benchmark_ticker] / data[benchmark_ticker].iloc[0]) * 100
+        fig_watch.add_trace(go.Scatter(
+            x=bench_norm.index, y=bench_norm,
+            name=benchmark_ticker,
+            line=dict(color='white', width=3, dash='solid'),
+            opacity=1.0
+        ))
+        
+        # Add watchlist tickers
+        colors = px.colors.qualitative.Plotly
+        for i, ticker in enumerate(watchlist_tickers):
+            if ticker not in data.columns:
+                continue
+            
+            ticker_norm = (data[ticker] / data[ticker].iloc[0]) * 100
+            fig_watch.add_trace(go.Scatter(
+                x=ticker_norm.index,
+                y=ticker_norm,
+                name=ticker,
+                line=dict(color=colors[i % len(colors)], width=1.5),
+                opacity=0.7
+            ))
+        
+        fig_watch.update_layout(
+            height=600,
+            hovermode='x unified',
+            legend=dict(orientation='h', yanchor='bottom', y=1.02, xanchor='right', x=1)
+        )
+        st.plotly_chart(fig_watch, use_container_width=True)
+        
+        # ==================== OPPORTUNITIES ====================
+        st.markdown("---")
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.subheader("🎯 Opportunités (Près du Bas 52W)")
+            opportunities = df_watchlist[df_watchlist['52W Position (%)'] < 25].nsmallest(5, '52W Position (%)')
+            if not opportunities.empty:
+                st.dataframe(opportunities[['Ticker', 'Prix', 'Perf (%)', '52W Position (%)']].style.format({
+                    'Prix': '${:.2f}',
+                    'Perf (%)': '{:+.1f}%',
+                    '52W Position (%)': '{:.0f}%'
+                }), use_container_width=True)
+            else:
+                st.info("Aucun ticker près du bas 52W actuellement.")
+        
+        with col2:
+            st.subheader("⚠️ À Surveiller (Près du Haut 52W)")
+            high_risk = df_watchlist[df_watchlist['52W Position (%)'] > 85].nlargest(5, '52W Position (%)')
+            if not high_risk.empty:
+                st.dataframe(high_risk[['Ticker', 'Prix', 'Perf (%)', '52W Position (%)']].style.format({
+                    'Prix': '${:.2f}',
+                    'Perf (%)': '{:+.1f}%',
+                    '52W Position (%)': '{:.0f}%'
+                }), use_container_width=True)
+            else:
+                st.info("Aucun ticker près du haut 52W actuellement.")
+
     # --- MODE 2: PORTFOLIO GLOBAL ---
-    else:
+    elif mode == "🌍 Portfolio Global":
         st.subheader("🌍 Analyse Globale du Portefeuille")
         
         port_data = load_portfolio_config()

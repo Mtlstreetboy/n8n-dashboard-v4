@@ -108,19 +108,24 @@ def main():
     results = {}
     total_start = time.time()
     
+    # Collect tickers (args that are not flags and not digits)
+    tickers = [arg for arg in sys.argv[1:] if not arg.startswith('-') and not arg.isdigit()]
+    
     # ÉTAPE 1: Collecte (Yahoo Finance)
     if not analyze_only:
+        collect_args = [days] + tickers
         results['collect'] = run_script(
             'news_collector.py',
-            [days],
+            collect_args,
             "ÉTAPE 1: Collecte d'articles (Yahoo Finance)"
         )
     
     # ÉTAPE 2: Analyse (FinBERT)
     if not collect_only:
+        analyze_args = tickers if tickers else []
         results['analyze'] = run_script(
             'news_analyzer.py',
-            [],
+            analyze_args,
             "ÉTAPE 2: Analyse sentiment (FinBERT)"
         )
     

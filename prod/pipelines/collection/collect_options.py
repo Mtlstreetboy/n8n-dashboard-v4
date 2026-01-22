@@ -438,6 +438,18 @@ def main():
                        if c['ticker'] not in ['OPENAI', 'ANTHROPIC', 'COHERE', 'MISTRAL']]
     
     print(f"\n???? Compagnies sélectionnées ({len(public_companies)}):")
+    print(f"\n???? Compagnies sélectionnées ({len(public_companies)}):")
+    
+    # Filter by arguments if provided
+    if len(sys.argv) > 1:
+        target_ticker = sys.argv[1].upper()
+        # Handle cases where argument might be like "NVDA" or "--force"
+        if not target_ticker.startswith('-'):
+            public_companies = [c for c in public_companies if c['ticker'] == target_ticker]
+            # Fallback if specific ticker not found in config (for ad-hoc checks)
+            if not public_companies:
+                 public_companies = [{'ticker': target_ticker, 'name': target_ticker}]
+    
     for c in public_companies:
         print(f"   ??? {c['ticker']:<6} - {c['name']}")
     
